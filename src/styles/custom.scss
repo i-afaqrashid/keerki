@@ -1,0 +1,22 @@
+$primary: #0278AE;
+$secondary: #EAB939;
+$navbar-dark-color: #ffffff;
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 19),
+    7: ($spacer * 33),
+    8: ($spacer *10),
+    9: ($spacer * 7)
+  ),
+  $spacers
+);
+
+@import 'node_modules/bootstrap/scss/bootstrap'
