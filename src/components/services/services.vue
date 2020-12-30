@@ -5,15 +5,14 @@
     <h1 class="font-weight-normal px-5 px-xl-6" style="font-size: 52px">
       {{ $t("services") }}
     </h1>
-    <h4 class="font-weight-normal pt-4 px-3 px-xl-6" style="font-size: 20px">
+    <h4 class="font-weight-normal pt-4 px-3 px-xl-10" style="font-size: 20px">
       {{ $t("randomHuge") }}
     </h4>
     <div
       class="mt-lg-9 d-flex w-100 justify-content-center align-items-center flex-column flex-lg-row"
     >
       <div
-        class="d-flex mt-5 mt-lg-0 justify-content-center align-items-center"
-        style="width: 280px; height: 180px;border: 3px solid #FFFFFF"
+        class="d-flex mt-5 mt-lg-0 justify-content-center align-items-center svgContainer"
       >
         <svg
           width="59"
@@ -46,8 +45,7 @@
         </svg>
       </div>
       <div
-        class="d-flex mt-3 mt-lg-0 ml-lg-3 justify-content-center align-items-center"
-        style="width: 280px; height: 180px;border: 3px solid #FFFFFF"
+        class="d-flex mt-3 mt-lg-0 ml-lg-3 justify-content-center align-items-center svgContainer"
       >
         <svg
           width="62"
@@ -80,8 +78,7 @@
         </svg>
       </div>
       <div
-        class="d-flex mt-3 mt-lg-0 ml-lg-3 justify-content-center align-items-center"
-        style="width: 280px; height: 180px;border: 3px solid #FFFFFF"
+        class="d-flex mt-3 mt-lg-0 ml-lg-3 justify-content-center align-items-center svgContainer"
       >
         <svg
           width="47"
@@ -121,3 +118,10 @@ export default {
   name: "Services",
 };
 </script>
+<style scoped>
+.svgContainer {
+  width: 280px;
+  height: 180px;
+  border: 3px solid #ffffff;
+}
+</style>

@@ -3,6 +3,7 @@
     <Intro/>
     <Services/>
     <Gallery/>
+    <Partners/>
   </div>
 
 </template>
@@ -11,12 +12,14 @@
 import Intro from '../components/intro'
 import Services from '../components/services/services'
 import Gallery from '../components/gallery/gallery'
+import Partners from '../components/partners/partners'
 export default {
   name: "Home",
   components:{
     Intro,
     Services,
-    Gallery
+    Gallery,
+    Partners
   }
 };
 </script>

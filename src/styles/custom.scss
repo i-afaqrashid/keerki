@@ -14,9 +14,23 @@ $spacers: map-merge(
     6: ($spacer * 19),
     7: ($spacer * 33),
     8: ($spacer *10),
-    9: ($spacer * 7)
+    9: ($spacer * 7),
+    10: ($spacer * 26),
+    11: ($spacer *4),
+    12: ($spacer *22)
   ),
   $spacers
 );
-
+$sizes: () !default;
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto,
+    56: 56%
+  ),
+  $sizes
+);
 @import 'node_modules/bootstrap/scss/bootstrap'

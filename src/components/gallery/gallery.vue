@@ -9,44 +9,84 @@
       {{ $t("galleryText") }}
     </h4>
     <div
-      class="d-flex flex-column flex-lg-row w-100 justify-content-center align-items-center mt-5 mt-lg-9"
+      class="d-flex flex-column flex-lg-row w-100 justify-content-center align-items-center mt-11"
     >
       <div>
         <img
           src="../../assets/galleryImage1.jpeg"
           width="225"
           height="285"
-          style="object-fit: cover;border-radius:12px"
-           class="border-primary"
+          style="object-fit: cover; border-radius: 12px"
+          class="border-primary"
         />
       </div>
-      <div class="ml-lg-5 mt-5 mt-lg-0">
+      <div class="ml-lg-3 mt-5 mt-lg-0">
         <img
           src="../../assets/galleryImage2.jpeg"
           width="225"
           height="285"
-          style="object-fit: cover;border-radius:12px"
+          style="object-fit: cover; border-radius: 12px"
           class="border-primary"
         />
       </div>
-      <div class="ml-lg-5 mt-5 mt-lg-0">
+      <div class="ml-lg-3 mt-5 mt-lg-0">
         <img
           src="../../assets/galleryImage3.jpeg"
           width="225"
           height="285"
-          style="object-fit: cover;border-radius:12px"
+          style="object-fit: cover; border-radius: 12px"
           class="border-primary"
         />
       </div>
-      <div class="ml-lg-5 mt-5 mt-lg-0">
+      <div class="ml-lg-3 mt-5 mt-lg-0">
         <img
           src="../../assets/galleryImage4.jpeg"
           width="225"
           height="285"
-          style="object-fill:cover;border-radius:12px"
+          style="object-fit: cover; border-radius: 12px"
           class="border-primary"
         />
       </div>
+    </div>
+    <div
+      class="d-flex justify-content-center align-items-center flex-column flex-lg-row mt-5 w-100"
+    >
+      <div>
+        <img
+          src="../../assets/galleryImage5.jpeg"
+          width="350px"
+          height="285px"
+          style="object-fit: cover; border-radius: 12px"
+          class="border-primary"
+        />
+      </div>
+      <div class="ml-lg-4 mt-5 mt-lg-0">
+        <img
+          src="../../assets/galleryImage6.jpeg"
+          width="225px"
+          height="285px"
+          style="object-fit: cover; border-radius: 12px"
+          class="border-primary"
+        />
+      </div>
+      <div class="ml-lg-4 mt-5 mt-lg-0">
+        <img
+          src="../../assets/galleryImage7.jpeg"
+          width="350px"
+          height="285px"
+          style="object-fit: cover; border-radius: 12px"
+          class="border-primary"
+        />
+      </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center w-100 mt-5">
+      <b-button
+        class="py-3"
+        style="width: 152px"
+        squared
+        variant="outline-light"
+        >{{ $t("seeMore") }}</b-button
+      >
     </div>
   </div>
 </template>
