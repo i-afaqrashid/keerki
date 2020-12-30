@@ -17,7 +17,9 @@ const messages = {
         clientCard: "Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun t utamet, consectetur adipiscing elit, sed do eiusmod temporincididunt utLorem ipsum dolor sit amet, consectetur adipiscing elit, s",
         designer: "Designer",
         clientCardHuge: "Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun t utamet, consectetur adipiscing elit, sed do eiusmod temporincididunt utLorem ipsum dolor sit amet, consectetur adipiscing elit, sLorem ipsum dolor dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun t ut",
-        containerOffer:"Have you tried our Container Offer?"
+        containerOffer:"Have you tried our Container Offer?",address:"Guanghzou,China",contactNo:"1885265612",
+        main:"Main",copyRight:"copyright Keerki 2020",resources:"Resources",freeCatalog:"Free Catalog",blog:"Blog",
+        request:"Request",updates:"Updates"
     },
     'ar':
     {
@@ -31,7 +33,9 @@ const messages = {
         partnerBtn: "كل الشركاء", clients: "客户 怎么 说", clientCard: "الأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبر الأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبر",
         designer: "مصمم",
         clientCardHuge: "الأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبر الأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبالأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبر الأ",
-        containerOffer:"هل جربت عرض الحاويات الخاص بنا؟"
+        containerOffer:"هل جربت عرض الحاويات الخاص بنا؟",address:"قوانغتشو، الصين",contactNo:"1885265612",
+        main:"الأساسية",copyRight:"حقوق النشر Keerki 2020",resources:"مصادر",freeCatalog:"كتالوج مجاني",blog:"مدونة",
+        request:"طلب",updates:"التحديثات"
 
     },
     'ch':
@@ -46,7 +50,8 @@ const messages = {
         clientCard: "常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続",
         designer: "设计师",
         clientCardHuge: "常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続",
-        containerOffer:"您尝试过我们的集装箱优惠吗？"
+        containerOffer:"您尝试过我们的集装箱优惠吗？",address:"中国广州",contactNo:"1885265612",
+        main:"主要",copyRight:"版权所有Keerki 2020",resources:"资源",freeCatalog:"免费目录",blog:"博客",request:"请求",updates:"更新"
     }
 }
 export default new VueI18n({ locale: 'en', fallbackLocale: 'en', messages, });

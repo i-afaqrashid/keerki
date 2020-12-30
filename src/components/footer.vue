@@ -21,7 +21,7 @@
               fill="white"
             />
           </svg>
-          <p class="mb-0">Guanghzou,China</p>
+          <p class="mb-0">{{$t("address")}}</p>
         </div>
         <div
           class="d-flex text-center text-white justify-content-center align-items-center w-100 pt-3"
@@ -39,7 +39,7 @@
             />
           </svg>
 
-          <p class="mb-0">1885265612</p>
+          <p class="mb-0">{{$t("contactNo")}}</p>
         </div>
         <div
           class="d-flex text-center text-white justify-content-center align-items-center w-100 pt-3"
@@ -89,18 +89,18 @@
         class="d-flex text-white flex-column flex-lg-row justify-content-center align-items-center w-50"
       >
         <div class="pt-5 pt-lg-0">
-          <p class="font-weight-normal" style="font-size: 20px">Main</p>
+          <p class="font-weight-normal fs-20">{{$t("main")}}</p>
           <p class="pt-3">{{ $t("home") }}</p>
           <p>{{ $t("product") }}</p>
           <p>{{ $t("about") }}</p>
           <p>{{ $t("contact") }}</p>
         </div>
         <div class="pl-lg-8 pl-4 pt-5 pt-lg-0">
-          <p class="font-weight-normal" style="font-size: 20px">Resources</p>
-          <p class="pt-3">Free Catalog</p>
-          <p>Blog</p>
-          <p>Request</p>
-          <p>Updates</p>
+          <p class="font-weight-normal fs-20" >{{$t("resources")}}</p>
+          <p class="pt-3">{{$t("freeCatalog")}}</p>
+          <p>{{$t("blog")}}</p>
+          <p>{{$t("request")}}</p>
+          <p>{{$t("updates")}}</p>
         </div>
       </div>
       <div class="w-25 pr-lg-9">
@@ -108,7 +108,7 @@
       </div>
     </div>
     <div class="w-100 d-flex justify-content-center align-items-center text-white font-weight-light py-lg-9">
-      <p>copyright Keerki 2020</p>
+      <p>{{$t("copyRight")}}</p>
     </div>
   </div>
 </template>

@@ -2,10 +2,10 @@
   <div
     class="d-flex align-items-center text-light text-center flex-column mt-5 mt-xl-8"
   >
-    <h1 class="font-weight-normal px-5 px-xl-6" style="font-size: 52px">
+    <h1 class="font-weight-normal px-5 px-xl-6 fs-52">
       {{ $t("partners") }}
     </h1>
-    <h4 class="font-weight-normal pt-2 px-3 px-xl-12" style="font-size: 20px">
+    <h4 class="font-weight-normal pt-2 px-3 px-xl-12 fs-20" >
       {{ $t("partnerText") }}
     </h4>
     <div
@@ -31,8 +31,7 @@
       </div>
     </div>
     <b-button
-      class="ml-lg-3 px-4 py-2 mt-lg-11"
-      style="width: 135px"
+      class="ml-lg-3 px-4 py-2 mt-lg-11 btn-width-135"
       squared
       variant="outline-light"
       >{{ $t("partnerBtn") }}</b-button
