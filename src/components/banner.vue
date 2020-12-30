@@ -15,9 +15,14 @@
         class="d-flex pt-5 pt-lg-0 flex-grow-1 w-100 text-white px-xl-9 text-center flex-column justify-content-center align-items-center"
       >
         <h1>{{ $t("containerOffer") }}</h1>
-        <b-button class="p-3 mt-5 mb-4 btn-width" squared variant="secondary">{{
-          $t("tryForFree")
-        }}</b-button>
+        <router-link to="/sign-up">
+          <b-button
+            class="p-3 mt-5 mb-4 btn-width"
+            squared
+            variant="secondary"
+            >{{ $t("tryForFree") }}</b-button
+          >
+        </router-link>
       </div>
     </div>
   </div>
@@ -28,9 +33,58 @@ export default {
 };
 </script>
 <style>
-.w-152
-{
-    width: 152px;
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #bababa;
+}
+.separator::before {
+  margin-right: 0.25em;
+}
+.separator::after {
+  margin-left: 0.25em;
+}
+.form-input {
+  border: 1px solid transparent;
+  height: 64px !important;
+  width: 100% !important;
+}
+.form-input:focus,
+.form-input:hover {
+  background: #ffffff;
+  border: 1px solid #1565d8;
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.11);
+  border-radius: 6px;
+}
+.horizontal-line {
+  border: 1px solid #f5f5f5;
+}
+.fs-30 {
+  font-size: 30px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.w-66 {
+  width: 100%;
+}
+.w-33 {
+  width: 45%;
+}
+.login-logo {
+  opacity: 0.7;
+}
+.sign-up-image {
+  background: linear-gradient(
+      0deg,
+      rgba(2, 120, 174, 0.9),
+      rgba(2, 120, 174, 0.9)
+    ),
+    url("../assets/login.jpeg");
+}
+.w-152 {
+  width: 152px;
 }
 .galleryImage {
   object-fit: cover;
@@ -119,6 +173,9 @@ export default {
     border-radius: 33px;
     width: 100%;
   }
+  .w-66 {
+    width: 55%;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .respImage {
@@ -128,6 +185,12 @@ export default {
   .bordered {
     border-radius: 33px;
     width: 100%;
+  }
+  .form-input {
+    width: 464px !important;
+  }
+  .w-66 {
+    width: 55%;
   }
 }
 </style>
