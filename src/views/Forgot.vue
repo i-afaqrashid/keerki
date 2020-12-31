@@ -76,16 +76,16 @@
                       and include atleast one:
                     </h3>
                     <div
-                      class="d-flex mt-4 justify-content-between flex-column flex-lg-row"
+                      class="d-flex mt-4 justify-content-between "
                     >
                       <p class="font-weight-light w-50">-Lowercase letter</p>
-                      <p class="font-weight-light w-50">-Number</p>
+                      <p class="font-weight-light w-50 ml-3 ml-sm-0">-Number</p>
                     </div>
                     <div
-                      class="d-flex justify-content-between flex-column flex-lg-row text-left"
+                      class="d-flex justify-content-between text-left"
                     >
                       <p class="font-weight-light w-50">-Uppercase letter</p>
-                      <p class="font-weight-light w-50">-Special Character</p>
+                      <p class="font-weight-light w-50 ml-3 ml-sm-0">-Special Character</p>
                     </div>
                     <b-form class="mt-4">
                       <b-form-group
