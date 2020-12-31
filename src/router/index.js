@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import SignUp from '../views/SignUp.vue'
 import Successful from '../views/Successful.vue'
+import Login from '../views/Login.vue'
+import Forgot from '../views/Forgot.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,6 +25,16 @@ const routes = [
     path: '/success',
     name: 'Successful',
     component: Successful
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/forgot',
+    name: 'Forgot',
+    component: Forgot
   },
 ]
 

@@ -33,6 +33,14 @@ export default {
 };
 </script>
 <style>
+btn:focus,
+a:focus,
+btn-secondary:focus {
+  outline: none !important;
+}
+.outline-none {
+  outline: none !important;
+}
 .separator::before,
 .separator::after {
   content: "";
@@ -45,13 +53,19 @@ export default {
 .separator::after {
   margin-left: 0.25em;
 }
+.modal-input {
+  border: 1px solid transparent;
+  height: 36px !important;
+}
 .form-input {
   border: 1px solid transparent;
   height: 64px !important;
   width: 100% !important;
 }
 .form-input:focus,
-.form-input:hover {
+.form-input:hover,
+.modal-input:focus,
+.modal-input:hover {
   background: #ffffff;
   border: 1px solid #1565d8;
   box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.11);
@@ -121,6 +135,9 @@ export default {
 }
 .btn-width-135 {
   width: 135px;
+}
+.fs-28 {
+  font-size: 28px;
 }
 .fs-20 {
   font-size: 20px;

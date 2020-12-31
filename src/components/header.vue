@@ -10,11 +10,13 @@
           class="d-flex flex-column ml-xl-5 flex-lg-row align-items-center justify-content-around w-100 px-5"
         >
           <b-navbar-nav class="ml-xl-5">
-            <b-button
-              class="px-4 py-2 btn-width-135"
-              squared
-              variant="secondary"
-              >{{ $t("login") }}</b-button
+            <router-link to="/login">
+              <b-button
+                class="px-4 py-2 btn-width-135"
+                squared
+                variant="secondary"
+                >{{ $t("login") }}</b-button
+              ></router-link
             >
             <router-link to="/sign-up"
               ><b-button

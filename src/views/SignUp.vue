@@ -29,25 +29,25 @@
         <div>
           <b-form @submit="onSubmit">
             <b-form-group
-              id="input-group-2"
+              id="input-group-1"
               label="Your Name*"
-              label-for="input-2"
+              label-for="input-1"
             >
               <b-form-input
                 class="form-input"
-                id="input-2"
+                id="input-1"
                 v-model="form.name"
                 placeholder="Full Name"
                 required
               ></b-form-input>
             </b-form-group>
             <b-form-group
-              id="input-group-1"
+              id="input-group-2"
               label="Email address*"
-              label-for="input-1"
+              label-for="input-2"
             >
               <b-form-input
-                id="input-1"
+                id="input-2"
                 v-model="form.email"
                 type="email"
                 placeholder="Enter email address"
@@ -97,11 +97,13 @@
                 class="form-input"
               ></b-form-input>
             </b-form-group>
-            <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0"
+            <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0" required
               >I agree to terms & conditions</b-form-checkbox
             >
-
-            <b-button size="lg" class="w-100 bg-info mt-11 text-white py-3 mb-5"
+            <b-button
+              size="lg"
+              class="w-100 bg-info mt-11 text-white py-3 mb-5"
+              type="submit"
               >Register Account</b-button
             >
             <div
@@ -141,9 +143,36 @@
             </button>
             <button
               type="button"
-              class="btn w-100 btn-white text-center shadow-sm form-input mt-3 mb-5"
+              class="btn w-100 btn-white d-flex align-items-center justify-content-between shadow-sm form-input mt-3 mb-5"
             >
-              Register with Facebook
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="15" cy="15" r="15" fill="url(#paint0_linear)" />
+                <path
+                  d="M18.6289 15.625L19.0117 13.1094H16.5781V11.4688C16.5781 10.7578 16.9062 10.1016 18 10.1016H19.1211V7.94141C19.1211 7.94141 18.1094 7.75 17.1523 7.75C15.1562 7.75 13.8438 8.98047 13.8438 11.168V13.1094H11.6016V15.625H13.8438V21.75H16.5781V15.625H18.6289Z"
+                  fill="white"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear"
+                    x1="-0.000188651"
+                    y1="0"
+                    x2="-0.000188651"
+                    y2="30.0004"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#00B2FF" />
+                    <stop offset="1" stop-color="#006AFF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <span class="flex-grow-1"> Register with Facebook </span>
             </button>
           </b-form>
         </div>
@@ -168,12 +197,7 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      alert(JSON.stringify(this.form));
-    },
-    onReset(event) {
-      event.preventDefault();
-      this.form.email = "";
-      this.form.name = "";
+      this.$router.push({ path: "success" });
     },
   },
 };

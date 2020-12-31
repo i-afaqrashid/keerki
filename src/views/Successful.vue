@@ -11,7 +11,8 @@
       />
     </div>
     <div class="w-66 bg-white">
-      <button class="d-flex pt-5 ml-5">
+      <router-link to="/login">
+      <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none">
         <svg
           width="20"
           height="20"
@@ -26,6 +27,7 @@
         </svg>
         <p class="font-weight-lighter ml-3">Back</p>
       </button>
+      </router-link>
       <div
         class="w-100 pt-lg-8 text-center flex-column d-flex justify-content-center align-items-center"
       >
