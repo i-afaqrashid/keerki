@@ -25,12 +25,12 @@
               fill="#8692A6"
             />
           </svg>
-          <p class="font-weight-lighter ml-3">Back</p>
+          <p class="font-weight-lighter ml-3">{{$t('back')}}</p>
         </button>
       </router-link>
 
       <div
-        class="w-100 pt-lg-8 px-4 text-left flex-column d-flex justify-content-center align-items-center"
+        class="w-100 pt-lg-8 px-xl-6 px-lg-9 px-5 px-sm-9 px-md-9 text-left flex-column d-flex justify-content-center align-items-center"
       >
         <img
           class="d-block d-lg-none"

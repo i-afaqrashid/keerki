@@ -5,6 +5,7 @@ import SignUp from '../views/SignUp.vue'
 import Successful from '../views/Successful.vue'
 import Login from '../views/Login.vue'
 import Forgot from '../views/Forgot.vue'
+import Dashboard from '../views/Dashboard.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -35,6 +36,11 @@ const routes = [
     path: '/forgot',
     name: 'Forgot',
     component: Forgot
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: Dashboard
   },
 ]
 

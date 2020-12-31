@@ -1,5 +1,5 @@
 <template>
-        <div class="pb-lg-5 mb-lg-5">
+        <div class="">
       <b-navbar toggleable="lg" type="dark" variant="primary">
         <b-navbar-toggle target="nav-collapse" class="white"></b-navbar-toggle>
         <b-navbar-nav class="ml-auto d-lg-none w-25">
