@@ -6,7 +6,7 @@
         class="w-25 d-flex justify-content-between align-items-center flex-column"
       >
         <img src="../assets/logoDark.png" class="w-25" />
-        <div>
+        <div class="d-flex flex-column justify-content-between align-items-between mt-4">
           <b-button variant="dark" class="bg-dark d-flex outline-none py-2">
             <svg
               width="21"

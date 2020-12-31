@@ -6,6 +6,7 @@ import Successful from '../views/Successful.vue'
 import Login from '../views/Login.vue'
 import Forgot from '../views/Forgot.vue'
 import Dashboard from '../views/Dashboard.vue'
+import Reset from '../views/Reset.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -42,6 +43,10 @@ const routes = [
     name: 'Dashboard',
     component: Dashboard
   },
+  {
+    path: '/reset',
+    name: 'Reset',
+    component: Reset  },
 ]
 
 const router = new VueRouter({
