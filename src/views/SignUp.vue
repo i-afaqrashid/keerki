@@ -11,7 +11,7 @@
       />
     </div>
     <div
-      class="w-66 pt-lg-8 bg-white text-left flex-column d-flex justify-content-center align-items-center"
+      class="w-66 pt-lg-8 px-4 bg-white text-left flex-column d-flex justify-content-center align-items-center"
     >
       <img
         class="d-block d-lg-none"
