@@ -10,7 +10,7 @@
         class="login-logo"
       />
     </div>
-    <div class="w-66 px-2 bg-white">
+    <div class="w-66  bg-white">
       <router-link to="/login">
         <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none">
           <svg
@@ -30,7 +30,7 @@
       </router-link>
 
       <div
-        class="w-100 pt-lg-8 text-left flex-column d-flex justify-content-center align-items-center"
+        class="w-100 pt-lg-8 px-4 text-left flex-column d-flex justify-content-center align-items-center"
       >
         <img
           class="d-block d-lg-none"
