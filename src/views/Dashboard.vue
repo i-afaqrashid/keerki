@@ -4,6 +4,8 @@
     <div class="d-flex">
         <div class="w-25 d-flex bg-dark justify-content-between align-items-center flex-column">
             <img src="../assets/logoDark.png" class="w-100"/>
+
+            asdasdasd
         </div>
         <div class="w-75">
 

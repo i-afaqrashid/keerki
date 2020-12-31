@@ -40,7 +40,14 @@
           height="80"
         />
         <div>
-          <CustomAlert v-bind:alert="type" />
+          <div v-if="type <= 1 || type > 8 || isNaN(type) ">
+            <h1 class="fs-30">Login to your account</h1>
+            <p class="font-weight-lighter fs-18">
+              Login to your account to manage all your <br />
+              information and details
+            </p>
+          </div>
+          <CustomAlert v-else v-bind:alert="type" />
           <p class="horizontal-line"></p>
           <div>
             <b-form @submit="onSubmit">
@@ -180,7 +187,7 @@ export default {
     },
     onSubmit(e) {
       e.preventDefault();
-      this.$router.push({ path: "success" });
+      this.$router.push({ path: "dashboard" });
     },
   },
   data() {
