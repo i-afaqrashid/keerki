@@ -20,96 +20,95 @@
         height="80"
       />
       <div>
-        <h1 class="fs-30">Register Your Account!</h1>
+        <h1 class="fs-30">{{$t("signUpHeading")}}</h1>
         <p class="font-weight-lighter fs-18">
-          Lorem ipsum dolor sit amet, consectetur <br />
-          adipiscing elit, sed
+          {{ $t("signUpdummy") }}
         </p>
         <p class="horizontal-line"></p>
         <div>
           <b-form @submit="onSubmit">
             <b-form-group
               id="input-group-1"
-              label="Your Name*"
+              :label="`${$t('yourName')}`"
               label-for="input-1"
             >
               <b-form-input
                 class="form-input"
                 id="input-1"
                 v-model="form.name"
-                placeholder="Full Name"
+                :placeholder="`${$t('fullName')}`"
                 required
               ></b-form-input>
             </b-form-group>
             <b-form-group
               id="input-group-2"
-              label="Email address*"
+              :label="`${$t('email')}`"
               label-for="input-2"
             >
               <b-form-input
                 id="input-2"
                 v-model="form.email"
                 type="email"
-                placeholder="Enter email address"
+                :placeholder="`${$t('enterEmail')}`"
                 required
                 class="form-input"
               ></b-form-input>
             </b-form-group>
             <b-form-group
               id="input-group-3"
-              label="Phone Number*"
+              :label="`${$t('phone')}`"
               label-for="input-3"
             >
               <b-form-input
                 id="input-3"
                 v-model="form.number"
                 type="text"
-                placeholder="Phone Number"
+                :placeholder="`${$t('phonePlaceholder')}`"
                 required
                 class="form-input"
               ></b-form-input>
             </b-form-group>
             <b-form-group
               id="input-group-4"
-              label="Create Password*"
+              :label="`${$t('createPassword')}`"
               label-for="input-4"
             >
               <b-form-input
                 id="input-4"
                 v-model="form.password"
                 type="password"
-                placeholder="Enter your password"
+                :placeholder="`${$t('enterPassword')}`"
                 required
                 class="form-input"
               ></b-form-input>
             </b-form-group>
             <b-form-group
               id="input-group-5"
-              label="Confirm Password*"
+              :label="`${$t('confirmPassword')}`"
               label-for="input-5"
             >
               <b-form-input
                 id="input-5"
                 v-model="form.confirmPassword"
                 type="password"
-                placeholder="Confirm Password"
+                :placeholder="`${$t('confirmPasswordPlaceholder')}`"
                 required
                 class="form-input"
               ></b-form-input>
             </b-form-group>
             <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0" required
-              >I agree to terms & conditions</b-form-checkbox
+              >{{$t('termsAndConditions')}}</b-form-checkbox
             >
             <b-button
               size="lg"
               class="w-100 bg-info mt-11 text-white py-3 mb-5"
               type="submit"
-              >Register Account</b-button
+              >{{$t('registerAccountBtn')}}</b-button
             >
             <div
               class="d-flex align-items-center text-center separator font-weight-lighter text-black"
             >
-              OR
+              {{$t('or')}}
             </div>
             <button
               type="button"
@@ -139,7 +138,7 @@
                   fill="#1976D2"
                 />
               </svg>
-              <span class="flex-grow-1"> Register with Google</span>
+              <span class="flex-grow-1">{{$t('registerWithGoogle')}}</span>
             </button>
             <button
               type="button"
@@ -172,7 +171,7 @@
                 </defs>
               </svg>
 
-              <span class="flex-grow-1"> Register with Facebook </span>
+              <span class="flex-grow-1">{{$t('registerWithFacebook')}} </span>
             </button>
           </b-form>
         </div>
