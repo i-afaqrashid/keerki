@@ -10,7 +10,7 @@
         class="login-logo"
       />
     </div>
-    <div class="w-66 bg-white">
+    <div class="w-66 px-2 bg-white">
       <router-link to="/login">
         <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none">
           <svg
