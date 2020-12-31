@@ -91,7 +91,7 @@
                 id="input-5"
                 v-model="form.confirmPassword"
                 type="password"
-                :placeholder="`${$t('confirmPasswordPlaceholder')}`"
+                :placeholder="`${$t('enterPassword')}`"
                 required
                 class="form-input"
               ></b-form-input>

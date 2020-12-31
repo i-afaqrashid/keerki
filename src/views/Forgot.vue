@@ -39,24 +39,23 @@
           height="80"
         />
         <div>
-          <h1 class="fs-30">Forgot your password?</h1>
+          <h1 class="fs-30">{{$t('forgotPasswordHeading')}}</h1>
           <p class="font-weight-lighter fs-18">
-            Enter your email that you used to create your<br />account and we
-            will reset your password for you
+            {{$t('forgotPasswordDescription')}}
           </p>
           <p class="horizontal-line"></p>
           <div>
             <b-form>
               <b-form-group
                 id="input-group-8"
-                label="Email"
+                :label="`${$t('loginEmail')}`"
                 label-for="input-8"
               >
                 <b-form-input
                   id="input-8"
                   v-model="form.email"
                   type="email"
-                  placeholder="Enter your email address"
+                  :placeholder="`${$t('enterEmail')}`"
                   required
                   class="form-input"
                 ></b-form-input>
@@ -65,7 +64,7 @@
                 v-b-modal.modal-center
                 size="lg"
                 class="w-100 bg-info text-white py-3 mb-5"
-                >Request new password</b-button
+                >{{$t('requestNewPassword')}}</b-button
               >
               <div>
                 <b-modal id="modal-center" hide-footer centered size="md">

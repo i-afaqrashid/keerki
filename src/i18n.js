@@ -26,6 +26,10 @@ const messages = {
         confirmPassword: "Confirm Password*",confirmPasswordPlaceholder:"Confirm Password"
         ,termsAndConditions:"I agree to term & conditions",registerAccountBtn:"Register Account",or:"OR",
         registerWithGoogle:"Register With Google",registerWithFacebook:"Register With Facebook"
+        ,back:"Back",loginHeading:"Login to your account",loginDescription:"Login to your account to manage all your information and details",loginEmail:"Email",enterYourEmail:"Enter your email address",
+        password:"Password*",forgotPassword:"Forgot Password",loginWithSocialMedia:"Login with social media",noAccount:"No account?Create an account now",
+        forgotPasswordHeading:"Forgot your password?",forgotPasswordDescription:"Enter your email that you used to create your account and we will reset your passeord for you",
+        requestNewPassword:"Request new password"
     },
     'ar':
     {
