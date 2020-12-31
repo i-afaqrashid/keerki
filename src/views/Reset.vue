@@ -1,5 +1,12 @@
 <template>
-  <b-modal id="modal-center" v-model="visible" hide-footer centered size="md">
+  <b-modal
+    id="modal-center"
+    @hide="handleClose('headerClose')"
+    v-model="visible"
+    hide-footer
+    centered
+    size="lg"
+  >
     <div class="d-flex justify-content-center flex-column px-5">
       <h1 class="fs-28">Change Password</h1>
       <h3 class="fs-16 font-weight-thin mt-4">
@@ -68,10 +75,15 @@
 <script>
 export default {
   name: "Reset",
+  methods: {
+    handleClose() {
+      this.$router.push({ path: "login" });
+    },
+  },
   data() {
     return {
-    visible:true,
-    form: {
+      visible: true,
+      form: {
         oldPassword: "",
         newPassword: "",
         confirmPassword: "",
