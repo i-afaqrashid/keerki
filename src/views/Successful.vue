@@ -25,7 +25,7 @@
             fill="#8692A6"
           />
         </svg>
-        <p class="font-weight-lighter ml-3">Back</p>
+        <p class="font-weight-lighter ml-3">{{$t('back')}}</p>
       </button>
       </router-link>
       <div
@@ -38,10 +38,8 @@
           height="80"
         />
         <div>
-          <h1 class="fs-30">Activate your account</h1>
-          <p class="font-weight-lighter fs-18 mt-5">
-            Please check the email send to your email to<br />
-            activate your account and start using your<br />account. Thank you!
+          <h1 class="fs-30">{{$t('activateYourAccount')}}</h1>
+          <p class="font-weight-lighter fs-18 mt-5 px-lg-14 px-4">{{$t('activateAccountDescription')}}
           </p>
           <p class="horizontal-line"></p>
           <svg
