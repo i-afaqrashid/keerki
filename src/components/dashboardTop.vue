@@ -148,7 +148,6 @@ export default {
   name: "DashboardTop",
   methods: {
     sidebarToggle() {
-      console.log(document.getElementsByClassName("side-bar")[0]);
       document.getElementsByClassName("side-bar")[0].classList.toggle("d-none");
     },
   },

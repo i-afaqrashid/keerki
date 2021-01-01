@@ -33,10 +33,10 @@ export default {
 };
 </script>
 <style>
-.border-radius-13{
-  border-radius: 13.62px!important;
+.border-radius-13 {
+  border-radius: 13.62px !important;
 }
-.w-21{
+.w-21 {
   width: 21%;
 }
 .fs-14 {
@@ -47,6 +47,15 @@ export default {
 }
 .fs-13 {
   font-size: 13px;
+}
+.dashboard-card {
+  margin-bottom: 40px;
+  width: 219px;
+  height: 219px;
+  background: #ffffff;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
 }
 .dashboard-btn {
   width: 176px !important;
@@ -162,12 +171,17 @@ btn-secondary:focus {
 .fs-20 {
   font-size: 20px;
 }
+.fs-24 {
+  font-size: 24px;
+  color: #696969;
+  line-height: 28px;
+}
 .btn-width {
   width: 224px;
 }
 @media only screen and (max-width: 576px) {
-  .side-bar{
-    position:absolute;
+  .side-bar {
+    position: absolute;
     background-color: white;
   }
   .width-100 {
@@ -185,8 +199,8 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-   .side-bar{
-    position:absolute;
+  .side-bar {
+    position: absolute;
     background-color: white;
   }
   .width-100 {
@@ -207,8 +221,8 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-   .side-bar{
-    position:absolute;
+  .side-bar {
+    position: absolute;
     background-color: white;
   }
   .width-100 {

@@ -8,12 +8,13 @@
         <div
           class="d-flex flex-column justify-content-between align-items-between"
         >
-        <div class="d-flex align-items-center pl-3 mt-5">
-        <img src="../assets/logoSign.png" width="35" height="35" />
-        <p class="mb-0 fs-16 ml-2" style="color:#0F4264">Keerki</p>
-      </div>
+          <div class="d-flex align-items-center pl-3 mt-5">
+            <img src="../assets/logoSign.png" width="35" height="35" />
+            <p class="mb-0 fs-16 ml-2" style="color: #0f4264">Keerki</p>
+          </div>
           <button
             type="button"
+            v-on:click="overview"
             class="btn dashboard-btn btn-white d-flex align-items-center justify-content-between mt-11"
           >
             <svg
@@ -50,6 +51,7 @@
           </button>
           <button
             type="button"
+            v-on:click="orderHistory"
             class="btn dashboard-btn btn-white d-flex align-items-center justify-content-between mt-4"
           >
             <svg
@@ -240,7 +242,7 @@
         <b-button
           variant="outline-secondary"
           v-on:click="logout"
-          class="text-success px-5 my-8 d-flex flex-nowrap align-items-center border-radius-13"
+          class="text-success px-5 mt-8 mb-5 d-flex flex-nowrap align-items-center border-radius-13"
           >Logout
           <svg
             width="17"
@@ -276,6 +278,7 @@
       </div>
       <div class="w-100 px-lg-11 px-4 mt-lg-11 mt-3">
         <DashboardTop v-bind:Heading="this.Heading" v-bind:Text="this.Text" />
+        <router-view></router-view>
       </div>
     </div>
   </div>
@@ -293,7 +296,17 @@ export default {
   },
   methods: {
     logout() {
-      this.$router.push({ path: "login" });
+      this.$router.push({ path: "../login" });
+    },
+    overview() {
+      this.Heading = "Dashboard";
+      this.$router.push({ path: "/dashboard" }).catch(()=>{});
+      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
+    },
+    orderHistory() {
+      this.Heading = "Order History";
+      this.$router.push({ path: "/dashboard/order-history" }).catch(()=>{});
+      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
   },
   components: {

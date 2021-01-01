@@ -7,6 +7,9 @@ import Login from '../views/Login.vue'
 import Forgot from '../views/Forgot.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Reset from '../views/Reset.vue'
+import DashboardOverview from '../components/dashboardOverview.vue';
+import OrderHistory from '../components/orderHistory.vue';
+import OrderType from '../components/orderType.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -39,14 +42,33 @@ const routes = [
     component: Forgot
   },
   {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: Dashboard
-  },
-  {
     path: '/reset',
     name: 'Reset',
-    component: Reset  },
+    component: Reset
+  },
+  {
+    path:"/dashboard",
+    component:Dashboard,
+    children:[
+      {
+        path:'order-history',
+        children:[
+          {
+            path:'',
+            component:OrderHistory
+          },
+          {
+            path:'orders',
+            component:OrderType
+          }
+        ]
+      },
+      { path: '',
+       component: DashboardOverview 
+      }
+
+    ]
+  }
 ]
 
 const router = new VueRouter({
