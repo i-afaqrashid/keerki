@@ -14,8 +14,8 @@
     </svg>
 
     <div class="ml-4">
-      <p class="mb-0">Invalid Email or password</p>
-      <p class="font-weight-lighter mb-0">Contact Keerki if you need help</p>
+      <p class="mb-0">{{$t('invalidEmail')}}</p>
+      <p class="font-weight-lighter mb-0">{{$t('contactKeerki')}}</p>
     </div>
   </div>
   <div
@@ -37,7 +37,7 @@
 
     <div class="ml-4">
       <p class="mb-0">
-        Your session expired due<br />to inactivity. Please log in again.
+        {{$t('sessionExpire')}}
       </p>
     </div>
   </div>
@@ -60,8 +60,7 @@
 
     <div class="ml-4">
       <p class="mb-0">
-        You’ve been logged out because <br />
-        of log in on another device.
+       {{$t('loginToOtherAccount')}}
       </p>
     </div>
   </div>
@@ -84,8 +83,7 @@
 
     <div class="ml-4">
       <p class="mb-0">
-        Technical difficulty. Sorry for the<br />inconvenience; please try
-        again.
+       {{$t('technicalDifficulty')}}
       </p>
     </div>
   </div>
@@ -107,7 +105,7 @@
     </svg>
 
     <div class="ml-4">
-      <p class="mb-0">Log out successful.</p>
+      <p class="mb-0">{{$t('logoutSuccessful')}}</p>
     </div>
   </div>
   <div
@@ -128,8 +126,8 @@
     </svg>
 
     <div class="ml-4">
-      <p class="mb-0">You account has been deactivated.</p>
-      <p class="font-weight-lighter mb-0">Contact Keerki if you need help</p>
+      <p class="mb-0">{{$t('accountDeactivated')}}</p>
+      <p class="font-weight-lighter mb-0">{{$t('contactKeerki')}}</p>
     </div>
   </div>
   <div
@@ -150,8 +148,8 @@
     </svg>
 
     <div class="ml-4">
-      <p class="mb-0">You account has been suspended.</p>
-      <p class="font-weight-lighter mb-0">Contact Keerki if you need help</p>
+      <p class="mb-0">{{$t('accountSuspended')}}</p>
+      <p class="font-weight-lighter mb-0">{{$t('contactKeerki')}}</p>
     </div>
   </div>
 </template>
