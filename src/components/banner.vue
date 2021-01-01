@@ -33,6 +33,26 @@ export default {
 };
 </script>
 <style>
+.border-radius-13{
+  border-radius: 13.62px!important;
+}
+.w-21{
+  width: 21%;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-43 {
+  font-size: 18px;
+}
+.fs-13 {
+  font-size: 13px;
+}
+.dashboard-btn {
+  width: 176px !important;
+  height: 40px !important;
+  outline: none !important;
+}
 btn:focus,
 a:focus,
 btn-secondary:focus {
@@ -146,6 +166,13 @@ btn-secondary:focus {
   width: 224px;
 }
 @media only screen and (max-width: 576px) {
+  .side-bar{
+    position:absolute;
+    background-color: white;
+  }
+  .width-100 {
+    width: 100%;
+  }
   .respImage {
     max-width: 100%;
     border-radius: 0px;
@@ -158,6 +185,13 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
+   .side-bar{
+    position:absolute;
+    background-color: white;
+  }
+  .width-100 {
+    width: 100%;
+  }
   .respImage {
     max-width: 100%;
     border-radius: 0px;
@@ -168,8 +202,18 @@ btn-secondary:focus {
   .padding {
     width: 70%;
   }
+  .fs-43 {
+    font-size: 30px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+   .side-bar{
+    position:absolute;
+    background-color: white;
+  }
+  .width-100 {
+    width: 100%;
+  }
   .respImage {
     border-radius: 0px;
     max-width: 100%;
@@ -179,6 +223,9 @@ btn-secondary:focus {
   }
   .padding {
     width: 80%;
+  }
+  .fs-43 {
+    font-size: 35px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -192,6 +239,12 @@ btn-secondary:focus {
   }
   .w-66 {
     width: 55%;
+  }
+  .fs-13 {
+    font-size: 16px;
+  }
+  .fs-43 {
+    font-size: 40px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -208,6 +261,12 @@ btn-secondary:focus {
   }
   .w-66 {
     width: 55%;
+  }
+  .fs-13 {
+    font-size: 16px;
+  }
+  .fs-43 {
+    font-size: 43px;
   }
 }
 </style>

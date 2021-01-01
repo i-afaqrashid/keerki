@@ -1,7 +1,8 @@
 $primary: #0278AE;
 $warning: #07689F;
 $info : #0278AE;
-$dark: #F0F7FF;
+$dark: #000000;
+$success:#404040;
 $secondary: #EAB939;
 $navbar-dark-color: #ffffff;
 $danger:#8692A6;
@@ -21,7 +22,9 @@ $spacers: map-merge(
     9: ($spacer * 7),
     10: ($spacer * 26),
     11: ($spacer *4),
-    12: ($spacer *22)
+    12: ($spacer *22),
+    13: (12px),
+    14: ($spacer * 12)
   ),
   $spacers
 );
