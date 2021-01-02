@@ -3,32 +3,52 @@
     class="px-lg-9 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
     @submit="formSubmit"
   >
-    <h1 class="w-100 border-3 text-right font-24 py-2">Company Info</h1>
-    <input class="input-form px-lg-5 px-3 mt-15" placeholder="Company Name" />
+    <h1 class="w-100 border-3 text-right font-24 py-2">
+      {{ $t("companyInfo") }}
+    </h1>
+    <input
+      class="input-form px-lg-5 px-3 mt-15"
+      :placeholder="`${$t('companyInfoName')}`"
+    />
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
-      <input class="input-form px-3 px-lg-5 mt-3" placeholder="Country" />
+      <input
+        class="input-form px-3 px-lg-5 mt-3"
+        :placeholder="`${$t('companyInfoCountry')}`"
+      />
       <input
         class="input-form px-3 px-lg-5 mt-3 ml-lg-4"
-        placeholder="Contact Person"
+        :placeholder="`${$t('companyInfoContactPerson')}`"
       />
     </div>
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
-      <input class="input-form px-3 px-lg-5 mt-3" placeholder="City" />
+      <input
+        class="input-form px-3 px-lg-5 mt-3"
+        :placeholder="`${$t('companyInfoCity')}`"
+      />
       <input
         class="input-form px-3 px-lg-5 mt-3 ml-lg-4"
-        placeholder="Province"
+        :placeholder="`${$t('companyInfoProvince')}`"
       />
     </div>
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
-      <input class="input-form px-3 px-lg-5 mt-3" placeholder="Post Code" />
+      <input
+        class="input-form px-3 px-lg-5 mt-3"
+        :placeholder="`${$t('companyInfoPostCode')}`"
+      />
       <input
         class="input-form px-3 px-lg-5 mt-3 ml-lg-4"
-        placeholder="Dist&Street"
+        :placeholder="`${$t('companyInfoDist')}`"
       />
     </div>
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
-      <input class="input-form px-3 px-lg-5 mt-3" placeholder="Phone Number" />
-      <input class="input-form px-3 px-lg-5 mt-3 ml-lg-4" placeholder="Email" />
+      <input
+        class="input-form px-3 px-lg-5 mt-3"
+        :placeholder="`${$t('companyInfoPhone')}`"
+      />
+      <input
+        class="input-form px-3 px-lg-5 mt-3 ml-lg-4"
+        :placeholder="`${$t('companyInfoEmail')}`"
+      />
     </div>
     <div
       class="d-flex justify-content-center align-items-center mt-3 w-100 form-file-input px-2 flex-column flex-lg-row"
@@ -50,18 +70,26 @@
         </svg>
       </span>
       <h1 class="font-24 text-center mb-0">
-        <span class="text-primary">Add logo</span> or drop it right here
+        <span class="text-primary">{{ $t("companyInfoAddLogo") }}</span>
+        {{ $t("companyInfoDropFile") }}
       </h1>
     </div>
-    <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">Shipping Info</h1>
+    <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">
+      {{ $t("shippingInfo") }}
+    </h1>
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
-      <input class="input-form px-3 px-lg-5 mt-15" placeholder="Port" />
+      <input
+        class="input-form px-3 px-lg-5 mt-15"
+        :placeholder="`${$t('shippingInfoPort')}`"
+      />
       <input
         class="input-form px-3 px-lg-5 mt-15 ml-lg-4"
-        placeholder="Country"
+        :placeholder="`${$t('shippingInfoCountry')}`"
       />
     </div>
-    <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">Shipping Info</h1>
+    <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">
+      {{ $t("shippingInfo") }}
+    </h1>
     <div
       class="d-flex w-100 justify-content-center align-items-center flex-lg-row flex-column mt-5"
     >
@@ -69,37 +97,45 @@
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        SAR
+        {{ $t("currencySAR") }}
       </button>
       <button class="w-100 btn btn-primary py-4 border-26" type="button">
-        AED
+        {{ $t("currencyAED") }}
       </button>
 
       <button
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        USD
+        {{ $t("currencyUSD") }}
       </button>
       <button
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        EURO
+        {{ $t("currencyEURO") }}
       </button>
     </div>
-    <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">About products</h1>
+    <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">
+      {{ $t("aboutProducts") }}
+    </h1>
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
-      <input class="input-form px-3 px-lg-5 mt-15" placeholder="Unit Price" />
+      <input
+        class="input-form px-3 px-lg-5 mt-15"
+        :placeholder="`${$t('productUnitPrice')}`"
+      />
       <input
         class="input-form px-3 px-lg-5 mt-15 ml-lg-3"
-        placeholder="Quantity"
+        :placeholder="`${$t('productQuantity')}`"
       />
-      <input class="input-form px-3 px-lg-5 mt-15 ml-lg-3" placeholder="Item" />
+      <input
+        class="input-form px-3 px-lg-5 mt-15 ml-lg-3"
+        :placeholder="`${$t('productItem')}`"
+      />
     </div>
     <textarea
       class="input-text-area py-5 px-3 px-lg-5 mt-15 ml-lg-3"
-      placeholder="Description"
+      :placeholder="`${$t('productDescription')}`"
     ></textarea>
     <div class="d-flex align-self-start mt-15 ml-5">
       <button
@@ -115,14 +151,19 @@
         +
       </button>
     </div>
-    <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">Remarks</h1>
+    <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">
+      {{ $t("remarks") }}
+    </h1>
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
-      <input class="input-form px-3 px-lg-5 mt-3" placeholder="Other" />
+      <input
+        class="input-form px-3 px-lg-5 mt-3"
+        :placeholder="`${$t('remarksOther')}`"
+      />
       <select
         class="form-control input-form px-3 px-lg-5 mt-3 ml-lg-4"
         id="tradingTerm"
       >
-        <option>Trading Term</option>
+        <option>{{ $t("remarksTradingTerm") }}</option>
         <option>2</option>
         <option>3</option>
         <option>4</option>
@@ -130,7 +171,7 @@
       </select>
     </div>
     <h1 class="w-100 font-weight-light text-right font-24 py-2 mt-15">
-      Payment term
+      {{ $t("paymentTerm") }}
     </h1>
     <div
       class="d-flex w-100 justify-content-center align-items-center flex-lg-row flex-column mt-4"
@@ -139,14 +180,14 @@
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        LC
+        {{ $t("paymentTermLC") }}
       </button>
       <button class="w-100 btn btn-primary py-4 border-26" type="button">
-        TT
+        {{ $t("paymentTermTT") }}
       </button>
     </div>
     <h1 class="w-100 font-weight-light text-right font-24 py-2 mt-15">
-      Shipping method
+      {{ $t("shippingMethod") }}
     </h1>
     <div
       class="d-flex w-100 justify-content-center align-items-center flex-lg-row flex-column mt-4"
@@ -155,14 +196,15 @@
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        BY AIR
+        {{ $t("shippingMethodByAir") }}
       </button>
       <button class="w-100 btn btn-primary py-4 border-26" type="button">
-        BY SEA
+                {{$t('shippingMethodBySea')}}
       </button>
     </div>
     <h1 class="w-100 font-weight-light text-right font-24 py-2 mt-15">
-      Delivery Time
+                      {{$t('deliveryTime')}}
+
     </h1>
     <div
       class="d-flex w-100 justify-content-center align-items-center flex-lg-row flex-column mt-4"
@@ -171,21 +213,21 @@
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        30 DAYS
+        {{$t('deliveryTime30Days')}}
       </button>
       <button
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        20 DAYS
+        {{$t('deliveryTime20Days')}}
       </button>
       <button class="w-100 btn btn-primary py-4 border-26" type="button">
-        10 DAYS
+        {{$t('deliveryTime10Days')}}
       </button>
     </div>
     <textarea
       class="input-text-area py-5 px-3 px-lg-5 mt-15 ml-lg-3"
-      placeholder="Others"
+      :placeholder="`${$t('companyInfoOthers')}`"
     ></textarea>
     <div
       class="w-100 d-flex flex-column flex-lg-row justify-content-center mt-5 align-items-center font-weight-bolder"
@@ -194,13 +236,13 @@
         class="btn btn-outline-secondary w-100 text-dark bg-white form-buttons"
         type="reset"
       >
-        Reset
+        {{$t('companyInfoReset')}}
       </button>
       <button
         class="btn btn-secondary w-100 text-dark ml-lg-4 mt-4 mt-lg-0 form-buttons"
         type="submit"
       >
-        Save and Continue
+       {{$t('companyInfoSave')}}
       </button>
     </div>
   </form>

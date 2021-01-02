@@ -53,7 +53,7 @@
               class="ml-lg-4 my-4 my-lg-0 text-white text-center text-lg-left"
             >
               <p class="mb-0 fs-16">Hedi</p>
-              <p class="mb-0 fs-16">Account Details</p>
+              <p class="mb-0 fs-16">{{$t('formHeaderAccountDetails')}}</p>
             </div>
           </b-navbar-nav>
 

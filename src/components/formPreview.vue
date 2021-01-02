@@ -33,7 +33,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        <p class="mb-0 fs-36 ml-4">Edit</p>
+        <p class="mb-0 fs-36 ml-4">{{$t('formPreviewEdit')}}</p>
       </button>
       <button class="d-flex align-items-center outline-none mt-5 mt-lg-0">
         <svg
@@ -52,7 +52,7 @@
           />
         </svg>
 
-        <p class="mb-0 fs-36 ml-4">View</p>
+        <p class="mb-0 fs-36 ml-4">{{$t('formPreviewView')}}</p>
       </button>
     </div>
     <div
@@ -62,13 +62,13 @@
         class="btn btn-outline-secondary w-100 text-dark bg-white form-buttons"
         @click="cancelSubmit"
       >
-        Cancel
+        {{$t('formPreviewCancel')}}
       </button>
       <button
         class="btn btn-secondary w-100 text-dark ml-lg-4 mt-4 mt-lg-0 form-buttons"
         @click="sendForm"
       >
-        Send
+        {{$t('formPreviewSend')}}
       </button>
     </div>
   </div>

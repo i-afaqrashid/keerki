@@ -36,7 +36,11 @@ const messages = {
         technicalDifficulty:" Technical difficulty. Sorry for the inconvenience; please try again.",logoutSuccessful:"Log out successful.",accountDeactivated:"You account has been deactivated.",accountSuspended:"You account has been suspended.",
         setNewPhoto:"Set new photo",accountName:"Name:",accountEmail:"EMAIL:",accountPhone:"PHONE:",accountPassword:"PASSWORD:",
         addCompanyInfo:"Add your company info",companyName:"Company Name",companyAddress:"Address",companyPhone:"Phone",companyPersonIncharge:"Person in Charge",companyCountry:"Country",companySave:"save",companyCancel:"cancel",cardClickHere:"Click here",overViewOrderHistory:"Order History",
-        overViewNotification:"Notification",overViewAccount:"Account",overViewOrderForm:"Order Form",help:"Help"
+        overViewNotification:"Notification",overViewAccount:"Account",overViewOrderForm:"Order Form",help:"Help",companyInfo:"Company info",companyInfoName:"Company Name",companyInfoCountry:"Country",companyInfoContactPerson:"Contact Person",companyInfoCity:"City",companyInfoProvince:"Province",companyInfoPostCode:"Post Code",companyInfoDist:"Dist&Street",
+        companyInfoPhone:"Phone Number",companyInfoEmail:"Email",companyInfoAddLogo:"Add logo",companyInfoDropFile:"or drop it right here",shippingInfo:"Shipping Info",shippingInfoPort:"Port",shippingInfoCountry:"Country",currencySAR:"SAR",currencyAED:"AED",currencyUSD:"USD",currencyEURO:"EURO",aboutProducts:"About Products",productUnitPrice:"Unit Price",
+        productQuantity:"Quantity",productItem:"Item",productDescription:"Description",remarks:"Remarks",remarksOther:"Other",remarksTradingTerm:"Trading Term",paymentTerm:"Payment Term",paymentTermLC:"LC",paymentTermTT:"TT",shippingMethod:"Shipping Method",shippingMethodBySea:"BY SEA",shippingMethodByAir:"BY AIR",deliveryTime:"Delivery Time",
+        deliveryTime30Days:"30 DAYS",deliveryTime20Days:"20 DAYS",deliveryTime10Days:"10 DAYS",companyInfoOthers:"Others",companyInfoSave:"Save and Continue",companyInfoReset:"Reset",formHeaderAccountDetails:"Account Details",formPreviewEdit:"Edit",formPreviewView:"View"
+        ,formPreviewCancel:"Cancel",formPreviewSend:"Send"
     },
     'ar':
     {
