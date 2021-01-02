@@ -18,9 +18,46 @@
           >{{ $t("tryForFree") }}</b-button
         >
       </router-link>
-      <b-button class="p-3 btn-width-160" squared variant="outline-light">{{
-        $t("catalogs")
-      }}</b-button>
+      <b-modal
+        id="catalogs-modal"
+        centered
+        title="Download your catalog"
+        hide-footer
+      >
+        <div
+          class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
+        >
+          <input
+            placeholder="Name *"
+            class="catalog-input outline-none w-100 p-4"
+            type="text"
+          />
+          <input
+            placeholder="Email *"
+            class="catalog-input outline-none w-100 p-4 mt-4"
+            type="email"
+          />
+
+          <input
+            placeholder="Phone *"
+            class="catalog-input outline-none w-100 p-4 mt-4"
+            type="number"
+          />
+          <button
+            class="text-white btn w-100 catalog-btn outline-none mt-4"
+            @click="$bvModal.hide('catalogs-modal')"
+          >
+            Download
+          </button>
+        </div>
+      </b-modal>
+      <b-button
+        v-b-modal.catalogs-modal
+        class="p-3 btn-width-160"
+        squared
+        variant="outline-light"
+        >{{ $t("catalogs") }}</b-button
+      >
     </div>
     <div class="mt-5 mt-xl-8">
       <img src="../assets/introImage.png" class="img-fluid w-100 introImage" />

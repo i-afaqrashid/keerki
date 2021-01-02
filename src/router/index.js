@@ -10,24 +10,26 @@ import DashboardOverview from '../components/dashboardOverview.vue';
 import OrderHistory from '../components/orderHistory.vue';
 import OrderType from '../components/orderType.vue'
 import Orders from '../components/orders.vue'
-import  Account from '../components/account.vue'
+import Account from '../components/account.vue'
 import Notification from '../components/notifications.vue'
 import OrderTemplate from '../components/orderTemplate.vue'
 import Form from '../views/Form.vue'
 import FormBody from '../components/formBody.vue'
 import FormPreview from '../components/formPreview.vue'
+import Messages from '../components/messages.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component:Home
+    component: Home
   },
   {
     path: '/sign-up',
     name: 'SignUp',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SignUp.vue')  },
+    component: () => import(/* webpackChunkName: "about" */ '../views/SignUp.vue')
+  },
   {
     path: '/success',
     name: 'Successful',
@@ -49,59 +51,64 @@ const routes = [
     component: Reset
   },
   {
-    path:"/form",
-    component:Form,
-    children:[
+    path: "/form",
+    component: Form,
+    children: [
       {
-        path:"",
-        component:FormBody
+        path: "",
+        component: FormBody
       },
       {
-        path:"preview",
-        component:FormPreview
+        path: "preview",
+        component: FormPreview
       }
     ]
   },
   {
-    path:"/dashboard",
-    component:Dashboard,
-    children:[
+    path: "/dashboard",
+    component: Dashboard,
+    children: [
       {
-        path:'order-history',
-        component:OrderType,
-        children:[
+        path: 'order-history',
+        component: OrderType,
+        children: [
           {
-            path:'',
-            component:OrderHistory
+            path: '',
+            component: OrderHistory
           },
           {
-            path:'quote-orders',
-            component:Orders
+            path: 'quote-orders',
+            component: Orders
           },
           {
-            path:'service-orders',
-            component:Orders
+            path: 'service-orders',
+            component: Orders
           },
           {
-            path:'shipping-orders',
-            component:Orders
+            path: 'shipping-orders',
+            component: Orders
           },
           {
-            path:"order-template",
+            path: "order-template",
             component: OrderTemplate
           }
         ]
       },
       {
-        path:"account",
-        component:Account
+        path: "account",
+        component: Account
       },
       {
-        path:"notifications",
+        path: "messages",
+        component: Messages
+      },
+      {
+        path: "notifications",
         component: Notification
       },
-      { path: '',
-       component: DashboardOverview 
+      {
+        path: '',
+        component: DashboardOverview
       }
 
     ]

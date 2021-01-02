@@ -9,14 +9,14 @@
           class="bg-secondary rounded-circle"
         />
         <button class="mt-2 fs-16 font-weight-lighter outline-none">
-          {{$t('setNewPhoto')}}
+          {{ $t("setNewPhoto") }}
         </button>
       </div>
       <div class="w-100 fs-18 text-69">
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
         >
-          <p class="mb-0">{{$t('accountName')}} HEDI</p>
+          <p class="mb-0">{{ $t("accountName") }} HEDI</p>
           <button class="outline-none">
             <svg
               width="24"
@@ -45,7 +45,7 @@
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
         >
-          <p class="mb-0">{{$t('accountEmail')}} HEDI@EMAIL.COM</p>
+          <p class="mb-0">{{ $t("accountEmail") }} HEDI@EMAIL.COM</p>
           <button class="outline-none">
             <svg
               width="24"
@@ -74,7 +74,7 @@
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
         >
-          <p class="mb-0">{{$t('accountPhone')}} 139939332893</p>
+          <p class="mb-0">{{ $t("accountPhone") }} 139939332893</p>
           <button class="outline-none">
             <svg
               width="24"
@@ -103,8 +103,44 @@
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 my-5"
         >
-          <p class="mb-0">{{$t('accountPassword')}} *****************</p>
+          <p class="mb-0">{{ $t("accountPassword") }} *****************</p>
           <button class="outline-none">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.5 2.49998C18.8978 2.10216 19.4374 1.87866 20 1.87866C20.5626 1.87866 21.1022 2.10216 21.5 2.49998C21.8978 2.89781 22.1213 3.43737 22.1213 3.99998C22.1213 4.56259 21.8978 5.10216 21.5 5.49998L12 15L8 16L9 12L18.5 2.49998Z"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 my-5"
+        >
+          <p class="mb-0">LANGUAGE: {{ selected }}</p>
+          <b-modal id="modal-sm" size="sm" centered>
+            <b-form-select
+              v-model="selected"
+              :options="options"
+            ></b-form-select>
+          </b-modal>
+
+          <button v-b-modal.modal-sm class="outline-none">
             <svg
               width="24"
               height="24"
@@ -133,7 +169,7 @@
       <div
         class="account-card my-5 px-lg-5 py-lg-4 p-3 py-lg-0 d-flex flex-column justify-content-around"
       >
-        <p class="mb-0 fs-24 font-weight-bold">{{$t('addCompanyInfo')}}</p>
+        <p class="mb-0 fs-24 font-weight-bold">{{ $t("addCompanyInfo") }}</p>
         <div class="d-flex justify-content-between">
           <svg
             width="66"
@@ -163,7 +199,6 @@
               <input
                 class="border-bottom outline-none w-100 pb-4"
                 :placeholder="`${$t('companyName')}`"
-
               />
             </div>
             <div
@@ -203,13 +238,13 @@
                 class="rounded-pill modal-button color-c7 outline-none"
                 @click="$bvModal.hide('modal-company')"
               >
-                {{$t('companyCancel')}}
+                {{ $t("companyCancel") }}
               </button>
               <button
                 class="rounded-pill color-ff modal-button outline-none ml-2"
                 @click="$bvModal.hide('modal-company')"
               >
-                {{$t('companySave')}}
+                {{ $t("companySave") }}
               </button>
             </div>
           </b-modal>
@@ -249,5 +284,16 @@
 <script>
 export default {
   name: "Account",
+  data() {
+    return {
+      selected: "ENGLISH",
+      options: [
+        { value: "ENGLISH", text: "PLEASE SELECT A LANGUAGE" },
+        { value: "ENGLISH", text: "ENGLISH" },
+        { value: "ARABIC", text: "ARABIC" },
+        { value: "CHINESE", text: "CHINESE" },
+      ],
+    };
+  },
 };
 </script>

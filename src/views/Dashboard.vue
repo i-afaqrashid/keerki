@@ -193,6 +193,7 @@
           <button
             type="button"
             class="btn dashboard-btn btn-white d-flex align-items-center justify-content-between mt-4"
+            @click="messages"
           >
             <svg
               width="32"
@@ -215,6 +216,7 @@
           <button
             type="button"
             class="btn dashboard-btn btn-white d-flex align-items-center justify-content-between mt-4"
+            @click="account"
           >
             <svg
               width="33"
@@ -241,9 +243,38 @@
             <span class="flex-grow-1">Settings</span>
           </button>
         </div>
+        <b-modal
+          id="log-out-modal"
+          centered
+          hide-footer
+          header-class="header-class"
+          hider-header
+          hide-header-close
+        >
+          <div class="d-flex flex-column w-100 justify-content-center align-items-center p-3">
+            <div class="w-100">
+                <h1 class="fs-16">You will be automatically logged out in</h1>
+                <h1 class="fs-18 text-primary">1 minutes 52 seconds</h1>
+            </div>
+            <div class="d-flex justify-content-end w-100 mt-3">
+              <button
+                class="rounded-lg btn modal-logout bg-white color-c7 outline-none"
+                @click="logout"
+              >
+                Logout
+              </button>
+              <button
+                class="rounded-lg btn btn-primary  outline-none ml-2"
+                @click="$bvModal.hide('log-out-modal')"
+              >
+                Continue Session
+              </button>
+            </div>
+          </div>
+        </b-modal>
         <b-button
           variant="outline-secondary"
-          v-on:click="logout"
+          v-b-modal.log-out-modal
           class="text-success px-5 mt-8 mb-5 d-flex flex-nowrap align-items-center border-radius-13"
           >Logout
           <svg
@@ -279,7 +310,7 @@
         </b-button>
       </div>
       <div class="w-100 px-lg-11 px-4 mt-lg-11 mt-3">
-        <DashboardTop  v-bind:Text="this.Text" />
+        <DashboardTop v-bind:Heading="this.Heading" v-bind:Text="this.Text" />
         <router-view></router-view>
       </div>
     </div>
@@ -300,6 +331,7 @@ export default {
   methods: {
     logout() {
       this.$router.push({ path: "../../login" });
+      this.$bvModal.hide("log-out-modal");
     },
     overview() {
       this.Heading = "Dashboard";
@@ -311,6 +343,12 @@ export default {
       this.Heading = "Notifications";
       this.Text = "Manage your notifications";
       this.$router.push({ path: "/dashboard/notifications" }).catch(() => {});
+      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
+    },
+    messages() {
+      this.Heading = "Messages";
+      this.Text = "Manage your messages";
+      this.$router.push({ path: "/dashboard/messages" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     orderHistory() {

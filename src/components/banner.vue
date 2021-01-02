@@ -34,6 +34,21 @@ export default {
 </script>
 
 <style>
+.catalog-input{
+
+height: 38px;
+background: #F2F3F7;
+border-radius: 6px;
+}
+.catalog-btn{
+  background: #2C5282!important;
+border-radius: 40px !important;
+
+margin: 0px 8px;
+}
+.modal-logout{
+ border: 1px solid #FF3A67!important;
+}
 .pop-over{
   width:300px!important;
 }
@@ -168,6 +183,9 @@ export default {
   border-radius: 20px;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
     0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+.noti-btn{
+  background:#F2FAFF!important;
 }
 .text-69 {
   color: #696969;
@@ -326,7 +344,7 @@ btn-secondary:focus {
   width: 135px;
 }
 .fs-28 {
-  font-size: 28px;
+  font-size: 28px!important;
 }
 .fs-20 {
   font-size: 20px;

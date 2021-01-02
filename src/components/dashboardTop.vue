@@ -53,7 +53,7 @@
           </svg>
           <p class="mb-0 ml-2">Help</p>
         </button>
-        <button class="outline-none ml-3 ml-lg-4">
+        <button class="outline-none ml-3 ml-lg-4" @click="messages">
           <svg
             width="27"
             height="25"
@@ -83,27 +83,54 @@
             target="popover-target-1"
             triggers="hover"
             placement="bottom"
-            custom-class = "pop-over"
+            custom-class="pop-over p-0"
           >
             <div class="d-flex flex-column w-100 p-2">
-                <div class="px-2 py-2  border-bottom w-100">
-                  <p class="mb-1 fs-20">Notifications</p>
-                  <p class="fs-14 font-weight-light">2 days ago</p>
-                </div>
-                <div class="d-flex w-100 justify-content-between align-items-center mt-3">
-                    <p class="font-12 mb-0">You have 3 new notifications</p>
-                    <p class="font-11 mb-0">DISMISS</p>
-                </div>
-                <div class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center">
-                    <p class="mb-0">view all</p>
-                </div>
+              <div class="px-2 py-2 border-bottom w-100">
+                <p class="mb-1 fs-20">Notifications</p>
+                <p class="fs-14 font-weight-light">2 days ago</p>
+              </div>
+              <div
+                class="d-flex w-100 justify-content-between align-items-center mt-3"
+              >
+                <p class="font-12 mb-0">You have 3 new notifications</p>
+                <p class="font-11 mb-0">DISMISS</p>
+              </div>
+              <div
+                class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center"
+              >
+                <button
+                  class="btn noti-btn w-100 d-flex align-items-center justify-content-center py-3"
+                  @click="notifications"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 8H15"
+                      stroke="#625D5D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 1L15 8L8 15"
+                      stroke="#625D5D"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <p class="fs-18 mb-0 ml-3">view all</p>
+                </button>
+              </div>
             </div>
           </b-popover>
-          <!-- 
- <b-button v-b-popover.hover.top="'I am popover directive content!'" title="Popover Title">
-    Hover Me
-  </b-button> -->
-
           <svg
             width="27"
             height="25"
@@ -146,6 +173,7 @@
       </div>
       <button
         class="d-flex justify-content-center align-items-center text-left outline-none ml-0 ml-lg-5"
+        @click="account"
       >
         <div class="bg-secondary rounded-circle">
           <svg
@@ -203,6 +231,18 @@ export default {
   methods: {
     sidebarToggle() {
       document.getElementsByClassName("side-bar")[0].classList.toggle("d-none");
+    },
+    messages() {
+      this.$router.push({ path: "/dashboard/messages" }).catch(() => {});
+      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
+    },
+    notifications() {
+      this.$router.push({ path: "/dashboard/notifications" }).catch(() => {});
+      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
+    },
+    account() {
+      this.$router.push({ path: "/dashboard/account" }).catch(() => {});
+      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     toggleView(e) {
       e.preventDefault();
