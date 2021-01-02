@@ -137,8 +137,8 @@
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 my-5"
         >
-          <p class="mb-0">LANGUAGE: {{ selected }}</p>
-          <b-modal id="modal-sm" size="sm" centered>
+          <p class="mb-0">LANGUAGE: {{ this.$i18n.locale.toUpperCase() }}</p>
+          <b-modal id="modal-sm" size="sm" centered @ok="handleOk">
             <b-form-select
               v-model="selected"
               :options="options"
@@ -287,21 +287,33 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "Account",
   methods: {
+    handleOk(){
+      localStorage.currentLanguage = this.selected;
+      console.log(localStorage.currentLanguage)
+      this.switchLocale(this.selected);
+
+    },
     handleFileChange(e) {
       this.$emit("input", e.target.files[0]);
+    },
+    switchLocale(locale) {
+      if (this.$i18n.locale !== locale) {
+        this.$i18n.locale = locale;
+      }
     },
   },
   data() {
     return {
-      selected: "ENGLISH",
+      selected: "en",
       options: [
-        { value: "ENGLISH", text: "PLEASE SELECT A LANGUAGE" },
-        { value: "ENGLISH", text: "ENGLISH" },
-        { value: "ARABIC", text: "ARABIC" },
-        { value: "CHINESE", text: "CHINESE" },
+        { value: "en", text: "PLEASE SELECT A LANGUAGE" },
+        { value: "en", text: "ENGLISH" },
+        { value: "ar", text: "ARABIC" },
+        { value: "ch", text: "CHINESE" },
       ],
     };
   },

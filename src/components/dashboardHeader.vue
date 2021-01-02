@@ -12,7 +12,7 @@
             <b-navbar-nav
               class="flex justify-content-center align-items-center text-light pt-lg-3"
             >
-              <p class="pl-lg-5">{{ $t("home") }}</p>
+             <router-link to="/"> <p class="pl-lg-5 text-white">{{ $t("home") }}</p></router-link>
               <p class="pl-lg-5">{{ $t("product") }}</p>
               <p class="pl-lg-5">{{ $t("about") }}</p>
               <p class="pl-lg-5">{{ $t("contact") }}</p>
