@@ -1,0 +1,252 @@
+<template>
+  <div class="d-flex justify-content-start mt-5 px-lg-4">
+    <div
+      class="w-100 d-flex justify-content-start align-items-start flex-column"
+    >
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <img
+          src="../assets/Group 198accountImage.png"
+          class="bg-secondary rounded-circle"
+        />
+        <button class="mt-2 fs-16 font-weight-lighter outline-none">
+          Set new photo
+        </button>
+      </div>
+      <div class="w-100 fs-18 text-69">
+        <div
+          class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
+        >
+          <p class="mb-0">NAME: HEDI</p>
+          <button class="outline-none">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.5 2.49998C18.8978 2.10216 19.4374 1.87866 20 1.87866C20.5626 1.87866 21.1022 2.10216 21.5 2.49998C21.8978 2.89781 22.1213 3.43737 22.1213 3.99998C22.1213 4.56259 21.8978 5.10216 21.5 5.49998L12 15L8 16L9 12L18.5 2.49998Z"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
+        >
+          <p class="mb-0">EMAIL: HEDI@EMAIL.COM</p>
+          <button class="outline-none">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.5 2.49998C18.8978 2.10216 19.4374 1.87866 20 1.87866C20.5626 1.87866 21.1022 2.10216 21.5 2.49998C21.8978 2.89781 22.1213 3.43737 22.1213 3.99998C22.1213 4.56259 21.8978 5.10216 21.5 5.49998L12 15L8 16L9 12L18.5 2.49998Z"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
+        >
+          <p class="mb-0">PHONE: 139939332893</p>
+          <button class="outline-none">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.5 2.49998C18.8978 2.10216 19.4374 1.87866 20 1.87866C20.5626 1.87866 21.1022 2.10216 21.5 2.49998C21.8978 2.89781 22.1213 3.43737 22.1213 3.99998C22.1213 4.56259 21.8978 5.10216 21.5 5.49998L12 15L8 16L9 12L18.5 2.49998Z"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 my-5"
+        >
+          <p class="mb-0">PASSWORD: *****************</p>
+          <button class="outline-none">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.5 2.49998C18.8978 2.10216 19.4374 1.87866 20 1.87866C20.5626 1.87866 21.1022 2.10216 21.5 2.49998C21.8978 2.89781 22.1213 3.43737 22.1213 3.99998C22.1213 4.56259 21.8978 5.10216 21.5 5.49998L12 15L8 16L9 12L18.5 2.49998Z"
+                stroke="#696F79"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="account-card my-5 px-lg-5 py-lg-4 p-3 py-lg-0 d-flex flex-column justify-content-around"
+      >
+        <p class="mb-0 fs-24 font-weight-bold">Add your company info</p>
+        <div class="d-flex justify-content-between">
+          <svg
+            width="66"
+            height="72"
+            viewBox="0 0 66 72"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M64.2321 67.5H61.2857V3.375C61.2857 1.51102 59.7027 0 57.75 0H8.25C6.29725 0 4.71429 1.51102 4.71429 3.375V67.5H1.76786C0.791558 67.5 0 68.2556 0 69.1875V72H66V69.1875C66 68.2556 65.2084 67.5 64.2321 67.5ZM18.8571 10.6875C18.8571 9.75558 19.6487 9 20.625 9H26.5179C27.4942 9 28.2857 9.75558 28.2857 10.6875V16.3125C28.2857 17.2444 27.4942 18 26.5179 18H20.625C19.6487 18 18.8571 17.2444 18.8571 16.3125V10.6875ZM18.8571 24.1875C18.8571 23.2556 19.6487 22.5 20.625 22.5H26.5179C27.4942 22.5 28.2857 23.2556 28.2857 24.1875V29.8125C28.2857 30.7444 27.4942 31.5 26.5179 31.5H20.625C19.6487 31.5 18.8571 30.7444 18.8571 29.8125V24.1875ZM26.5179 45H20.625C19.6487 45 18.8571 44.2444 18.8571 43.3125V37.6875C18.8571 36.7556 19.6487 36 20.625 36H26.5179C27.4942 36 28.2857 36.7556 28.2857 37.6875V43.3125C28.2857 44.2444 27.4942 45 26.5179 45ZM37.7143 67.5H28.2857V55.6875C28.2857 54.7556 29.0773 54 30.0536 54H35.9464C36.9227 54 37.7143 54.7556 37.7143 55.6875V67.5ZM47.1429 43.3125C47.1429 44.2444 46.3513 45 45.375 45H39.4821C38.5058 45 37.7143 44.2444 37.7143 43.3125V37.6875C37.7143 36.7556 38.5058 36 39.4821 36H45.375C46.3513 36 47.1429 36.7556 47.1429 37.6875V43.3125ZM47.1429 29.8125C47.1429 30.7444 46.3513 31.5 45.375 31.5H39.4821C38.5058 31.5 37.7143 30.7444 37.7143 29.8125V24.1875C37.7143 23.2556 38.5058 22.5 39.4821 22.5H45.375C46.3513 22.5 47.1429 23.2556 47.1429 24.1875V29.8125ZM47.1429 16.3125C47.1429 17.2444 46.3513 18 45.375 18H39.4821C38.5058 18 37.7143 17.2444 37.7143 16.3125V10.6875C37.7143 9.75558 38.5058 9 39.4821 9H45.375C46.3513 9 47.1429 9.75558 47.1429 10.6875V16.3125Z"
+              fill="#197BBD"
+              fill-opacity="0.55"
+            />
+          </svg>
+          <b-modal
+            id="modal-company"
+            centered
+            hide-footer
+            content-class="content-class"
+            header-class="header-class"
+            hider-header
+            hide-header-close
+          >
+            <div
+              class="d-flex w-100 justify-content-center align-items-center pt-5 pb-4"
+            >
+              <input
+                class="border-bottom outline-none w-100 pb-4"
+                placeholder="Company Name"
+              />
+            </div>
+            <div
+              class="d-flex w-100 justify-content-center align-items-center py-4"
+            >
+              <input
+                class="border-bottom outline-none w-100 pb-4"
+                placeholder="Address"
+              />
+            </div>
+            <div
+              class="d-flex w-100 justify-content-center align-items-center py-4"
+            >
+              <input
+                class="border-bottom outline-none w-100 pb-4"
+                placeholder="Phone"
+              />
+            </div>
+            <div
+              class="d-flex w-100 justify-content-center align-items-center py-4"
+            >
+              <input
+                class="border-bottom outline-none w-100 pb-4"
+                placeholder="Person in Charge"
+              />
+            </div>
+            <div
+              class="d-flex w-100 justify-content-center align-items-center py-4"
+            >
+              <input
+                class="border-bottom outline-none w-100 pb-4"
+                placeholder="Country"
+              />
+            </div>
+            <div class="d-flex justify-content-end">
+              <button
+                class="rounded-pill modal-button color-c7 outline-none"
+                @click="$bvModal.hide('modal-company')"
+              >
+                cancel
+              </button>
+              <button
+                class="rounded-pill color-ff modal-button outline-none ml-2"
+                @click="$bvModal.hide('modal-company')"
+              >
+                save
+              </button>
+            </div>
+          </b-modal>
+          <button class="outline-none" variant="white" v-b-modal.modal-company>
+            <svg
+              width="58"
+              height="60"
+              viewBox="0 0 58 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M29.0002 55C42.347 55 53.1668 43.8071 53.1668 30C53.1668 16.1929 42.347 5 29.0002 5C15.6533 5 4.8335 16.1929 4.8335 30C4.8335 43.8071 15.6533 55 29.0002 55Z"
+                fill="#FFC145"
+              />
+              <path
+                d="M28.9995 20V40"
+                stroke="#404040"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19.333 30H38.6663"
+                stroke="#404040"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  name: "Account",
+};
+</script>

@@ -24,7 +24,8 @@ $spacers: map-merge(
     11: ($spacer *4),
     12: ($spacer *22),
     13: (12px),
-    14: ($spacer * 12)
+    14: ($spacer * 12),
+    15:($spacer*2)
   ),
   $spacers
 );

@@ -12,7 +12,7 @@
           <b-navbar-nav class="ml-xl-5">
             <router-link to="/login">
               <b-button
-                class="px-4 py-2 btn-width-135"
+                class=" py-2 btn-width-135"
                 squared
                 variant="secondary"
                 >{{ $t("login") }}</b-button
@@ -20,7 +20,7 @@
             >
             <router-link to="/sign-up"
               ><b-button
-                class="ml-lg-3 px-4 py-2 btn-width-135"
+                class="ml-lg-3 py-2 btn-width-135"
                 squared
                 variant="outline-light"
                 >{{ $t("signup") }}</b-button

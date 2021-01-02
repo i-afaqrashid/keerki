@@ -14,8 +14,8 @@
     </svg>
 
     <div class="ml-4">
-      <p class="mb-0">{{$t('invalidEmail')}}</p>
-      <p class="font-weight-lighter mb-0">{{$t('contactKeerki')}}</p>
+      <p class="mb-0">{{ $t("invalidEmail") }}</p>
+      <p class="font-weight-lighter mb-0">{{ $t("contactKeerki") }}</p>
     </div>
   </div>
   <div
@@ -37,7 +37,7 @@
 
     <div class="ml-4">
       <p class="mb-0">
-        {{$t('sessionExpire')}}
+        {{ $t("sessionExpire") }}
       </p>
     </div>
   </div>
@@ -60,7 +60,7 @@
 
     <div class="ml-4">
       <p class="mb-0">
-       {{$t('loginToOtherAccount')}}
+        {{ $t("loginToOtherAccount") }}
       </p>
     </div>
   </div>
@@ -83,7 +83,7 @@
 
     <div class="ml-4">
       <p class="mb-0">
-       {{$t('technicalDifficulty')}}
+        {{ $t("technicalDifficulty") }}
       </p>
     </div>
   </div>
@@ -105,7 +105,7 @@
     </svg>
 
     <div class="ml-4">
-      <p class="mb-0">{{$t('logoutSuccessful')}}</p>
+      <p class="mb-0">{{ $t("logoutSuccessful") }}</p>
     </div>
   </div>
   <div
@@ -126,8 +126,8 @@
     </svg>
 
     <div class="ml-4">
-      <p class="mb-0">{{$t('accountDeactivated')}}</p>
-      <p class="font-weight-lighter mb-0">{{$t('contactKeerki')}}</p>
+      <p class="mb-0">{{ $t("accountDeactivated") }}</p>
+      <p class="font-weight-lighter mb-0">{{ $t("contactKeerki") }}</p>
     </div>
   </div>
   <div
@@ -148,9 +148,15 @@
     </svg>
 
     <div class="ml-4">
-      <p class="mb-0">{{$t('accountSuspended')}}</p>
-      <p class="font-weight-lighter mb-0">{{$t('contactKeerki')}}</p>
+      <p class="mb-0">{{ $t("accountSuspended") }}</p>
+      <p class="font-weight-lighter mb-0">{{ $t("contactKeerki") }}</p>
     </div>
+  </div>
+  <div
+    v-else-if="alert === 200"
+    :class="`d-flex justify-content-center fs-11 py-1 align-items-center status-button outline-none ${this.color} `"
+  >
+    {{ this.type }}
   </div>
 </template>
 <script>
@@ -161,6 +167,14 @@ export default {
       type: Number,
       default: 1,
     },
+    type: {
+      type: String,
+      default: "IN PROGRESS",
+    },
+    color:{
+      type:String,
+      default:"in-progress"
+    }
   },
 };
 </script>

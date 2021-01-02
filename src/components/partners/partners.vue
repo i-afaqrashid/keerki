@@ -31,7 +31,7 @@
       </div>
     </div>
     <b-button
-      class="ml-lg-3 px-4 py-2 mt-lg-11 btn-width-135"
+      class="ml-lg-3 mt-4 py-2 mt-lg-11 btn-width-135"
       squared
       variant="outline-light"
       >{{ $t("partnerBtn") }}</b-button

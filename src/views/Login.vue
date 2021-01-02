@@ -74,7 +74,7 @@
                   id="input-7"
                   v-model="password"
                   type="password"
-                  placeholder="Enter your password"
+                  :placeholder="`${$t('enterPassword')}`"
                   required
                   class="form-input"
                 ></b-form-input>

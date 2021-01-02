@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import SignUp from '../views/SignUp.vue'
 import Successful from '../views/Successful.vue'
+import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Forgot from '../views/Forgot.vue'
 import Dashboard from '../views/Dashboard.vue'
@@ -10,22 +9,25 @@ import Reset from '../views/Reset.vue'
 import DashboardOverview from '../components/dashboardOverview.vue';
 import OrderHistory from '../components/orderHistory.vue';
 import OrderType from '../components/orderType.vue'
+import Orders from '../components/orders.vue'
+import  Account from '../components/account.vue'
+import Notification from '../components/notifications.vue'
+import OrderTemplate from '../components/orderTemplate.vue'
+import Form from '../views/Form.vue'
+import FormBody from '../components/formBody.vue'
+import FormPreview from '../components/formPreview.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component:Home
   },
   {
     path: '/sign-up',
-    name: SignUp,
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/SignUp.vue')
-  },
+    name: 'SignUp',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SignUp.vue')  },
   {
     path: '/success',
     name: 'Successful',
@@ -47,21 +49,56 @@ const routes = [
     component: Reset
   },
   {
+    path:"/form",
+    component:Form,
+    children:[
+      {
+        path:"",
+        component:FormBody
+      },
+      {
+        path:"preview",
+        component:FormPreview
+      }
+    ]
+  },
+  {
     path:"/dashboard",
     component:Dashboard,
     children:[
       {
         path:'order-history',
+        component:OrderType,
         children:[
           {
             path:'',
             component:OrderHistory
           },
           {
-            path:'orders',
-            component:OrderType
+            path:'quote-orders',
+            component:Orders
+          },
+          {
+            path:'service-orders',
+            component:Orders
+          },
+          {
+            path:'shipping-orders',
+            component:Orders
+          },
+          {
+            path:"order-template",
+            component: OrderTemplate
           }
         ]
+      },
+      {
+        path:"account",
+        component:Account
+      },
+      {
+        path:"notifications",
+        component: Notification
       },
       { path: '',
        component: DashboardOverview 

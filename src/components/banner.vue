@@ -32,12 +32,154 @@ export default {
   name: "Banner",
 };
 </script>
+
 <style>
+.form-preview {
+  background: #ffffff;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+}
+.form-buttons {
+  max-width: 270px !important;
+  height: 70px !important;
+  border: 2px solid #eab939 !important;
+  border-radius: 16px !important;
+}
+.rounded-button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.border-26 {
+  border: 1px solid #c8c8c8 !important;
+}
+.form-file-input {
+  background: #ffffff;
+  border: 2px solid #c8c8c8;
+  border-radius: 16px;
+  height: 150px;
+}
+.input-text-area {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  height: 226px !important;
+  width: 100%;
+  text-align: right;
+}
+.input-form {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  height: 66px !important;
+  width: 100%;
+  text-align: right;
+}
+.border-3 {
+  border-bottom: 3px solid #1580e3;
+}
+.form {
+  background: #f2f2f2;
+}
+.z-index-2 {
+  z-index: 2 !important;
+}
+.template-card {
+  width: 260px;
+  height: 320px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+}
+.in-progress {
+  background: #fec400;
+}
+.cancelled {
+  background: #f12b2c;
+}
+.waiting {
+  background: #6fa6f6;
+}
+.done {
+  background: #66cc66;
+}
+.status-button {
+  border-radius: 100px !important;
+  width: 100px;
+  /* padding: 5px 15px!important; */
+}
+.color-f5 {
+  background-color: #f5f5f5 !important;
+}
+.orders {
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+.dismiss-btn {
+  background: #f12b2c;
+  border-radius: 8px;
+  width: 75px;
+  height: 24px;
+  color: white;
+}
+.align-notifications {
+  align-items: initial;
+}
+.active-notification {
+  border-left: 5px solid #245aab;
+}
+.notifications-btn {
+  width: 124px;
+  height: 38px;
+  border-radius: 5px;
+}
+.notifications {
+  background: #ffffff;
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+}
+.modal-button {
+  width: 76px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.color-ff {
+  background-color: #ffc145;
+}
+.color-c7 {
+  background-color: #c7c9ca;
+}
+.content-class {
+  border-radius: 20px !important;
+  border: 1px solid #e3e3e3 !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+.header-class {
+  display: none !important;
+}
+.account-card {
+  width: 100%;
+  height: 219px;
+  border-radius: 20px;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+.text-69 {
+  color: #696969;
+}
 .border-radius-13 {
   border-radius: 13.62px !important;
 }
 .w-21 {
   width: 21%;
+}
+.fs-11 {
+  font-size: 11px;
+  color: white;
+  font-weight: 700;
+  line-height: 13.81px;
 }
 .fs-14 {
   font-size: 14px;
@@ -70,6 +212,11 @@ btn-secondary:focus {
 .outline-none {
   outline: none !important;
 }
+.outline-none:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0 rgba(2, 120, 174, 0.25) !important;
+}
+
 .separator::before,
 .separator::after {
   content: "";
@@ -103,11 +250,14 @@ btn-secondary:focus {
 .horizontal-line {
   border: 1px solid #f5f5f5;
 }
+.fs-36{
+  font-size: 36px;
+}
 .fs-30 {
   font-size: 30px;
 }
 .fs-18 {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 .w-66 {
   width: 100%;
@@ -137,7 +287,7 @@ btn-secondary:focus {
   font-size: 46px;
 }
 .fs-16 {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 .lh-32 {
   line-height: 32px;
@@ -171,6 +321,9 @@ btn-secondary:focus {
 .fs-20 {
   font-size: 20px;
 }
+.font-24 {
+  font-size: 24px !important;
+}
 .fs-24 {
   font-size: 24px;
   color: #696969;
@@ -180,6 +333,12 @@ btn-secondary:focus {
   width: 224px;
 }
 @media only screen and (max-width: 576px) {
+  .template-card {
+    width: 100%;
+  }
+  .align-notifications {
+    align-items: center;
+  }
   .side-bar {
     position: absolute;
     background-color: white;
@@ -199,6 +358,9 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
+  .template-card {
+    width: 75%;
+  }
   .side-bar {
     position: absolute;
     background-color: white;
@@ -221,6 +383,12 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .template-card {
+    width: 400px;
+  }
+  .account-card {
+    width: 50%;
+  }
   .side-bar {
     position: absolute;
     background-color: white;
@@ -243,6 +411,14 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .template-card {
+    width: 220px;
+    height: 300px;
+  }
+  .account-card {
+    width: 50%;
+  }
+
   .respImage {
     max-width: 35rem;
     border-radius: 33px 0px 0px 33px;
@@ -262,6 +438,10 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 1200px) {
+  .account-card {
+    width: 490px;
+  }
+
   .respImage {
     max-width: 35rem;
     border-radius: 33px 0px 0px 33px;

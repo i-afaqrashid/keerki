@@ -6,6 +6,26 @@
       <h1 class="fs-43">{{ this.Heading }}</h1>
       <h3 class="fs-13 font-weight-light">{{ this.Text }}</h3>
     </div>
+    <div
+      v-if="
+        this.$route.fullPath === '/dashboard/order-history/quote-orders' ||
+        this.$route.fullPath === '/dashboard/order-history/service-orders' ||
+        this.$route.fullPath === '/dashboard/order-history/shipping-orders' ||
+        this.$route.fullPath === '/dashboard/order-history/order-template'
+      "
+      class="order-2 order-lg-0 fs-16 zindex-dropdown "
+    >
+      <b-form-checkbox
+        size="lg"
+        v-model="checked"
+        v-on:click.native="toggleView"
+        name="check-button"
+        switch
+        class="fs-16 font-weight-lighter"
+      >
+        View in templates
+      </b-form-checkbox>
+    </div>
     <div class="d-flex justify-content-between width-100 align-items-center">
       <div class="d-flex">
         <button
@@ -144,11 +164,25 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "DashboardTop",
+  data() {
+    return {
+      checked:false
+    };
+  },
   methods: {
     sidebarToggle() {
       document.getElementsByClassName("side-bar")[0].classList.toggle("d-none");
+    },
+    toggleView(e) {
+      e.preventDefault();
+      this.checked = !this.checked;
+
+      this.checked && this.$router.push({ path: "/dashboard/order-history/order-template" }).catch(() => {});
+      !this.checked && this.$router.go(-1);
+
     },
   },
   props: {

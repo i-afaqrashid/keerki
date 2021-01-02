@@ -3,7 +3,7 @@
     <DashboardHeader />
     <div class="d-flex flex-column flex-lg-row">
       <div
-        class="w-21 pl-3 pr-14 px-lg-0 side-bar d-none d-lg-flex justify-content-center align-items-center flex-column mt-11 border-right"
+        class="w-21 z-index-2 pl-3 pr-14 px-lg-0 side-bar d-none d-lg-flex align-items-center flex-column mt-11 border-right"
       >
         <div
           class="d-flex flex-column justify-content-between align-items-between"
@@ -110,6 +110,7 @@
           <button
             type="button"
             class="btn dashboard-btn btn-white d-flex align-items-center justify-content-between mt-4"
+            v-on:click="account"
           >
             <div
               class="d-flex flex-column justify-content-center align-items-center pl-2"
@@ -150,6 +151,7 @@
           <button
             type="button"
             class="btn dashboard-btn btn-white d-flex align-items-center justify-content-between mt-4"
+            v-on:click="notifications"
           >
             <div
               class="d-flex flex-column justify-content-center align-items-center pl-2"
@@ -286,6 +288,7 @@
 <script>
 import DashboardHeader from "../components/dashboardHeader";
 import DashboardTop from "../components/dashboardTop";
+
 export default {
   name: "Dashboard",
   data() {
@@ -296,16 +299,30 @@ export default {
   },
   methods: {
     logout() {
-      this.$router.push({ path: "../login" });
+      this.$router.push({ path: "../../login" });
     },
     overview() {
       this.Heading = "Dashboard";
-      this.$router.push({ path: "/dashboard" }).catch(()=>{});
+      this.Text = "Get summary of your weekly online transactions here.";
+      this.$router.push({ path: "/dashboard" }).catch(() => {});
+      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
+    },
+    notifications() {
+      this.Heading = "Notifications";
+      this.Text = "Manage your notifications";
+      this.$router.push({ path: "/dashboard/notifications" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     orderHistory() {
       this.Heading = "Order History";
-      this.$router.push({ path: "/dashboard/order-history" }).catch(()=>{});
+      this.Text = "Get summary of your weekly online transactions here.";
+      this.$router.push({ path: "/dashboard/order-history" }).catch(() => {});
+      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
+    },
+    account() {
+      this.Heading = "Account";
+      this.Text = "Change your account details";
+      this.$router.push({ path: "/dashboard/account" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
   },
