@@ -13,7 +13,7 @@
         this.$route.fullPath === '/dashboard/order-history/shipping-orders' ||
         this.$route.fullPath === '/dashboard/order-history/order-template'
       "
-      class="order-2 order-lg-0 fs-16 zindex-dropdown "
+      class="order-2 order-lg-0 fs-16 zindex-dropdown"
     >
       <b-form-checkbox
         size="lg"
@@ -74,7 +74,36 @@
             />
           </svg>
         </button>
-        <button class="outline-none ml-3 ml-lg-4">
+        <button
+          id="popover-target-1"
+          v-b-popover.hover.top
+          class="outline-none ml-3 ml-lg-4"
+        >
+          <b-popover
+            target="popover-target-1"
+            triggers="hover"
+            placement="bottom"
+            custom-class = "pop-over"
+          >
+            <div class="d-flex flex-column w-100 p-2">
+                <div class="px-2 py-2  border-bottom w-100">
+                  <p class="mb-1 fs-20">Notifications</p>
+                  <p class="fs-14 font-weight-light">2 days ago</p>
+                </div>
+                <div class="d-flex w-100 justify-content-between align-items-center mt-3">
+                    <p class="font-12 mb-0">You have 3 new notifications</p>
+                    <p class="font-11 mb-0">DISMISS</p>
+                </div>
+                <div class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center">
+                    <p class="mb-0">view all</p>
+                </div>
+            </div>
+          </b-popover>
+          <!-- 
+ <b-button v-b-popover.hover.top="'I am popover directive content!'" title="Popover Title">
+    Hover Me
+  </b-button> -->
+
           <svg
             width="27"
             height="25"
@@ -164,12 +193,11 @@
   </div>
 </template>
 <script>
-
 export default {
   name: "DashboardTop",
   data() {
     return {
-      checked:false
+      checked: false,
     };
   },
   methods: {
@@ -180,9 +208,11 @@ export default {
       e.preventDefault();
       this.checked = !this.checked;
 
-      this.checked && this.$router.push({ path: "/dashboard/order-history/order-template" }).catch(() => {});
+      this.checked &&
+        this.$router
+          .push({ path: "/dashboard/order-history/order-template" })
+          .catch(() => {});
       !this.checked && this.$router.go(-1);
-
     },
   },
   props: {

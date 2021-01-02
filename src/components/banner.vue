@@ -34,6 +34,9 @@ export default {
 </script>
 
 <style>
+.pop-over{
+  width:300px!important;
+}
 .form-preview {
   background: #ffffff;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
@@ -174,6 +177,13 @@ export default {
 }
 .w-21 {
   width: 21%;
+}
+.font-12{
+font-size:12px;
+}
+.font-11{
+  font-size: 11px;
+  color:#F12B2C;
 }
 .fs-11 {
   font-size: 11px;

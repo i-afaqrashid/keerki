@@ -279,7 +279,7 @@
         </b-button>
       </div>
       <div class="w-100 px-lg-11 px-4 mt-lg-11 mt-3">
-        <DashboardTop v-bind:Heading="this.Heading" v-bind:Text="this.Text" />
+        <DashboardTop  v-bind:Text="this.Text" />
         <router-view></router-view>
       </div>
     </div>
