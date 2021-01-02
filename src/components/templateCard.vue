@@ -1,11 +1,13 @@
 <template>
-  <div class="d-flex flex-column justify-content-center align-items-center mt-4 mx-lg-4">
+  <div
+    class="d-flex flex-column justify-content-center align-items-center mt-4 mx-lg-4"
+  >
     <div class="template-card p-15">
       <CustomAlert
-                v-bind:alert="200"
-                v-bind:type="this.name"
-                v-bind:color="this.color"
-              />
+        v-bind:alert="200"
+        v-bind:type="this.name"
+        v-bind:color="this.color"
+      />
       <div class="d-flex w-100 p-15 align-items-center justify-content-center">
         <svg
           width="154"
@@ -55,8 +57,7 @@
           stroke-linejoin="round"
         />
       </svg>
-
-      Download
+      {{ $t("orderDownload") }}
     </button>
   </div>
 </template>

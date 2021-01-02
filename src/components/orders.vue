@@ -3,7 +3,7 @@
     <div
       class="d-flex flex-column flex-lg-row justify-content-between w-100 align-items-sm-center flex-sm-wrap pl-lg-15"
     >
-      <p class="fs-20 mb-0 font-weight-bold">Order forms history</p>
+      <p class="fs-20 mb-0 font-weight-bold">{{ $t("orderFormHistory") }}</p>
       <div class="d-flex flex-column flex-lg-row mt-3 mt-lg-0">
         <div class="d-flex border rounded-lg">
           <div
@@ -28,7 +28,7 @@
               size="sm"
             >
               <b-form-select-option :value="null">
-                Search by order No.</b-form-select-option
+                {{ $t("orderSearchByNumber") }}</b-form-select-option
               >
             </b-form-select>
           </div>
@@ -37,7 +37,7 @@
         <button
           class="ml-lg-4 btn-primary rounded-lg px-4 py-2 py-lg-0 mt-3 mt-lg-0 d-flex justify-content-center align-items-center"
         >
-          Select all
+          {{ $t("orderSelectAll") }}
         </button>
         <button
           class="ml-lg-4 btn-primary rounded-lg py-3 py-lg-0 px-3 mt-3 mt-lg-0 d-flex justify-content-center align-items-center"
@@ -76,7 +76,7 @@
         <button
           class="d-flex justify-content-center align-items-center outline-none mt-3 mt-lg-0 ml-lg-3"
         >
-          Download All
+          {{ $t("orderDownloadAll") }}
         </button>
       </div>
     </div>
@@ -86,13 +86,21 @@
       >
         <thead>
           <tr>
-            <th scope="col" class="font-weight-normal py-lg-15">Status</th>
-            <th scope="col" class="font-weight-normal py-lg-15">Date</th>
-            <th scope="col" class="font-weight-normal py-lg-15">Price</th>
-            <th scope="col" class="font-weight-normal py-lg-15">Categories</th>
+            <th scope="col" class="font-weight-normal py-lg-15">
+              {{ $t("orderStatus") }}
+            </th>
+            <th scope="col" class="font-weight-normal py-lg-15">
+              {{ $t("orderDate") }}
+            </th>
+            <th scope="col" class="font-weight-normal py-lg-15">
+              {{ $t("orderPrice") }}
+            </th>
+            <th scope="col" class="font-weight-normal py-lg-15">
+              {{ $t("orderCategories") }}
+            </th>
             <th scope="col" class="font-weight-normal py-lg-15"></th>
             <th scope="col" class="font-weight-normal py-lg-15">
-              something else
+              {{ $t("orderSomethingElse") }}
             </th>
             <th scope="col" class="font-weight-normal py-lg-15"></th>
           </tr>
@@ -102,7 +110,10 @@
             <th
               class="d-flex justify-content-center align-items-center mt-3 mt-sm-2 mt-md-0 py-lg-15"
             >
-              <CustomAlert v-bind:alert="200" v-bind:type="'IN PROGRESS'" />
+              <CustomAlert
+                v-bind:alert="200"
+                v-bind:type="`${$t('inProgressBtn')}`"
+              />
             </th>
             <td class="py-lg-15">{{ this.data }}</td>
             <td class="py-lg-15">{{ this.price }}</td>
@@ -141,7 +152,7 @@
                   />
                 </svg>
 
-                Download
+                {{ $t("orderDownload") }}
               </button>
             </td>
             <td class="py-lg-15">{{ this.text }}</td>
@@ -161,7 +172,7 @@
             >
               <CustomAlert
                 v-bind:alert="200"
-                v-bind:type="'DONE'"
+                v-bind:type="`${$t('doneBtn')}`"
                 v-bind:color="'done'"
               />
             </th>
@@ -202,7 +213,7 @@
                   />
                 </svg>
 
-                Download
+                {{ $t("orderDownload") }}
               </button>
             </td>
             <td class="py-lg-15">{{ this.text }}</td>
@@ -222,7 +233,7 @@
             >
               <CustomAlert
                 v-bind:alert="200"
-                v-bind:type="'WAITING'"
+                v-bind:type="`${$t('waitingBtn')}`"
                 v-bind:color="'waiting'"
               />
             </th>
@@ -263,7 +274,7 @@
                   />
                 </svg>
 
-                Download
+                {{ $t("orderDownload") }}
               </button>
             </td>
             <td class="py-lg-15">{{ this.text }}</td>
@@ -283,7 +294,7 @@
             >
               <CustomAlert
                 v-bind:alert="200"
-                v-bind:type="'CANCELLED'"
+                v-bind:type="`${$t('canceledBtn')}`"
                 v-bind:color="'cancelled'"
               />
             </th>
@@ -324,7 +335,7 @@
                   />
                 </svg>
 
-                Download
+                {{ $t("orderDownload") }}
               </button>
             </td>
             <td class="py-lg-15">{{ this.text }}</td>
@@ -342,7 +353,10 @@
             <th
               class="d-flex justify-content-center align-items-center mt-3 mt-sm-2 mt-md-0"
             >
-              <CustomAlert v-bind:alert="200" v-bind:type="'IN PROGRESS'" />
+              <CustomAlert
+                v-bind:alert="200"
+                v-bind:type="`${$t('inProgressBtn')}`"
+              />
             </th>
             <td class="py-lg-15">{{ this.data }}</td>
             <td class="py-lg-15">{{ this.price }}</td>
@@ -380,7 +394,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-                Download
+                {{ $t("orderDownload") }}
               </button>
             </td>
             <td class="py-lg-15">{{ this.text }}</td>

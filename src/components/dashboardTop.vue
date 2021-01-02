@@ -23,7 +23,7 @@
         switch
         class="fs-16 font-weight-lighter"
       >
-        View in templates
+        {{$t('viewInTemplates')}}
       </b-form-checkbox>
     </div>
     <div class="d-flex justify-content-between width-100 align-items-center">
@@ -51,7 +51,7 @@
               fill="#0278AE"
             />
           </svg>
-          <p class="mb-0 ml-2">Help</p>
+          <p class="mb-0 ml-2">{{$t('help')}}</p>
         </button>
         <button
           v-b-popover.hover.top
@@ -66,14 +66,14 @@
           >
             <div class="d-flex flex-column w-100 p-2">
               <div class="px-2 py-2 border-bottom w-100">
-                <p class="mb-1 fs-20">Messages</p>
-                <p class="fs-14 font-weight-light">2 days ago</p>
+                <p class="mb-1 fs-20">{{$t('popupMessages')}}</p>
+                <p class="fs-14 font-weight-light">{{$t('popupDaysAgo')}}</p>
               </div>
               <div
                 class="d-flex w-100 justify-content-between align-items-center mt-3"
               >
-                <p class="font-12 mb-0">You have 3 new messages</p>
-                <p class="font-11 mb-0">DISMISS</p>
+                <p class="font-12 mb-0">{{$t('popupNewMessages')}}</p>
+                <p class="font-11 mb-0">{{$t('popupDismiss')}}</p>
               </div>
               <div
                 class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center"
@@ -105,7 +105,7 @@
                     />
                   </svg>
 
-                  <p class="fs-18 mb-0 ml-3">view all</p>
+                  <p class="fs-18 mb-0 ml-3">{{$t('popupViewAll')}}</p>
                 </button>
               </div>
             </div>
@@ -144,14 +144,14 @@
           >
             <div class="d-flex flex-column w-100 p-2">
               <div class="px-2 py-2 border-bottom w-100">
-                <p class="mb-1 fs-20">Notifications</p>
-                <p class="fs-14 font-weight-light">2 days ago</p>
+                <p class="mb-1 fs-20">{{$t('popupNotifications')}}</p>
+                <p class="fs-14 font-weight-light">{{$t('popupDaysAgo')}}</p>
               </div>
               <div
                 class="d-flex w-100 justify-content-between align-items-center mt-3"
               >
-                <p class="font-12 mb-0">You have 3 new notifications</p>
-                <p class="font-11 mb-0">DISMISS</p>
+                <p class="font-12 mb-0">{{$t('popupNewNotifications')}}</p>
+                <p class="font-11 mb-0">{{$t('popupDismiss')}}</p>
               </div>
               <div
                 class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center"
@@ -183,7 +183,7 @@
                     />
                   </svg>
 
-                  <p class="fs-18 mb-0 ml-3">view all</p>
+                  <p class="fs-18 mb-0 ml-3">{{$t('popupViewAll')}}</p>
                 </button>
               </div>
             </div>
@@ -271,7 +271,7 @@
         </div>
         <div class="ml-2">
           <p class="mb-0 fs-14">Hedi</p>
-          <p class="mb-0 fs-14">Account Details</p>
+          <p class="mb-0 fs-14">{{$t('formHeaderAccountDetails')}}</p>
         </div>
       </button>
     </div>

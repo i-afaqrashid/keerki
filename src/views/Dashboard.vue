@@ -10,7 +10,7 @@
         >
           <div class="d-flex align-items-center pl-3 mt-5">
             <img src="../assets/logoSign.png" width="35" height="35" />
-            <p class="mb-0 fs-16 ml-2" style="color: #0f4264">Keerki</p>
+            <p class="mb-0 fs-16 ml-2" style="color: #0f4264">{{$t('keerki')}}</p>
           </div>
           <button
             type="button"
@@ -47,7 +47,7 @@
               />
             </svg>
 
-            <span class="flex-grow-1">Overview</span>
+            <span class="flex-grow-1">{{$t('overview')}}</span>
           </button>
           <button
             type="button"
@@ -105,7 +105,7 @@
               />
             </svg>
 
-            <span class="flex-grow-1">Order History </span>
+            <span class="flex-grow-1">{{$t('orderHistory')}}</span>
           </button>
           <button
             type="button"
@@ -146,7 +146,7 @@
                 />
               </svg>
             </div>
-            <span class="flex-grow-1">Account </span>
+            <span class="flex-grow-1">{{$t('account')}}</span>
           </button>
           <button
             type="button"
@@ -188,7 +188,7 @@
                 />
               </svg>
             </div>
-            <span class="flex-grow-1">Notifications</span>
+            <span class="flex-grow-1">{{$t('notifications')}}</span>
           </button>
           <button
             type="button"
@@ -211,7 +211,7 @@
               />
             </svg>
 
-            <span class="flex-grow-1">Messages</span>
+            <span class="flex-grow-1">{{$t('messages')}}</span>
           </button>
           <button
             type="button"
@@ -240,7 +240,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <span class="flex-grow-1">Settings</span>
+            <span class="flex-grow-1">{{$t('settings')}}</span>
           </button>
         </div>
         <b-modal
@@ -255,21 +255,21 @@
             class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
           >
             <div class="w-100">
-              <h1 class="fs-16">You will be automatically logged out in</h1>
-              <h1 class="fs-18 text-primary">1 minutes 52 seconds</h1>
+              <h1 class="fs-16">{{$t('automaticLogout')}}</h1>
+              <h1 class="fs-18 text-primary">{{$t('logoutTime')}}</h1>
             </div>
             <div class="d-flex justify-content-end w-100 mt-3">
               <button
                 class="rounded-lg btn modal-logout bg-white color-c7 outline-none"
                 @click="logout"
               >
-                Logout
+                {{$t('logout')}}
               </button>
               <button
                 class="rounded-lg btn btn-primary outline-none ml-2"
                 @click="$bvModal.hide('log-out-modal')"
               >
-                Continue Session
+        {{$t('continueSession')}}
               </button>
             </div>
           </div>
@@ -278,7 +278,7 @@
           variant="outline-secondary"
           v-b-modal.log-out-modal
           class="text-success px-5 mt-8 mb-5 d-flex flex-nowrap align-items-center border-radius-13"
-          >Logout
+          >{{$t('logout')}}
           <svg
             width="17"
             height="17"
