@@ -34,6 +34,9 @@ const messages = {
         activateYourAccount:"Activate your account",activateAccountDescription:"Please check the email send to your email to activate your account and start using your account. Thank you!",invalidEmail:"Invalid Email or password",contactKeerki:"Contact Keerki if you need help",
         sessionExpire:"Your session expired due to inactivity. Please log in again.",loginToOtherAccount:"You’ve been logged out because of log in on another device.",
         technicalDifficulty:" Technical difficulty. Sorry for the inconvenience; please try again.",logoutSuccessful:"Log out successful.",accountDeactivated:"You account has been deactivated.",accountSuspended:"You account has been suspended.",
+        setNewPhoto:"Set new photo",accountName:"Name:",accountEmail:"EMAIL:",accountPhone:"PHONE:",accountPassword:"PASSWORD:",
+        addCompanyInfo:"Add your company info",companyName:"Company Name",companyAddress:"Address",companyPhone:"Phone",companyPersonIncharge:"Person in Charge",companyCountry:"Country",companySave:"save",companyCancel:"cancel",cardClickHere:"Click here",overViewOrderHistory:"Order History",
+        overViewNotification:"Notification",overViewAccount:"Account",overViewOrderForm:"Order Form",help:"Help"
     },
     'ar':
     {

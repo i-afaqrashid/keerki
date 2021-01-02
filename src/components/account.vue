@@ -9,14 +9,14 @@
           class="bg-secondary rounded-circle"
         />
         <button class="mt-2 fs-16 font-weight-lighter outline-none">
-          Set new photo
+          {{$t('setNewPhoto')}}
         </button>
       </div>
       <div class="w-100 fs-18 text-69">
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
         >
-          <p class="mb-0">NAME: HEDI</p>
+          <p class="mb-0">{{$t('accountName')}} HEDI</p>
           <button class="outline-none">
             <svg
               width="24"
@@ -45,7 +45,7 @@
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
         >
-          <p class="mb-0">EMAIL: HEDI@EMAIL.COM</p>
+          <p class="mb-0">{{$t('accountEmail')}} HEDI@EMAIL.COM</p>
           <button class="outline-none">
             <svg
               width="24"
@@ -74,7 +74,7 @@
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
         >
-          <p class="mb-0">PHONE: 139939332893</p>
+          <p class="mb-0">{{$t('accountPhone')}} 139939332893</p>
           <button class="outline-none">
             <svg
               width="24"
@@ -103,7 +103,7 @@
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 my-5"
         >
-          <p class="mb-0">PASSWORD: *****************</p>
+          <p class="mb-0">{{$t('accountPassword')}} *****************</p>
           <button class="outline-none">
             <svg
               width="24"
@@ -133,7 +133,7 @@
       <div
         class="account-card my-5 px-lg-5 py-lg-4 p-3 py-lg-0 d-flex flex-column justify-content-around"
       >
-        <p class="mb-0 fs-24 font-weight-bold">Add your company info</p>
+        <p class="mb-0 fs-24 font-weight-bold">{{$t('addCompanyInfo')}}</p>
         <div class="d-flex justify-content-between">
           <svg
             width="66"
@@ -162,7 +162,8 @@
             >
               <input
                 class="border-bottom outline-none w-100 pb-4"
-                placeholder="Company Name"
+                :placeholder="`${$t('companyName')}`"
+
               />
             </div>
             <div
@@ -170,7 +171,7 @@
             >
               <input
                 class="border-bottom outline-none w-100 pb-4"
-                placeholder="Address"
+                :placeholder="`${$t('companyAddress')}`"
               />
             </div>
             <div
@@ -178,7 +179,7 @@
             >
               <input
                 class="border-bottom outline-none w-100 pb-4"
-                placeholder="Phone"
+                :placeholder="`${$t('companyPhone')}`"
               />
             </div>
             <div
@@ -186,7 +187,7 @@
             >
               <input
                 class="border-bottom outline-none w-100 pb-4"
-                placeholder="Person in Charge"
+                :placeholder="`${$t('companyPersonIncharge')}`"
               />
             </div>
             <div
@@ -194,7 +195,7 @@
             >
               <input
                 class="border-bottom outline-none w-100 pb-4"
-                placeholder="Country"
+                :placeholder="`${$t('companyCountry')}`"
               />
             </div>
             <div class="d-flex justify-content-end">
@@ -202,13 +203,13 @@
                 class="rounded-pill modal-button color-c7 outline-none"
                 @click="$bvModal.hide('modal-company')"
               >
-                cancel
+                {{$t('companyCancel')}}
               </button>
               <button
                 class="rounded-pill color-ff modal-button outline-none ml-2"
                 @click="$bvModal.hide('modal-company')"
               >
-                save
+                {{$t('companySave')}}
               </button>
             </div>
           </b-modal>
