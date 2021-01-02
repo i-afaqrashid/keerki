@@ -187,7 +187,9 @@
       class="input-text-area py-5 px-3 px-lg-5 mt-15 ml-lg-3"
       placeholder="Others"
     ></textarea>
-    <div class="w-100 d-flex flex-column flex-lg-row justify-content-center mt-5 align-items-center font-weight-bolder">
+    <div
+      class="w-100 d-flex flex-column flex-lg-row justify-content-center mt-5 align-items-center font-weight-bolder"
+    >
       <button
         class="btn btn-outline-secondary w-100 text-dark bg-white form-buttons"
         type="reset"
@@ -206,11 +208,11 @@
 <script>
 export default {
   name: "FormBody",
-  methods:{
-    formSubmit(e){
+  methods: {
+    formSubmit(e) {
       e.preventDefault();
       this.$router.push({ path: "/form/preview" });
-    }
-  }
+    },
+  },
 };
 </script>
