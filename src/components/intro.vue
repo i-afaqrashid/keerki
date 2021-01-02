@@ -21,25 +21,25 @@
       <b-modal
         id="catalogs-modal"
         centered
-        title="Download your catalog"
+        :title="`${$t('downloadYourCatalog')}`"
         hide-footer
       >
         <div
           class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
         >
           <input
-            placeholder="Name *"
+            :placeholder="`${$t('catalogName')}`"
             class="catalog-input outline-none w-100 p-4"
             type="text"
           />
           <input
-            placeholder="Email *"
+            :placeholder="`${$t('catalogEmail')}`"
             class="catalog-input outline-none w-100 p-4 mt-4"
             type="email"
           />
 
           <input
-            placeholder="Phone *"
+            :placeholder="`${$t('catalogPhone')}`"
             class="catalog-input outline-none w-100 p-4 mt-4"
             type="number"
           />
@@ -47,7 +47,7 @@
             class="text-white btn w-100 catalog-btn outline-none mt-4"
             @click="$bvModal.hide('catalogs-modal')"
           >
-            Download
+            {{$t('catalogDownloadBtn')}}
           </button>
         </div>
       </b-modal>

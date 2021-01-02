@@ -40,7 +40,8 @@ const messages = {
         companyInfoPhone:"Phone Number",companyInfoEmail:"Email",companyInfoAddLogo:"Add logo",companyInfoDropFile:"or drop it right here",shippingInfo:"Shipping Info",shippingInfoPort:"Port",shippingInfoCountry:"Country",currencySAR:"SAR",currencyAED:"AED",currencyUSD:"USD",currencyEURO:"EURO",aboutProducts:"About Products",productUnitPrice:"Unit Price",
         productQuantity:"Quantity",productItem:"Item",productDescription:"Description",remarks:"Remarks",remarksOther:"Other",remarksTradingTerm:"Trading Term",paymentTerm:"Payment Term",paymentTermLC:"LC",paymentTermTT:"TT",shippingMethod:"Shipping Method",shippingMethodBySea:"BY SEA",shippingMethodByAir:"BY AIR",deliveryTime:"Delivery Time",
         deliveryTime30Days:"30 DAYS",deliveryTime20Days:"20 DAYS",deliveryTime10Days:"10 DAYS",companyInfoOthers:"Others",companyInfoSave:"Save and Continue",companyInfoReset:"Reset",formHeaderAccountDetails:"Account Details",formPreviewEdit:"Edit",formPreviewView:"View"
-        ,formPreviewCancel:"Cancel",formPreviewSend:"Send"
+        ,formPreviewCancel:"Cancel",formPreviewSend:"Send",downloadYourCatalog:"Download your catalog",catalogName:"Name*",catalogEmail:"Email*",catalogPhone:"Phone*",catalogDownloadBtn:"Download",allMessages:"All Messages",newMessages:"New Messages",messagesUnReadBtn:"Unread",messagesReadBtn:"Read",messageOrderShipped:"Order Shipped",message1Minute:"1 minute ago",messageView:"View",messageDismiss:"DISMISS",messageNewHadi:"New Message From Hedi",messageOrderDelivered:"Order Delivered",
+        allNotifications:"All Notifications",newNotifications:"New Orders",notificationReadBtn:"Read",notificationUnReadBtn:"Unread",notification1Minute:"1 minute ago",notificationView:"View",notificationDismiss:"DISMISS",notificationOrderShipped:"Order Shipped",notificationNewHedi:"New Message From Hedi",notificationOrderDelivered:"Order Delivered"
     },
     'ar':
     {

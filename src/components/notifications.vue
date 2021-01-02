@@ -5,19 +5,19 @@
         class="d-flex px-lg-5 py-lg-4 p-2 flex-column flex-lg-row justify-content-between align-items-center"
       >
         <div class="text-center text-lg-left">
-          <h1 class="font-24">All notifications</h1>
-          <p class="fs-18 mb-0 font-weight-lighter">New Orders</p>
+          <h1 class="font-24">{{$t('allNotifications')}}</h1>
+          <p class="fs-18 mb-0 font-weight-lighter">{{$t('newNotifications')}}</p>
         </div>
         <div class="d-flex mt-4 mt-lg-0">
           <button
             class="notifications-btn bg-primary border border-primary text-light"
           >
-            Unread
+            {{$t('notificationUnReadBtn')}}
           </button>
           <button
             class="notifications-btn btn-outline-primary border border-primary ml-2"
           >
-            Read
+            {{$t('notificationReadBtn')}}
           </button>
         </div>
       </div>
@@ -27,19 +27,19 @@
             class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
           >
             <div class="px-lg-5 text-center text-sm-left">
-              <h1 class="fs-18 font-weight-light">Order Shipped</h1>
+              <h1 class="fs-18 font-weight-light">{{$t('notificationOrderShipped')}}</h1>
               <div class="d-flex w-100 justify-content-between">
                 <p class="mb-0 font-weight-lighter ml-2 ml-lg-0">
-                  1 minute ago
+                  {{$t('notification1Minute')}}
                 </p>
-                <p class="mb-0 text-primary ml-lg-5 ml-3">View</p>
+                <p class="mb-0 text-primary ml-lg-5 ml-3">{{$t('notificationView')}}</p>
               </div>
             </div>
             <div class="px-5 mt-2 mt-lg-0">
               <button
                 class="dismiss-btn px-5 py-2 d-flex justify-content-center align-items-center"
               >
-                DISMISS
+                {{$t('notificationDismiss')}}
               </button>
             </div>
           </div>
@@ -51,19 +51,19 @@
             class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
           >
             <div class="px-lg-5 text-center text-sm-left">
-              <h1 class="fs-18 font-weight-light">New Message from Hedi</h1>
+              <h1 class="fs-18 font-weight-light">{{$t('notificationNewHedi')}}</h1>
               <div class="d-flex w-100 justify-content-between">
                 <p class="mb-0 font-weight-lighter ml-2 ml-lg-0">
-                  1 minute ago
+                  {{$t('notification1Minute')}}
                 </p>
-                <p class="mb-0 text-primary ml-lg-5 ml-3">View</p>
+                <p class="mb-0 text-primary ml-lg-5 ml-3">{{$t('notificationView')}}</p>
               </div>
             </div>
             <div class="px-5 mt-2 mt-lg-0">
               <button
                 class="dismiss-btn px-5 py-2 d-flex justify-content-center align-items-center"
               >
-                DISMISS
+                {{$t('notificationDismiss')}}
               </button>
             </div>
           </div>
@@ -75,19 +75,19 @@
             class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
           >
             <div class="px-lg-5 text-center text-sm-left">
-              <h1 class="fs-18 font-weight-light">Order Delivered</h1>
+              <h1 class="fs-18 font-weight-light">{{$t('notificationOrderDelivered')}}</h1>
               <div class="d-flex w-100 justify-content-between">
                 <p class="mb-0 font-weight-lighter ml-2 ml-lg-0">
-                  1 minute ago
+                  {{$t('notification1Minute')}}
                 </p>
-                <p class="mb-0 text-primary ml-lg-5 ml-3">View</p>
+                <p class="mb-0 text-primary ml-lg-5 ml-3">{{$t('notificationView')}}</p>
               </div>
             </div>
             <div class="px-5 mt-2 mt-lg-0">
               <button
                 class="dismiss-btn px-5 py-2 d-flex justify-content-center align-items-center"
               >
-                DISMISS
+                {{$t('notificationDismiss')}}
               </button>
             </div>
           </div>
