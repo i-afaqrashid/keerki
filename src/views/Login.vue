@@ -186,6 +186,11 @@ export default {
     },
     onSubmit(e) {
       e.preventDefault();
+      localStorage.email = this.email;
+      localStorage.password = this.password;
+      localStorage.newUser= true;
+      localStorage.currentLanguage = "en";
+
       this.$router.push({ path: "dashboard" });
     },
   },

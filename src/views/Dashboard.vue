@@ -276,6 +276,7 @@
         </b-modal>
         <b-button
           variant="outline-secondary"
+          
           v-b-modal.log-out-modal
           class="text-success px-5 mt-8 mb-5 d-flex flex-nowrap align-items-center border-radius-13"
           >{{$t('logout')}}
@@ -332,6 +333,7 @@ export default {
   },
   methods: {
     logout() {
+      localStorage.clear();
       this.$router.push({ path: "../../login" });
       this.$bvModal.hide("log-out-modal");
     },

@@ -8,9 +8,14 @@
           src="../assets/Group 198accountImage.png"
           class="bg-secondary rounded-circle"
         />
-        <button class="mt-2 fs-16 font-weight-lighter outline-none">
-          {{ $t("setNewPhoto") }}
-        </button>
+        <label class="file-select mt-3">
+          <div class="select-button">
+            <span class="mt-2 fs-16 font-weight-lighter outline-none">
+              {{ $t("setNewPhoto") }}
+            </span>
+          </div>
+          <input type="file" @change="handleFileChange" />
+        </label>
       </div>
       <div class="w-100 fs-18 text-69">
         <div
@@ -284,6 +289,11 @@
 <script>
 export default {
   name: "Account",
+  methods: {
+    handleFileChange(e) {
+      this.$emit("input", e.target.files[0]);
+    },
+  },
   data() {
     return {
       selected: "ENGLISH",
@@ -297,3 +307,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.file-select > .select-button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16.0564px;
+  line-height: 18px;
+
+  color: #aeaeae;
+
+  cursor: pointer;
+  border-radius: 0.3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Don't forget to hide the original file input! */
+.file-select > input[type="file"] {
+  display: none;
+}
+</style>

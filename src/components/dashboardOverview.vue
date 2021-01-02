@@ -134,7 +134,7 @@ export default {
   name: "DashboardOverview",
   data() {
     return {
-      visible: true,
+      visible:(localStorage.newUser == "true"?true:false),
       index: 0,
       data: [
         {
@@ -175,6 +175,7 @@ export default {
   },
   methods: {
     done() {
+      localStorage.newUser= false;
       this.$bvModal.hide("entry-modal");
       this.index = 0;
     },
