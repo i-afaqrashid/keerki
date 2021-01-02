@@ -15,7 +15,7 @@
         class="d-flex pt-5 pt-lg-0 flex-grow-1 w-100 text-white px-xl-9 text-center flex-column justify-content-center align-items-center"
       >
         <h1>{{ $t("containerOffer") }}</h1>
-        <router-link to="/sign-up">
+        <router-link to="/dashboard/order-form">
           <b-button
             class="p-3 mt-5 mb-4 btn-width"
             squared

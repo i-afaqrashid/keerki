@@ -10,7 +10,7 @@
         {{ $t("randomLarge") }}
       </h4>
 
-      <router-link to="/sign-up">
+      <router-link to="/dashboard/order-form">
         <b-button
           class="p-3 mt-5 mb-4 btn-width-160"
           squared
