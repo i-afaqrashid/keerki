@@ -45,27 +45,27 @@
               class="btn btn-outline-primary border-0 mr-lg-3 mt-4 mt-lg-0"
               @click="prev"
             >
-              Previous
+              {{ $t("newUserPrev") }}
             </button>
             <div
               v-else
               class="btn border-0 mr-0 outline-none mt-4 mt-lg-0 bg-transparent text-white"
             >
-              Previous
+              {{ $t("newUserPrev") }}
             </div>
             <button
               v-if="index != 4"
               class="btn btn-primary mt-4 mt-lg-0"
               @click="next"
             >
-              Next
+              {{ $t("newUserNext") }}
             </button>
             <button
               v-if="index >= 4"
               class="btn btn-primary mt-4 mt-lg-0"
               @click="done"
             >
-              Done
+              {{ $t("newUserDone") }}
             </button>
           </div>
         </div>
@@ -134,38 +134,32 @@ export default {
   name: "DashboardOverview",
   data() {
     return {
-      visible:(localStorage.newUser == "true"?true:false),
+      visible: localStorage.newUser == "true" ? true : false,
       index: 0,
       data: [
         {
-          heading: "Welcome to Keerki.",
-          body:
-            "A new experience designed to help you manage your orders faster!",
+          heading: this.$t("newUserWelcomeHeading"),
+          body: this.$t("newUserWelcomeDescription"),
           img: "/img/dashboard.620aa608.png",
         },
         {
-          heading: "View all orders in one place!",
-          body:
-            "Check all  your orders and details in orders history page and check their status. ",
+          heading: this.$t("newUserHistoryPageHeading"),
+          body: this.$t("newUserHistoryPageDescription"),
           img: "/img/orderhistory.d29eda7c.png",
         },
         {
-          heading: "View your orders in templates ",
-          body:
-            "Even better and faster you can view all your status and orders in templates",
+          heading: this.$t("newUserOrderTemplateHeading"),
+          body: this.$t("newUserOrderTemplateDescription"),
           img: "/img/orderpreview.c81043bc.png",
         },
         {
-          heading:
-            "Manage your account information and add your company details",
-          body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ",
+          heading: this.$t("newUserAccountInformationHeading"),
+          body: this.$t("newUserAccountInformationDescription"),
           img: "/img/account.984f9563.png",
         },
         {
-          heading: "Send messages and view notification within one screen",
-          body:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+          heading: this.$t("newUserNotificationHeading"),
+          body: this.$t("newUserNotificationDescription"),
         },
       ],
     };
@@ -175,19 +169,17 @@ export default {
   },
   methods: {
     done() {
-      localStorage.newUser= false;
+      localStorage.newUser = false;
       this.$bvModal.hide("entry-modal");
       this.index = 0;
     },
     prev() {
       this.index != 0 && this.index--;
-            this.changeSlide(this.index, `active-circle${this.index}`);
-
+      this.changeSlide(this.index, `active-circle${this.index}`);
     },
     next() {
       this.index < 5 && this.index++;
-            this.changeSlide(this.index, `active-circle${this.index}`);
-
+      this.changeSlide(this.index, `active-circle${this.index}`);
     },
     changeSlide(currentIndex, id) {
       var elems = document.querySelectorAll(".active-circle");

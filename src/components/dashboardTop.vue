@@ -315,11 +315,15 @@ export default {
   props: {
     Heading: {
       type: String,
-      default: "Dashboard",
+      default:  function () {
+    return this.$t('dashboardHeading')
+  }
     },
     Text: {
       type: String,
-      default: "Get summary of your weekly online transactions here.",
+      default:  function () {
+    return this.$t('dashboardDescription')
+  },
     },
   },
 };
