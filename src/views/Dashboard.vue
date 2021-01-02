@@ -251,10 +251,12 @@
           hider-header
           hide-header-close
         >
-          <div class="d-flex flex-column w-100 justify-content-center align-items-center p-3">
+          <div
+            class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
+          >
             <div class="w-100">
-                <h1 class="fs-16">You will be automatically logged out in</h1>
-                <h1 class="fs-18 text-primary">1 minutes 52 seconds</h1>
+              <h1 class="fs-16">You will be automatically logged out in</h1>
+              <h1 class="fs-18 text-primary">1 minutes 52 seconds</h1>
             </div>
             <div class="d-flex justify-content-end w-100 mt-3">
               <button
@@ -264,7 +266,7 @@
                 Logout
               </button>
               <button
-                class="rounded-lg btn btn-primary  outline-none ml-2"
+                class="rounded-lg btn btn-primary outline-none ml-2"
                 @click="$bvModal.hide('log-out-modal')"
               >
                 Continue Session

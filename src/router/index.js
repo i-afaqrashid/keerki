@@ -17,6 +17,7 @@ import Form from '../views/Form.vue'
 import FormBody from '../components/formBody.vue'
 import FormPreview from '../components/formPreview.vue'
 import Messages from '../components/messages.vue'
+import OrderForm from '../components/orderForm.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -51,7 +52,7 @@ const routes = [
     component: Reset
   },
   {
-    path: "/form",
+    path: "/quote-form",
     component: Form,
     children: [
       {
@@ -62,8 +63,38 @@ const routes = [
         path: "preview",
         component: FormPreview
       }
+      ,
+      {
+        path: "/service-form",
+        component: Form,
+        children: [
+          {
+            path: "",
+            component: FormBody
+          },
+          {
+            path: "preview",
+            component: FormPreview
+          }
+        ]
+      },
+      {
+        path: "/shipping-form",
+        component: Form,
+        children: [
+          {
+            path: "",
+            component: FormBody
+          },
+          {
+            path: "preview",
+            component: FormPreview
+          }
+        ]
+      }
     ]
   },
+
   {
     path: "/dashboard",
     component: Dashboard,
@@ -106,6 +137,13 @@ const routes = [
         path: "notifications",
         component: Notification
       },
+      {
+        path: 'order-form',
+        component: OrderForm,
+
+      }
+      ,
+
       {
         path: '',
         component: DashboardOverview

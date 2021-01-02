@@ -1,5 +1,8 @@
 <template>
   <div class="d-flex flex-column">
+    <b-modal id="entry-modal" hide-footer centered size="lg" v-model="visible">
+      <p class="my-4">Vertically centered modal!</p>
+    </b-modal>
     <div class="d-flex flex-column flex-xl-row">
       <div
         class="d-flex justify-content-around align-items-center flex-column flex-lg-row pt-lg-9 pt-11 px-0 w-100"
@@ -7,7 +10,6 @@
         <DashboardCard
           v-bind:title="`${$t('overViewOrderHistory')}`"
           v-bind:footer="`${$t('cardClickHere')}`"
-
           v-on:click.native="orderHistory"
         />
         <DashboardCard
@@ -53,7 +55,7 @@
           fill="#0278AE"
         />
       </svg>
-      <p class="mb-0 ml-2">{{$t('help')}}</p>
+      <p class="mb-0 ml-2">{{ $t("help") }}</p>
     </div>
   </div>
 </template>
@@ -61,6 +63,11 @@
 import DashboardCard from "../components/dashboardCard";
 export default {
   name: "DashboardOverview",
+   data() {
+    return {
+    visible:true,
+    };
+  },
   components: {
     DashboardCard,
   },
@@ -78,7 +85,7 @@ export default {
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     form() {
-      this.$router.push({ path: "/form" }).catch(() => {});
+      this.$router.push({ path: "/dashboard/order-form" }).catch(() => {});
     },
   },
 };

@@ -199,12 +199,11 @@
         {{ $t("shippingMethodByAir") }}
       </button>
       <button class="w-100 btn btn-primary py-4 border-26" type="button">
-                {{$t('shippingMethodBySea')}}
+        {{ $t("shippingMethodBySea") }}
       </button>
     </div>
     <h1 class="w-100 font-weight-light text-right font-24 py-2 mt-15">
-                      {{$t('deliveryTime')}}
-
+      {{ $t("deliveryTime") }}
     </h1>
     <div
       class="d-flex w-100 justify-content-center align-items-center flex-lg-row flex-column mt-4"
@@ -213,16 +212,16 @@
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        {{$t('deliveryTime30Days')}}
+        {{ $t("deliveryTime30Days") }}
       </button>
       <button
         class="w-100 btn btn-outline-primary py-4 border-26"
         type="button"
       >
-        {{$t('deliveryTime20Days')}}
+        {{ $t("deliveryTime20Days") }}
       </button>
       <button class="w-100 btn btn-primary py-4 border-26" type="button">
-        {{$t('deliveryTime10Days')}}
+        {{ $t("deliveryTime10Days") }}
       </button>
     </div>
     <textarea
@@ -236,13 +235,13 @@
         class="btn btn-outline-secondary w-100 text-dark bg-white form-buttons"
         type="reset"
       >
-        {{$t('companyInfoReset')}}
+        {{ $t("companyInfoReset") }}
       </button>
       <button
         class="btn btn-secondary w-100 text-dark ml-lg-4 mt-4 mt-lg-0 form-buttons"
         type="submit"
       >
-       {{$t('companyInfoSave')}}
+        {{ $t("companyInfoSave") }}
       </button>
     </div>
   </form>
@@ -253,7 +252,13 @@ export default {
   methods: {
     formSubmit(e) {
       e.preventDefault();
-      this.$router.push({ path: "/form/preview" });
+      this.$route.fullPath === "/quote-form" &&
+        this.$router.push({ path: "/quote-form/preview" });
+      this.$route.fullPath === "/service-form" &&
+        this.$router.push({ path: "/service-form/preview" });
+
+      this.$route.fullPath === "/shipping-form" &&
+        this.$router.push({ path: "/shipping-form/preview" });
     },
   },
 };

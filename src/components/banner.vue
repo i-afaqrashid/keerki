@@ -34,6 +34,16 @@ export default {
 </script>
 
 <style>
+.order-card {
+  margin-bottom: 40px;
+  width: 219px!important;
+  height: 219px;
+  background: #ffffff;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+}
+
 .catalog-input{
 
 height: 38px;

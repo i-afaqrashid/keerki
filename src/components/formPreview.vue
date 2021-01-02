@@ -81,7 +81,7 @@ export default {
       this.$router.go(-1);
     },
     sendForm(){
-        this.$router.push({ path: "/dashboard" })
+        this.$router.push({ path: "/dashboard/order-form" })
     }
   },
 };
