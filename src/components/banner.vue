@@ -34,9 +34,36 @@ export default {
 </script>
 
 <style>
+.faded-circle {
+  width: 8px;
+  height: 8px;
+  background: #dedede;
+  margin: 16px 0px;
+}
+.active-circle{
+  background: #007BC7!important;
+}
+.first-modal-body {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: #747474;
+}
+.first-modal-header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  color: #007bc7;
+}
+.text-black {
+  text-shadow: none !important;
+  color: black;
+}
 .order-card {
   margin-bottom: 40px;
-  width: 219px!important;
+  width: 219px !important;
   height: 219px;
   background: #ffffff;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
@@ -44,23 +71,22 @@ export default {
   border-radius: 20px;
 }
 
-.catalog-input{
+.catalog-input {
+  height: 38px;
+  background: #f2f3f7;
+  border-radius: 6px;
+}
+.catalog-btn {
+  background: #2c5282 !important;
+  border-radius: 40px !important;
 
-height: 38px;
-background: #F2F3F7;
-border-radius: 6px;
+  margin: 0px 8px;
 }
-.catalog-btn{
-  background: #2C5282!important;
-border-radius: 40px !important;
-
-margin: 0px 8px;
+.modal-logout {
+  border: 1px solid #ff3a67 !important;
 }
-.modal-logout{
- border: 1px solid #FF3A67!important;
-}
-.pop-over{
-  width:300px!important;
+.pop-over {
+  width: 300px !important;
 }
 .form-preview {
   background: #ffffff;
@@ -194,8 +220,8 @@ margin: 0px 8px;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
     0px 0px 1px rgba(0, 0, 0, 0.04);
 }
-.noti-btn{
-  background:#F2FAFF!important;
+.noti-btn {
+  background: #f2faff !important;
 }
 .text-69 {
   color: #696969;
@@ -206,12 +232,12 @@ margin: 0px 8px;
 .w-21 {
   width: 21%;
 }
-.font-12{
-font-size:12px;
+.font-12 {
+  font-size: 12px;
 }
-.font-11{
+.font-11 {
   font-size: 11px;
-  color:#F12B2C;
+  color: #f12b2c;
 }
 .fs-11 {
   font-size: 11px;
@@ -230,7 +256,7 @@ font-size:12px;
 }
 .dashboard-card {
   margin-bottom: 40px;
-  width: 219px!important;
+  width: 219px !important;
   height: 219px;
   background: #ffffff;
   box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04),
@@ -288,7 +314,7 @@ btn-secondary:focus {
 .horizontal-line {
   border: 1px solid #f5f5f5;
 }
-.fs-36{
+.fs-36 {
   font-size: 36px;
 }
 .fs-30 {
@@ -354,7 +380,7 @@ btn-secondary:focus {
   width: 135px;
 }
 .fs-28 {
-  font-size: 28px!important;
+  font-size: 28px !important;
 }
 .fs-20 {
   font-size: 20px;

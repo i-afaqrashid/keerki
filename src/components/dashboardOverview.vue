@@ -1,7 +1,75 @@
 <template>
   <div class="d-flex flex-column">
     <b-modal id="entry-modal" hide-footer centered size="lg" v-model="visible">
-      <p class="my-4">Vertically centered modal!</p>
+      <div
+        class="d-flex flex-column py-4 px-5 align-items-center justify-content-center"
+      >
+        <div class="align-self-start">
+          <p class="first-modal-header">{{ this.data[index].heading }}</p>
+          <p class="first-modal-body mb-0">{{ this.data[index].body }}</p>
+        </div>
+        <img :src="this.data[index].img" class="mt-16 w-100" />
+        <div
+          class="d-flex justify-content-between align-items-center flex-column flex-lg-row w-100 mt-5"
+        >
+          <div class="d-flex justify-content-center w-100 pl-lg-9">
+            <button
+              class="rounded-circle ml-2 faded-circle outline-none active-circle"
+              @click="changeSlide(0, 'active-circle0')"
+              id="active-circle0"
+            ></button>
+            <button
+              class="rounded-circle ml-2 faded-circle outline-none"
+              @click="changeSlide(1, 'active-circle1')"
+              id="active-circle1"
+            ></button>
+            <button
+              class="rounded-circle ml-2 faded-circle outline-none"
+              @click="changeSlide(2, 'active-circle2')"
+              id="active-circle2"
+            ></button>
+            <button
+              class="rounded-circle ml-2 faded-circle outline-none"
+              @click="changeSlide(3, 'active-circle3')"
+              id="active-circle3"
+            ></button>
+            <button
+              class="rounded-circle ml-2 faded-circle outline-none"
+              @click="changeSlide(4, 'active-circle4')"
+              id="active-circle4"
+            ></button>
+          </div>
+          <div class="d-flex flex-column flex-lg-row">
+            <button
+              v-if="index != 0"
+              class="btn btn-outline-primary border-0 mr-lg-3 mt-4 mt-lg-0"
+              @click="prev"
+            >
+              Previous
+            </button>
+            <div
+              v-else
+              class="btn border-0 mr-0 outline-none mt-4 mt-lg-0 bg-transparent text-white"
+            >
+              Previous
+            </div>
+            <button
+              v-if="index != 4"
+              class="btn btn-primary mt-4 mt-lg-0"
+              @click="next"
+            >
+              Next
+            </button>
+            <button
+              v-if="index >= 4"
+              class="btn btn-primary mt-4 mt-lg-0"
+              @click="done"
+            >
+              Done
+            </button>
+          </div>
+        </div>
+      </div>
     </b-modal>
     <div class="d-flex flex-column flex-xl-row">
       <div
@@ -61,18 +129,76 @@
 </template>
 <script>
 import DashboardCard from "../components/dashboardCard";
+
 export default {
   name: "DashboardOverview",
-   data() {
+  data() {
     return {
-    visible:true,
+      visible: true,
+      index: 0,
+      data: [
+        {
+          heading: "Welcome to Keerki.",
+          body:
+            "A new experience designed to help you manage your orders faster!",
+          img: "/img/dashboard.620aa608.png",
+        },
+        {
+          heading: "View all orders in one place!",
+          body:
+            "Check all  your orders and details in orders history page and check their status. ",
+          img: "/img/orderhistory.d29eda7c.png",
+        },
+        {
+          heading: "View your orders in templates ",
+          body:
+            "Even better and faster you can view all your status and orders in templates",
+          img: "/img/orderpreview.c81043bc.png",
+        },
+        {
+          heading:
+            "Manage your account information and add your company details",
+          body:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ",
+          img: "/img/account.984f9563.png",
+        },
+        {
+          heading: "Send messages and view notification within one screen",
+          body:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
+        },
+      ],
     };
   },
   components: {
     DashboardCard,
   },
   methods: {
+    done() {
+      this.$bvModal.hide("entry-modal");
+      this.index = 0;
+    },
+    prev() {
+      this.index != 0 && this.index--;
+            this.changeSlide(this.index, `active-circle${this.index}`);
+
+    },
+    next() {
+      this.index < 5 && this.index++;
+            this.changeSlide(this.index, `active-circle${this.index}`);
+
+    },
+    changeSlide(currentIndex, id) {
+      var elems = document.querySelectorAll(".active-circle");
+
+      [].forEach.call(elems, function (el) {
+        el.classList.remove("active-circle");
+      });
+      this.index = currentIndex;
+      document.getElementById(id).classList.add("active-circle");
+    },
     orderHistory() {
+      console.log(this.data);
       this.$router.push({ path: "/dashboard/order-history" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
