@@ -114,6 +114,16 @@ const messages = {
         activateYourAccount:"激活你的账号",activateAccountDescription:"请检查发送到您的电子邮件的电子邮件以激活您的帐户并开始使用您的帐户。谢谢！",invalidEmail:"无效的电子邮件或密码",contactKeerki:"如果需要帮助，请联系Keerki",
         sessionExpire:"您的会话因不活动而过期。请重新登录。",loginToOtherAccount:"您已因在另一台设备上登录而被注销。",
         technicalDifficulty:"技术难度。抱歉给你带来不便;请再试一次。",logoutSuccessful:"Log out successful.",accountDeactivated:"注销成功。",accountSuspended:"您的帐户已被暂停。",
+        setNewPhoto:"设置新照片",accountName:"名称:",accountEmail:"电子邮件:",accountPhone:"电话:",accountPassword:"密码:",
+        addCompanyInfo:"添加公司信息",companyName:"公司名",companyAddress:"地址",companyPhone:"电话",companyPersonIncharge:"负责人",companyCountry:"国家",companySave:"保存",companyCancel:"取消",cardClickHere:"点击这里",overViewOrderHistory:"订单历史",
+        overViewNotification:"通知",overViewAccount:"帐户",overViewOrderForm:"订单",help:"救命",companyInfo:"公司资料",companyInfoName:"公司名",companyInfoCountry:"国家",companyInfoContactPerson:"联系人",companyInfoCity:"市",companyInfoProvince:"省",companyInfoPostCode:"邮编",companyInfoDist:"街区",
+        companyInfoPhone:"电话号码",companyInfoEmail:"电子邮件",companyInfoAddLogo:"添加徽标",companyInfoDropFile:"或放在这里",shippingInfo:"运输信息",shippingInfoPort:"港口",shippingInfoCountry:"国家",currencySAR:"SAR",currencyAED:"AED",currencyUSD:"USD",currencyEURO:"EURO",aboutProducts:"关于产品",productUnitPrice:"单价",
+        productQuantity:"数量",productItem:"项目",productDescription:"描述",remarks:"备注",remarksOther:"其他",remarksTradingTerm:"交易期限",paymentTerm:"付款期限",paymentTermLC:"LC",paymentTermTT:"TT",shippingMethod:"邮寄方式",shippingMethodBySea:"按海",shippingMethodByAir:"空运",deliveryTime:"交货时间",
+        deliveryTime30Days:"30天",deliveryTime20Days:"20天",deliveryTime10Days:"10天",companyInfoOthers:"其他",companyInfoSave:"保存并继续",companyInfoReset:"重启",formHeaderAccountDetails:"帐户详细资料",formPreviewEdit:"编辑",formPreviewView:"视图"
+        ,formPreviewCancel:"取消",formPreviewSend:"发送",downloadYourCatalog:"下载目录",catalogName:"Name*",catalogEmail:"电子邮件*",catalogPhone:"电话*",catalogDownloadBtn:"下载",allMessages:"所有讯息",newMessages:"新讯息",messagesUnReadBtn:"未读",messagesReadBtn:"读",messageOrderShipped:"订单出货",message1Minute:"1分钟前",messageView:"视图",messageDismiss:"解雇",messageNewHadi:"Hedi的新讯息",messageOrderDelivered:"订单已交付",
+        allNotifications:"所有通知",newNotifications:"新订单",notificationReadBtn:"读",notificationUnReadBtn:"未读",notification1Minute:"1分钟前",notificationView:"视图",notificationDismiss:"解雇",notificationOrderShipped:"订单出货",notificationNewHedi:"Hedi的新讯息",notificationOrderDelivered:"订单已交付",quoteOrders:"报价单",serviceOrders:"服务订单",shippingOrders:"运输订单",orderFormHistory:"订单历史记录",orderSearchByNumber:"按订单号搜索",orderSelectAll:"全选",orderDownloadAll:"全部下载",orderStatus:"状态",orderDate:"日期",
+        orderPrice:"价钱",orderCategories:"分类目录",orderSomethingElse:"还有别的",inProgressBtn:"进行中",doneBtn:"完成",waitingBtn:"等候",canceledBtn:"取消",orderDownload:"下载",keerki:"基尔基",overview:"总览",orderHistory:"订单历史",account:"帐户",notifications:"通知事项",messages:"留言内容",settings:"设定值",logout:"登出",continueSession:"继续会议",logoutTime:"1分52秒",automaticLogout:"您将自动注销",viewInTemplates:"在模板中查看",popupMessages:"留言内容", popupDaysAgo:"2天前",popupNewMessages:"您有3条新消息",popupDismiss:"解雇",popupViewAll:"查看全部",
+        popupNotifications:"通知事项",popupNewNotifications:"您有3条新通知"
     }
 }
 export default new VueI18n({ locale: 'en', fallbackLocale: 'en', messages, });
