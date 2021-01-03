@@ -9,7 +9,7 @@
         <div
           class="d-flex flex-column ml-xl-5 flex-lg-row align-items-center justify-content-around w-100 px-5"
         >
-          <b-navbar-nav class="ml-xl-5">
+          <b-navbar-nav class="ml-xl-5" dir="ltr">
               <b-button
               @click="login"
                 class=" py-2 btn-width-135"

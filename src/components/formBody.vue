@@ -1,6 +1,6 @@
 <template>
   <form
-    class="px-lg-9 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
+    class="px-lg-9 pb-11 px-4 d-flex flex-column justify-content-center align-items-center" dir="ltr"
     @submit="formSubmit"
   >
     <h1 class="w-100 border-3 text-right font-24 py-2">
@@ -50,7 +50,7 @@
         :placeholder="`${$t('companyInfoEmail')}`"
       />
     </div>
-    <div class="w-100">
+    <div class="w-100" dir="ltr">
       <div @dragover.prevent @drop.prevent>
         <div
           class="d-flex justify-content-center align-items-center mt-3 w-100 form-file-input px-2 flex-column "

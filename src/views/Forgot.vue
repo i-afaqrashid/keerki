@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex w-100 min-vh-100">
+  <div class="d-flex w-100 min-vh-100" dir="ltr">
     <div
       class="d-none w-33 sign-up-image d-lg-flex justify-content-center align-items-center"
     >
@@ -44,7 +44,7 @@
             {{ $t("forgotPasswordDescription") }}
           </p>
           <p class="horizontal-line"></p>
-          <div>
+          <div dir="auto">
             <b-form @submit="onSubmit">
               <b-form-group
                 id="input-group-8"
@@ -54,6 +54,7 @@
                 <b-form-input
                   id="input-8"
                   v-model="form.email"
+                  
                   type="email"
                   :placeholder="`${$t('enterEmail')}`"
                   required

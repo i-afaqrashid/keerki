@@ -4,7 +4,7 @@
       :Heading="$t('notificationHeading')"
       :Text="$t('notificationDescription')"
     />
-  <div class="d-flex flex-column w-100 p-lg-5 p-1">
+  <div class="d-flex flex-column w-100 p-lg-5 p-1" dir="auto">
     <div class="notifications">
       <div
         class="d-flex px-lg-5 py-lg-4 p-2 flex-column flex-lg-row justify-content-between align-items-center"
@@ -13,7 +13,7 @@
           <h1 class="font-24">{{$t('allNotifications')}}</h1>
           <p class="fs-18 mb-0 font-weight-lighter">{{$t('newNotifications')}}</p>
         </div>
-        <div class="d-flex mt-4 mt-lg-0">
+        <div class="d-flex mt-4 mt-lg-0"  dir="ltr">
           <button
             class="notifications-btn bg-primary border border-primary text-light"
           >

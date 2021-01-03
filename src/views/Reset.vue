@@ -7,7 +7,7 @@
     centered
     size="lg"
   >
-    <div class="d-flex justify-content-center flex-column px-5">
+    <div class="d-flex justify-content-center flex-column px-5" dir="auto">
       <h1 class="fs-28">{{$t('changePassword')}}</h1>
       <h3 class="fs-16 font-weight-thin mt-4">
         {{$t('changePasswordDescription')}}

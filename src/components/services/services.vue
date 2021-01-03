@@ -9,7 +9,7 @@
       {{ $t("randomHuge") }}
     </h4>
     <div
-      class="mt-lg-9 d-flex w-100 justify-content-center align-items-center flex-column flex-lg-row"
+      class="mt-lg-9 d-flex w-100 justify-content-center align-items-center flex-column flex-lg-row" dir="ltr"
     >
       <div
         class="d-flex mt-5 mt-lg-0 justify-content-center align-items-center svgContainer"

@@ -9,7 +9,7 @@
       class="mt-lg-11 d-flex justify-content-start align-items-center flex-column flex-lg-row"
     >
       <div class="d-flex align-items-center flex-column">
-        <div class="card bg-warning clientCard w-22">
+        <div class="card bg-warning clientCard w-22 px-2" >
           <div class="d-flex align-items-center p-5">
             <img
               src="https://s3-alpha-sig.figma.com/img/1664/0dc1/2a055c78a67003b018f22d24fb03e964?Expires=1610323200&Signature=UuaGcth3boG2WoY8Ad-tk6aO59dcBizJMGxHX3~YpWO9LQ5NUSkm0uGFq30H6iJXMbExOZxahAqzpt6OU5zpJF9ypGQMCSbzucryj18ljyFt3pFZYGSNkFuD~AHPbt6pG8SM6VzGI3HV2GdaFSi4VOtofm~zEnCYA-k5PPmkn2PaopEpr8q6B1BvOkmN4Y~Iuaj~1wEi6ZoG478V0XpJFozgpDFgdN0sPiAiklpNjPshC90mXZDqndJ5nlKaFXo241TPu2YyziJe7svz03e1eOcCRu3T9bpT-fqWNY3f2~BctZKqlnm-9ITkjUEO6-Oyu8xshu1QRvEpw9TuFsOFNA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
@@ -18,7 +18,7 @@
               class="border-radius-5"
             />
             <div
-              class="d-flex flex-column justify-content-center align-items-center ml-4"
+              class="d-flex flex-column justify-content-center align-items-center mx-4"
             >
               <p class="mb-0">Clair Bell</p>
               <p class="mt-1 mb-0">{{ $t("designer") }}</p>
@@ -37,7 +37,7 @@
               class="border-radius-5"
             />
             <div
-              class="d-flex flex-column justify-content-center align-items-center ml-4"
+              class="d-flex flex-column justify-content-center align-items-center mx-4"
             >
               <p class="mb-0 ml-1">Ralph Fisher</p>
               <p class="mt-1 mb-0 mr-3">{{ $t("designer") }}</p>
@@ -48,7 +48,7 @@
           </h1>
         </div>
       </div>
-      <div class="d-flex align-items-center flex-column ml-lg-4 mt-2 mt-lg-9">
+      <div class="d-flex align-items-center flex-column ml-lg-4 mt-2 mt-lg-9 mr-lg-4">
         <div class="card bg-warning clientCard w-22">
           <div class="d-flex align-items-center p-5">
             <img
@@ -58,7 +58,7 @@
               class="border-radius-5"
             />
             <div
-              class="d-flex flex-column justify-content-center text-left align-items-center ml-4"
+              class="d-flex flex-column justify-content-center text-left align-items-center mx-4"
             >
               <p class="mb-0 ml-2">Franciso Lane</p>
               <p class="mt-1 mb-0 mr-4">{{ $t("designer") }}</p>
@@ -77,7 +77,7 @@
               class="border-radius-5"
             />
             <div
-              class="d-flex flex-column justify-content-center align-items-center ml-4"
+              class="d-flex flex-column justify-content-center align-items-center mx-4"
             >
               <p class="mb-0 ml-2">Jorge Murphy</p>
               <p class="mt-1 mb-0 mr-4">{{ $t("designer") }}</p>

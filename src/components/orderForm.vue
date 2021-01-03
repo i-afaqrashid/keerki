@@ -4,9 +4,9 @@
       :Heading="$t('dashboardHeading')"
       :Text="$t('dashboardDescription')"
     />
-    <div class="orders w-100 px-15 py-5 my-5">
+    <div class="orders w-100 px-15 py-5 my-5" dir="auto">
       <div class="d-flex flex-column px-lg-5 py-lg-4 p-2 align-items-center">
-        <div class="d-flex align-self-lg-start">
+        <div class="d-flex align-self-lg-start" dir="ltr">
           <h1 class="fs-24">{{ $t("orderFormHeading") }}</h1>
           <svg
             width="40"

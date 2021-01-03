@@ -6,7 +6,7 @@
       :Text="$t('accountDescription')"
     />
 
-  <div class="d-flex justify-content-start mt-5 px-lg-4">
+  <div class="d-flex justify-content-start mt-5 px-lg-4" dir="auto">
     <div
       class="w-100 d-flex justify-content-start align-items-start flex-column"
     >
@@ -146,6 +146,13 @@
         >
           <p class="mb-0">{{$t('language')}} {{ this.$i18n.locale.toUpperCase() }}</p>
           <b-modal id="modal-sm" size="sm" centered @ok="handleOk">
+
+              <template #modal-footer="{ ok}">
+      <b-button size="sm" variant="primary" @click="ok()">
+        {{ $t("ok") }}
+      </b-button>
+      
+    </template>
             <b-form-select
               v-model="selected"
               :options="options"
@@ -321,10 +328,10 @@ export default {
     return {
       selected: "en",
       options: [
-        { value: "en", text: "PLEASE SELECT A LANGUAGE" },
+        { value: localStorage.currentLanguage, text: `${this.$t('selectLanguage')}` },
         { value: "en", text: "ENGLISH" },
-        { value: "ar", text: "ARABIC" },
-        { value: "ch", text: "CHINESE" },
+        { value: "ar", text: "عربى" },
+        { value: "ch", text: "中文" },
       ],
     };
   },

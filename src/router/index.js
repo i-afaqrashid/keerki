@@ -54,6 +54,22 @@ const routes = [
     component: Reset
   },
   {
+    path: "/shipping-form",
+    component: Form,
+    children: [
+      {
+        path: "",
+        component: FormBody
+      },
+      {
+        path: "preview",
+        component: FormPreview
+      }
+
+    ]
+  },
+
+  {
     path: "/quote-form",
     component: Form,
     children: [
@@ -65,38 +81,25 @@ const routes = [
         path: "preview",
         component: FormPreview
       }
-      ,
-      {
-        path: "/service-form",
-        component: Form,
-        children: [
-          {
-            path: "",
-            component: FormBody
-          },
-          {
-            path: "preview",
-            component: FormPreview
-          }
-        ]
-      },
-      {
-        path: "/shipping-form",
-        component: Form,
-        children: [
-          {
-            path: "",
-            component: FormBody
-          },
-          {
-            path: "preview",
-            component: FormPreview
-          }
-        ]
-      }
+
     ]
   },
+  {
+    path: "/service-form",
+    component: Form,
+    children: [
+      {
+        path: "",
+        component: FormBody
+      },
+      {
+        path: "preview",
+        component: FormPreview
+      }
 
+    ]
+  }
+  ,
   {
     path: "/dashboard",
     component: Dashboard,

@@ -1,5 +1,6 @@
 <template>
-    <div class="form">  
+    <div class="form" dir="auto">  
+        <p class="d-none">{{$t('rtlHelper')}}</p>
         <FormHeader/>
         <router-view></router-view>
     </div>

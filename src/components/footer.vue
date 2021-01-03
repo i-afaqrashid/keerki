@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div dir="ltr">
     <div class="d-flex flex-column flex-lg-row align-items-center w-100 pt-5 pt-xl-8">
       <div class="d-flex flex-column w-25 ml-xl-4">
         <div

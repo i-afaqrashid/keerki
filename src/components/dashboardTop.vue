@@ -26,8 +26,9 @@
         {{$t('viewInTemplates')}}
       </b-form-checkbox>
     </div>
-    <div class="d-flex justify-content-between width-100 align-items-center">
+    <div class="d-flex justify-content-between width-100 align-items-center" dir="auto">
       <div class="d-flex">
+        <router-link to="/dashboard/functionality-unavailable">
         <button
           class="d-flex flex-column pt-2 px-2 d-lg-none align-items-center justify-content-center"
           v-on:click="sidebarToggle"
@@ -51,8 +52,9 @@
               fill="#0278AE"
             />
           </svg>
-          <router-link to="/dashboard/functionality-unavailable"><p class="btn p-0 outline-none mb-0 ml-2">{{$t('help')}}</p></router-link>
+          <p class="btn p-0 outline-none mb-0 mx-2">{{$t('help')}}</p>
         </button>
+        </router-link>
         <button
           v-b-popover.hover.top
           id="popover-target-2"
@@ -64,7 +66,7 @@
             placement="bottom"
             custom-class="pop-over p-0"
           >
-            <div class="d-flex flex-column w-100 p-2">
+            <div class="d-flex flex-column w-100 p-2" dir="auto">
               <div class="px-2 py-2 border-bottom w-100">
                 <p class="mb-1 fs-20">{{$t('popupMessages')}}</p>
                 <p class="fs-14 font-weight-light">{{$t('popupDaysAgo')}}</p>
@@ -80,7 +82,7 @@
               >
                 <button
                   class="btn noti-btn w-100 d-flex align-items-center justify-content-center py-3"
-                  @click="messages"
+                  @click="messages" dir="ltr"
                 >
                   <svg
                     width="16"
@@ -142,7 +144,7 @@
             placement="bottom"
             custom-class="pop-over p-0"
           >
-            <div class="d-flex flex-column w-100 p-2">
+            <div class="d-flex flex-column w-100 p-2" dir="auto">
               <div class="px-2 py-2 border-bottom w-100">
                 <p class="mb-1 fs-20">{{$t('popupNotifications')}}</p>
                 <p class="fs-14 font-weight-light">{{$t('popupDaysAgo')}}</p>
@@ -158,7 +160,7 @@
               >
                 <button
                   class="btn noti-btn w-100 d-flex align-items-center justify-content-center py-3"
-                  @click="notifications"
+                  @click="notifications" dir="ltr"
                 >
                   <svg
                     width="16"
@@ -229,7 +231,7 @@
         </button>
       </div>
       <button
-        class="d-flex justify-content-center align-items-center text-left outline-none ml-0 ml-lg-5"
+        class="d-flex justify-content-center align-items-center text-left outline-none ml-0 ml-lg-5" 
         @click="account"
       >
         <div class="bg-secondary rounded-circle">
@@ -269,7 +271,7 @@
             </g>
           </svg>
         </div>
-        <div class="ml-2">
+        <div class="mx-2">
           <p class="mb-0 fs-14">Hedi</p>
           <p class="mb-0 fs-14">{{$t('formHeaderAccountDetails')}}</p>
         </div>

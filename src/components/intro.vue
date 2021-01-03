@@ -25,7 +25,7 @@
         hide-footer
       >
         <div
-          class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
+          class="d-flex flex-column w-100 justify-content-center align-items-center p-3" dir="auto"
         >
           <input
             :placeholder="`${$t('catalogName')}`"

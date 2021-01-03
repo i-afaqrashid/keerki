@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex w-100 min-vh-100">
+  <div class="d-flex w-100 min-vh-100" dir="ltr">
     <div
       class="d-none w-33 sign-up-image d-lg-flex justify-content-center align-items-center"
     >
@@ -11,7 +11,7 @@
       />
     </div>
     <div
-      class="w-66 pt-lg-8 px-4 bg-white text-left flex-column d-flex justify-content-center align-items-center"
+      class="w-66 pt-lg-8 px-4 bg-white text-left flex-column d-flex justify-content-center align-items-center" dir="auto"
     >
       <img
         class="d-block d-lg-none"

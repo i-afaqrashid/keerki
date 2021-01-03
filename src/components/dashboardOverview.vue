@@ -19,7 +19,10 @@
             <p class="first-modal-header">{{ this.data[index].heading }}</p>
             <p class="first-modal-body mb-0">{{ this.data[index].body }}</p>
           </div>
-          <img :src="this.data[index].img" class="mt-16 w-100" />
+          <img v-if="index!==4"
+            :src="`${require(`../assets/${this.data[index].img}`)}`"
+            class="mt-16 w-100"
+          />
           <div
             class="d-flex justify-content-between align-items-center flex-column flex-lg-row w-100 mt-5"
           >
@@ -134,7 +137,11 @@
             fill="#0278AE"
           />
         </svg>
-        <router-link to="/dashboard/content-unavailable"><p class=" btn p-0 outline-none mb-0 ml-2">{{ $t("help") }}</p></router-link>
+        <router-link to="/dashboard/content-unavailable"
+          ><p class="btn p-0 outline-none mb-0 ml-2">
+            {{ $t("help") }}
+          </p></router-link
+        >
       </div>
     </div>
   </div>
@@ -153,26 +160,27 @@ export default {
         {
           heading: this.$t("newUserWelcomeHeading"),
           body: this.$t("newUserWelcomeDescription"),
-          img: "/img/dashboard.620aa608.png",
+          img: "dashboard.png",
         },
         {
           heading: this.$t("newUserHistoryPageHeading"),
           body: this.$t("newUserHistoryPageDescription"),
-          img: "/img/orderhistory.d29eda7c.png",
+          img: "ordertemplate.png",
         },
         {
           heading: this.$t("newUserOrderTemplateHeading"),
           body: this.$t("newUserOrderTemplateDescription"),
-          img: "/img/orderpreview.c81043bc.png",
+          img: "orderpreview.png",
         },
         {
           heading: this.$t("newUserAccountInformationHeading"),
           body: this.$t("newUserAccountInformationDescription"),
-          img: "/img/account.984f9563.png",
+          img: "account.png",
         },
         {
           heading: this.$t("newUserNotificationHeading"),
           body: this.$t("newUserNotificationDescription"),
+          img:""
         },
       ],
     };

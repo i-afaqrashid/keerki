@@ -1,16 +1,16 @@
 <template>
-  <div class="bg-white">
+  <div class="bg-white" dir="ltr">
     <DashboardHeader />
     <div class="d-flex flex-column flex-lg-row">
       <div
-        class="w-21 z-index-2 pl-3 pr-14 px-lg-0 side-bar d-none d-lg-flex align-items-center flex-column mt-11 border-right"
+        class="w-21 z-index-2 px-3 side-bar d-none d-lg-flex align-items-center flex-column mt-11 border-right" dir="auto"
       >
         <div
           class="d-flex flex-column justify-content-between align-items-between"
         >
-          <div class="d-flex align-items-center pl-3 mt-5">
+          <div class="d-flex align-items-center px-3 mt-5">
             <img src="../assets/logoSign.png" width="35" height="35" />
-            <p class="mb-0 fs-16 ml-2" style="color: #0f4264">
+            <p class="mb-0 fs-16 mx-2" style="color: #0f4264">
               {{ $t("keerki") }}
             </p>
           </div>

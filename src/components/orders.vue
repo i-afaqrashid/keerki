@@ -4,7 +4,7 @@
       :Heading="$t('orderHistoryHeading')"
       :Text="$t('orderHistoryDescription')"
     />
-  <div class="orders w-100 p-15 my-5">
+  <div class="orders w-100 p-15 my-5" dir="auto">
     <div
       class="d-flex flex-column flex-lg-row justify-content-between w-100 align-items-sm-center flex-sm-wrap pl-lg-15"
     >

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex mt-5 mt-lg-6 flex-column justify-content-center text-white text-center align-items-center"
+    class="d-flex mt-5 mt-lg-6 flex-column justify-content-center text-white text-center align-items-center"  dir="ltr"
   >
     <h1 class="font-weight-normal px-5 px-xl-6 fs-46">
       {{ $t("gallery") }}

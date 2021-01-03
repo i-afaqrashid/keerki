@@ -48,7 +48,8 @@ const messages = {
         newUserAccountInformationDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ", newUserNotificationHeading: "Send messages and view notification within one screen", newUserNotificationDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
          newUserNext: "Next", newUserPrev: "Previous", newUserDone: "Done",
         notificationHeading: "Notifications", notificationDescription: "Manage your notifications", messagesHeading: "Messages", messagesDescription: "Manage your messages", orderHistoryHeading: "Order History", orderHistoryDescription: "Get summary of your weekly online transactions here.", accountHeading: "Account", accountDescription: "Change your account details", orderFormHeading: "Order Form", orderFormQuote: "Quote", orderFormService: "Service", orderFormShipping: "Shipping",
-        language:"LANGUAGE:"
+        language:"LANGUAGE:",rtlHelper:"help",functionalityError:"Functionality currently unavailable",sorryText:"Sorry for the inconvenience",contentError:"Content currently unavailable.",tryLater:"We’re sorry; please try again later.",
+        ok:"Ok",selectLanguage:"Please Select a Language",
 
     },
     'ar':
@@ -94,7 +95,7 @@ const messages = {
         newUserAccountInformationDescription: "الأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبر", newUserNotificationHeading: "إرسال الرسائل وعرض الإخطار في شاشة واحدة", newUserNotificationDescription: "الأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبر"
         , newUserNext: "التالى", newUserPrev: "السابق", newUserDone: "منجز",
         notificationHeading: "إشعارات", notificationDescription: "إدارة الإخطارات الخاصة بك", messagesHeading: "الرسائل", messagesDescription: "إدارة رسائلك", orderHistoryHeading: "تاريخ الطلب", orderHistoryDescription: ".احصل على ملخص للمعاملات الأسبوعية عبر الإنترنت هنا", accountHeading: "الحساب", accountDescription: "تغيير تفاصيل حسابك", orderFormHeading: "نموذج الطلب", orderFormQuote: "اقتبس", orderFormService: "الخدمات", orderFormShipping: "الشحن",
-        language: ":لغة"
+        language: ":لغة",rtlHelper:"مرحبا",functionalityError:"الوظيفة غير متوفرة حاليًا",sorryText:"آسف للإزعاج",contentError:"المحتوى غير متوفر حاليا.",tryLater:"نحن آسفون؛ الرجاء معاودة المحاولة في وقت لاحق.",ok:"حسنا",selectLanguage:"يرجى تحديد لغة"
     },
     'ch':
     {
@@ -137,8 +138,8 @@ const messages = {
         dashboardHeading: "仪表板", dashboardDescription: "在此处获取每周在线交易的摘要。", newUserWelcomeHeading: "欢迎来到Keerki。", newUserWelcomeDescription: "旨在帮助您更快地管理订单的全新体验！", newUserHistoryPageHeading: "在一处查看所有订单！", newUserHistoryPageDescription: "在订单历史记录页面中检查所有订单和详细信息，并检查其状态。“，newUserOrderTemplateHeading：”在模板中查看订单“，newUserOrderTemplateDescription：”甚至更好更快地可以在模板中查看所有状态和订单", newUserAccountInformationHeading: "管理您的帐户信息并添加公司详细信息",
         newUserAccountInformationDescription: "常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続"
         , newUserNext: "下一个", newUserPrev: "以前", newUserDone: "完成了",
-        notificationHeading: "通知事项", notificationDescription: "管理您的通知", messagesHeading: "留言内容", messagesDescription: "管理您的讯息", orderHistoryHeading: "订单历史", orderHistoryDescription: "在这里获取每周在线交易的摘要。", accountHeading: "帐户", accountDescription: "更改您的帐户详细信息", orderFormHeading: "订单", orderFormQuote: "引用", orderFormService: "服务", orderFormShipping: "运输"
-        ,language: "语言:"
+        notificationHeading: "通知事项", notificationDescription: "管理您的通知", messagesHeading: "留言内容", messagesDescription: "管理您的讯息", orderHistoryHeading: "订单历史", orderHistoryDescription: "在这里获取每周在线交易的摘要。", accountHeading: "帐户", accountDescription: "更改您的帐户详细信息", orderFormHeading: "订单", orderFormQuote: "引用", orderFormService: "服务", orderFormShipping: "运输",
+        language: "语言:",rtlHelper:"help",functionalityError:"当前不可用的功能",sorryText:"抱歉给你带来不便",contentError:"内容当前不可用。",tryLater:"我们很抱歉;请稍后再试。",ok:"好",selectLanguage:"请选择一种语言",
     }
 }
 export default new VueI18n({ locale: localStorage.currentLanguage || 'en', fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en', messages, });

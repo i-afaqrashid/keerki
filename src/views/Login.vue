@@ -1,6 +1,6 @@
 
 <template>
-  <div class="d-flex w-100 min-vh-100">
+  <div class="d-flex w-100 min-vh-100" dir="ltr">
     <div
       class="d-none w-33 sign-up-image d-lg-flex justify-content-center align-items-center"
     >
@@ -51,6 +51,7 @@
           <div>
             <b-form @submit="onSubmit">
               <b-form-group
+              dir="auto"
                 id="input-group-6"
                 :label="`${$t('loginEmail')}`"
                 label-for="input-6"
@@ -66,6 +67,7 @@
                 ></b-form-input>
               </b-form-group>
               <b-form-group
+              dir="auto"
                 id="input-group-7"
                 :label="`${$t('password')}`"
                 label-for="input-7"
@@ -99,10 +101,11 @@
                 {{$t('or')}}
               </div>
               <button
+              dir="auto"
                 type="button"
                 class="btn w-100 btn-white d-flex align-items-center justify-content-between shadow-sm form-input mt-5"
               >
-                <div>
+                <div dir="ltr">
                   <svg
                     width="24"
                     height="24"
@@ -160,6 +163,7 @@
               </button>
               <router-link to="/sign-up">
                 <button
+                dir="auto"
                   type="button"
                   class="btn w-100 btn-white text-center shadow-sm form-input mt-3 mb-5"
                 >

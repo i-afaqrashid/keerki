@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex justify-content-center align-items-center mt-xl-8 mt-5 px-xl-8 px-lg-11"
+    class="d-flex justify-content-center align-items-center mt-xl-8 mt-5 px-xl-8 px-lg-11" dir="ltr"
   >
     <div
       class="d-flex flex-column w-100 justify-content-center align-items-center padding flex-lg-row border-secondary bg-warning bordered"
@@ -229,9 +229,7 @@ export default {
 .border-radius-13 {
   border-radius: 13.62px !important;
 }
-.w-21 {
-  width: 21%;
-}
+
 .font-12 {
   font-size: 12px;
 }
@@ -246,7 +244,7 @@ export default {
   line-height: 13.81px;
 }
 .fs-14 {
-  font-size: 14px;
+  font-size:14px !important;
 }
 .fs-43 {
   font-size: 18px;
@@ -361,7 +359,7 @@ btn-secondary:focus {
 }
 
 .w-22 {
-  width: 22rem;
+  width: 21rem;
 }
 .fs-52 {
   font-size: 52px;
@@ -397,6 +395,9 @@ btn-secondary:focus {
   width: 224px;
 }
 @media only screen and (max-width: 576px) {
+  .w-21 {
+  width: 55%;
+}
   .template-card {
     width: 100%;
   }
@@ -422,6 +423,9 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
+  .w-21 {
+  width: 35%;
+}
   .template-card {
     width: 75%;
   }
@@ -447,6 +451,9 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .w-21 {
+  width: 35%;
+}
   .template-card {
     width: 400px;
   }
@@ -475,6 +482,9 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .w-21 {
+  width: 25%;
+}
   .template-card {
     width: 220px;
     height: 300px;
@@ -502,6 +512,9 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 1200px) {
+  .w-21 {
+  width: 21%;
+}
   .account-card {
     width: 490px;
   }
@@ -515,7 +528,7 @@ btn-secondary:focus {
     width: 100%;
   }
   .form-input {
-    width: 464px !important;
+    width: 100%!important;
   }
   .w-66 {
     width: 55%;
