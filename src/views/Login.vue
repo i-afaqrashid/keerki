@@ -31,7 +31,7 @@
       </router-link>
 
       <div
-        class="w-66 pt-lg-11 px-4 text-left flex-column d-flex justify-content-center align-items-center"
+        class="w-70 pt-lg-11 px-4 text-left flex-column d-flex justify-content-center align-items-center"
       >
         <img
           class="d-block d-lg-none"

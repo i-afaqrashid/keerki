@@ -332,6 +332,9 @@ btn-secondary:focus {
 .w-66 {
   width: 100%;
 }
+  .w-70{
+    width:100%;
+  }
 .w-33 {
   width: 45%;
 }
@@ -518,6 +521,9 @@ btn-secondary:focus {
   .w-66 {
     width: 55%;
   }
+    .w-70{
+    width:70%;
+  }
   .fs-13 {
     font-size: 16px;
   }
@@ -552,6 +558,9 @@ btn-secondary:focus {
   }
   .w-66 {
     width: 55%;
+  }
+  .w-70{
+    width:70%;
   }
   .fs-13 {
     font-size: 16px;
