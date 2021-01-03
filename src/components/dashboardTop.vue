@@ -51,7 +51,7 @@
               fill="#0278AE"
             />
           </svg>
-          <p class="mb-0 ml-2">{{$t('help')}}</p>
+          <router-link to="/dashboard/functionality-unavailable"><p class="btn p-0 outline-none mb-0 ml-2">{{$t('help')}}</p></router-link>
         </button>
         <button
           v-b-popover.hover.top

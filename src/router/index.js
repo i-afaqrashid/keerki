@@ -18,6 +18,8 @@ import FormBody from '../components/formBody.vue'
 import FormPreview from '../components/formPreview.vue'
 import Messages from '../components/messages.vue'
 import OrderForm from '../components/orderForm.vue'
+import FunctionalityUnavailable from '../components/functionalityUnavailable.vue'
+import ContentUnavailable from '../components/contentUnavailable.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -99,6 +101,14 @@ const routes = [
     path: "/dashboard",
     component: Dashboard,
     children: [
+      {
+        path: "content-unavailable",
+        component: ContentUnavailable
+      },
+      {
+        path: 'functionality-unavailable',
+        component: FunctionalityUnavailable
+      },
       {
         path: 'order-history',
         component: OrderType,
