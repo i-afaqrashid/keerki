@@ -1,4 +1,9 @@
 <template>
+<div>
+   <DashboardTop
+      :Heading="$t('orderHistoryHeading')"
+      :Text="$t('orderHistoryDescription')"
+    />
   <div
     class="d-flex justify-content-around align-items-center flex-column flex-lg-row pt-lg-9 pt-11 px-0 px-lg-9 flex-wrap"
   >
@@ -30,13 +35,16 @@
        '
     />
   </div>
+  </div>
 </template>
 <script>
 import DashboardCard from "./dashboardCard";
+import DashboardTop from './dashboardTop'
 export default {
   name: "OrderHistory",
   components: {
     DashboardCard,
+    DashboardTop
   },
   methods: {
     quoteOrders() {

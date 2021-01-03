@@ -81,7 +81,7 @@
                 />
               </svg>
             </span>
-            <h1 class="font-24 text-center mb-0">
+            <h1 class="font-24 text-center mb-0 ml-lg-4">
               <span class="text-primary">{{ $t("companyInfoAddLogo") }}</span>
               {{ $t("companyInfoDropFile") }}
             </h1>

@@ -10,7 +10,9 @@
         >
           <div class="d-flex align-items-center pl-3 mt-5">
             <img src="../assets/logoSign.png" width="35" height="35" />
-            <p class="mb-0 fs-16 ml-2" style="color: #0f4264">{{$t('keerki')}}</p>
+            <p class="mb-0 fs-16 ml-2" style="color: #0f4264">
+              {{ $t("keerki") }}
+            </p>
           </div>
           <button
             type="button"
@@ -47,7 +49,7 @@
               />
             </svg>
 
-            <span class="flex-grow-1">{{$t('overview')}}</span>
+            <span class="flex-grow-1">{{ $t("overview") }}</span>
           </button>
           <button
             type="button"
@@ -105,7 +107,7 @@
               />
             </svg>
 
-            <span class="flex-grow-1">{{$t('orderHistory')}}</span>
+            <span class="flex-grow-1">{{ $t("orderHistory") }}</span>
           </button>
           <button
             type="button"
@@ -146,7 +148,7 @@
                 />
               </svg>
             </div>
-            <span class="flex-grow-1">{{$t('account')}}</span>
+            <span class="flex-grow-1">{{ $t("account") }}</span>
           </button>
           <button
             type="button"
@@ -188,7 +190,7 @@
                 />
               </svg>
             </div>
-            <span class="flex-grow-1">{{$t('notifications')}}</span>
+            <span class="flex-grow-1">{{ $t("notifications") }}</span>
           </button>
           <button
             type="button"
@@ -211,7 +213,7 @@
               />
             </svg>
 
-            <span class="flex-grow-1">{{$t('messages')}}</span>
+            <span class="flex-grow-1">{{ $t("messages") }}</span>
           </button>
           <button
             type="button"
@@ -240,7 +242,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <span class="flex-grow-1">{{$t('settings')}}</span>
+            <span class="flex-grow-1">{{ $t("settings") }}</span>
           </button>
         </div>
         <b-modal
@@ -255,31 +257,30 @@
             class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
           >
             <div class="w-100">
-              <h1 class="fs-16">{{$t('automaticLogout')}}</h1>
-              <h1 class="fs-18 text-primary">{{$t('logoutTime')}}</h1>
+              <h1 class="fs-16">{{ $t("automaticLogout") }}</h1>
+              <h1 class="fs-18 text-primary">{{ $t("logoutTime") }}</h1>
             </div>
             <div class="d-flex justify-content-end w-100 mt-3">
               <button
                 class="rounded-lg btn modal-logout bg-white color-c7 outline-none"
                 @click="logout"
               >
-                {{$t('logout')}}
+                {{ $t("logout") }}
               </button>
               <button
                 class="rounded-lg btn btn-primary outline-none ml-2"
                 @click="$bvModal.hide('log-out-modal')"
               >
-        {{$t('continueSession')}}
+                {{ $t("continueSession") }}
               </button>
             </div>
           </div>
         </b-modal>
         <b-button
           variant="outline-secondary"
-          
           v-b-modal.log-out-modal
           class="text-success px-5 mt-8 mb-5 d-flex flex-nowrap align-items-center border-radius-13"
-          >{{$t('logout')}}
+          >{{ $t("logout") }}
           <svg
             width="17"
             height="17"
@@ -313,7 +314,6 @@
         </b-button>
       </div>
       <div class="w-100 px-lg-11 px-4 mt-lg-11 mt-3">
-        <DashboardTop v-bind:Heading="this.Heading" v-bind:Text="this.Text" />
         <router-view></router-view>
       </div>
     </div>
@@ -321,16 +321,9 @@
 </template>
 <script>
 import DashboardHeader from "../components/dashboardHeader";
-import DashboardTop from "../components/dashboardTop";
 
 export default {
   name: "Dashboard",
-  data() {
-    return {
-      Heading:this.$t("dashboardHeading"),
-      Text: this.$t("dashboardDescription"),
-    };
-  },
   methods: {
     logout() {
       localStorage.clear();
@@ -338,39 +331,28 @@ export default {
       this.$bvModal.hide("log-out-modal");
     },
     overview() {
-      this.Heading = this.$t("dashboardHeading");
-      this.Text =  this.$t("dashboardDescription");
       this.$router.push({ path: "/dashboard" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     notifications() {
-      this.Heading = this.$t("notificationHeading");
-      this.Text = this.$t("notificationDescription");
       this.$router.push({ path: "/dashboard/notifications" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     messages() {
-      this.Heading = this.$t("messagesHeading");
-      this.Text = this.$t("messagesDescription");
       this.$router.push({ path: "/dashboard/messages" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     orderHistory() {
-      this.Heading = this.$t("orderHistoryHeading");
-      this.Text = this.$t("orderHistoryDescription");
       this.$router.push({ path: "/dashboard/order-history" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     account() {
-      this.Heading =this.$t("accountHeading");
-      this.Text = this.$t("accountDescription");
       this.$router.push({ path: "/dashboard/account" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
   },
   components: {
     DashboardHeader,
-    DashboardTop,
   },
 };
 </script>

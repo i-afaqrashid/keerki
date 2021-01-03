@@ -1,4 +1,9 @@
 <template>
+<div>
+  <DashboardTop
+      :Heading="$t('orderHistoryHeading')"
+      :Text="$t('orderHistoryDescription')"
+    />
   <div class="orders w-100 p-15 my-5">
     <div
       class="d-flex flex-column flex-lg-row justify-content-between w-100 align-items-sm-center flex-sm-wrap pl-lg-15"
@@ -412,14 +417,16 @@
       </table>
     </div>
   </div>
+  </div>
 </template>
 <script>
 import CustomAlert from "../components/customAlert";
-
+import DashboardTop from './dashboardTop'
 export default {
   name: "Orders",
   components: {
     CustomAlert,
+    DashboardTop
   },
   data() {
     return {

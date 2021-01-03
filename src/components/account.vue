@@ -1,4 +1,11 @@
 <template>
+<div>
+
+  <DashboardTop
+      :Heading="$t('accountHeading')"
+      :Text="$t('accountDescription')"
+    />
+
   <div class="d-flex justify-content-start mt-5 px-lg-4">
     <div
       class="w-100 d-flex justify-content-start align-items-start flex-column"
@@ -285,11 +292,15 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 <script>
-
+import DashboardTop from './dashboardTop'
 export default {
   name: "Account",
+  components:{
+    DashboardTop
+  },
   methods: {
     handleOk(){
       localStorage.currentLanguage = this.selected;

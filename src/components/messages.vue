@@ -1,4 +1,9 @@
 <template>
+<div>
+     <DashboardTop
+      :Heading="$t('messagesHeading')"
+      :Text="$t('messagesDescription')"
+    />
   <div class="d-flex flex-column w-100 p-lg-5 p-1">
     <div class="notifications">
       <div
@@ -112,9 +117,14 @@
       <p class="mb-0 ml-2">Help</p>
     </div>
   </div>
+</div>
 </template>
 <script>
+import DashboardTop from './dashboardTop'
 export default {
   name: "Messages",
+  components:{
+    DashboardTop
+  }
 };
 </script>

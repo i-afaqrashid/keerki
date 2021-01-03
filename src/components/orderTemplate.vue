@@ -1,4 +1,9 @@
 <template>
+<div>
+  <DashboardTop
+      :Heading="$t('orderHistoryHeading')"
+      :Text="$t('orderHistoryDescription')"
+    />
   <div class="mb-11">
     <div class="d-flex justify-content-center flex-column flex-lg-row mt-11">
       <TemplateCard
@@ -23,13 +28,16 @@
       />
     </div>
   </div>
+</div>
 </template>
 <script>
 import TemplateCard from "../components/templateCard";
+import DashboardTop from './dashboardTop';
 export default {
   name: "OrderTemplate",
   components: {
     TemplateCard,
+    DashboardTop
   },
 };
 </script>
