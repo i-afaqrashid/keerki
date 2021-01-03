@@ -11,9 +11,13 @@
         class="login-logo"
       />
     </div>
-    <div class="w-66 bg-white d-flex justify-content-center align-items-center flex-column">
-      <router-link to="/" class=" align-self-start">
-        <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none">
+    <div
+      class="w-66 bg-white d-flex justify-content-center align-items-center flex-column"
+    >
+      <router-link to="/" class= " align-self-start" >
+        <button
+          class="d-flex pt-5 ml-4 ml-lg-5 outline-none d-flex align-items-center justify-content-center"
+        >
           <svg
             width="20"
             height="20"
@@ -26,7 +30,7 @@
               fill="#8692A6"
             />
           </svg>
-          <p class="font-weight-lighter ml-3">{{$t('back')}}</p>
+          <p class="font-weight-lighter ml-3 mb-0">{{ $t("back") }}</p>
         </button>
       </router-link>
 
@@ -40,68 +44,68 @@
           height="80"
         />
         <div class="w-84">
-          <div v-if="type <= 1 || type > 8 || isNaN(type) ">
-            <h1 class="fs-30">{{$t('loginHeading')}}</h1>
+          <div v-if="type <= 1 || type > 8 || isNaN(type)">
+            <h1 class="fs-30">{{ $t("loginHeading") }}</h1>
             <p class="font-weight-lighter fs-18">
-              {{$t('loginDescription')}}
+              {{ $t("loginDescription") }}
             </p>
           </div>
           <CustomAlert v-else v-bind:alert="type" />
           <p class="horizontal-line"></p>
-          <div >
+          <div>
             <b-form @submit="onSubmit">
               <b-form-group
-              dir="auto"
+                dir="auto"
                 id="input-group-6"
                 :label="`${$t('loginEmail')}`"
                 label-for="input-6"
               >
-                <b-form-input
+                <input
                   id="input-6"
                   v-model="email"
                   v-on:change="checkCredentials"
                   type="email"
                   :placeholder="`${$t('enterYourEmail')}`"
                   required
-                  class="form-input"
-                ></b-form-input>
+                  class="form-input outline-none border rounded-lg px-3"
+                />
               </b-form-group>
               <b-form-group
-              dir="auto"
+                dir="auto"
                 id="input-group-7"
                 :label="`${$t('password')}`"
                 label-for="input-7"
               >
-                <b-form-input
+                <input
                   id="input-7"
                   v-model="password"
                   type="password"
                   :placeholder="`${$t('enterPassword')}`"
                   required
-                  class="form-input"
-                ></b-form-input>
+                  class="form-input outline-none border rounded-lg px-3"
+                />
               </b-form-group>
               <router-link to="/forgot">
                 <button
                   class="mb-2 mr-sm-2 mb-sm-0 bg-white border-0 outline-none"
                   type="button"
                 >
-                  {{$t('forgotPassword')}}
+                  {{ $t("forgotPassword") }}
                 </button></router-link
               >
               <b-button
                 size="lg"
                 type="submit"
                 class="w-100 bg-info mt-11 text-white py-3 mb-5"
-                >{{$t('login')}}</b-button
+                >{{ $t("login") }}</b-button
               >
               <div
                 class="d-flex align-items-center text-center separator font-weight-lighter text-black"
               >
-                {{$t('or')}}
+                {{ $t("or") }}
               </div>
               <button
-              dir="auto"
+                dir="auto"
                 type="button"
                 class="btn w-100 btn-white d-flex align-items-center justify-content-between shadow-sm form-input mt-5"
               >
@@ -159,15 +163,17 @@
                   </svg>
                 </div>
 
-                <span class="flex-grow-1">{{$t('loginWithSocialMedia')}}</span>
+                <span class="flex-grow-1">{{
+                  $t("loginWithSocialMedia")
+                }}</span>
               </button>
               <router-link to="/sign-up">
                 <button
-                dir="auto"
+                  dir="auto"
                   type="button"
                   class="btn w-100 btn-white text-center shadow-sm form-input mt-3 mb-5"
                 >
-                  {{$t('noAccount')}}
+                  {{ $t("noAccount") }}
                 </button>
               </router-link>
             </b-form>
@@ -192,7 +198,7 @@ export default {
       e.preventDefault();
       localStorage.email = this.email;
       localStorage.password = this.password;
-      localStorage.newUser= true;
+      localStorage.newUser = true;
       localStorage.currentLanguage = "en";
 
       this.$router.push({ path: "dashboard" });

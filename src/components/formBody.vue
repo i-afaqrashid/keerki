@@ -4,7 +4,13 @@
     dir="auto"
     @submit="formSubmit"
   >
-    <h1 class="w-100 border-3 font-24 py-2" >
+    <h1
+      v-if="this.currentLanguage === 'ar'"
+      class="w-100 text-right border-3 font-24 py-2"
+    >
+      {{ $t("companyInfo") }}
+    </h1>
+    <h1 v-else class="w-100 text-left border-3 font-24 py-2">
       {{ $t("companyInfo") }}
     </h1>
     <input
@@ -97,9 +103,16 @@
         </div>
       </div>
     </div>
-    <h1 class="w-100 border-3 font-24 py-2 mt-15">
+    <h1
+      v-if="this.currentLanguage === 'ar'"
+      class="w-100 border-3 text-right font-24 py-2 mt-15"
+    >
       {{ $t("shippingInfo") }}
     </h1>
+    <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
+      {{ $t("shippingInfo") }}
+    </h1>
+
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
       <input
         class="input-form px-3 px-lg-5 mt-15 w-48"
@@ -110,7 +123,13 @@
         :placeholder="`${$t('shippingInfoCountry')}`"
       />
     </div>
-    <h1 class="w-100 border-3 font-24 py-2 mt-15">
+    <h1
+      v-if="this.currentLanguage === 'ar'"
+      class="w-100 border-3 text-right font-24 py-2 mt-15"
+    >
+      {{ $t("shippingInfo") }}
+    </h1>
+    <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
       {{ $t("shippingInfo") }}
     </h1>
     <div
@@ -139,7 +158,13 @@
         {{ $t("currencyEURO") }}
       </button>
     </div>
-    <h1 class="w-100 border-3 font-24 py-2 mt-15">
+     <h1
+      v-if="this.currentLanguage === 'ar'"
+      class="w-100 border-3 text-right font-24 py-2 mt-15"
+    >
+      {{ $t("aboutProducts") }}
+    </h1>
+    <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
       {{ $t("aboutProducts") }}
     </h1>
     <div
@@ -180,7 +205,13 @@
         +
       </button>
     </div>
-    <h1 class="w-100 border-3 font-24 py-2 mt-15">
+     <h1
+      v-if="this.currentLanguage === 'ar'"
+      class="w-100 border-3 text-right font-24 py-2 mt-15"
+    >
+      {{ $t("remarks") }}
+    </h1>
+    <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
       {{ $t("remarks") }}
     </h1>
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
@@ -199,7 +230,13 @@
         <option>5</option>
       </select>
     </div>
-    <h1 class="w-100 font-weight-light font-24 py-2 mt-15">
+  <h1
+      v-if="this.currentLanguage === 'ar'"
+      class="w-100 border-3 text-right font-24 py-2 mt-15"
+    >
+      {{ $t("paymentTerm") }}
+    </h1>
+    <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
       {{ $t("paymentTerm") }}
     </h1>
     <div
@@ -216,8 +253,14 @@
         {{ $t("paymentTermTT") }}
       </button>
     </div>
-    <h1 class="w-100 font-weight-light font-24 py-2 mt-15">
-      {{ $t("shippingMethod") }}
+     <h1
+      v-if="this.currentLanguage === 'ar'"
+      class="w-100 border-3 text-right font-24 py-2 mt-15"
+    >
+      {{ $t("paymentTerm") }}
+    </h1>
+    <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
+      {{ $t("paymentTerm") }}
     </h1>
     <div
       class="d-flex w-100 justify-content-center align-items-center flex-lg-row flex-column mt-4"
@@ -233,7 +276,13 @@
         {{ $t("shippingMethodBySea") }}
       </button>
     </div>
-    <h1 class="w-100 font-weight-light font-24 py-2 mt-15">
+     <h1
+      v-if="this.currentLanguage === 'ar'"
+      class="w-100 border-3 text-right font-24 py-2 mt-15"
+    >
+      {{ $t("deliveryTime") }}
+    </h1>
+    <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
       {{ $t("deliveryTime") }}
     </h1>
     <div
@@ -286,13 +335,13 @@ export default {
     return {
       files: [],
       color: "#444444",
+      currentLanguage: localStorage.currentLanguage,
     };
   },
   methods: {
     handleFileDrop(e) {
       let droppedFiles = e.dataTransfer.files;
       if (!droppedFiles) return;
-      // this tip, convert FileList to array, credit: https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/
       [...droppedFiles].forEach((f) => {
         this.files.push(f);
       });

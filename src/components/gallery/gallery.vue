@@ -2,10 +2,10 @@
   <div
     class="d-flex mt-5 mt-lg-6 flex-column justify-content-center text-white text-center align-items-center"  dir="ltr"
   >
-    <h1 class="font-weight-normal px-5 px-xl-6 fs-46">
+    <h1 class="font-weight-normal w-60 fs-46">
       {{ $t("gallery") }}
     </h1>
-    <h4 class="font-weight-normal pt-4 px-3 px-xl-7 fs-20" >
+    <h4 class="font-weight-normal pt-4 w-30 fs-20" >
       {{ $t("galleryText") }}
     </h4>
     <div

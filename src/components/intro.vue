@@ -3,10 +3,10 @@
     <div
       class="mt-lg-5 pt-5 text-center text-wrap text-light d-flex justify-content-center align-items-center flex-column"
     >
-      <h1 class="font-weight-bold px-5 px-xl-6 fs-5">
+      <h1 class="font-weight-bold fs-5 w-60">
         {{ $t("randomSmall") }}
       </h1>
-      <h4 class="font-weight-normal pt-4 px-5 px-xl-7 fs-20">
+      <h4 class="font-weight-normal pt-4 w-60 fs-20 text-center">
         {{ $t("randomLarge") }}
       </h4>
 

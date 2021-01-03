@@ -42,7 +42,7 @@
             </div>
             <div class="px-5 mt-2 mt-lg-0">
               <button
-                class="dismiss-btn px-5 py-2 d-flex justify-content-center align-items-center"
+                class="dismiss-btn px-15 py-2 d-flex justify-content-center align-items-center"
               >
                 {{$t('notificationDismiss')}}
               </button>
@@ -66,7 +66,7 @@
             </div>
             <div class="px-5 mt-2 mt-lg-0">
               <button
-                class="dismiss-btn px-5 py-2 d-flex justify-content-center align-items-center"
+                class="dismiss-btn px-15 py-2 d-flex justify-content-center align-items-center"
               >
                 {{$t('notificationDismiss')}}
               </button>
@@ -90,7 +90,7 @@
             </div>
             <div class="px-5 mt-2 mt-lg-0">
               <button
-                class="dismiss-btn px-5 py-2 d-flex justify-content-center align-items-center"
+                class="dismiss-btn px-15 py-2 d-flex justify-content-center align-items-center"
               >
                 {{$t('notificationDismiss')}}
               </button>

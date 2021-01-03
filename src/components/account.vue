@@ -30,16 +30,17 @@
           </label>
         </div>
         <div class="w-100 fs-18 text-69">
-          <b-modal id="name-modal" size="sm" dir="auto"  centered>
+          <b-modal id="name-modal" size="sm" dir="auto" centered>
             <template #modal-footer="{ ok }">
               <b-button size="sm" variant="primary" @click="ok()">
                 {{ $t("ok") }}
               </b-button>
             </template>
-            <b-form-input
+            <input
               v-model="name"
               :placeholder="`${$t('fullName')}`"
-            ></b-form-input>
+              class="form-input outline-none border rounded-lg px-3"
+            />
           </b-modal>
 
           <div
@@ -74,17 +75,18 @@
           <div
             class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
           >
-            <b-modal id="email-modal" size="sm" dir="auto"  centered>
+            <b-modal id="email-modal" size="sm" dir="auto" centered>
               <template #modal-footer="{ ok }">
                 <b-button size="sm" variant="primary" @click="ok()">
                   {{ $t("ok") }}
                 </b-button>
               </template>
-              <b-form-input
+              <input
                 v-model="email"
                 type="email"
                 :placeholder="`${$t('enterEmail')}`"
-              ></b-form-input>
+              class="form-input outline-none border rounded-lg px-3"
+              >
             </b-modal>
             <p class="mb-0">{{ $t("accountEmail") }} {{ email }}</p>
             <button class="outline-none" v-b-modal.email-modal>
@@ -115,17 +117,18 @@
           <div
             class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
           >
-            <b-modal id="phone-modal" size="sm" dir="auto"  centered>
+            <b-modal id="phone-modal" size="sm" dir="auto" centered>
               <template #modal-footer="{ ok }">
                 <b-button size="sm" variant="primary" @click="ok()">
                   {{ $t("ok") }}
                 </b-button>
               </template>
-              <b-form-input
+              <input
                 v-model="phone"
                 type="number"
                 :placeholder="`${$t('phonePlaceholder')}`"
-              ></b-form-input>
+              class="form-input outline-none border rounded-lg px-3"
+              >
             </b-modal>
             <p class="mb-0">{{ $t("accountPhone") }} {{ phone }}</p>
             <button class="outline-none" v-b-modal.phone-modal>
@@ -164,47 +167,46 @@
               </template>
 
               <b-form-group
-          id="input-group-22"
-          :label="`${$t('oldPassword')}`"
-          label-for="input-22"
-        >
-          <b-form-input
-            id="input-22"
-            v-model="password"
-            type="password"
-            required
-            class="modal-input"
-          ></b-form-input>
-        </b-form-group>
-        <b-form-group
-          id="input-group-21"
-          :label="`${$t('newPassword')}`"
-          label-for="input-21"
-          class="mt-3"
-        >
-          <b-form-input
-            id="input-21"
-            v-model="newPassword"
-            type="password"
-            required
-            class="modal-input"
-          ></b-form-input>
-        </b-form-group>
-        <b-form-group
-          id="input-group-20"
-          :label="`${$t('confirmNewPassword')}`"
-          label-for="input-20"
-          class="mt-3"
-        >
-          <b-form-input
-            id="input-20"
-            v-model="confirmPassword"
-            type="password"
-            required
-            class="modal-input"
-          ></b-form-input>
-        </b-form-group>
-
+                id="input-group-22"
+                :label="`${$t('oldPassword')}`"
+                label-for="input-22"
+              >
+                <input
+                  id="input-22"
+                  v-model="password"
+                  type="password"
+                  required
+              class="form-input outline-none border rounded-lg px-3"
+                >
+              </b-form-group>
+              <b-form-group
+                id="input-group-21"
+                :label="`${$t('newPassword')}`"
+                label-for="input-21"
+                class="mt-3"
+              >
+                <input
+                  id="input-21"
+                  v-model="newPassword"
+                  type="password"
+                  required
+              class="form-input outline-none border rounded-lg px-3"
+                >
+              </b-form-group>
+              <b-form-group
+                id="input-group-20"
+                :label="`${$t('confirmNewPassword')}`"
+                label-for="input-20"
+                class="mt-3"
+              >
+                <input
+                  id="input-20"
+                  v-model="confirmPassword"
+                  type="password"
+                  required
+              class="form-input outline-none border rounded-lg px-3"
+                >
+              </b-form-group>
             </b-modal>
             <p class="mb-0">{{ $t("accountPassword") }} *****************</p>
             <button class="outline-none" v-b-modal.password-modal>
@@ -425,18 +427,18 @@ export default {
   },
   data() {
     return {
-      selected: "en",
+      selected: localStorage.currentLanguage,
       profile: false,
       name: "HEDI",
       email: "HEDI@EMAIL.COM",
       phone: "139315651",
       password: "1212525458585",
-      newPassword:"",
-      confirmPassword:"",
+      newPassword: "",
+      confirmPassword: "",
 
       options: [
         {
-          value: localStorage.currentLanguage,
+          value: null,
           text: `${this.$t("selectLanguage")}`,
         },
         { value: "en", text: "ENGLISH" },

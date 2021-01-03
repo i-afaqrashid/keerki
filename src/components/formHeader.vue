@@ -2,8 +2,8 @@
   <div class="mb-9">
     <b-navbar toggleable="lg" type="dark" variant="primary">
       <b-navbar-toggle target="nav-collapse" class="white"></b-navbar-toggle>
-      <b-navbar-nav class="ml-auto d-lg-none w-25">
-        <img src="../assets/logo.png" class="w-100" />
+      <b-navbar-nav class="ml-auto d-lg-none">
+        <img src="../assets/logo.png" width="100" />
       </b-navbar-nav>
       <b-collapse id="nav-collapse" is-nav>
         <div
@@ -53,7 +53,7 @@
               class="mx-lg-4 my-4 my-lg-0 text-white text-center text-lg-left"
             >
               <p class="mb-0 fs-16">Hedi</p>
-              <p class="mb-0 fs-16">{{$t('formHeaderAccountDetails')}}</p>
+             <router-link to="/dashboard/account" class="text-white"> <p class="mb-0 fs-16">{{$t('formHeaderAccountDetails')}}</p> </router-link>
             </div>
           </b-navbar-nav>
 

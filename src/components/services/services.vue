@@ -2,10 +2,10 @@
   <div
     class="d-flex align-items-center text-light text-center flex-column mt-5 mt-xl-8"
   >
-    <h1 class="font-weight-normal px-5 px-xl-6 fs-52" >
+    <h1 class="font-weight-normal w-60 fs-52" >
       {{ $t("services") }}
     </h1>
-    <h4 class="font-weight-normal pt-4 px-3 px-xl-10 fs-20" >
+    <h4 class="font-weight-normal text-center pt-4 w-30 fs-20" >
       {{ $t("randomHuge") }}
     </h4>
     <div

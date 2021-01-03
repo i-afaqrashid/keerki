@@ -2,8 +2,8 @@
         <div dir="auto">
       <b-navbar toggleable="lg" type="dark" variant="primary">
         <b-navbar-toggle target="nav-collapse" class="white"></b-navbar-toggle>
-        <b-navbar-nav class="ml-auto d-lg-none w-25">
-          <img src="../assets/logo.png" class="w-100" />
+        <b-navbar-nav class=" d-lg-none w-25">
+          <img src="../assets/logo.png" width="100" />
         </b-navbar-nav>
         <b-collapse id="nav-collapse" is-nav class="w-100">
           <div
@@ -19,7 +19,7 @@
             </b-navbar-nav>
           </div>
         </b-collapse>
-        <b-navbar-nav class="d-none d-lg-block w-25 ml-xl-7 ml-lg-6">
+        <b-navbar-nav class="d-none d-lg-block ml-xl-7 ml-lg-6">
           <img src="../assets/logo.png" width="200" />
         </b-navbar-nav>
       </b-navbar>

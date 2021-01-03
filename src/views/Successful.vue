@@ -12,7 +12,7 @@
     </div>
     <div class="w-66 bg-white">
       <router-link to="/login">
-      <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none">
+      <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none d-flex align-items-center justify-content-center">
         <svg
           width="20"
           height="20"
@@ -25,7 +25,7 @@
             fill="#8692A6"
           />
         </svg>
-        <p class="font-weight-lighter ml-3">{{$t('back')}}</p>
+        <p class="font-weight-lighter ml-3 mb-0">{{$t('back')}}</p>
       </button>
       </router-link>
       <div
@@ -37,11 +37,11 @@
           width="158"
           height="80"
         />
-        <div>
+        <div class="d-flex flex-column align-items-center justify-content-center">
           <h1 class="fs-30">{{$t('activateYourAccount')}}</h1>
-          <p class="font-weight-lighter fs-18 mt-5 px-lg-14 px-4">{{$t('activateAccountDescription')}}
+          <p class="font-weight-lighter fs-18 mt-5 w-60">{{$t('activateAccountDescription')}}
           </p>
-          <p class="horizontal-line"></p>
+          <p class="horizontal-line w-60"></p>
           <svg
             width="239"
             height="233"

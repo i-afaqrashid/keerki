@@ -2,8 +2,8 @@
   <div class="pb-lg-5 mb-lg-5">
     <b-navbar toggleable="lg" type="dark" variant="primary">
       <b-navbar-toggle target="nav-collapse" class="white"></b-navbar-toggle>
-      <b-navbar-nav class="ml-auto d-lg-none w-25">
-        <img src="../assets/logo.png" class="w-100" />
+      <b-navbar-nav class="d-lg-none ">
+        <img src="../assets/logo.png" width="100" />
       </b-navbar-nav>
       <b-collapse id="nav-collapse" is-nav>
         <div

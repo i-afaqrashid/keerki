@@ -13,9 +13,9 @@
         />
       </div>
       <div
-        class="d-flex pt-5 pt-lg-0 flex-grow-1 w-100 text-white px-xl-9 text-center flex-column justify-content-center align-items-center"
+        class="d-flex pt-5 pt-lg-0 flex-grow-1 w-100 text-white text-center flex-column justify-content-center align-items-center"
       >
-        <h1>{{ $t("containerOffer") }}</h1>
+        <h1 class="w-60">{{ $t("containerOffer") }}</h1>
         <router-link to="/dashboard/order-form">
           <b-button
             class="p-3 mt-5 mb-4 btn-width"
@@ -35,11 +35,17 @@ export default {
 </script>
 
 <style>
+.w-30 {
+  width: 30%;
+}
+.w-60 {
+  width: 60%;
+}
 .w-48 {
   width: 100% !important;
 }
-.w-32{
-  width:100%!important;
+.w-32 {
+  width: 100% !important;
 }
 .w-84 {
   width: 84% !important;
@@ -178,8 +184,10 @@ export default {
 }
 .dismiss-btn {
   background: #f12b2c;
+  text-align: center;
   border-radius: 8px;
-  width: 75px;
+  min-width: 75px;
+
   height: 24px;
   color: white;
 }
@@ -332,9 +340,9 @@ btn-secondary:focus {
 .w-66 {
   width: 100%;
 }
-  .w-70{
-    width:100%;
-  }
+.w-70 {
+  width: 100%;
+}
 .w-33 {
   width: 45%;
 }
@@ -386,7 +394,7 @@ btn-secondary:focus {
   font-size: 5vw;
 }
 .btn-width-135 {
-  width: 135px;
+  min-width: 135px;
 }
 .fs-28 {
   font-size: 28px !important;
@@ -425,6 +433,7 @@ btn-secondary:focus {
   .respImage {
     max-width: 100%;
     border-radius: 0px;
+    max-height: 400px;
   }
   .bordered {
     border-radius: 0px;
@@ -450,6 +459,7 @@ btn-secondary:focus {
   .respImage {
     max-width: 100%;
     border-radius: 0px;
+    max-height: 500px;
   }
   .bordered {
     border-radius: 0px;
@@ -481,6 +491,7 @@ btn-secondary:focus {
   .respImage {
     border-radius: 0px;
     max-width: 100%;
+    max-height: 650px;
   }
   .bordered {
     border-radius: 0px;
@@ -493,9 +504,9 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .w-32{
-  width:32%!important;
-}
+  .w-32 {
+    width: 32% !important;
+  }
   .w-48 {
     width: 49% !important;
   }
@@ -521,8 +532,8 @@ btn-secondary:focus {
   .w-66 {
     width: 55%;
   }
-    .w-70{
-    width:70%;
+  .w-70 {
+    width: 70%;
   }
   .fs-13 {
     font-size: 16px;
@@ -532,9 +543,9 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .w-32{
-  width:32%!important;
-}
+  .w-32 {
+    width: 32% !important;
+  }
   .w-48 {
     width: 49% !important;
   }
@@ -559,8 +570,8 @@ btn-secondary:focus {
   .w-66 {
     width: 55%;
   }
-  .w-70{
-    width:70%;
+  .w-70 {
+    width: 70%;
   }
   .fs-13 {
     font-size: 16px;

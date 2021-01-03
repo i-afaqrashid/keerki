@@ -12,21 +12,21 @@
     </div>
     <div class="w-66 bg-white">
       <router-link to="/">
-        <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14.8627 3.225L13.3794 1.75L5.1377 10L13.3877 18.25L14.8627 16.775L8.0877 10L14.8627 3.225Z"
-              fill="#8692A6"
-            />
-          </svg>
-          <p class="font-weight-lighter ml-3">{{ $t("back") }}</p>
-        </button>
+      <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none d-flex align-items-center justify-content-center">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.8627 3.225L13.3794 1.75L5.1377 10L13.3877 18.25L14.8627 16.775L8.0877 10L14.8627 3.225Z"
+            fill="#8692A6"
+          />
+        </svg>
+        <p class="font-weight-lighter ml-3 mb-0">{{$t('back')}}</p>
+      </button>
       </router-link>
       <div
         class="w-100 pt-lg-8 px-4 bg-white text-left flex-column d-flex justify-content-center align-items-center"
@@ -51,69 +51,69 @@
                 :label="`${$t('yourName')}`"
                 label-for="input-1"
               >
-                <b-form-input
-                  class="form-input"
+                <input
+                  class="form-input outline-none border rounded-lg px-3"
                   id="input-1"
                   v-model="form.name"
                   :placeholder="`${$t('fullName')}`"
                   required
-                ></b-form-input>
+                >
               </b-form-group>
               <b-form-group
                 id="input-group-2"
                 :label="`${$t('email')}`"
                 label-for="input-2"
               >
-                <b-form-input
+                <input
                   id="input-2"
                   v-model="form.email"
                   type="email"
                   :placeholder="`${$t('enterEmail')}`"
                   required
-                  class="form-input"
-                ></b-form-input>
+                  class="form-input outline-none border rounded-lg px-3 "
+                >
               </b-form-group>
               <b-form-group
                 id="input-group-3"
                 :label="`${$t('phone')}`"
                 label-for="input-3"
               >
-                <b-form-input
+                <input
                   id="input-3"
                   v-model="form.number"
                   type="text"
                   :placeholder="`${$t('phonePlaceholder')}`"
                   required
-                  class="form-input"
-                ></b-form-input>
+                  class="form-input outline-none border rounded-lg px-3"
+                >
               </b-form-group>
               <b-form-group
                 id="input-group-4"
                 :label="`${$t('createPassword')}`"
                 label-for="input-4"
               >
-                <b-form-input
+                <input
                   id="input-4"
                   v-model="form.password"
                   type="password"
                   :placeholder="`${$t('enterPassword')}`"
                   required
-                  class="form-input"
-                ></b-form-input>
+                  class="form-input outline-none border rounded-lg px-3"
+                >
               </b-form-group>
               <b-form-group
                 id="input-group-5"
                 :label="`${$t('confirmPassword')}`"
                 label-for="input-5"
               >
-                <b-form-input
+                <input
                   id="input-5"
                   v-model="form.confirmPassword"
                   type="password"
                   :placeholder="`${$t('enterPassword')}`"
                   required
-                  class="form-input"
-                ></b-form-input>
+                  class="form-input outline-none border rounded-lg px-3"
+                >
               </b-form-group>
               <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0" required>{{
                 $t("termsAndConditions")
