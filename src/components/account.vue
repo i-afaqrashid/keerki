@@ -162,11 +162,49 @@
                   {{ $t("ok") }}
                 </b-button>
               </template>
-              <b-form-input
-                v-model="password"
-                type="password"
-                :placeholder="`${$t('enterPassword')}`"
-              ></b-form-input>
+
+              <b-form-group
+          id="input-group-22"
+          :label="`${$t('oldPassword')}`"
+          label-for="input-22"
+        >
+          <b-form-input
+            id="input-22"
+            v-model="password"
+            type="password"
+            required
+            class="modal-input"
+          ></b-form-input>
+        </b-form-group>
+        <b-form-group
+          id="input-group-21"
+          :label="`${$t('newPassword')}`"
+          label-for="input-21"
+          class="mt-3"
+        >
+          <b-form-input
+            id="input-21"
+            v-model="newPassword"
+            type="password"
+            required
+            class="modal-input"
+          ></b-form-input>
+        </b-form-group>
+        <b-form-group
+          id="input-group-20"
+          :label="`${$t('confirmNewPassword')}`"
+          label-for="input-20"
+          class="mt-3"
+        >
+          <b-form-input
+            id="input-20"
+            v-model="confirmPassword"
+            type="password"
+            required
+            class="modal-input"
+          ></b-form-input>
+        </b-form-group>
+
             </b-modal>
             <p class="mb-0">{{ $t("accountPassword") }} *****************</p>
             <button class="outline-none" v-b-modal.password-modal>
@@ -393,6 +431,8 @@ export default {
       email: "HEDI@EMAIL.COM",
       phone: "139315651",
       password: "1212525458585",
+      newPassword:"",
+      confirmPassword:"",
 
       options: [
         {
