@@ -2,7 +2,7 @@
   <div class="orders w-100 px-15 my-5 py-9">
     <div class="d-flex flex-column px-lg-5 py-lg-4 p-2 align-items-center">
       <div class="d-flex align-self-lg-start">
-        <h1 class="fs-24">Order Form</h1>
+        <h1 class="fs-24">{{$t('orderFormHeading')}}</h1>
         <svg
           width="40"
           height="33"
@@ -22,7 +22,7 @@
         class="d-flex justify-content-around align-items-center flex-column flex-lg-row pt-lg-9 pt-11 px-0 w-100"
       >
         <DashboardCard
-          v-bind:title="'quote'"
+          v-bind:title="`${$t('orderFormQuote')}`"
           v-bind:footer="''"
           v-on:click.native="quoteForm"
           icon='<svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,7 +31,7 @@
 '
         />
         <DashboardCard
-          v-bind:title="'service'"
+          v-bind:title="`${$t('orderFormService')}`"
           v-bind:footer="''"
           v-on:click.native="serviceForm"
           icon='<svg width="33" height="39" viewBox="0 0 33 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@
       '
         />
         <DashboardCard
-          v-bind:title="'shipping'"
+          v-bind:title="`${$t('orderFormShipping')}`"
           v-bind:footer="''"
           v-on:click.native="shippingForm"
           icon='<svg width="42" height="30" viewBox="0 0 42 30" fill="none" xmlns="http://www.w3.org/2000/svg">
