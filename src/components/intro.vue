@@ -27,22 +27,24 @@
         <div
           class="d-flex flex-column w-100 justify-content-center align-items-center p-3" dir="auto"
         >
-          <input
-            :placeholder="`${$t('catalogName')}`"
-            class="catalog-input outline-none w-100 p-4"
-            type="text"
-          />
-          <input
-            :placeholder="`${$t('catalogEmail')}`"
-            class="catalog-input outline-none w-100 p-4 mt-4"
-            type="email"
-          />
-
-          <input
-            :placeholder="`${$t('catalogPhone')}`"
-            class="catalog-input outline-none w-100 p-4 mt-4"
-            type="number"
-          />
+                <input
+                  id="input-7"
+                  type="text"
+                  :placeholder="`${$t('catalogName')}`"
+                  class="catalog-input form-input outline-none border rounded-lg px-3"
+                />
+                                <input
+                  id="input-7"
+                  type="text"
+                  :placeholder="`${$t('catalogEmail')}`"
+                  class="catalog-input form-input outline-none border rounded-lg px-3 mt-3"
+                />
+                                <input
+                  id="input-7"
+                  type="text"
+                  :placeholder="`${$t('catalogPhone')}`"
+                  class="catalog-input form-input outline-none border rounded-lg px-3 mt-3"
+                />
           <button
             class="text-white btn w-100 catalog-btn outline-none mt-4"
             @click="$bvModal.hide('catalogs-modal')"
