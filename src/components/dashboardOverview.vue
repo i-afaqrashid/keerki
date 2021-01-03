@@ -13,16 +13,18 @@
         v-model="visible"
       >
         <div
-          class="d-flex flex-column py-4 px-5 align-items-center justify-content-center"
+          class="d-flex flex-column py-4 px-4 w-100 align-items-center justify-content-center"
         >
-          <div class="align-self-start">
-            <p class="first-modal-header">{{ this.data[index].heading }}</p>
+          <div class="align-self-start w-70">
+            <p class="first-modal-header ">{{ this.data[index].heading }}</p>
             <p class="first-modal-body mb-0">{{ this.data[index].body }}</p>
           </div>
+          <div class="w-70 d-flex justify-content-center align-items-center" style="max-height:100%">
           <img v-if="index!==4"
             :src="`${require(`../assets/${this.data[index].img}`)}`"
-            class="mt-16 w-100"
+            class="mt-16 w-100" style="max-height:400px"
           />
+          </div>
           <div
             class="d-flex justify-content-between align-items-center flex-column flex-lg-row w-100 mt-5"
           >

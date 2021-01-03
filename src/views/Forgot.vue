@@ -1,18 +1,22 @@
 <template>
-  <div class="d-flex w-100 min-vh-100" dir="ltr">
+  <div class="d-flex w-100 min-vh-100>" dir="ltr">
     <div
-      class="d-none w-33 sign-up-image d-lg-flex justify-content-center align-items-center"
+      class="d-none w-33 min-vh-100 sign-up-image d-lg-flex justify-content-center align-items-center"
     >
       <img
         src="../assets/logo.png"
         width="304"
         height="131"
-        class="login-logo"
+        class="login-logo mw-100"
       />
     </div>
-    <div class="w-66 bg-white">
-      <router-link to="/login">
-        <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none">
+    <div
+      class="w-66 bg-white d-flex justify-content-center align-items-center flex-column"
+    >
+      <router-link to="/" class="align-self-start">
+        <button
+          class="d-flex ml-4 ml-lg-5 outline-none d-flex align-items-center justify-content-center"
+        >
           <svg
             width="20"
             height="20"
@@ -25,12 +29,12 @@
               fill="#8692A6"
             />
           </svg>
-          <p class="font-weight-lighter ml-3">{{ $t("back") }}</p>
+          <p class="font-weight-lighter ml-3 mb-0">{{ $t("back") }}</p>
         </button>
       </router-link>
 
       <div
-        class="w-100 pt-lg-8 px-xl-6 px-lg-9 px-5 px-sm-9 px-md-9 text-left flex-column d-flex justify-content-center align-items-center"
+        class="w-70 pt-lg-11 px-4 text-left flex-column d-flex justify-content-center align-items-center"
       >
         <img
           class="d-block d-lg-none"
@@ -38,28 +42,29 @@
           width="158"
           height="80"
         />
-        <div>
-          <h1 class="fs-30">{{ $t("forgotPasswordHeading") }}</h1>
-          <p class="font-weight-lighter fs-18">
-            {{ $t("forgotPasswordDescription") }}
-          </p>
+        <div class="w-84">
+          <div>
+            <h1 class="fs-30">{{ $t("forgotPasswordHeading") }}</h1>
+            <p class="font-weight-lighter fs-18">
+              {{ $t("forgotPasswordDescription") }}
+            </p>
+          </div>
           <p class="horizontal-line"></p>
-          <div dir="auto">
+          <div>
             <b-form @submit="onSubmit">
               <b-form-group
+                dir="auto"
                 id="input-group-8"
                 :label="`${$t('loginEmail')}`"
                 label-for="input-8"
               >
-                <b-form-input
+                <input
                   id="input-8"
                   v-model="form.email"
-                  
-                  type="email"
-                  :placeholder="`${$t('enterEmail')}`"
+                  :placeholder="`${$t('enterYourEmail')}`"
                   required
-                  class="form-input"
-                ></b-form-input>
+                  class="form-input outline-none border rounded-lg px-3"
+                />
               </b-form-group>
               <b-button
                 v-b-modal.modal-center
@@ -88,9 +93,6 @@ export default {
     return {
       form: {
         email: "",
-        oldPassword: "",
-        newPassword: "",
-        confirmPassword: "",
       },
     };
   },
