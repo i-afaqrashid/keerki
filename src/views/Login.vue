@@ -31,7 +31,7 @@
       </router-link>
 
       <div
-        class="w-100 pt-lg-8 px-4 text-left flex-column d-flex justify-content-center align-items-center"
+        class="w-100 pt-lg-11 px-4 text-left flex-column d-flex justify-content-center align-items-center"
       >
         <img
           class="d-block d-lg-none"
@@ -39,7 +39,7 @@
           width="158"
           height="80"
         />
-        <div>
+        <div class="w-84">
           <div v-if="type <= 1 || type > 8 || isNaN(type) ">
             <h1 class="fs-30">{{$t('loginHeading')}}</h1>
             <p class="font-weight-lighter fs-18">
@@ -48,7 +48,7 @@
           </div>
           <CustomAlert v-else v-bind:alert="type" />
           <p class="horizontal-line"></p>
-          <div>
+          <div >
             <b-form @submit="onSubmit">
               <b-form-group
               dir="auto"

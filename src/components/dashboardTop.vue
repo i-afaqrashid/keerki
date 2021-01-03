@@ -28,7 +28,7 @@
     </div>
     <div class="d-flex justify-content-between width-100 align-items-center" dir="auto">
       <div class="d-flex">
-        <router-link to="/dashboard/functionality-unavailable">
+   
         <button
           class="d-flex flex-column pt-2 px-2 d-lg-none align-items-center justify-content-center"
           v-on:click="sidebarToggle"
@@ -37,6 +37,7 @@
           <span class="px-13 py-1 border-top border-dark"></span>
           <span class="px-13 py-1 border-top border-dark"></span>
         </button>
+             <router-link to="/dashboard/functionality-unavailable" >
         <button
           class="d-none d-lg-flex align-items-center justify-content-center outline-none"
         >

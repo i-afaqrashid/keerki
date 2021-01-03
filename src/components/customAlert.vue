@@ -1,5 +1,5 @@
 <template>
-  <div v-if="alert === 2" class="d-flex mt-4 mt-lg-0 align-items-center mb-3">
+  <div v-if="alert === 2" class="d-flex mt-4 mt-lg-0 align-items-center mb-3 width-100">
     <svg
       width="33"
       height="29"
