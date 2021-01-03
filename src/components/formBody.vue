@@ -50,29 +50,49 @@
         :placeholder="`${$t('companyInfoEmail')}`"
       />
     </div>
-    <div
-      class="d-flex justify-content-center align-items-center mt-3 w-100 form-file-input px-2 flex-column flex-lg-row"
-    >
-      <span>
-        <svg
-          width="20"
-          height="23"
-          viewBox="0 0 20 23"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+    <div class="w-100">
+      <div @dragover.prevent @drop.prevent>
+        <div
+          class="d-flex justify-content-center align-items-center mt-3 w-100 form-file-input px-2 flex-column "
+          @dragleave="fileDragOut"
+          @dragover="fileDragIn"
+          @drop="handleFileDrop"
         >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M5.87738 23C4.02337 23.0013 2.35136 21.8828 1.64169 20.1665C0.932015 18.4503 1.3246 16.4747 2.63622 15.1617L9.1187 8.66718C9.71831 8.08691 10.6714 8.09521 11.2609 8.68583C11.8503 9.27646 11.8586 10.2315 11.2795 10.8323L4.79699 17.327C4.20459 17.9256 4.20657 18.8914 4.80141 19.4876C5.39625 20.0838 6.36016 20.0861 6.95777 19.4927L15.6012 10.8321C16.461 9.97088 16.9441 8.8026 16.9441 7.58441C16.9441 6.36621 16.461 5.19793 15.6012 4.33669C13.7876 2.60073 10.9323 2.60073 9.1187 4.33669L2.63622 10.8315C2.25383 11.235 1.68312 11.3988 1.14553 11.2595C0.607945 11.1202 0.188084 10.6996 0.0488551 10.161C-0.0903737 9.62238 0.0729435 9.05048 0.47544 8.66718L6.95777 2.17098C9.97972 -0.723659 14.7397 -0.723659 17.7617 2.17098C19.1948 3.60628 20 5.55339 20 7.58372C20 9.61404 19.1948 11.5612 17.7617 12.9965L9.1187 21.6571C8.25928 22.5186 7.09298 23.0018 5.87738 23Z"
-            fill="#047BAE"
-          />
-        </svg>
-      </span>
-      <h1 class="font-24 text-center mb-0">
-        <span class="text-primary">{{ $t("companyInfoAddLogo") }}</span>
-        {{ $t("companyInfoDropFile") }}
-      </h1>
+          <div class="w-100 file-wrapper d-flex justify-content-center align-items-center flex-column flex-lg-row">
+            <input
+              type="file"
+              name="file-input"
+              multiple="True"
+              @change="handleFileInput"
+            />
+            <span>
+              <svg
+                width="20"
+                height="23"
+                viewBox="0 0 20 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.87738 23C4.02337 23.0013 2.35136 21.8828 1.64169 20.1665C0.932015 18.4503 1.3246 16.4747 2.63622 15.1617L9.1187 8.66718C9.71831 8.08691 10.6714 8.09521 11.2609 8.68583C11.8503 9.27646 11.8586 10.2315 11.2795 10.8323L4.79699 17.327C4.20459 17.9256 4.20657 18.8914 4.80141 19.4876C5.39625 20.0838 6.36016 20.0861 6.95777 19.4927L15.6012 10.8321C16.461 9.97088 16.9441 8.8026 16.9441 7.58441C16.9441 6.36621 16.461 5.19793 15.6012 4.33669C13.7876 2.60073 10.9323 2.60073 9.1187 4.33669L2.63622 10.8315C2.25383 11.235 1.68312 11.3988 1.14553 11.2595C0.607945 11.1202 0.188084 10.6996 0.0488551 10.161C-0.0903737 9.62238 0.0729435 9.05048 0.47544 8.66718L6.95777 2.17098C9.97972 -0.723659 14.7397 -0.723659 17.7617 2.17098C19.1948 3.60628 20 5.55339 20 7.58372C20 9.61404 19.1948 11.5612 17.7617 12.9965L9.1187 21.6571C8.25928 22.5186 7.09298 23.0018 5.87738 23Z"
+                  fill="#047BAE"
+                />
+              </svg>
+            </span>
+            <h1 class="font-24 text-center mb-0">
+              <span class="text-primary">{{ $t("companyInfoAddLogo") }}</span>
+              {{ $t("companyInfoDropFile") }}
+            </h1>
+          </div>
+          <ul class="file-list">
+            <li v-for="(file, index) in files" :key="index">
+              {{ file.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <h1 class="w-100 border-3 text-right font-24 py-2 mt-15">
       {{ $t("shippingInfo") }}
@@ -249,7 +269,41 @@
 <script>
 export default {
   name: "FormBody",
+  data() {
+    return {
+      files: [],
+      color: "#444444",
+    };
+  },
   methods: {
+    handleFileDrop(e) {
+      let droppedFiles = e.dataTransfer.files;
+      if (!droppedFiles) return;
+      // this tip, convert FileList to array, credit: https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/
+      [...droppedFiles].forEach((f) => {
+        this.files.push(f);
+      });
+      this.color = "#444444";
+    },
+    handleFileInput(e) {
+      let files = e.target.files;
+      files = e.target.files;
+      if (!files) return;
+      [...files].forEach((f) => {
+        this.files.push(f);
+      });
+    },
+    removeFile(fileKey) {
+      this.files.splice(fileKey, 1);
+    },
+    fileDragIn() {
+      // alert("oof")
+      // alert("color")
+      this.color = "white";
+    },
+    fileDragOut() {
+      this.color = "#444444";
+    },
     formSubmit(e) {
       e.preventDefault();
       this.$route.fullPath === "/quote-form" &&
@@ -263,3 +317,31 @@ export default {
   },
 };
 </script>
+<style scoped>
+.file-list{
+  list-style: none;
+}
+.container {
+  min-height: 150px;
+}
+
+.file-wrapper {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.file-wrapper input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 300px;
+  height: 200px;
+}
+</style>
