@@ -11,8 +11,8 @@
         class="login-logo"
       />
     </div>
-    <div class="w-66 bg-white">
-      <router-link to="/">
+    <div class="w-66 bg-white d-flex justify-content-center align-items-center flex-column">
+      <router-link to="/" class=" align-self-start">
         <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none">
           <svg
             width="20"
@@ -31,7 +31,7 @@
       </router-link>
 
       <div
-        class="w-100 pt-lg-11 px-4 text-left flex-column d-flex justify-content-center align-items-center"
+        class="w-66 pt-lg-11 px-4 text-left flex-column d-flex justify-content-center align-items-center"
       >
         <img
           class="d-block d-lg-none"
