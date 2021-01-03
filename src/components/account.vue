@@ -137,7 +137,7 @@
         <div
           class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 my-5"
         >
-          <p class="mb-0">LANGUAGE: {{ this.$i18n.locale.toUpperCase() }}</p>
+          <p class="mb-0">{{$t('language')}} {{ this.$i18n.locale.toUpperCase() }}</p>
           <b-modal id="modal-sm" size="sm" centered @ok="handleOk">
             <b-form-select
               v-model="selected"

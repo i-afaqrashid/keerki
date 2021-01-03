@@ -327,8 +327,8 @@ export default {
   name: "Dashboard",
   data() {
     return {
-      Heading: "Dashboard",
-      Text: "Get summary of your weekly online transactions here.",
+      Heading:this.$t("dashboardHeading"),
+      Text: this.$t("dashboardDescription"),
     };
   },
   methods: {
@@ -338,32 +338,32 @@ export default {
       this.$bvModal.hide("log-out-modal");
     },
     overview() {
-      this.Heading = "Dashboard";
-      this.Text = "Get summary of your weekly online transactions here.";
+      this.Heading = this.$t("dashboardHeading");
+      this.Text =  this.$t("dashboardDescription");
       this.$router.push({ path: "/dashboard" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     notifications() {
-      this.Heading = "Notifications";
-      this.Text = "Manage your notifications";
+      this.Heading = this.$t("notificationHeading");
+      this.Text = this.$t("notificationDescription");
       this.$router.push({ path: "/dashboard/notifications" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     messages() {
-      this.Heading = "Messages";
-      this.Text = "Manage your messages";
+      this.Heading = this.$t("messagesHeading");
+      this.Text = this.$t("messagesDescription");
       this.$router.push({ path: "/dashboard/messages" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     orderHistory() {
-      this.Heading = "Order History";
-      this.Text = "Get summary of your weekly online transactions here.";
+      this.Heading = this.$t("orderHistoryHeading");
+      this.Text = this.$t("orderHistoryDescription");
       this.$router.push({ path: "/dashboard/order-history" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     account() {
-      this.Heading = "Account";
-      this.Text = "Change your account details";
+      this.Heading =this.$t("accountHeading");
+      this.Text = this.$t("accountDescription");
       this.$router.push({ path: "/dashboard/account" }).catch(() => {});
       document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
