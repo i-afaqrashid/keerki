@@ -21,6 +21,7 @@ import OrderForm from '../components/orderForm.vue'
 import FunctionalityUnavailable from '../components/functionalityUnavailable.vue'
 import ContentUnavailable from '../components/contentUnavailable.vue'
 import ServiceForm from '../components/serviceForm.vue'
+import AdminLogin from '../components/admin/login.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,6 +29,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path:"/admin",
+    name:"Admin",
+    component:AdminLogin
   },
   {
     path: '/sign-up',
