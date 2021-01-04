@@ -85,8 +85,8 @@
                 v-model="email"
                 type="email"
                 :placeholder="`${$t('enterEmail')}`"
-              class="form-input outline-none border rounded-lg px-3"
-              >
+                class="form-input outline-none border rounded-lg px-3"
+              />
             </b-modal>
             <p class="mb-0">{{ $t("accountEmail") }} {{ email }}</p>
             <button class="outline-none" v-b-modal.email-modal>
@@ -127,8 +127,8 @@
                 v-model="phone"
                 type="number"
                 :placeholder="`${$t('phonePlaceholder')}`"
-              class="form-input outline-none border rounded-lg px-3"
-              >
+                class="form-input outline-none border rounded-lg px-3"
+              />
             </b-modal>
             <p class="mb-0">{{ $t("accountPhone") }} {{ phone }}</p>
             <button class="outline-none" v-b-modal.phone-modal>
@@ -176,8 +176,8 @@
                   v-model="password"
                   type="password"
                   required
-              class="form-input outline-none border rounded-lg px-3"
-                >
+                  class="form-input outline-none border rounded-lg px-3"
+                />
               </b-form-group>
               <b-form-group
                 id="input-group-21"
@@ -190,8 +190,8 @@
                   v-model="newPassword"
                   type="password"
                   required
-              class="form-input outline-none border rounded-lg px-3"
-                >
+                  class="form-input outline-none border rounded-lg px-3"
+                />
               </b-form-group>
               <b-form-group
                 id="input-group-20"
@@ -204,8 +204,8 @@
                   v-model="confirmPassword"
                   type="password"
                   required
-              class="form-input outline-none border rounded-lg px-3"
-                >
+                  class="form-input outline-none border rounded-lg px-3"
+                />
               </b-form-group>
             </b-modal>
             <p class="mb-0">{{ $t("accountPassword") }} *****************</p>
@@ -407,8 +407,12 @@ export default {
   },
   methods: {
     handleOk() {
+      document
+        .getElementById("app")
+        .classList.remove(localStorage.currentLanguage);
       localStorage.currentLanguage = this.selected;
       this.switchLocale(this.selected);
+      document.getElementById("app").classList.add(this.selected);
     },
     handleFileChange(e) {
       this.$emit("input", e.target.files[0]);

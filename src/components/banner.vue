@@ -35,6 +35,15 @@ export default {
 </script>
 
 <style>
+
+.select-width{
+  width:30%!important;
+   border: 1px solid transparent;
+  height: 64px !important;
+}
+.input-width{
+  width:65%!important;
+}
 .width-83{
   width:83%!important;
 }
@@ -336,7 +345,10 @@ btn-secondary:focus {
 .form-input:focus,
 .form-input:hover,
 .modal-input:focus,
-.modal-input:hover {
+.modal-input:hover,
+.select-width:focus,
+.select-width:hover
+ {
   background: #ffffff;
   border: 1px solid #1565d8;
   box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.11);

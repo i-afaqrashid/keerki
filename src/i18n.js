@@ -49,7 +49,7 @@ const messages = {
          newUserNext: "Next", newUserPrev: "Previous", newUserDone: "Done",
         notificationHeading: "Notifications", notificationDescription: "Manage your notifications", messagesHeading: "Messages", messagesDescription: "Manage your messages", orderHistoryHeading: "Order History", orderHistoryDescription: "Get summary of your weekly online transactions here.", accountHeading: "Account", accountDescription: "Change your account details", orderFormHeading: "Order Form", orderFormQuote: "Quote", orderFormService: "Service", orderFormShipping: "Shipping",
         language:"LANGUAGE:",rtlHelper:"help",functionalityError:"Functionality currently unavailable",sorryText:"Sorry for the inconvenience",contentError:"Content currently unavailable.",tryLater:"We’re sorry; please try again later.",
-        ok:"Ok",selectLanguage:"Please Select a Language",
+        ok:"Ok",selectLanguage:"Please Select a Language",ksa:"Saudia Arabia",uae:"United Arab Emirates",qatar:"Qatar",bahrain:"Bahrain",oman:"Oman",lebanon:"Lebanon",jordan:"Jordan",egypt:"Egypt",germany:"Germany",otherLanguages:"Others"
 
     },
     'ar':
@@ -95,7 +95,8 @@ const messages = {
         newUserAccountInformationDescription: "الأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبر", newUserNotificationHeading: "إرسال الرسائل وعرض الإخطار في شاشة واحدة", newUserNotificationDescription: "الأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبرالأميركية تحدي التي الأردن مخاوف تتعاون في معها الأسلحة كما مصالح ويعبر"
         , newUserNext: "التالى", newUserPrev: "السابق", newUserDone: "منجز",
         notificationHeading: "إشعارات", notificationDescription: "إدارة الإخطارات الخاصة بك", messagesHeading: "الرسائل", messagesDescription: "إدارة رسائلك", orderHistoryHeading: "تاريخ الطلب", orderHistoryDescription: ".احصل على ملخص للمعاملات الأسبوعية عبر الإنترنت هنا", accountHeading: "الحساب", accountDescription: "تغيير تفاصيل حسابك", orderFormHeading: "نموذج الطلب", orderFormQuote: "اقتبس", orderFormService: "الخدمات", orderFormShipping: "الشحن",
-        language: ":لغة",rtlHelper:"مرحبا",functionalityError:"الوظيفة غير متوفرة حاليًا",sorryText:"آسف للإزعاج",contentError:"المحتوى غير متوفر حاليا.",tryLater:"نحن آسفون؛ الرجاء معاودة المحاولة في وقت لاحق.",ok:"حسنا",selectLanguage:"يرجى تحديد لغة"
+        language: ":لغة",rtlHelper:"مرحبا",functionalityError:"الوظيفة غير متوفرة حاليًا",sorryText:"آسف للإزعاج",contentError:"المحتوى غير متوفر حاليا.",tryLater:"نحن آسفون؛ الرجاء معاودة المحاولة في وقت لاحق.",ok:"حسنا",selectLanguage:"يرجى تحديد لغة",
+        ksa:"المملكة العربية السعودية",uae:"United Arab Emirates",qatar:"الإمارات العربية المتحدة",bahrain:"البحرين",oman:"سلطنة عمان",lebanon:"لبنان",jordan:"الأردن",egypt:"مصر",germany:"ألمانيا",otherLanguages:"الآخرين"
     },
     'ch':
     {
@@ -140,6 +141,7 @@ const messages = {
         , newUserNext: "下一个", newUserPrev: "以前", newUserDone: "完成了",
         notificationHeading: "通知事项", notificationDescription: "管理您的通知", messagesHeading: "留言内容", messagesDescription: "管理您的讯息", orderHistoryHeading: "订单历史", orderHistoryDescription: "在这里获取每周在线交易的摘要。", accountHeading: "帐户", accountDescription: "更改您的帐户详细信息", orderFormHeading: "订单", orderFormQuote: "引用", orderFormService: "服务", orderFormShipping: "运输",
         language: "语言:",rtlHelper:"help",functionalityError:"当前不可用的功能",sorryText:"抱歉给你带来不便",contentError:"内容当前不可用。",tryLater:"我们很抱歉;请稍后再试。",ok:"好",selectLanguage:"请选择一种语言",
+        ksa:"沙特阿拉伯",uae:"阿拉伯联合酋长国",qatar:"卡塔尔",bahrain:"巴林",oman:"阿曼",lebanon:"黎巴嫩",jordan:"约旦",egypt:"埃及",germany:"德国",otherLanguages:"其他"
     }
 }
 export default new VueI18n({ locale: localStorage.currentLanguage || 'en', fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en', messages, });

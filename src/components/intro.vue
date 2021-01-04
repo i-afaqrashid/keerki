@@ -25,31 +25,62 @@
         hide-footer
       >
         <div
-          class="d-flex flex-column w-100 justify-content-center align-items-center p-3" dir="auto"
+          class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
+          dir="auto"
         >
-                <input
-                  id="input-7"
-                  type="text"
-                  :placeholder="`${$t('catalogName')}`"
-                  class="catalog-input form-input outline-none border rounded-lg px-3"
-                />
-                                <input
-                  id="input-7"
-                  type="text"
-                  :placeholder="`${$t('catalogEmail')}`"
-                  class="catalog-input form-input outline-none border rounded-lg px-3 mt-3"
-                />
-                                <input
-                  id="input-7"
-                  type="text"
-                  :placeholder="`${$t('catalogPhone')}`"
-                  class="catalog-input form-input outline-none border rounded-lg px-3 mt-3"
-                />
+          <input
+            id="input-700"
+            type="text"
+            :placeholder="`${$t('yourName')}`"
+            class="catalog-input form-input outline-none border rounded-lg px-3"
+          />
+          <input
+            id="input-800"
+            type="text"
+            :placeholder="`${$t('companyName')}`"
+            class="catalog-input form-input outline-none border rounded-lg px-3 mt-3"
+          />
+          <input
+            id="input-900"
+            type="text"
+            :placeholder="`${$t('catalogEmail')}`"
+            class="catalog-input form-input outline-none border rounded-lg px-3 mt-3"
+          />
+          <div class="w-100 d-flex justify-content-between align-items-center">
+            <select
+              name="countrycode"
+              class="catalog-input outline-none select-width border mt-3 d-flex justify-content-center align-items-center px-2"
+              id="countrycode"
+              @change="displayCountryCode"
+            >
+              <option data-countryCode="SA" value="966">
+                +986 {{ $t("ksa") }}
+              </option>
+              <option data-countryCode="AE" value="971">
+                +971 {{ $t("uae") }}
+              </option>
+              <option data-countryCode="QA" value="974">+974 {{ $t("qatar") }}</option>
+              <option data-countryCode="QA" value="973">+973 {{ $t("bahrain") }}</option>
+              <option data-countryCode="OM" value="968">+978 {{ $t("oman") }}</option>
+              <option data-countryCode="LB" value="961">+961 {{ $t("lebanon") }}</option>
+              <option data-countryCode="JO" value="962">+961 {{ $t("jordan") }}</option>
+              <option data-countryCode="EG" value="20">+961 {{ $t("egypt") }}</option>
+              <option data-countryCode="DE" value="40">+961 {{ $t("germany") }}</option>
+              <option data-countryCode="OT" value="Others">{{ $t("otherLanguages") }}</option>
+            </select>
+            <input
+              id="input-7"
+              type="text"
+              :placeholder="`${$t('catalogPhone')}`"
+              class="catalog-input form-input input-width outline-none border rounded-lg px-3 mt-3"
+              style="width:65%!important"
+            />
+          </div>
           <button
             class="text-white btn w-100 catalog-btn outline-none mt-4"
             @click="$bvModal.hide('catalogs-modal')"
           >
-            {{$t('catalogDownloadBtn')}}
+            {{ $t("catalogDownloadBtn") }}
           </button>
         </div>
       </b-modal>
@@ -69,5 +100,12 @@
 <script>
 export default {
   name: "Intro",
+  methods: {
+    displayCountryCode() {
+      var countrycode = document.getElementById("countrycode");
+      countrycode.options[countrycode.selectedIndex].text =
+        "+" + countrycode.value;
+    },
+  },
 };
 </script>

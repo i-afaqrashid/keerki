@@ -20,6 +20,7 @@ import Messages from '../components/messages.vue'
 import OrderForm from '../components/orderForm.vue'
 import FunctionalityUnavailable from '../components/functionalityUnavailable.vue'
 import ContentUnavailable from '../components/contentUnavailable.vue'
+import ServiceForm from '../components/serviceForm.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -90,7 +91,7 @@ const routes = [
     children: [
       {
         path: "",
-        component: FormBody
+        component: ServiceForm
       },
       {
         path: "preview",
