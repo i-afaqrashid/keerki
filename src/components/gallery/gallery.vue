@@ -12,8 +12,9 @@
       class="d-flex flex-column flex-lg-row w-100 justify-content-center align-items-center mt-11"
     >
       <div>
+        
         <img
-          src="../../assets/galleryImage1.jpeg"
+          src="../../assets/Rectang1.png"
           width="225"
           height="285"
           class="border-primary galleryImage"
@@ -21,7 +22,7 @@
       </div>
       <div class="ml-lg-3 mt-5 mt-lg-0">
         <img
-          src="../../assets/galleryImage2.jpeg"
+          src="../../assets/r2.png"
           width="225"
           height="285"
           class="border-primary galleryImage"
@@ -29,7 +30,7 @@
       </div>
       <div class="ml-lg-3 mt-5 mt-lg-0">
         <img
-          src="../../assets/galleryImage3.jpeg"
+          src="../../assets/r3.png"
           width="225"
           height="285"
           class="border-primary galleryImage"
@@ -37,7 +38,7 @@
       </div>
       <div class="ml-lg-3 mt-5 mt-lg-0">
         <img
-          src="../../assets/galleryImage4.jpeg"
+          src="../../assets/r4.png"
           width="225"
           height="285"
           class="border-primary galleryImage"
@@ -49,7 +50,7 @@
     >
       <div>
         <img
-          src="../../assets/galleryImage5.jpeg"
+          src="../../assets/r5.png"
           width="350px"
           height="285px"
           class="border-primary galleryImage"
@@ -57,7 +58,7 @@
       </div>
       <div class="ml-lg-4 mt-5 mt-lg-0">
         <img
-          src="../../assets/galleryImage6.jpeg"
+          src="../../assets/r6.png"
           width="225px"
           height="285px"
           class="border-primary galleryImage"
@@ -65,7 +66,7 @@
       </div>
       <div class="ml-lg-4 mt-5 mt-lg-0">
         <img
-          src="../../assets/galleryImage7.jpeg"
+          src="../../assets/r7.png"
           width="350px"
           height="285px"
           class="border-primary galleryImage"

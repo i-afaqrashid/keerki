@@ -57,11 +57,11 @@
           >
             <div class="px-lg-5 text-center text-sm-left">
               <h1 class="fs-18 font-weight-light">{{$t('messageNewHadi')}}</h1>
-              <div class="d-flex w-100 justify-content-between">
+              <div class="d-flex w-84 justify-content-between">
                 <p class="mb-0 font-weight-lighter ml-2 ml-lg-0">
                  {{$t('message1Minute')}}
                 </p>
-                <p class="mb-0 text-primary ml-lg-5 ml-3">{{$t('messageView')}}</p>
+                <p class="mb-0 text-primary ">{{$t('messageView')}}</p>
               </div>
             </div>
             <div class="px-5 mt-2 mt-lg-0">

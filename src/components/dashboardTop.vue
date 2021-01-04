@@ -18,7 +18,8 @@
       <b-form-checkbox
         size="lg"
         v-model="checked"
-        v-on:click.native="toggleView"
+        @click.native="toggleView"
+        button-variant = "secondary"
         name="check-button"
         switch
         class="fs-16 font-weight-lighter"
@@ -306,8 +307,7 @@ export default {
     },
     toggleView(e) {
       e.preventDefault();
-      this.checked = !this.checked;
-
+     this.checked = !this.checked;
       this.checked &&
         this.$router
           .push({ path: "/dashboard/order-history/order-template" })
@@ -331,3 +331,10 @@ export default {
   },
 };
 </script>
+<style>
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #66cc66!important;
+background: #66CC66!important;
+}
+
+</style>
