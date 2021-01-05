@@ -152,12 +152,6 @@
       <p class="font-weight-lighter mb-0">{{ $t("contactKeerki") }}</p>
     </div>
   </div>
-  <div
-    v-else-if="alert === 200"
-    :class="`d-flex justify-content-center fs-11 py-1 align-items-center status-button outline-none ${this.color} `"
-  >
-    {{ this.type }}
-  </div>
 </template>
 <script>
 export default {
@@ -167,14 +161,7 @@ export default {
       type: Number,
       default: 1,
     },
-    type: {
-      type: String,
-      default: "IN PROGRESS",
-    },
-    color:{
-      type:String,
-      default:"in-progress"
-    }
+
   },
 };
 </script>

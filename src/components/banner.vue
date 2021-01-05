@@ -35,6 +35,9 @@ export default {
 </script>
 
 <style>
+.width-25{
+  width: 300px!important;
+}
 
 .select-width{
   width:30%!important;
@@ -293,6 +296,9 @@ export default {
 }
 .fs-13 {
   font-size: 13px;
+}
+.fs-19{
+  font-size: 19px;
 }
 .dashboard-card {
   margin-bottom: 40px;
@@ -594,6 +600,7 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+
     .w-30 {
   width: 40%;
 }

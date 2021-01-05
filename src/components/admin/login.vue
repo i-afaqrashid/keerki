@@ -2,11 +2,11 @@
   <div
     class="min-vh-100 w-100 d-flex justify-content-center align-items-center login-bg"
   >
-    <div class="w-84">
+    <form class="w-84" v-on:submit="handleSubmit">
      <div class="d-flex justify-content-center align-items-center flex-column w-100">
       <img src="../../assets/logo.png" width="275" height="86" />
-      <div class="mt-15 w-50 d-flex justify-content-center align-center-items">
-                <AdminCustomAlert v-bind:alert="type" />
+      <div class="mt-15 d-flex justify-content-center width-25 text-white align-center-items">
+                <AdminCustomAlert v-bind:alert="type" />  
       </div>
       <div class="mt-15">
         <svg
@@ -36,6 +36,7 @@
           type="text"
           v-model="userName"
           v-on:change="handleUserName"
+          required
         />
       </div>
       <div class="mt-3">
@@ -65,10 +66,13 @@
           class="border border-white rounded-lg text-white login-input w-100 outline-none px-5"
           placeholder="Password"
           type="password"
+          required
         />
       </div>
       <div style="width:300px">
-      <button class="btn w-100 login-input shadow-md btn-white btn-light mt-5">
+      <button class="btn w-100 login-input shadow-md btn-white btn-light mt-5"
+      type="submit"
+      >
         LOGIN
       </button>
       <p class="align-self-start fs-16 mb-0 text-white mt-13">
@@ -77,7 +81,7 @@
 </div>
 
     </div>
-    </div>
+    </form>
   </div>
 </template>
 <script>
@@ -94,6 +98,9 @@ export default {
    methods: {
     handleUserName() {
       this.type = parseInt(this.userName);
+    },
+    handleSubmit(){
+            this.$router.push({ path: "/admin/dashboard" }).catch(() => {});
     }
    }
 

@@ -22,6 +22,7 @@ import FunctionalityUnavailable from '../components/functionalityUnavailable.vue
 import ContentUnavailable from '../components/contentUnavailable.vue'
 import ServiceForm from '../components/serviceForm.vue'
 import AdminLogin from '../components/admin/login.vue'
+import AdminDashboard from '../views/AdminDashboard.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -34,6 +35,10 @@ const routes = [
     path:"/admin",
     name:"Admin",
     component:AdminLogin
+  },
+  {
+    path:"/admin/dashboard",
+    component:AdminDashboard
   },
   {
     path: '/sign-up',
