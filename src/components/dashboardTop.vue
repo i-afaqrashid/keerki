@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-100 d-flex align-items-lg-center justify-content-between flex-column flex-lg-row"
+    class="w-100 d-flex align-items-lg-center justify-content-between flex-column px-4 px-lg-11 pt-11 flex-lg-row"
   >
     <div class="order-1 order-lg-0 mt-4 mt-lg-0">
       <h1 class="fs-43">{{ this.Heading }}</h1>
@@ -19,17 +19,19 @@
         size="lg"
         v-model="checked"
         @click.native="toggleView"
-        button-variant = "secondary"
+        button-variant="secondary"
         name="check-button"
         switch
         class="fs-16 font-weight-lighter"
       >
-        {{$t('viewInTemplates')}}
+        {{ $t("viewInTemplates") }}
       </b-form-checkbox>
     </div>
-    <div class="d-flex justify-content-between width-100 align-items-center" dir="auto">
+    <div
+      class="d-flex justify-content-between width-100 align-items-center"
+      dir="auto"
+    >
       <div class="d-flex">
-   
         <button
           class="d-flex flex-column pt-2 px-2 d-lg-none align-items-center justify-content-center"
           v-on:click="sidebarToggle"
@@ -38,9 +40,10 @@
           <span class="px-13 py-1 border-top border-dark"></span>
           <span class="px-13 py-1 border-top border-dark"></span>
         </button>
-             <router-link to="/dashboard/functionality-unavailable" >
+
         <button
           class="d-none d-lg-flex align-items-center justify-content-center outline-none"
+          v-b-modal.entry-modal
         >
           <svg
             width="18"
@@ -54,9 +57,96 @@
               fill="#0278AE"
             />
           </svg>
-          <p class="btn p-0 outline-none mb-0 mx-2">{{$t('help')}}</p>
+          <p class="btn p-0 outline-none mb-0 mx-2" v-b-modal.entry-modal>
+            {{ $t("help") }}
+          </p>
+
+          <b-modal id="entry-modal" hide-footer centered size="lg">
+            <div
+              class="d-flex flex-column py-4 px-4 w-100 align-items-center justify-content-center"
+            >
+              <div class="align-self-start w-70">
+                <p class="first-modal-header">
+                  {{ this.data[index].heading }}
+                </p>
+                <p class="first-modal-body mb-0">
+                  {{ this.data[index].body }}
+                </p>
+              </div>
+              <div
+                class="w-70 d-flex justify-content-center align-items-center"
+                style="max-height: 100%"
+              >
+                <img
+                  v-if="index !== 4"
+                  :src="`${require(`../assets/${this.data[index].img}`)}`"
+                  class="mt-16 w-100"
+                  style="max-height: 400px"
+                />
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center flex-column flex-lg-row w-100 mt-5"
+              >
+                <div class="d-flex justify-content-center w-100 pl-lg-9">
+                  <button
+                    class="rounded-circle ml-2 faded-circle outline-none active-circle"
+                    @click="changeSlide(0, 'active-circle0')"
+                    id="active-circle0"
+                  ></button>
+                  <button
+                    class="rounded-circle ml-2 faded-circle outline-none"
+                    @click="changeSlide(1, 'active-circle1')"
+                    id="active-circle1"
+                  ></button>
+                  <button
+                    class="rounded-circle ml-2 faded-circle outline-none"
+                    @click="changeSlide(2, 'active-circle2')"
+                    id="active-circle2"
+                  ></button>
+                  <button
+                    class="rounded-circle ml-2 faded-circle outline-none"
+                    @click="changeSlide(3, 'active-circle3')"
+                    id="active-circle3"
+                  ></button>
+                  <button
+                    class="rounded-circle ml-2 faded-circle outline-none"
+                    @click="changeSlide(4, 'active-circle4')"
+                    id="active-circle4"
+                  ></button>
+                </div>
+                <div class="d-flex flex-column flex-lg-row">
+                  <button
+                    v-if="index != 0"
+                    class="btn btn-outline-primary border-0 mr-lg-3 mt-4 mt-lg-0"
+                    @click="prev"
+                  >
+                    {{ $t("newUserPrev") }}
+                  </button>
+                  <div
+                    v-else
+                    class="btn border-0 mr-0 outline-none mt-4 mt-lg-0 bg-transparent text-white"
+                  >
+                    {{ $t("newUserPrev") }}
+                  </div>
+                  <button
+                    v-if="index != 4"
+                    class="btn btn-primary mt-4 mt-lg-0"
+                    @click="next"
+                  >
+                    {{ $t("newUserNext") }}
+                  </button>
+                  <button
+                    v-if="index >= 4"
+                    class="btn btn-primary mt-4 mt-lg-0"
+                    @click="done"
+                  >
+                    {{ $t("newUserDone") }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </b-modal>
         </button>
-        </router-link>
         <button
           v-b-popover.hover.top
           id="popover-target-2"
@@ -70,21 +160,22 @@
           >
             <div class="d-flex flex-column w-100 p-2" dir="auto">
               <div class="px-2 py-2 border-bottom w-100">
-                <p class="mb-1 fs-20">{{$t('popupMessages')}}</p>
-                <p class="fs-14 font-weight-light">{{$t('popupDaysAgo')}}</p>
+                <p class="mb-1 fs-20">{{ $t("popupMessages") }}</p>
+                <p class="fs-14 font-weight-light">{{ $t("popupDaysAgo") }}</p>
               </div>
               <div
                 class="d-flex w-100 justify-content-between align-items-center mt-3"
               >
-                <p class="font-12 mb-0">{{$t('popupNewMessages')}}</p>
-                <p class="font-11 mb-0">{{$t('popupDismiss')}}</p>
+                <p class="font-12 mb-0">{{ $t("popupNewMessages") }}</p>
+                <p class="font-11 mb-0">{{ $t("popupDismiss") }}</p>
               </div>
               <div
                 class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center"
               >
                 <button
                   class="btn noti-btn w-100 d-flex align-items-center justify-content-center py-3"
-                  @click="messages" dir="ltr"
+                  @click="messages"
+                  dir="ltr"
                 >
                   <svg
                     width="16"
@@ -109,7 +200,7 @@
                     />
                   </svg>
 
-                  <p class="fs-18 mb-0 ml-3">{{$t('popupViewAll')}}</p>
+                  <p class="fs-18 mb-0 ml-3">{{ $t("popupViewAll") }}</p>
                 </button>
               </div>
             </div>
@@ -148,21 +239,22 @@
           >
             <div class="d-flex flex-column w-100 p-2" dir="auto">
               <div class="px-2 py-2 border-bottom w-100">
-                <p class="mb-1 fs-20">{{$t('popupNotifications')}}</p>
-                <p class="fs-14 font-weight-light">{{$t('popupDaysAgo')}}</p>
+                <p class="mb-1 fs-20">{{ $t("popupNotifications") }}</p>
+                <p class="fs-14 font-weight-light">{{ $t("popupDaysAgo") }}</p>
               </div>
               <div
                 class="d-flex w-100 justify-content-between align-items-center mt-3"
               >
-                <p class="font-12 mb-0">{{$t('popupNewNotifications')}}</p>
-                <p class="font-11 mb-0">{{$t('popupDismiss')}}</p>
+                <p class="font-12 mb-0">{{ $t("popupNewNotifications") }}</p>
+                <p class="font-11 mb-0">{{ $t("popupDismiss") }}</p>
               </div>
               <div
                 class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center"
               >
                 <button
                   class="btn noti-btn w-100 d-flex align-items-center justify-content-center py-3"
-                  @click="notifications" dir="ltr"
+                  @click="notifications"
+                  dir="ltr"
                 >
                   <svg
                     width="16"
@@ -187,7 +279,7 @@
                     />
                   </svg>
 
-                  <p class="fs-18 mb-0 ml-3">{{$t('popupViewAll')}}</p>
+                  <p class="fs-18 mb-0 ml-3">{{ $t("popupViewAll") }}</p>
                 </button>
               </div>
             </div>
@@ -233,7 +325,7 @@
         </button>
       </div>
       <button
-        class="d-flex justify-content-center align-items-center text-left outline-none ml-0 ml-lg-5" 
+        class="d-flex justify-content-center align-items-center text-left outline-none ml-0 ml-lg-5"
         @click="account"
       >
         <div class="bg-secondary rounded-circle">
@@ -275,7 +367,7 @@
         </div>
         <div class="mx-2">
           <p class="mb-0 fs-14">Hedi</p>
-          <p class="mb-0 fs-14">{{$t('formHeaderAccountDetails')}}</p>
+          <p class="mb-0 fs-14">{{ $t("formHeaderAccountDetails") }}</p>
         </div>
       </button>
     </div>
@@ -286,10 +378,59 @@ export default {
   name: "DashboardTop",
   data() {
     return {
+      visible: localStorage.newUser == "true" ? true : false,
       checked: false,
+      index: 0,
+      data: [
+        {
+          heading: this.$t("newUserWelcomeHeading"),
+          body: this.$t("newUserWelcomeDescription"),
+          img: "dashboard.png",
+        },
+        {
+          heading: this.$t("newUserHistoryPageHeading"),
+          body: this.$t("newUserHistoryPageDescription"),
+          img: "ordertemplate.png",
+        },
+        {
+          heading: this.$t("newUserOrderTemplateHeading"),
+          body: this.$t("newUserOrderTemplateDescription"),
+          img: "orderpreview.png",
+        },
+        {
+          heading: this.$t("newUserAccountInformationHeading"),
+          body: this.$t("newUserAccountInformationDescription"),
+          img: "account.png",
+        },
+        {
+          heading: this.$t("newUserNotificationHeading"),
+          body: this.$t("newUserNotificationDescription"),
+          img: "",
+        },
+      ],
     };
   },
   methods: {
+    done() {
+      this.$bvModal.hide("entry-modal");
+    },
+    prev() {
+      this.index != 0 && this.index--;
+      this.changeSlide(this.index, `active-circle${this.index}`);
+    },
+    next() {
+      this.index < 5 && this.index++;
+      this.changeSlide(this.index, `active-circle${this.index}`);
+    },
+    changeSlide(currentIndex, id) {
+      var elems = document.querySelectorAll(".active-circle");
+
+      [].forEach.call(elems, function (el) {
+        el.classList.remove("active-circle");
+      });
+      this.index = currentIndex;
+      document.getElementById(id).classList.add("active-circle");
+    },
     sidebarToggle() {
       document.getElementsByClassName("side-bar")[0].classList.toggle("d-none");
     },
@@ -307,7 +448,7 @@ export default {
     },
     toggleView(e) {
       e.preventDefault();
-     this.checked = !this.checked;
+      this.checked = !this.checked;
       this.checked &&
         this.$router
           .push({ path: "/dashboard/order-history/order-template" })
@@ -318,23 +459,22 @@ export default {
   props: {
     Heading: {
       type: String,
-      default:  function () {
-    return this.$t('dashboardHeading')
-  }
+      default: function () {
+        return this.$t("dashboardHeading");
+      },
     },
     Text: {
       type: String,
-      default:  function () {
-    return this.$t('dashboardDescription')
-  },
+      default: function () {
+        return this.$t("dashboardDescription");
+      },
     },
   },
 };
 </script>
 <style>
 .custom-control-input:checked ~ .custom-control-label::before {
-    border-color: #66cc66!important;
-background: #66CC66!important;
+  border-color: #66cc66 !important;
+  background: #66cc66 !important;
 }
-
 </style>

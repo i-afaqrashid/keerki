@@ -5,7 +5,7 @@
     @submit="formSubmit"
   >
     <h1
-      v-if="this.currentLanguage === 'ar'"
+      v-if="this.$i18n.locale == 'ar'"
       class="w-100 text-right border-3 font-24 py-2"
     >
       {{ $t("companyInfo") }}
@@ -104,13 +104,13 @@
       </div>
     </div>
     <h1
-      v-if="this.currentLanguage === 'ar'"
+      v-if="this.$i18n.locale == 'ar'"
       class="w-100 border-3 text-right font-24 py-2 mt-15"
     >
-      {{ $t("shippingInfo") }}
+      {{ $t("shippingTo") }}
     </h1>
     <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
-      {{ $t("shippingInfo") }}
+      {{ $t("shippingTo") }}
     </h1>
 
     <div class="d-flex flex-lg-row flex-column justify-content-between w-100">
@@ -124,7 +124,7 @@
       />
     </div>
     <h1
-      v-if="this.currentLanguage === 'ar'"
+      v-if="this.$i18n.locale == 'ar'"
       class="w-100 border-3 text-right font-24 py-2 mt-15"
     >
       {{ $t("shippingInfo") }}
@@ -159,7 +159,7 @@
       </button>
     </div>
      <h1
-      v-if="this.currentLanguage === 'ar'"
+      v-if="this.$i18n.locale == 'ar'"
       class="w-100 border-3 text-right font-24 py-2 mt-15"
     >
       {{ $t("aboutProducts") }}
@@ -206,7 +206,7 @@
       </button>
     </div>
      <h1
-      v-if="this.currentLanguage === 'ar'"
+      v-if="this.$i18n.locale == 'ar'"
       class="w-100 border-3 text-right font-24 py-2 mt-15"
     >
       {{ $t("remarks") }}
@@ -231,7 +231,7 @@
       </select>
     </div>
   <h1
-      v-if="this.currentLanguage === 'ar'"
+      v-if="this.$i18n.locale == 'ar'"
       class="w-100 border-3 text-right font-24 py-2 mt-15"
     >
       {{ $t("paymentTerm") }}
@@ -254,13 +254,13 @@
       </button>
     </div>
      <h1
-      v-if="this.currentLanguage === 'ar'"
+      v-if="this.$i18n.locale == 'ar'"
       class="w-100 border-3 text-right font-24 py-2 mt-15"
     >
-      {{ $t("paymentTerm") }}
+      {{ $t("shippingMethod") }}
     </h1>
     <h1 v-else class="w-100 border-3 text-left font-24 py-2 mt-15">
-      {{ $t("paymentTerm") }}
+      {{ $t("shippingMethod") }}
     </h1>
     <div
       class="d-flex w-100 justify-content-center align-items-center flex-lg-row flex-column mt-4"
@@ -277,7 +277,7 @@
       </button>
     </div>
      <h1
-      v-if="this.currentLanguage === 'ar'"
+      v-if="this.$i18n.locale == 'ar'"
       class="w-100 border-3 text-right font-24 py-2 mt-15"
     >
       {{ $t("deliveryTime") }}

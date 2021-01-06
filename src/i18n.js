@@ -47,9 +47,13 @@ const messages = {
         dashboardHeading: "Dashboard", dashboardDescription: "Get summary of your weekly online transactions here.", newUserWelcomeHeading: "Welcome to Keerki.", newUserWelcomeDescription: "A new experience designed to help you manage your orders faster!", newUserHistoryPageHeading: "View all orders in one place!", newUserHistoryPageDescription: "Check all  your orders and details in orders history page and check their status.", newUserOrderTemplateHeading: "View your orders in templates ", newUserOrderTemplateDescription: "Even better and faster you can view all your status and orders in templates", newUserAccountInformationHeading: "Manage your account information and add your company details",
         newUserAccountInformationDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ", newUserNotificationHeading: "Send messages and view notification within one screen", newUserNotificationDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo",
          newUserNext: "Next", newUserPrev: "Previous", newUserDone: "Done",
-        notificationHeading: "Notifications", notificationDescription: "Manage your notifications", messagesHeading: "Messages", messagesDescription: "Manage your messages", orderHistoryHeading: "Order History", orderHistoryDescription: "Get summary of your weekly online transactions here.", accountHeading: "Account", accountDescription: "Change your account details", orderFormHeading: "Order Form", orderFormQuote: "Quote", orderFormService: "Service", orderFormShipping: "Shipping",
+        notificationHeading: "Notifications", notificationDescription: "Manage your notifications", messagesHeading: "Messages", messagesDescription: "All messages history", orderHistoryHeading: "Order History", orderHistoryDescription: "Get summary of your weekly online transactions here.", accountHeading: "Account", accountDescription: "Change your account details", orderFormHeading: "Order Form", orderFormQuote: "Quote", orderFormService: "Service", orderFormShipping: "Shipping",
         language:"LANGUAGE:",rtlHelper:"help",functionalityError:"Functionality currently unavailable",sorryText:"Sorry for the inconvenience",contentError:"Content currently unavailable.",tryLater:"We’re sorry; please try again later.",
-        ok:"Ok",selectLanguage:"Please Select a Language",ksa:"Saudia Arabia",uae:"United Arab Emirates",qatar:"Qatar",bahrain:"Bahrain",oman:"Oman",lebanon:"Lebanon",jordan:"Jordan",egypt:"Egypt",germany:"Germany",otherLanguages:"Others"
+        ok:"Ok",selectLanguage:"Please Select a Language",ksa:"Saudia Arabia",uae:"United Arab Emirates",qatar:"Qatar",bahrain:"Bahrain",oman:"Oman",lebanon:"Lebanon",jordan:"Jordan",egypt:"Egypt",germany:"Germany",otherLanguages:"Others",
+        setLanguage:"Language",shippingTo:"Ship To",serviceDetails:"Service Details",factoryContact:"Factory Contacts",whatGoodsShipping:"What goods are you shipping?",entryFactoryContact:"Enter factory contact",listGoods:"List all your goods",
+        providePackingList:"Please provide the packing list or upload a file",height:"Height",width:"Width",weightKG:"Weight in KG",uploadPackingList:"Upload packing list",uploadInvoice:"Upload invoice",submit:"Submit",
+        messageReply:"Reply",openMessages:"Open Messages",messagesOpen:"Open",messagesClosed:"Closed",messageSubject:"Message Subject",orderTypeNumber:"Order type - Order number",
+        inboxAll:"All",inboxFile:"File",inboxImages:"Images",inboxSearch:"Quick Search",inboxMessage:"Message",inboxSend:"SEND",inboxRating:"Rate Your Chat Experience",inboxThanks:"Thank you ^.^",inboxImprove:"Please tell us what we can improve"
 
     },
     'ar':
@@ -96,7 +100,11 @@ const messages = {
         , newUserNext: "التالى", newUserPrev: "السابق", newUserDone: "منجز",
         notificationHeading: "إشعارات", notificationDescription: "إدارة الإخطارات الخاصة بك", messagesHeading: "الرسائل", messagesDescription: "إدارة رسائلك", orderHistoryHeading: "تاريخ الطلب", orderHistoryDescription: ".احصل على ملخص للمعاملات الأسبوعية عبر الإنترنت هنا", accountHeading: "الحساب", accountDescription: "تغيير تفاصيل حسابك", orderFormHeading: "نموذج الطلب", orderFormQuote: "اقتبس", orderFormService: "الخدمات", orderFormShipping: "الشحن",
         language: ":لغة",rtlHelper:"مرحبا",functionalityError:"الوظيفة غير متوفرة حاليًا",sorryText:"آسف للإزعاج",contentError:"المحتوى غير متوفر حاليا.",tryLater:"نحن آسفون؛ الرجاء معاودة المحاولة في وقت لاحق.",ok:"حسنا",selectLanguage:"يرجى تحديد لغة",
-        ksa:"المملكة العربية السعودية",uae:"United Arab Emirates",qatar:"الإمارات العربية المتحدة",bahrain:"البحرين",oman:"سلطنة عمان",lebanon:"لبنان",jordan:"الأردن",egypt:"مصر",germany:"ألمانيا",otherLanguages:"الآخرين"
+        ksa:"المملكة العربية السعودية",uae:"United Arab Emirates",qatar:"الإمارات العربية المتحدة",bahrain:"البحرين",oman:"سلطنة عمان",lebanon:"لبنان",jordan:"الأردن",egypt:"مصر",germany:"ألمانيا",otherLanguages:"الآخرين",
+        setLanguage:"لغة",shippingTo:"سافر على متن سفينة ل",serviceDetails:"تفاصيل الخدمة",factoryContact:"اتصالات المصنع",whatGoodsShipping:"ما هي البضائع التي تقوم بشحنها؟",entryFactoryContact:"أدخل جهة اتصال المصنع",listGoods:"قائمة بجميع البضائع الخاصة بك",
+        providePackingList:"يرجى تقديم قائمة التعبئة أو تحميل ملف",height:"ارتفاع",width:"عرض",weightKG:"العرض بالكيلوغرام",uploadPackingList:"تحميل قائمة التعبئة",uploadInvoice:"تحميل الفاتورة",submit:"إرسال",
+        messageReply:"الرد",openMessages:"افتح الرسائل",messagesOpen:"افتح",messagesClosed:"مغلق",messageSubject:"موضوع الرسالة",orderTypeNumber:"نوع الطلب - رقم الطلب",
+        inboxAll:"الكل",inboxFile:"ملف",inboxImages:"الصور",inboxSearch:"بحث سريع",inboxMessage:"رسالة",inboxSend:"إرسال",inboxRating:"قيم تجربتك الدردشة",inboxThanks:"شكرا لك ^. ^",inboxImprove:"من فضلك قل لنا ما يمكننا تحسينه"
     },
     'ch':
     {
@@ -140,8 +148,13 @@ const messages = {
         newUserAccountInformationDescription: "常理態重社俊避続常理態重社俊避続常理態重社俊避続常理態重社俊避続"
         , newUserNext: "下一个", newUserPrev: "以前", newUserDone: "完成了",
         notificationHeading: "通知事项", notificationDescription: "管理您的通知", messagesHeading: "留言内容", messagesDescription: "管理您的讯息", orderHistoryHeading: "订单历史", orderHistoryDescription: "在这里获取每周在线交易的摘要。", accountHeading: "帐户", accountDescription: "更改您的帐户详细信息", orderFormHeading: "订单", orderFormQuote: "引用", orderFormService: "服务", orderFormShipping: "运输",
-        language: "语言:",rtlHelper:"help",functionalityError:"当前不可用的功能",sorryText:"抱歉给你带来不便",contentError:"内容当前不可用。",tryLater:"我们很抱歉;请稍后再试。",ok:"好",selectLanguage:"请选择一种语言",
-        ksa:"沙特阿拉伯",uae:"阿拉伯联合酋长国",qatar:"卡塔尔",bahrain:"巴林",oman:"阿曼",lebanon:"黎巴嫩",jordan:"约旦",egypt:"埃及",germany:"德国",otherLanguages:"其他"
+        language: "语言:",rtlHelper:"help",functionalityError:"当前不可用的功能",sorryText:"抱歉给你带来不便",contentError:"内容当前不可用。",tryLater:"我们很抱歉;请稍后再试。",ok:"好",selectLanguage:"请选择一种语言",listGoods:"列出所有商品",
+        ksa:"沙特阿拉伯",uae:"阿拉伯联合酋长国",qatar:"卡塔尔",bahrain:"巴林",oman:"阿曼",lebanon:"黎巴嫩",jordan:"约旦",egypt:"埃及",germany:"德国",otherLanguages:"其他",
+        setLanguage:"语言",shippingTo:"运送到",serviceDetails:"服务详情",factoryContact:"工厂联系方式",whatGoodsShipping:"您要运送什么商品？",entryFactoryContact:"输入工厂联系方式",
+        providePackingList:"请提供装箱单或上传文件",height:"高度",width:"宽度",weightKG:"宽度（公斤）",uploadPackingList:"上传装箱单",uploadInvoice:"上传发票",submit:"提交",
+        messageReply:"回复",openMessages:"公开留言",messagesOpen:"打开",messagesClosed:"关闭",messageSubject:"邮件主题",orderTypeNumber:"订单类型-订单号",
+        inboxAll:"所",inboxFile:"文件",inboxImages:"图片",inboxSearch:"快速搜索",inboxMessage:"信息",inboxSend:"发送",inboxRating:"评价您的聊天体验",inboxThanks:"谢谢^。^",inboxImprove:"请告诉我们我们可以改善的地方"
+
     }
 }
 export default new VueI18n({ locale: localStorage.currentLanguage || 'en', fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en', messages, });

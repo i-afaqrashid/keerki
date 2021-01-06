@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-9">
+  <div class="mb-9" dir="ltr">
     <b-navbar toggleable="lg" type="dark" variant="primary">
       <b-navbar-toggle target="nav-collapse" class="white"></b-navbar-toggle>
       <b-navbar-nav class="ml-auto d-lg-none">
@@ -53,19 +53,34 @@
               class="mx-lg-4 my-4 my-lg-0 text-white text-center text-lg-left"
             >
               <p class="mb-0 fs-16">Hedi</p>
-             <router-link to="/dashboard/account" class="text-white"> <p class="mb-0 fs-16">{{$t('formHeaderAccountDetails')}}</p> </router-link>
+              <router-link to="/dashboard/account" class="text-white">
+                <p class="mb-0 fs-16">{{ $t("formHeaderAccountDetails") }}</p>
+              </router-link>
             </div>
           </b-navbar-nav>
 
           <b-navbar-nav
-            class="flex justify-content-center align-items-center text-light pt-lg-3 w-100 pr-lg-11"
+            class="d-flex justify-content-lg-center align-items-lg-center text-light pt-lg-3 w-100 pr-lg-11"
           >
-            <p class="btn p-0 text-white pl-lg-5" @click="gotoHome">
-              {{ $t("home") }}
+            <router-link to="/">
+              <p class="pl-lg-5 text-white">{{ $t("home") }}</p></router-link
+            >
+            <p class="pl-lg-5">{{ $t("product") }}</p>
+            <p class="pl-lg-5">{{ $t("about") }}</p>
+            <p class="pl-lg-5">{{ $t("contact") }}</p>
+            <p class="pl-lg-5">
+              <b-nav-item-dropdown :text="`${$t('setLanguage')}`">
+                <b-dropdown-item @click="switchLocale('en')"
+                  >ENGLISH</b-dropdown-item
+                >
+                <b-dropdown-item @click="switchLocale('ar')"
+                  >عربى</b-dropdown-item
+                >
+                <b-dropdown-item @click="switchLocale('ch')"
+                  >中文</b-dropdown-item
+                >
+              </b-nav-item-dropdown>
             </p>
-            <p class="btn p-0 text-white pl-lg-5">{{ $t("product") }}</p>
-            <p class="btn p-0 text-white pl-lg-5">{{ $t("about") }}</p>
-            <p class="btn p-0 text-white pl-lg-5">{{ $t("contact") }}</p>
           </b-navbar-nav>
         </div>
       </b-collapse>
@@ -81,6 +96,14 @@ export default {
   methods: {
     gotoHome() {
       this.$router.push({ path: "/" });
+    },
+    switchLocale(locale) {
+      if (this.$i18n.locale !== locale) {
+        document.getElementById("app").classList.remove(this.$i18n.locale);
+        localStorage.currentLanguage = locale;
+        document.getElementById("app").classList.add(locale);
+        this.$i18n.locale = locale;
+      }
     },
   },
 };

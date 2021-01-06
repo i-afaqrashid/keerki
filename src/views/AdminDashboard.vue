@@ -19,28 +19,30 @@
             </div>
           </div>
           <div class="w-100 pt-16">
-            <button
-              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                class="w-50"
-                xmlns="http://www.w3.org/2000/svg"
+            <router-link to="/admin/dashboard">
+              <button
+                class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
               >
-                <path
-                  opacity="0.4"
-                  d="M15.5232 8.94116H8.54412L13.1921 13.5891C13.3697 13.7667 13.6621 13.7812 13.8447 13.6091C14.9829 12.5367 15.7659 11.0912 15.9956 9.46616C16.035 9.18793 15.8041 8.94116 15.5232 8.94116ZM15.0576 7.03528C14.8153 3.52176 12.0076 0.714119 8.49412 0.471767C8.22589 0.453237 8 0.679413 8 0.948236V7.5294H14.5815C14.8503 7.5294 15.0762 7.30352 15.0576 7.03528ZM6.58824 8.94116V1.96206C6.58824 1.68118 6.34147 1.45029 6.06353 1.48971C2.55853 1.985 -0.120585 5.04705 0.00412089 8.71675C0.132356 12.4856 3.37736 15.5761 7.14794 15.5288C8.6303 15.5103 10 15.0326 11.1262 14.2338C11.3585 14.0691 11.3738 13.727 11.1724 13.5256L6.58824 8.94116Z"
-                  fill="#C4C4C4"
-                />
-              </svg>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  class="w-50"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M15.5232 8.94116H8.54412L13.1921 13.5891C13.3697 13.7667 13.6621 13.7812 13.8447 13.6091C14.9829 12.5367 15.7659 11.0912 15.9956 9.46616C16.035 9.18793 15.8041 8.94116 15.5232 8.94116ZM15.0576 7.03528C14.8153 3.52176 12.0076 0.714119 8.49412 0.471767C8.22589 0.453237 8 0.679413 8 0.948236V7.5294H14.5815C14.8503 7.5294 15.0762 7.30352 15.0576 7.03528ZM6.58824 8.94116V1.96206C6.58824 1.68118 6.34147 1.45029 6.06353 1.48971C2.55853 1.985 -0.120585 5.04705 0.00412089 8.71675C0.132356 12.4856 3.37736 15.5761 7.14794 15.5288C8.6303 15.5103 10 15.0326 11.1262 14.2338C11.3585 14.0691 11.3738 13.727 11.1724 13.5256L6.58824 8.94116Z"
+                    fill="#C4C4C4"
+                  />
+                </svg>
 
-              <span class="fs-19 mb-0 text-muted w-50 text-left"
-                >Dashboard</span
-              >
-            </button>
+                <span class="fs-19 mb-0 text-muted w-50 text-left"
+                  >Dashboard</span
+                >
+              </button>
+            </router-link>
           </div>
           <span class="divider w-100"></span>
           <div class="w-100">
@@ -197,7 +199,10 @@
         >
           <div class="w-95 d-flex order-1 order-lg-0">
             <div class="w-95 d-flex justify-content-between align-items-center">
-              <div class="width-75 pt-lg-0 pt-15">
+              <div
+                v-if="this.$route.fullPath != '/admin/dashboard'"
+                class="width-75 pt-lg-0 pt-15"
+              >
                 <svg
                   width="34"
                   height="34"
@@ -256,6 +261,7 @@
                   />
                 </svg>
               </div>
+              <div v-else class="width-75 fs-24 font-weight-bolder pt-lg-0 pt-15">Dashboard</div>
             </div>
           </div>
           <div
@@ -451,7 +457,7 @@
           </div>
         </div>
       </div>
-    <router-view></router-view>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -496,7 +502,7 @@ export default {
   height: 56px !important;
 }
 .w-82 {
-  width: 82%;
+  width: 100%;
   background: #f7f8fc;
 }
 .bg-f7 {
@@ -520,6 +526,9 @@ export default {
   .w-18 {
     width: 18%;
   }
+  .w-82 {
+    width: 82 !important;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .width-75 {
@@ -527,6 +536,9 @@ export default {
   }
   .w-18 {
     width: 18%;
+  }
+  .w-82 {
+    width: 82 !important;
   }
 }
 </style>

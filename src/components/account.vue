@@ -5,7 +5,7 @@
       :Text="$t('accountDescription')"
     />
 
-    <div class="d-flex justify-content-start mt-5 px-lg-4" dir="auto">
+    <div class="d-flex justify-content-start mt-5 px-4 px-lg-11" dir="auto">
       <div
         class="w-100 d-flex justify-content-start align-items-start flex-column"
       >
@@ -30,17 +30,38 @@
           </label>
         </div>
         <div class="w-100 fs-18 text-69">
-          <b-modal id="name-modal" size="sm" dir="auto" centered>
-            <template #modal-footer="{ ok }">
-              <b-button size="sm" variant="primary" @click="ok()">
-                {{ $t("ok") }}
-              </b-button>
-            </template>
-            <input
-              v-model="name"
-              :placeholder="`${$t('fullName')}`"
-              class="form-input outline-none border rounded-lg px-3"
-            />
+          <b-modal
+            id="name-modal"
+            centered
+            hide-footer
+            content-class="content-class"
+            header-class="header-class"
+            hider-header
+            hide-header-close
+          >
+            <div
+              class="d-flex w-100 justify-content-center align-items-center pt-5 pb-4"
+            >
+              <input
+                class="border-bottom outline-none w-100 pb-4"
+                :placeholder="`${$t('fullName')}`"
+                v-model="name"
+              />
+            </div>
+            <div class="d-flex justify-content-end">
+              <button
+                class="rounded-pill modal-button color-c7 outline-none"
+                @click="$bvModal.hide('name-modal')"
+              >
+                {{ $t("companyCancel") }}
+              </button>
+              <button
+                class="rounded-pill color-ff modal-button outline-none ml-2"
+                @click="$bvModal.hide('name-modal')"
+              >
+                {{ $t("companySave") }}
+              </button>
+            </div>
           </b-modal>
 
           <div
@@ -75,18 +96,38 @@
           <div
             class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
           >
-            <b-modal id="email-modal" size="sm" dir="auto" centered>
-              <template #modal-footer="{ ok }">
-                <b-button size="sm" variant="primary" @click="ok()">
-                  {{ $t("ok") }}
-                </b-button>
-              </template>
-              <input
-                v-model="email"
-                type="email"
-                :placeholder="`${$t('enterEmail')}`"
-                class="form-input outline-none border rounded-lg px-3"
-              />
+            <b-modal
+              id="email-modal"
+              centered
+              hide-footer
+              content-class="content-class"
+              header-class="header-class"
+              hider-header
+              hide-header-close
+            >
+              <div
+                class="d-flex w-100 justify-content-center align-items-center pt-5 pb-4"
+              >
+                <input
+                  class="border-bottom outline-none w-100 pb-4"
+                  :placeholder="`${$t('enterEmail')}`"
+                  v-model="email"
+                />
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  class="rounded-pill modal-button color-c7 outline-none"
+                  @click="$bvModal.hide('email-modal')"
+                >
+                  {{ $t("companyCancel") }}
+                </button>
+                <button
+                  class="rounded-pill color-ff modal-button outline-none ml-2"
+                  @click="$bvModal.hide('email-modal')"
+                >
+                  {{ $t("companySave") }}
+                </button>
+              </div>
             </b-modal>
             <p class="mb-0">{{ $t("accountEmail") }} {{ email }}</p>
             <button class="outline-none" v-b-modal.email-modal>
@@ -117,18 +158,38 @@
           <div
             class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 mt-5"
           >
-            <b-modal id="phone-modal" size="sm" dir="auto" centered>
-              <template #modal-footer="{ ok }">
-                <b-button size="sm" variant="primary" @click="ok()">
-                  {{ $t("ok") }}
-                </b-button>
-              </template>
-              <input
-                v-model="phone"
-                type="number"
-                :placeholder="`${$t('phonePlaceholder')}`"
-                class="form-input outline-none border rounded-lg px-3"
-              />
+            <b-modal
+              id="phone-modal"
+              centered
+              hide-footer
+              content-class="content-class"
+              header-class="header-class"
+              hider-header
+              hide-header-close
+            >
+              <div
+                class="d-flex w-100 justify-content-center align-items-center pt-5 pb-4"
+              >
+                <input
+                  class="border-bottom outline-none w-100 pb-4"
+                  :placeholder="`${$t('phonePlaceholder')}`"
+                  v-model="phone"
+                />
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  class="rounded-pill modal-button color-c7 outline-none"
+                  @click="$bvModal.hide('phone-modal')"
+                >
+                  {{ $t("companyCancel") }}
+                </button>
+                <button
+                  class="rounded-pill color-ff modal-button outline-none ml-2"
+                  @click="$bvModal.hide('phone-modal')"
+                >
+                  {{ $t("companySave") }}
+                </button>
+              </div>
             </b-modal>
             <p class="mb-0">{{ $t("accountPhone") }} {{ phone }}</p>
             <button class="outline-none" v-b-modal.phone-modal>
@@ -159,100 +220,58 @@
           <div
             class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 my-5"
           >
-            <b-modal id="password-modal" size="sm" dir="auto" centered>
-              <template #modal-footer="{ ok }">
-                <b-button size="sm" variant="primary" @click="ok()">
-                  {{ $t("ok") }}
-                </b-button>
-              </template>
-
-              <b-form-group
-                id="input-group-22"
-                :label="`${$t('oldPassword')}`"
-                label-for="input-22"
+            <b-modal
+              id="password-modal"
+              centered
+              hide-footer
+              content-class="content-class"
+              header-class="header-class"
+              hider-header
+              hide-header-close
+            >
+              <div
+                class="d-flex w-100 justify-content-center align-items-center py-4"
               >
                 <input
-                  id="input-22"
-                  v-model="password"
-                  type="password"
-                  required
-                  class="form-input outline-none border rounded-lg px-3"
+                  class="border-bottom outline-none w-100 pb-4"
+                  :placeholder="`${$t('oldPassword')}`"
+                  v-modal="password"
                 />
-              </b-form-group>
-              <b-form-group
-                id="input-group-21"
-                :label="`${$t('newPassword')}`"
-                label-for="input-21"
-                class="mt-3"
+              </div>
+              <div
+                class="d-flex w-100 justify-content-center align-items-center py-4"
               >
                 <input
-                  id="input-21"
-                  v-model="newPassword"
-                  type="password"
-                  required
-                  class="form-input outline-none border rounded-lg px-3"
+                  class="border-bottom outline-none w-100 pb-4"
+                  :placeholder="`${$t('newPassword')}`"
                 />
-              </b-form-group>
-              <b-form-group
-                id="input-group-20"
-                :label="`${$t('confirmNewPassword')}`"
-                label-for="input-20"
-                class="mt-3"
+              </div>
+              <div
+                class="d-flex w-100 justify-content-center align-items-center py-4"
               >
                 <input
-                  id="input-20"
-                  v-model="confirmPassword"
-                  type="password"
-                  required
-                  class="form-input outline-none border rounded-lg px-3"
+                  class="border-bottom outline-none w-100 pb-4"
+                  :placeholder="`${$t('confirmNewPassword')}`"
                 />
-              </b-form-group>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  class="rounded-pill modal-button color-c7 outline-none"
+                  @click="$bvModal.hide('password-modal')"
+                >
+                  {{ $t("companyCancel") }}
+                </button>
+                <button
+                  class="rounded-pill color-ff modal-button outline-none ml-2"
+                  @click="$bvModal.hide('password-modal')"
+                >
+                  {{ $t("companySave") }}
+                </button>
+              </div>
             </b-modal>
+
             <p class="mb-0">{{ $t("accountPassword") }} *****************</p>
             <button class="outline-none" v-b-modal.password-modal>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13"
-                  stroke="#696F79"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M18.5 2.49998C18.8978 2.10216 19.4374 1.87866 20 1.87866C20.5626 1.87866 21.1022 2.10216 21.5 2.49998C21.8978 2.89781 22.1213 3.43737 22.1213 3.99998C22.1213 4.56259 21.8978 5.10216 21.5 5.49998L12 15L8 16L9 12L18.5 2.49998Z"
-                  stroke="#696F79"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="border-bottom border-danger d-flex justify-content-between align-items-center pb-4 mx-1 my-5"
-          >
-            <p class="mb-0">
-              {{ $t("language") }} {{ this.$i18n.locale.toUpperCase() }}
-            </p>
-            <b-modal id="modal-sm" size="sm" centered @ok="handleOk">
-              <template #modal-footer="{ ok }">
-                <b-button size="sm" variant="primary" @click="ok()">
-                  {{ $t("ok") }}
-                </b-button>
-              </template>
-              <b-form-select
-                v-model="selected"
-                :options="options"
-              ></b-form-select>
-            </b-modal>
-
-            <button v-b-modal.modal-sm class="outline-none">
               <svg
                 width="24"
                 height="24"

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div  class="px-4 px-lg-15">
      <DashboardTop
       :Heading="$t('notificationHeading')"
       :Text="$t('notificationDescription')"

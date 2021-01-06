@@ -3,7 +3,7 @@
     <DashboardHeader />
     <div class="d-flex flex-column flex-lg-row">
       <div
-        class="w-21 z-index-2 px-3 side-bar d-none d-lg-flex align-items-center flex-column mt-11 border-right" dir="auto"
+        class="w-21 z-index-2 px-3 side-bar d-none d-lg-flex align-items-center flex-column pt-11 border-right" dir="auto"
       >
         <div
           class="d-flex flex-column justify-content-between align-items-between"
@@ -313,7 +313,7 @@
           </svg>
         </b-button>
       </div>
-      <div class="w-100 px-lg-11 px-4 mt-lg-11 mt-3">
+      <div class="w-100">
         <router-view></router-view>
       </div>
     </div>

@@ -1,4 +1,6 @@
 <template>
+<div>
+  <DashboardHeader/>
   <div class="d-flex w-100 min-vh-100" dir="ltr">
     <div
       class="d-none w-33 min-vh-100 sign-up-image d-lg-flex justify-content-center align-items-center"
@@ -200,8 +202,10 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 <script>
+import DashboardHeader from '../components/dashboardHeader'
 export default {
   name: "SignUp",
   data() {
@@ -214,6 +218,9 @@ export default {
         confirmPassword: "",
       },
     };
+  },
+  components:{
+DashboardHeader
   },
   methods: {
     onSubmit(event) {

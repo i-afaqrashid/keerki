@@ -1,5 +1,8 @@
 
 <template>
+<div>
+    <DashboardHeader/>
+
   <div class="d-flex w-100 min-vh-100>" dir="ltr">
     <div
       class="d-none w-33 min-vh-100 sign-up-image d-lg-flex justify-content-center align-items-center"
@@ -182,13 +185,16 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 <script>
 import CustomAlert from "../components/customAlert";
+import DashboardHeader from '../components/dashboardHeader'
 export default {
   name: "Login",
   components: {
     CustomAlert,
+    DashboardHeader
   },
   methods: {
     checkCredentials() {

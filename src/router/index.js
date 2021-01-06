@@ -23,6 +23,9 @@ import ContentUnavailable from '../components/contentUnavailable.vue'
 import ServiceForm from '../components/serviceForm.vue'
 import AdminLogin from '../components/admin/login.vue'
 import AdminDashboard from '../views/AdminDashboard.vue'
+import DashboardHome from '../components/admin/dashboardHome.vue'
+import ShippingForm from '../components/shippingForm.vue'
+import Inbox from '../components/inbox.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -38,7 +41,13 @@ const routes = [
   },
   {
     path:"/admin/dashboard",
-    component:AdminDashboard
+    component:AdminDashboard,
+    children:[
+      {
+        path: "",
+        component: DashboardHome
+      },
+    ]
   },
   {
     path: '/sign-up',
@@ -71,7 +80,7 @@ const routes = [
     children: [
       {
         path: "",
-        component: FormBody
+        component: ShippingForm
       },
       {
         path: "preview",
@@ -157,6 +166,10 @@ const routes = [
       {
         path: "messages",
         component: Messages
+      },
+      {
+        path: "inbox",
+        component: Inbox
       },
       {
         path: "notifications",
