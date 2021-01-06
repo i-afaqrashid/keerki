@@ -12,7 +12,7 @@
       class="mt-lg-9 d-flex w-100 justify-content-center align-items-center flex-column flex-lg-row" dir="ltr"
     >
       <div
-        class="d-flex mt-5 mt-lg-0 justify-content-center align-items-center svgContainer"
+        class="d-flex mt-5 mt-lg-0 flex-column justify-content-center align-items-center svgContainer"
       >
         <svg
           width="59"
@@ -43,9 +43,10 @@
             stroke-linejoin="round"
           />
         </svg>
+        <p class="font-24">{{$t('servicesProducts')}}</p>
       </div>
       <div
-        class="d-flex mt-3 mt-lg-0 ml-lg-3 justify-content-center align-items-center svgContainer"
+        class="d-flex mt-3 mt-lg-0 ml-lg-3 justify-content-center align-items-center svgContainer flex-column"
       >
         <svg
           width="62"
@@ -76,9 +77,11 @@
             stroke-linejoin="round"
           />
         </svg>
+        <p class="font-24">{{$t('servicesConsultation')}}</p>
+
       </div>
       <div
-        class="d-flex mt-3 mt-lg-0 ml-lg-3 justify-content-center align-items-center svgContainer"
+        class="d-flex mt-3 mt-lg-0 ml-lg-3 justify-content-center align-items-center svgContainer flex-column"
       >
         <svg
           width="47"
@@ -109,6 +112,8 @@
             stroke-linejoin="round"
           />
         </svg>
+        <p class="font-24">{{$t('servicesInformation')}}</p>
+
       </div>
     </div>
   </div>

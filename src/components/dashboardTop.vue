@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-100 d-flex align-items-lg-center justify-content-between flex-column px-4 px-lg-11 pt-11 flex-lg-row"
+    class="w-100 d-flex align-items-lg-center justify-content-between flex-column px-lg-11 pt-11 flex-lg-row"
   >
     <div class="order-1 order-lg-0 mt-4 mt-lg-0">
       <h1 class="fs-43">{{ this.Heading }}</h1>
@@ -13,7 +13,7 @@
         this.$route.fullPath === '/dashboard/order-history/shipping-orders' ||
         this.$route.fullPath === '/dashboard/order-history/order-template'
       "
-      class="order-2 order-lg-0 fs-16 zindex-dropdown"
+      class="order-2 order-lg-0 fs-16 zindex-dropdown checkbox"
     >
       <b-form-checkbox
         size="lg"
@@ -473,7 +473,7 @@ export default {
 };
 </script>
 <style>
-.custom-control-input:checked ~ .custom-control-label::before {
+.checkbox .custom-control-input:checked ~ .custom-control-label::before {
   border-color: #66cc66 !important;
   background: #66cc66 !important;
 }

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="px-4">
   <DashboardTop
       :Heading="$t('orderHistoryHeading')"
       :Text="$t('orderHistoryDescription')"

@@ -53,7 +53,8 @@ const messages = {
         setLanguage:"Language",shippingTo:"Ship To",serviceDetails:"Service Details",factoryContact:"Factory Contacts",whatGoodsShipping:"What goods are you shipping?",entryFactoryContact:"Enter factory contact",listGoods:"List all your goods",
         providePackingList:"Please provide the packing list or upload a file",height:"Height",width:"Width",weightKG:"Weight in KG",uploadPackingList:"Upload packing list",uploadInvoice:"Upload invoice",submit:"Submit",
         messageReply:"Reply",openMessages:"Open Messages",messagesOpen:"Open",messagesClosed:"Closed",messageSubject:"Message Subject",orderTypeNumber:"Order type - Order number",
-        inboxAll:"All",inboxFile:"File",inboxImages:"Images",inboxSearch:"Quick Search",inboxMessage:"Message",inboxSend:"SEND",inboxRating:"Rate Your Chat Experience",inboxThanks:"Thank you ^.^",inboxImprove:"Please tell us what we can improve"
+        inboxAll:"All",inboxFile:"File",inboxImages:"Images",inboxSearch:"Quick Search",inboxMessage:"Message",inboxSend:"SEND",inboxRating:"Rate Your Chat Experience",inboxThanks:"Thank you ^.^",inboxImprove:"Please tell us what we can improve",
+        servicesProducts:"Products",servicesConsultation:"Consultation",servicesInformation:"Information",orderProducts:"Product",orderDeselect:"Deselect all",orderNumber:"Order Number",dateUpdated:"Date Updated"
 
     },
     'ar':
@@ -104,7 +105,9 @@ const messages = {
         setLanguage:"لغة",shippingTo:"سافر على متن سفينة ل",serviceDetails:"تفاصيل الخدمة",factoryContact:"اتصالات المصنع",whatGoodsShipping:"ما هي البضائع التي تقوم بشحنها؟",entryFactoryContact:"أدخل جهة اتصال المصنع",listGoods:"قائمة بجميع البضائع الخاصة بك",
         providePackingList:"يرجى تقديم قائمة التعبئة أو تحميل ملف",height:"ارتفاع",width:"عرض",weightKG:"العرض بالكيلوغرام",uploadPackingList:"تحميل قائمة التعبئة",uploadInvoice:"تحميل الفاتورة",submit:"إرسال",
         messageReply:"الرد",openMessages:"افتح الرسائل",messagesOpen:"افتح",messagesClosed:"مغلق",messageSubject:"موضوع الرسالة",orderTypeNumber:"نوع الطلب - رقم الطلب",
-        inboxAll:"الكل",inboxFile:"ملف",inboxImages:"الصور",inboxSearch:"بحث سريع",inboxMessage:"رسالة",inboxSend:"إرسال",inboxRating:"قيم تجربتك الدردشة",inboxThanks:"شكرا لك ^. ^",inboxImprove:"من فضلك قل لنا ما يمكننا تحسينه"
+        inboxAll:"الكل",inboxFile:"ملف",inboxImages:"الصور",inboxSearch:"بحث سريع",inboxMessage:"رسالة",inboxSend:"إرسال",inboxRating:"قيم تجربتك الدردشة",inboxThanks:"شكرا لك ^. ^",inboxImprove:"من فضلك قل لنا ما يمكننا تحسينه",
+        servicesProducts:"منتجات",servicesConsultation:"التشاور",servicesInformation:"معلومات",orderProducts:"المنتج",orderDeselect:"الغاء تحديد الكل",orderNumber:"رقم الأمر",dateUpdated:"تاريخ تحديث"
+
     },
     'ch':
     {
@@ -153,7 +156,10 @@ const messages = {
         setLanguage:"语言",shippingTo:"运送到",serviceDetails:"服务详情",factoryContact:"工厂联系方式",whatGoodsShipping:"您要运送什么商品？",entryFactoryContact:"输入工厂联系方式",
         providePackingList:"请提供装箱单或上传文件",height:"高度",width:"宽度",weightKG:"宽度（公斤）",uploadPackingList:"上传装箱单",uploadInvoice:"上传发票",submit:"提交",
         messageReply:"回复",openMessages:"公开留言",messagesOpen:"打开",messagesClosed:"关闭",messageSubject:"邮件主题",orderTypeNumber:"订单类型-订单号",
-        inboxAll:"所",inboxFile:"文件",inboxImages:"图片",inboxSearch:"快速搜索",inboxMessage:"信息",inboxSend:"发送",inboxRating:"评价您的聊天体验",inboxThanks:"谢谢^。^",inboxImprove:"请告诉我们我们可以改善的地方"
+        inboxAll:"所",inboxFile:"文件",inboxImages:"图片",inboxSearch:"快速搜索",inboxMessage:"信息",inboxSend:"发送",inboxRating:"评价您的聊天体验",inboxThanks:"谢谢^。^",inboxImprove:"请告诉我们我们可以改善的地方",
+        servicesProducts:"产品展示",servicesConsultation:"咨询服务",servicesInformation:"信息",orderProducts:"产品",orderDeselect:"全部取消选择",orderNumber:"订单号",dateUpdated:"更新日期"
+
+
 
     }
 }

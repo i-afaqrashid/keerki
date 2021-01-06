@@ -1,5 +1,5 @@
 <template>
-  <div  class="px-4 px-lg-15">
+  <div class="px-4 px-lg-15">
     <DashboardTop
       :Heading="$t('orderHistoryHeading')"
       :Text="$t('orderHistoryDescription')"
@@ -10,64 +10,124 @@
       >
         <p class="fs-20 mb-0 font-weight-bold">{{ $t("orderFormHistory") }}</p>
         <div class="d-flex flex-column flex-lg-row mt-3 mt-lg-0">
-          <div class="d-flex border rounded-lg">
+          <div class="d-flex flex-column flex-lg-row border rounded-lg">
             <div
-              class="btn d-flex align-items-center border-right px-2 py-1 color-f5"
+              class="btn outline-none d-flex align-items-center justify-content-center border-right px-2 py-1 color-f5"
             >
-              <svg
-                width="14"
-                height="15"
-                viewBox="0 0 14 15"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.8906 13.5742L10.582 10.2656C10.5 10.2109 10.418 10.1562 10.3359 10.1562H9.98047C10.8281 9.17188 11.375 7.85938 11.375 6.4375C11.375 3.32031 8.80469 0.75 5.6875 0.75C2.54297 0.75 0 3.32031 0 6.4375C0 9.58203 2.54297 12.125 5.6875 12.125C7.10938 12.125 8.39453 11.6055 9.40625 10.7578V11.1133C9.40625 11.1953 9.43359 11.2773 9.48828 11.3594L12.7969 14.668C12.9336 14.8047 13.1523 14.8047 13.2617 14.668L13.8906 14.0391C14.0273 13.9297 14.0273 13.7109 13.8906 13.5742ZM5.6875 10.8125C3.25391 10.8125 1.3125 8.87109 1.3125 6.4375C1.3125 4.03125 3.25391 2.0625 5.6875 2.0625C8.09375 2.0625 10.0625 4.03125 10.0625 6.4375C10.0625 8.87109 8.09375 10.8125 5.6875 10.8125Z"
-                  fill="black"
-                  fill-opacity="0.55"
-                />
-              </svg>
               <div class="border-0 outline-none ml-2 color-f5">
-                <p class="mb-0 font-weight-light">{{ $t("orderSearchByNumber") }}</p>
+                <svg
+                  width="14"
+                  height="15"
+                  viewBox="0 0 14 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.8906 13.5742L10.582 10.2656C10.5 10.2109 10.418 10.1562 10.3359 10.1562H9.98047C10.8281 9.17188 11.375 7.85938 11.375 6.4375C11.375 3.32031 8.80469 0.75 5.6875 0.75C2.54297 0.75 0 3.32031 0 6.4375C0 9.58203 2.54297 12.125 5.6875 12.125C7.10938 12.125 8.39453 11.6055 9.40625 10.7578V11.1133C9.40625 11.1953 9.43359 11.2773 9.48828 11.3594L12.7969 14.668C12.9336 14.8047 13.1523 14.8047 13.2617 14.668L13.8906 14.0391C14.0273 13.9297 14.0273 13.7109 13.8906 13.5742ZM5.6875 10.8125C3.25391 10.8125 1.3125 8.87109 1.3125 6.4375C1.3125 4.03125 3.25391 2.0625 5.6875 2.0625C8.09375 2.0625 10.0625 4.03125 10.0625 6.4375C10.0625 8.87109 8.09375 10.8125 5.6875 10.8125Z"
+                    fill="black"
+                    fill-opacity="0.55"
+                  />
+                </svg>
+
+                <b-dropdown
+                  id="dropdown-1"
+                  :text="$t('orderSearchByNumber')"
+                  variant="transparent"
+                  class="outline-none"
+                  left
+                  offset="-50"
+                >
+                  <div class="overflow-scroll">
+                    <b-dropdown-item>
+                      <div
+                        class="d-flex justify-content-between align-items-center w-100"
+                      >
+                        <p class="">
+                          <CustomAlert
+                            v-bind:alert="200"
+                            v-bind:type="`${$t('inProgressBtn')}`"
+                          />
+                        </p>
+                        <div
+                          class="d-flex justify-content-center align-items-center flex-column mx-3"
+                        >
+                          <p class="mb-1">{{ $t("orderNumber") }}</p>
+                          <p class="font-weight-light">
+                            {{ $t("dateUpdated") }}
+                          </p>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+                    <b-dropdown-item>
+                      <div
+                        class="d-flex justify-content-between align-items-center w-100"
+                      >
+                        <p class="">
+                          <CustomAlert
+                            v-bind:alert="200"
+                            v-bind:type="`${$t('doneBtn')}`"
+                            v-bind:color="'done'"
+                          />
+                        </p>
+                        <div
+                          class="d-flex justify-content-center align-items-center flex-column mx-3"
+                        >
+                          <p class="mb-1">{{ $t("orderNumber") }}</p>
+                          <p class="font-weight-light">
+                            {{ $t("dateUpdated") }}
+                          </p>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+                    <b-dropdown-item>
+                      <div
+                        class="d-flex justify-content-between align-items-center w-100"
+                      >
+                        <p class="">
+                          <CustomAlert
+                            v-bind:alert="200"
+                            v-bind:type="`${$t('canceledBtn')}`"
+                            v-bind:color="'cancelled'"
+                          />
+                        </p>
+                        <div
+                          class="d-flex justify-content-center align-items-center flex-column mx-3"
+                        >
+                          <p class="mb-1">{{ $t("orderNumber") }}</p>
+                          <p class="font-weight-light">
+                            {{ $t("dateUpdated") }}
+                          </p>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+                  </div>
+                </b-dropdown>
               </div>
-              <svg
-                width="9"
-                height="6"
-                viewBox="0 0 9 6"
-                fill="none"
-                class="ml-2"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4.71875 5.21875C4.875 5.375 5.09375 5.375 5.25 5.21875L8.875 1.5625C9.03125 1.40625 9.03125 1.15625 8.875 1.03125L8.65625 0.8125C8.5 0.65625 8.28125 0.65625 8.125 0.8125L5 4L1.84375 0.78125C1.6875 0.65625 1.46875 0.65625 1.3125 0.78125L1.09375 1.03125C0.9375 1.15625 0.9375 1.40625 1.09375 1.5625L4.71875 5.21875Z"
-                  fill="black"
-                  fill-opacity="0.55"
-                />
-              </svg>
             </div>
             <input class="outline-none" />
           </div>
           <button
+            v-if="
+              checkbox1 &&
+              checkbox2 &&
+              checkbox3 &&
+              checkbox4 &&
+              checkbox5 &&
+              checkbox6
+            "
+            @click="deselectAll"
+            class="ml-lg-4 btn-primary rounded-lg px-3 py-2 py-lg-0 mt-3 mt-lg-0 d-flex justify-content-center align-items-center"
+          >
+            {{ $t("orderDeselect") }}
+          </button>
+          <button
+            v-else
+            @click="selectAll"
             class="ml-lg-4 btn-primary rounded-lg px-4 py-2 py-lg-0 mt-3 mt-lg-0 d-flex justify-content-center align-items-center"
           >
             {{ $t("orderSelectAll") }}
           </button>
-          <button
-            class="ml-lg-4 btn-primary rounded-lg py-3 py-lg-0 px-3 mt-3 mt-lg-0 d-flex justify-content-center align-items-center"
-          >
-            <svg
-              width="11"
-              height="3"
-              viewBox="0 0 11 3"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 0.375H1C0.578125 0.375 0.25 0.726562 0.25 1.125V1.875C0.25 2.29688 0.578125 2.625 1 2.625H10C10.3984 2.625 10.75 2.29688 10.75 1.875V1.125C10.75 0.726562 10.3984 0.375 10 0.375Z"
-                fill="white"
-              />
-            </svg>
-          </button>
+
           <p
             class="text-primary mb-0 d-flex justify-content-center align-items-center ml-3 mt-3 mt-lg-0"
           >
@@ -113,9 +173,18 @@
               </th>
               <th scope="col" class="font-weight-normal py-lg-15"></th>
               <th scope="col" class="font-weight-normal py-lg-15">
-                {{ $t("orderSomethingElse") }}
+                {{ $t("orderProducts") }}
               </th>
-              <th scope="col" class="font-weight-normal py-lg-15"></th>
+              <th scope="col" class="font-weight-normal py-lg-15">
+                <b-form-checkbox
+                  id="checkbox-11"
+                  name="checkbox-11"
+                  value="true"
+                  unchecked-value="false"
+                  v-model="checkbox1"
+                >
+                </b-form-checkbox>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -173,8 +242,9 @@
                 <b-form-checkbox
                   id="checkbox-5"
                   name="checkbox-5"
-                  value="accepted"
-                  unchecked-value="not_accepted"
+                  value="true"
+                  v-model="checkbox2"
+                  unchecked-value="false"
                 >
                 </b-form-checkbox>
               </td>
@@ -234,8 +304,9 @@
                 <b-form-checkbox
                   id="checkbox-1"
                   name="checkbox-1"
-                  value="accepted"
-                  unchecked-value="not_accepted"
+                  value="true"
+                  v-model="checkbox3"
+                  unchecked-value="false"
                 >
                 </b-form-checkbox>
               </td>
@@ -295,8 +366,9 @@
                 <b-form-checkbox
                   id="checkbox-2"
                   name="checkbox-2"
-                  value="accepted"
-                  unchecked-value="not_accepted"
+                  value="true"
+                  v-model="checkbox4"
+                  unchecked-value="false"
                 >
                 </b-form-checkbox>
               </td>
@@ -356,8 +428,9 @@
                 <b-form-checkbox
                   id="checkbox-3"
                   name="checkbox-3"
-                  value="accepted"
-                  unchecked-value="not_accepted"
+                  value="true"
+                  v-model="checkbox5"
+                  unchecked-value="false"
                 >
                 </b-form-checkbox>
               </td>
@@ -415,8 +488,9 @@
                 <b-form-checkbox
                   id="checkbox-4"
                   name="checkbox-4"
-                  value="accepted"
-                  unchecked-value="not_accepted"
+                  value="true"
+                  v-model="checkbox6"
+                  unchecked-value="false"
                 >
                 </b-form-checkbox>
               </td>
@@ -442,7 +516,31 @@ export default {
       data: "13 Dec 2020",
       price: "$75.67",
       text: "Chairs",
+      checkbox1: false,
+      checkbox2: false,
+      checkbox3: false,
+      checkbox4: false,
+      checkbox5: false,
+      checkbox6: false,
     };
+  },
+  methods: {
+    deselectAll() {
+      this.checkbox1 = false;
+      this.checkbox2 = false;
+      this.checkbox3 = false;
+      this.checkbox4 = false;
+      this.checkbox5 = false;
+      this.checkbox6 = false;
+    },
+    selectAll() {
+      this.checkbox1 = true;
+      this.checkbox2 = true;
+      this.checkbox3 = true;
+      this.checkbox4 = true;
+      this.checkbox5 = true;
+      this.checkbox6 = true;
+    },
   },
 };
 </script>

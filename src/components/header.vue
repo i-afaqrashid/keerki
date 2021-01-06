@@ -34,7 +34,31 @@
             <p class="pl-lg-5">{{ $t("product") }}</p>
             <p class="pl-lg-5">{{ $t("about") }}</p>
             <p class="pl-lg-5">{{ $t("contact") }}</p>
-            <p class="pl-lg-5">
+            <p class="pl-lg-5 d-flex align-items-center">
+              <img
+                v-if="this.$i18n.locale == 'en'"
+                src="../assets/enFlag.png"
+                width="24"
+                height="24"
+                class="rounded-circle"
+              />
+              <img
+                v-else-if="this.$i18n.locale == 'ar'"
+                src="../assets/arFlag.png"
+                width="24"
+                height="24"
+                class="rounded-circle"
+              />
+              <img
+                v-else
+                if="this.$i18n.locale == 'ch'"
+                src="../assets/chFlag.png"
+                width="24"
+                height="24"
+                class="rounded-circle"
+              />
+            </p>
+            <p>
               <b-nav-item-dropdown :text="`${$t('setLanguage')}`">
                 <b-dropdown-item @click="switchLocale('en')"
                   >ENGLISH</b-dropdown-item

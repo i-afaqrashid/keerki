@@ -2,7 +2,6 @@
   <div class="d-flex flex-lg-row flex-column w-100">
     <div class="w-100 pb-4 order-1 order-lg-0">
       <div class="w-100">
-        <!--         inboxAll:"所有",inboxFile:"文件",inboxImages:"图片",inboxSearch:"快速搜索",inboxMessage:"信息",inboxSend:"发送",inboxRating:"评价您的聊天体验",inboxThanks:"谢谢^。^",inboxImprove:"请告诉我们我们可以改善的地方" -->
         <div
           class="d-flex justify-content-between flex-column flex-md-row align-items-center border-bottom py-15"
         >
@@ -47,6 +46,15 @@
           <div
             class="width-25 pt-4 pt-md-0 d-flex justify-content-around align-items-center"
           >
+     <button
+          class="d-flex flex-column pt-2 px-2 d-lg-none align-items-center justify-content-center"
+          v-on:click="sidebarToggle"
+        >
+          <span class="px-13 py-1 border-top border-dark"></span>
+          <span class="px-13 py-1 border-top border-dark"></span>
+          <span class="px-13 py-1 border-top border-dark"></span>
+        </button>
+
             <svg
               width="25"
               height="28"
@@ -143,8 +151,8 @@
           </div>
         </div>
       </div>
-      <div class="w-100 p-2">
-        <div class="d-flex flex-column p-4 justify-content-between">
+      <div class="w-100 p-2 ">
+        <div class="d-flex flex-column p-4 justify-content-between overflow-scroll " style="height:500px!important">
           <div class="d-flex flex-row-reverse">
             <div class="d-flex">
               <div class="mx-3">
@@ -405,11 +413,19 @@ export default {
   data() {
     return {
       value: null,
-    };
+    }
   },
+  methods:{
+        sidebarToggle() {
+      document.getElementsByClassName("side-bar")[0].classList.toggle("d-none");
+    }
+  }
 };
 </script>
 <style>
+.overflow-scroll{
+  overflow-y: scroll!important;
+}
 .rating-text-area {
   height: 130px !important;
   border: 1px solid #000000;
