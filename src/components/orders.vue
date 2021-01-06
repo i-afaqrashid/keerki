@@ -10,7 +10,7 @@
       >
         <p class="fs-20 mb-0 font-weight-bold">{{ $t("orderFormHistory") }}</p>
         <div class="d-flex flex-column flex-lg-row mt-3 mt-lg-0">
-          <div class="d-flex flex-column flex-lg-row border rounded-lg">
+          <div class="d-flex flex-column flex-lg-row border rounded-lg p-0">
             <div
               class="btn outline-none d-flex align-items-center justify-content-center border-right px-2 py-1 color-f5"
             >
