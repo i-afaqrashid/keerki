@@ -36,7 +36,7 @@
         </svg>
 
         <input
-          class="w-100 px-5 text-center outline-none quick-search"
+          class="w-100 px-5 text-center outline-none quick-search1"
           placeholder="Quick Search"
         />
         <svg
@@ -67,6 +67,7 @@
       >
         <button
           class="admin-card btn btn-transparent d-flex flex-column justify-content-around align-items-center align-content-around"
+          v-b-modal.contact-modal
         >
           <svg
             width="37"
@@ -83,8 +84,293 @@
           </svg>
           <p class="font-24 mb-0">Contact</p>
         </button>
+
+        <b-modal
+          id="contact-modal"
+          centered
+          hide-footer
+          header-class="header-class"
+          hider-header
+          size="lg"
+          hide-header-close
+          no-stacking
+        >
+          <div class="d-flex justify-content-center align-items-center py-15">
+            <div class="w-100">
+              <p class="font-24 text-center font-weight-bolder">
+                Who would you like to send a message to?
+              </p>
+              <div
+                class="d-flex w-100 pt-4 justify-content-center align-items-center"
+              >
+                <div
+                  class="d-flex w-75 justify-content-around align-items-center"
+                >
+                  <button class="outline-none" v-b-modal.contact-admin>
+                    <div
+                      class="bg-light rounded-circle d-flex justify-content-center align-items-center"
+                      style="width: 110px; height: 110px"
+                    >
+                      <svg
+                        width="47"
+                        height="51"
+                        viewBox="0 0 47 51"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M47 49.0078V51H0V49.0078C0 48.3477 0.563685 47.8125 1.25893 47.8125H3.35714V11.9531C3.35714 10.6328 4.48441 9.5625 5.875 9.5625H15.1071V2.39062C15.1071 1.0703 16.2344 0 17.625 0H29.375C30.7656 0 31.8929 1.0703 31.8929 2.39062V9.5625H41.125C42.5156 9.5625 43.6429 10.6328 43.6429 11.9531V47.8125H45.7411C46.4363 47.8125 47 48.3477 47 49.0078ZM32.3125 19.125H28.1161C27.4208 19.125 26.8571 19.6602 26.8571 20.3203V24.3047C26.8571 24.9648 27.4208 25.5 28.1161 25.5H32.3125C33.0077 25.5 33.5714 24.9648 33.5714 24.3047V20.3203C33.5714 19.6602 33.0077 19.125 32.3125 19.125ZM14.6875 25.5H18.8839C19.5792 25.5 20.1429 24.9648 20.1429 24.3047V20.3203C20.1429 19.6602 19.5792 19.125 18.8839 19.125H14.6875C13.9923 19.125 13.4286 19.6602 13.4286 20.3203V24.3047C13.4286 24.9648 13.9923 25.5 14.6875 25.5ZM25.5982 38.25H21.4018C20.7065 38.25 20.1429 38.7852 20.1429 39.4453V47.8125H26.8571V39.4453C26.8571 38.7852 26.2935 38.25 25.5982 38.25ZM32.3125 28.6875H28.1161C27.4208 28.6875 26.8571 29.2227 26.8571 29.8828V33.8672C26.8571 34.5273 27.4208 35.0625 28.1161 35.0625H32.3125C33.0077 35.0625 33.5714 34.5273 33.5714 33.8672V29.8828C33.5714 29.2227 33.0077 28.6875 32.3125 28.6875ZM20.1429 29.8828C20.1429 29.2227 19.5792 28.6875 18.8839 28.6875H14.6875C13.9923 28.6875 13.4286 29.2227 13.4286 29.8828V33.8672C13.4286 34.5273 13.9923 35.0625 14.6875 35.0625H18.8839C19.5792 35.0625 20.1429 34.5273 20.1429 33.8672V29.8828ZM19.0938 9.5625H21.8214V12.1523C21.8214 12.3109 21.8877 12.4629 22.0058 12.575C22.1238 12.687 22.2839 12.75 22.4509 12.75H24.5491C24.7161 12.75 24.8762 12.687 24.9942 12.575C25.1123 12.4629 25.1786 12.3109 25.1786 12.1523V9.5625H27.9062C28.0732 9.5625 28.2333 9.49953 28.3513 9.38745C28.4694 9.27537 28.5357 9.12335 28.5357 8.96484V6.97266C28.5357 6.81415 28.4694 6.66213 28.3513 6.55005C28.2333 6.43797 28.0732 6.375 27.9062 6.375H25.1786V3.78516C25.1786 3.62665 25.1123 3.47463 24.9942 3.36255C24.8762 3.25047 24.7161 3.1875 24.5491 3.1875H22.4509C22.2839 3.1875 22.1238 3.25047 22.0058 3.36255C21.8877 3.47463 21.8214 3.62665 21.8214 3.78516V6.375H19.0938C18.9268 6.375 18.7667 6.43797 18.6487 6.55005C18.5306 6.66213 18.4643 6.81415 18.4643 6.97266V8.96484C18.4643 9.12335 18.5306 9.27537 18.6487 9.38745C18.7667 9.49953 18.9268 9.5625 19.0938 9.5625Z"
+                          fill="#FFB800"
+                        />
+                      </svg>
+                    </div>
+                    <p class="fs-19 pt-4">Administrators</p>
+                  </button>
+                  <button class="outline-none" v-b-modal.contact-client>
+                    <div
+                      class="bg-light rounded-circle d-flex justify-content-center align-items-center"
+                      style="width: 110px; height: 110px"
+                    >
+                      <svg
+                        width="50"
+                        height="55"
+                        viewBox="0 0 50 55"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M25 30.9375C32.7637 30.9375 39.0625 24.0088 39.0625 15.4688C39.0625 6.92871 32.7637 0 25 0C17.2363 0 10.9375 6.92871 10.9375 15.4688C10.9375 24.0088 17.2363 30.9375 25 30.9375ZM37.5 34.375H32.1191C29.9512 35.4707 27.5391 36.0938 25 36.0938C22.4609 36.0938 20.0586 35.4707 17.8809 34.375H12.5C5.5957 34.375 0 40.5303 0 48.125V49.8438C0 52.6904 2.09961 55 4.6875 55H45.3125C47.9004 55 50 52.6904 50 49.8438V48.125C50 40.5303 44.4043 34.375 37.5 34.375Z"
+                          fill="#08689F"
+                        />
+                      </svg>
+                    </div>
+                    <p class="fs-19 pt-4">Client</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </b-modal>
+        <b-modal
+          id="contact-client"
+          centered
+          hide-footer
+          content-class="client-class"
+          header-class="rating-header"
+          hider-header
+        >
+          <form
+            class="d-flex w-100 justify-content-center"
+            @submit="submitHandler"
+          >
+            <div class="d-flex flex-column w-90 justify-content-start">
+              <h1 class="fs-19">Contact a Client</h1>
+              <div class="w-100 pt-3">
+                <svg
+                  width="14"
+                  height="15"
+                  viewBox="0 0 14 15"
+                  fill="none"
+                  class="position-absolute mt-17 mx-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.8906 13.5742L10.582 10.2656C10.5 10.2109 10.418 10.1562 10.3359 10.1562H9.98047C10.8281 9.17188 11.375 7.85938 11.375 6.4375C11.375 3.32031 8.80469 0.75 5.6875 0.75C2.54297 0.75 0 3.32031 0 6.4375C0 9.58203 2.54297 12.125 5.6875 12.125C7.10938 12.125 8.39453 11.6055 9.40625 10.7578V11.1133C9.40625 11.1953 9.43359 11.2773 9.48828 11.3594L12.7969 14.668C12.9336 14.8047 13.1523 14.8047 13.2617 14.668L13.8906 14.0391C14.0273 13.9297 14.0273 13.7109 13.8906 13.5742ZM5.6875 10.8125C3.25391 10.8125 1.3125 8.87109 1.3125 6.4375C1.3125 4.03125 3.25391 2.0625 5.6875 2.0625C8.09375 2.0625 10.0625 4.03125 10.0625 6.4375C10.0625 8.87109 8.09375 10.8125 5.6875 10.8125Z"
+                    fill="#DBDCDE"
+                  />
+                </svg>
+
+                <input
+                  class="w-100 contact-input outline-none px-15 font-weight-light"
+                  placeholder="Search for client name"
+                  required
+                />
+              </div>
+              <div class="w-100 pt-3">
+                <input
+                  class="w-100 contact-input outline-none px-15 font-weight-light"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="w-100 pt-3">
+                <textarea
+                  class="w-100 contact-text-area py-2 outline-none px-15 font-weight-light"
+                  placeholder="Write your message here"
+                />
+              </div>
+              <div class="w-100" dir="ltr">
+                <div @dragover.prevent @drop.prevent>
+                  <div
+                    class="d-flex justify-content-center align-items-center mt-3 w-100 form-file-input px-2 flex-column"
+                    @dragleave="fileDragOut"
+                    @dragover="fileDragIn"
+                    @drop="handleFileDrop"
+                  >
+                    <div
+                      class="w-100 file-wrapper d-flex justify-content-center align-items-center flex-column flex-lg-row"
+                    >
+                      <input
+                        type="file"
+                        name="file-input"
+                        multiple="True"
+                        required
+                        @change="handleFileInput"
+                      />
+                      <h1 class="fs-14 text-center mb-0 mx-lg-4">
+                        Drag and drop or
+
+                        <span class="text-primary">browse</span>
+                      </h1>
+                    </div>
+                    <ul class="file-list">
+                      <li v-for="(file, index) in files" :key="index">
+                        {{ file.name }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill mt-4">
+                Submit
+              </button>
+            </div>
+          </form>
+        </b-modal>
+        <b-modal
+          id="contact-admin"
+          centered
+          hide-footer
+          content-class="client-class"
+          header-class="rating-header"
+          hider-header
+        >
+          <form
+            class="d-flex w-100 justify-content-center"
+            @submit="submitHandler"
+          >
+            <div class="d-flex flex-column w-90 justify-content-start">
+              <h1 class="fs-19">Contact an employee</h1>
+              <div class="w-100 pt-3">
+                <svg
+                  width="14"
+                  height="15"
+                  viewBox="0 0 14 15"
+                  fill="none"
+                  class="position-absolute mt-17 mx-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.8906 13.5742L10.582 10.2656C10.5 10.2109 10.418 10.1562 10.3359 10.1562H9.98047C10.8281 9.17188 11.375 7.85938 11.375 6.4375C11.375 3.32031 8.80469 0.75 5.6875 0.75C2.54297 0.75 0 3.32031 0 6.4375C0 9.58203 2.54297 12.125 5.6875 12.125C7.10938 12.125 8.39453 11.6055 9.40625 10.7578V11.1133C9.40625 11.1953 9.43359 11.2773 9.48828 11.3594L12.7969 14.668C12.9336 14.8047 13.1523 14.8047 13.2617 14.668L13.8906 14.0391C14.0273 13.9297 14.0273 13.7109 13.8906 13.5742ZM5.6875 10.8125C3.25391 10.8125 1.3125 8.87109 1.3125 6.4375C1.3125 4.03125 3.25391 2.0625 5.6875 2.0625C8.09375 2.0625 10.0625 4.03125 10.0625 6.4375C10.0625 8.87109 8.09375 10.8125 5.6875 10.8125Z"
+                    fill="#DBDCDE"
+                  />
+                </svg>
+
+                <input
+                  class="w-100 contact-input outline-none px-15 font-weight-light"
+                  placeholder="Search for Employee"
+                  required
+                />
+              </div>
+              <div class="w-100 pt-3 d-flex">
+                <select
+                  class="w-100 contact-input outline-none select-arrow px-15 font-weight-lighter"
+                  required
+                >
+                  <option class="font-weight-light">Select Department</option>
+                </select>
+              </div>
+              <div class="w-100 pt-3">
+                <input
+                  class="w-100 contact-input outline-none px-15 font-weight-light"
+                  placeholder="Order Number"
+                  required
+                />
+              </div>
+              <div class="w-100 pt-3">
+                <input
+                  class="w-100 contact-input outline-none px-15 font-weight-light"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="w-100 pt-3">
+                <textarea
+                  class="w-100 contact-text-area py-2 outline-none px-15 font-weight-light"
+                  placeholder="Write your message here"
+                />
+              </div>
+              <div class="w-100" dir="ltr">
+                <div @dragover.prevent @drop.prevent>
+                  <div
+                    class="d-flex justify-content-center align-items-center mt-3 w-100 form-file-input px-2 flex-column"
+                    @dragleave="fileDragOut"
+                    @dragover="fileDragIn"
+                    @drop="handleFileDrop"
+                  >
+                    <div
+                      class="w-100 file-wrapper d-flex justify-content-center align-items-center flex-column flex-lg-row"
+                    >
+                      <input
+                        type="file"
+                        name="file-input"
+                        multiple="True"
+                        required
+                        @change="handleFileInput"
+                      />
+                      <h1 class="fs-14 text-center mb-0 mx-lg-4">
+                        Drag and drop or
+
+                        <span class="text-primary">browse</span>
+                      </h1>
+                    </div>
+                    <p class="mb-0 pt-4 fs-10 font-weight-light text-center">
+                      <svg
+                        width="12"
+                        height="13"
+                        viewBox="0 0 12 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.8125 6.5C11.8125 3.3125 9.1875 0.6875 6 0.6875C2.78906 0.6875 0.1875 3.3125 0.1875 6.5C0.1875 9.71094 2.78906 12.3125 6 12.3125C9.1875 12.3125 11.8125 9.71094 11.8125 6.5ZM6 7.67188C6.58594 7.67188 7.07812 8.16406 7.07812 8.75C7.07812 9.35938 6.58594 9.82812 6 9.82812C5.39062 9.82812 4.92188 9.35938 4.92188 8.75C4.92188 8.16406 5.39062 7.67188 6 7.67188ZM4.96875 3.80469C4.94531 3.64062 5.08594 3.5 5.25 3.5H6.72656C6.89062 3.5 7.03125 3.64062 7.00781 3.80469L6.84375 6.99219C6.82031 7.15625 6.70312 7.25 6.5625 7.25H5.41406C5.27344 7.25 5.15625 7.15625 5.13281 6.99219L4.96875 3.80469Z"
+                          fill="#FF3A67"
+                        />
+                      </svg>
+
+                      Please upload a PDF, PNG, or JPG image with similar height
+                      and width that is less than 5mb.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="d-flex flex-lg w-100 justify-content-end py-4 align-items-center"
+              >
+                <div
+                  class="d-flex align-items-center w-25 justify-content-around"
+                >
+                  <p
+                    class="mb-0 fs-14 font-weight-light pt-lg-2 pt-1 mr-2 mr-lg-0"
+                  >
+                    Urgent
+                  </p>
+                  <b-form-checkbox
+                    v-model="urgent"
+                    switch
+                    size="lg"
+                  ></b-form-checkbox>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill mt-4">
+                Submit
+              </button>
+            </div>
+          </form>
+        </b-modal>
         <button
           class="admin-card btn mt-5 mt-lg-0 btn-transparent d-flex flex-column justify-content-around align-items-center align-content-around"
+          v-b-modal.client-modal
         >
           <svg
             width="53"
@@ -100,8 +386,116 @@
             />
           </svg>
 
-          <p class="font-24 mb-0">Clients</p></button
-        ><button
+          <p class="font-24 mb-0">Clients</p>
+        </button>
+
+        <b-modal
+          id="client-modal"
+          centered
+          hide-footer
+          header-class="header-class"
+          body-class="client-drop-modal"
+          hider-header
+          size="sm"
+          hide-header-close
+          no-stacking
+        >
+          <div class="w-100">
+            <b-dropdown
+              id="dropdown-5"
+              menu-class="client-drop-menu"
+              text="Search for..."
+              variant="transparent"
+              class="w-100"
+              size="lg"
+            >
+              <b-dropdown-item>
+                <div class="d-flex justify-content-around">
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div>
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
+                </div>
+              </b-dropdown-item>
+              <b-dropdown-item>
+                <div class="d-flex justify-content-around">
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div>
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
+                </div> </b-dropdown-item
+              ><b-dropdown-item>
+                <div class="d-flex justify-content-around">
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div>
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
+                </div>
+              </b-dropdown-item>
+              <b-dropdown-item>
+                <div class="d-flex justify-content-around">
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div>
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
+                </div>
+              </b-dropdown-item>
+            </b-dropdown>
+          </div>
+        </b-modal>
+        <button
           class="admin-card btn mt-5 mt-lg-0 btn-transparent d-flex flex-column justify-content-around align-items-center align-content-around"
         >
           <svg
@@ -121,32 +515,135 @@
           <p class="font-24 mb-0">Orders</p>
         </button>
       </div>
-      <AdminChart/>
+      <AdminChart />
     </div>
   </div>
 </template>
 <script>
-import AdminChart from './adminChart'
+import AdminChart from "./adminChart";
 export default {
   name: "DashboardHome",
-  components:{
-      AdminChart
-  }
+  components: {
+    AdminChart,
+  },
+  data() {
+    return {
+      currentLanguage: localStorage.currentLanguage,
+      files: [],
+      color: "#444444",
+      urgent: false,
+    };
+  },
+  methods: {
+    submitHandler(e) {
+      e.preventDefault();
+      this.$bvModal.hide("contact-client");
+      this.$bvModal.hide("contact-admin");
+    },
+    handleFileDrop(e) {
+      let droppedFiles = e.dataTransfer.files;
+      if (!droppedFiles) return;
+      [...droppedFiles].forEach((f) => {
+        this.files.push(f);
+      });
+      this.color = "#444444";
+    },
+    handleFileInput(e) {
+      let files = e.target.files;
+      files = e.target.files;
+      if (!files) return;
+      [...files].forEach((f) => {
+        this.files.push(f);
+      });
+    },
+    removeFile(fileKey) {
+      this.files.splice(fileKey, 1);
+    },
+    fileDragIn() {
+      this.color = "white";
+    },
+    fileDragOut() {
+      this.color = "#444444";
+    },
+  },
 };
 </script>
-<style scoped>
+<style>
+.client-drop-menu {
+  width: 300px !important;
+  height: 200px !important;
+  overflow-y: scroll !important;
+}
+.client-drop-modal {
+  padding: 0px !important;
+}
+.fs-10 {
+  font-size: 10px;
+}
+.select-arrow {
+  -webkit-appearance: button !important;
+}
+.file-list {
+  list-style: none;
+}
+.container {
+  min-height: 150px;
+}
+
+.file-wrapper {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.file-wrapper input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 300px;
+  height: 200px;
+}
+.contact-text-area {
+  background: #f2f3f7;
+  border-radius: 6px;
+  height: 100px !important;
+}
+.contact-input {
+  background: #f2f3f7;
+  border-radius: 6px;
+  height: 40px !important;
+}
+.w-90 {
+  width: 95% !important;
+}
+.client-class {
+  border-radius: 12px !important;
+  border: 1px solid #e3e3e3 !important;
+}
+
 .admin-card {
-  background: #ffffff;
+  background: #ffffff !important;
   width: 90% !important;
-  border: 1px solid #dfe0eb;
+  border: 1px solid #dfe0eb !important;
   height: 175px !important;
   border-radius: 10px !important;
 }
 .resp-search {
   width: 80% !important;
 }
-.quick-search {
+.quick-search1 {
   height: 65px !important;
+
+  background: #ffffff !important;
+
+  border: 1px solid #dfe0eb !important;
+  border-radius: 8px !important;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .resp-search {

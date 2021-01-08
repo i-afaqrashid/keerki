@@ -282,6 +282,9 @@ export default {
   font-size: 11px;
   color: #f12b2c;
 }
+.font-11{
+  font-size:11px;
+}
 .fs-11 {
   font-size: 11px;
   color: white;

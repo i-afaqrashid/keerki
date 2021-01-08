@@ -26,6 +26,10 @@ import AdminDashboard from '../views/AdminDashboard.vue'
 import DashboardHome from '../components/admin/dashboardHome.vue'
 import ShippingForm from '../components/shippingForm.vue'
 import Inbox from '../components/inbox.vue'
+import AdminAccount from '../components/admin/settings.vue'
+import AdminNotifications from '../components/admin/notifications.vue'
+import AdminClients from '../components/admin/clients.vue'
+import ClientDetailed from '../components/admin/ClientDetailed.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -47,6 +51,22 @@ const routes = [
         path: "",
         component: DashboardHome
       },
+      {
+        path:"account",
+        component:AdminAccount
+      },
+      {
+        path:"notifications",
+        component:AdminNotifications
+      },
+      {
+        path:"clients",
+        component:AdminClients
+      },
+      {
+        path:"client-detailed",
+        component:ClientDetailed
+      }
     ]
   },
   {

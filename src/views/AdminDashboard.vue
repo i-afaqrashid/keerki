@@ -2,7 +2,7 @@
   <div
     class="w-100 d-flex justify-content-center flex-column flex-lg-row bg-f7"
   >
-    <div class="w-18 d-none d-lg-block side-bar admin-side z-index-2">
+    <div class="w-18 d-none px-1 d-lg-block side-bar admin-side z-index-2">
       <div class="d-flex align-content-between flex-column text-white">
         <div
           class="d-flex w-100 justify-content-center align-items-center flex-column text-white py-5"
@@ -19,35 +19,35 @@
             </div>
           </div>
           <div class="w-100 pt-16">
-            <router-link to="/admin/dashboard">
-              <button
-                class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  class="w-50"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.4"
-                    d="M15.5232 8.94116H8.54412L13.1921 13.5891C13.3697 13.7667 13.6621 13.7812 13.8447 13.6091C14.9829 12.5367 15.7659 11.0912 15.9956 9.46616C16.035 9.18793 15.8041 8.94116 15.5232 8.94116ZM15.0576 7.03528C14.8153 3.52176 12.0076 0.714119 8.49412 0.471767C8.22589 0.453237 8 0.679413 8 0.948236V7.5294H14.5815C14.8503 7.5294 15.0762 7.30352 15.0576 7.03528ZM6.58824 8.94116V1.96206C6.58824 1.68118 6.34147 1.45029 6.06353 1.48971C2.55853 1.985 -0.120585 5.04705 0.00412089 8.71675C0.132356 12.4856 3.37736 15.5761 7.14794 15.5288C8.6303 15.5103 10 15.0326 11.1262 14.2338C11.3585 14.0691 11.3738 13.727 11.1724 13.5256L6.58824 8.94116Z"
-                    fill="#C4C4C4"
-                  />
-                </svg>
-
-                <span class="fs-19 mb-0 text-muted w-50 text-left"
-                  >Dashboard</span
-                >
-              </button>
-            </router-link>
-          </div>
-          <span class="divider w-100"></span>
-          <div class="w-100">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              @click="dashboard"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                class="w-50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.4"
+                  d="M15.5232 8.94116H8.54412L13.1921 13.5891C13.3697 13.7667 13.6621 13.7812 13.8447 13.6091C14.9829 12.5367 15.7659 11.0912 15.9956 9.46616C16.035 9.18793 15.8041 8.94116 15.5232 8.94116ZM15.0576 7.03528C14.8153 3.52176 12.0076 0.714119 8.49412 0.471767C8.22589 0.453237 8 0.679413 8 0.948236V7.5294H14.5815C14.8503 7.5294 15.0762 7.30352 15.0576 7.03528ZM6.58824 8.94116V1.96206C6.58824 1.68118 6.34147 1.45029 6.06353 1.48971C2.55853 1.985 -0.120585 5.04705 0.00412089 8.71675C0.132356 12.4856 3.37736 15.5761 7.14794 15.5288C8.6303 15.5103 10 15.0326 11.1262 14.2338C11.3585 14.0691 11.3738 13.727 11.1724 13.5256L6.58824 8.94116Z"
+                  fill="#C4C4C4"
+                />
+              </svg>
+
+              <span class="fs-19 mb-0 text-muted w-50 text-left"
+                >Dashboard</span
+              >
+            </button>
+          </div>
+          <span class="divider w-100"></span>
+          <div class="w-100 d-flex align-items-center justify-content-between">
+            <button
+              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              @click="clients"
             >
               <svg
                 width="16"
@@ -66,8 +66,23 @@
 
               <span class="fs-19 mb-0 text-muted w-50 text-left">Clients</span>
             </button>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              class="btn p-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
+                fill="#CCCCCE"
+              />
+            </svg>
           </div>
-          <div class="w-100">
+          <div class="w-100 d-flex align-items-center justify-content-between">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
             >
@@ -87,8 +102,23 @@
 
               <span class="fs-19 mb-0 text-muted w-50 text-left">Orders</span>
             </button>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              class="btn p-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
+                fill="#CCCCCE"
+              />
+            </svg>
           </div>
-          <div class="w-100">
+          <div class="w-100 d-flex align-items-center justify-content-between">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
             >
@@ -116,10 +146,26 @@
 
               <span class="fs-19 mb-0 text-muted w-50 text-left">Contact</span>
             </button>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              class="btn p-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
+                fill="#CCCCCE"
+              />
+            </svg>
           </div>
-          <div class="w-100">
+          <div class="w-100 d-flex align-items-center justify-content-between">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              @click="notifications"
             >
               <svg
                 width="15"
@@ -139,8 +185,23 @@
                 >Notifications</span
               >
             </button>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              class="btn p-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
+                fill="#CCCCCE"
+              />
+            </svg>
           </div>
-          <div class="w-100">
+          <div class="w-100 d-flex justify-content-between align-items-center">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
             >
@@ -160,11 +221,28 @@
 
               <span class="fs-19 mb-0 text-muted w-50 text-left">Messages</span>
             </button>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              class="btn p-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
+                fill="#CCCCCE"
+              />
+            </svg>
           </div>
           <span class="divider w-100"></span>
-          <div class="w-100">
+
+          <div class="w-100 d-flex align-items-center justify-content-between">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              @click="settings"
             >
               <svg
                 width="16"
@@ -183,11 +261,92 @@
 
               <span class="fs-19 mb-0 text-muted w-50 text-left">Settings</span>
             </button>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              class="btn p-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
+                fill="#CCCCCE"
+              />
+            </svg>
           </div>
         </div>
       </div>
       <div class="d-flex justify-content-center align-items-center">
-        <img src="../assets/logo.png" class="w-100" />
+        <b-modal
+          id="log-out-modal2"
+          centered
+          hide-footer
+          header-class="header-class"
+          hider-header
+          hide-header-close
+        >
+          <div
+            class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
+          >
+            <div class="w-100">
+              <h1 class="fs-16">{{ $t("automaticLogout") }}</h1>
+              <h1 class="fs-18 text-primary">{{ $t("logoutTime") }}</h1>
+            </div>
+            <div class="d-flex justify-content-end w-100 mt-3">
+              <button
+                class="rounded-lg btn modal-logout bg-white color-c7 outline-none"
+                @click="logout"
+              >
+                {{ $t("logout") }}
+              </button>
+              <button
+                class="rounded-lg btn btn-primary outline-none ml-2"
+                @click="$bvModal.hide('log-out-modal2')"
+              >
+                {{ $t("continueSession") }}
+              </button>
+            </div>
+          </div>
+        </b-modal>
+        <button
+          class="btn btn-outline-secondary mb-4 mb-lg-0 text-white border-radius-13 width-75 d-flex justify-content-around align-items-center"
+          v-b-modal.log-out-modal2
+        >
+          <span class="w-75 text-right">Logout</span>
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            class="w-50"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.375 14.875H3.54167C3.16594 14.875 2.80561 14.7257 2.53993 14.4601C2.27426 14.1944 2.125 13.8341 2.125 13.4583V3.54167C2.125 3.16594 2.27426 2.80561 2.53993 2.53993C2.80561 2.27426 3.16594 2.125 3.54167 2.125H6.375"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M11.3334 12.0416L14.875 8.49998L11.3334 4.95831"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M14.875 8.5H6.375"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </div>
     </div>
     <div class="w-82 d-flex flex-column align-items-center">
@@ -261,14 +420,28 @@
                   />
                 </svg>
               </div>
-              <div v-else class="width-75 fs-24 font-weight-bolder pt-lg-0 pt-15">Dashboard</div>
+              <div
+                v-else
+                class="width-75 fs-24 font-weight-bolder pt-lg-0 pt-15"
+              >
+                Dashboard
+              </div>
             </div>
           </div>
           <div
             class="w-95 d-flex flex-column flex-lg-row flex-wrap justify-content-between align-items-center pt-4 pt-lg-0"
           >
             <div class="d-none d-lg-block">
-              <button class="btn py-0 btn-primary rounded-pill">Admin</button>
+              <button
+                v-if="role == 'employee'"
+                class="btn py-0 employee-btn rounded-pill"
+              >
+                Employee
+              </button>
+
+              <button v-else class="btn py-0 btn-primary rounded-pill">
+                Admin
+              </button>
             </div>
             <div
               class="width-75 d-flex justify-content-around align-items-center pt-15 pt-lg-0"
@@ -326,7 +499,69 @@
                   >5</span
                 >
               </button>
-              <button class="outline-none">
+              <b-popover
+                target="popover-target-2"
+                triggers="hover"
+                placement="bottom"
+                custom-class="pop-over p-0"
+              >
+                <div class="d-flex flex-column w-100 p-2" dir="auto">
+                  <div class="px-2 py-2 border-bottom w-100">
+                    <p class="mb-1 fs-20">{{ $t("popupNotifications") }}</p>
+                    <p class="fs-14 font-weight-light">
+                      {{ $t("popupDaysAgo") }}
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex w-100 justify-content-between align-items-center mt-3"
+                  >
+                    <p class="font-12 mb-0">You have 3 new orders</p>
+                    <p class="font-11 mb-0">{{ $t("popupDismiss") }}</p>
+                  </div>
+                  <div
+                    class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn noti-btn w-100 d-flex align-items-center justify-content-around"
+                      dir="ltr"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        class="w-50"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 8H15"
+                          stroke="#625D5D"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 1L15 8L8 15"
+                          stroke="#625D5D"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+
+                      <p class="fs-18 mb-0 w-75 text-left">
+                        {{ $t("popupViewAll") }}
+                      </p>
+                    </button>
+                  </div>
+                </div>
+              </b-popover>
+
+              <button
+                class="outline-none"
+                v-b-popover.hover.top
+                id="popover-target-2"
+              >
                 <svg
                   width="25"
                   height="26"
@@ -398,6 +633,7 @@
                     <template #title>My Account</template>
                     <button
                       class="btn btn-transparent rounded-0 w-100 d-flex justify-content-around align-items-center"
+                      @click="account"
                     >
                       <svg
                         width="20"
@@ -425,6 +661,7 @@
                     </button>
                     <button
                       class="btn btn-transparent rounded-0 w-100 d-flex justify-content-center align-items-center"
+                      @click="account"
                     >
                       <svg
                         width="20"
@@ -450,6 +687,46 @@
 
                       <span class="flex-grow-1 text-left">Change Password</span>
                     </button>
+                    <router-link to="/admin">
+                      <button
+                        class="btn btn-transparent rounded-0 bg-f7 w-100 d-flex justify-content-center align-items-center"
+                      >
+                        <svg
+                          width="17"
+                          height="17"
+                          viewBox="0 0 17 17"
+                          fill="none"
+                          class="w-25"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.375 14.875H3.54167C3.16594 14.875 2.80561 14.7257 2.53993 14.4601C2.27426 14.1944 2.125 13.8341 2.125 13.4583V3.54167C2.125 3.16594 2.27426 2.80561 2.53993 2.53993C2.80561 2.27426 3.16594 2.125 3.54167 2.125H6.375"
+                            stroke="#5C5C5C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M11.3335 12.0416L14.8752 8.49992L11.3335 4.95825"
+                            stroke="#5C5C5C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M14.875 8.5H6.375"
+                            stroke="#5C5C5C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+
+                        <span class="flex-grow-1 text-left color-ff3"
+                          >Log out</span
+                        >
+                      </button>
+                    </router-link>
                   </b-popover>
                 </div>
               </div>
@@ -464,17 +741,53 @@
 <script>
 export default {
   name: "AdminDashboard",
+  data() {
+    return {
+      role: localStorage.getItem("role"),
+    };
+  },
   methods: {
+    notifications(){
+      this.$router.push({ path: "/admin/dashboard/notifications" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
+
     handleSideBar() {
       const sideBar = document.getElementsByClassName("admin-side")[0];
       if (sideBar.classList.contains("d-none"))
         sideBar.classList.remove("d-none");
       else sideBar.classList.add("d-none");
     },
+    logout() {
+      this.$router.push({ path: "/admin" });
+    },
+    dashboard() {
+      this.$router.push({ path: "/admin/dashboard" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
+    settings() {
+      this.$router.push({ path: "/admin/dashboard/settings" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
+    clients() {
+      this.$router.push({ path: "/admin/dashboard/clients" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
+    account(){
+      this.$router.push({ path: "/admin/dashboard/account" }).catch(() => {});
+      
+    }
   },
 };
 </script>
 <style scoped>
+.employee-btn {
+  background: #64bb9f;
+  color: white !important;
+}
+.color-ff3 {
+  color: #ff3737;
+}
 .width-75 {
   width: 100% !important;
 }
