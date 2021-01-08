@@ -34,6 +34,7 @@ import AdminOrders from '../components/admin/orders.vue'
 import AdminOrdersDetailed from '../components/admin/orderDetailed.vue'
 import AdminMessages from '../components/admin/messages.vue'
 import AdminInbox from '../components/admin/adminInbox.vue'
+import QuickResponses from '../components/admin/quickResponses.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -86,6 +87,10 @@ const routes = [
       {
         path:"inbox",
         component:AdminInbox
+      },
+      {
+        path:"quick-responses",
+        component:QuickResponses
       }
     ]
   },

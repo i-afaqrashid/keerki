@@ -1,13 +1,153 @@
 <template>
   <div class="d-flex flex-lg-row flex-column w-100 bg-white mt-15">
-    <div class="w-15 admin-inbox-side"></div>
+    <div class="w-15 admin-inbox-side border-right py-4">
+      <button
+        class="w-100 d-flex justify-content-between btn outline-none align-items-center font-weight-bold"
+      >
+        <span>Messages</span>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
+            fill="#191919"
+          />
+        </svg>
+      </button>
+      <div class="w-100 bg-white mt-15">
+        <input
+          class="w-100 outline-none search-admin-inbox fs-10 px-2"
+          :placeholder="'Search'"
+        />
+        <svg
+          width="23"
+          height="23"
+          viewBox="0 0 23 23"
+          fill="none"
+          class="position-absolute mx-n5 mt-17"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2.63007 8.54774C2.63007 5.2733 5.2733 2.63007 8.54774 2.63007C11.8222 2.63007 14.4654 5.2733 14.4654 8.54774C14.4654 11.8222 11.8222 14.4654 8.54774 14.4654C5.2733 14.4654 2.63007 11.8222 2.63007 8.54774ZM16.438 14.4654H15.3991L15.0309 14.1103C16.3196 12.6112 17.0955 10.665 17.0955 8.54774C17.0955 3.82676 13.2687 0 8.54774 0C3.82676 0 0 3.82676 0 8.54774C0 13.2687 3.82676 17.0955 8.54774 17.0955C10.665 17.0955 12.6112 16.3196 14.1103 15.0309L14.4654 15.3991V16.438L21.0406 23L23 21.0406L16.774 14.8021L16.438 14.4654Z"
+            fill="#747F8D"
+          />
+        </svg>
+      </div>
+      <div class="w-100 d-flex justify-content-between align-items-center pt-4">
+        <div class="d-flex align-items-center">
+          <button class="btn outline-none">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.295 4L6 6.2869L3.705 4L3 4.70403L6 7.7L9 4.70403L8.295 4Z"
+                fill="#6A7480"
+              />
+            </svg>
+          </button>
+          <p class="mb-0 text-muted font-weight-bold">ORDER MESSAGES</p>
+        </div>
+        <button class="btn outline-none">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M15 10H10V15H8V10H3V8H8V3H10V8H15V10Z" fill="#6A7480" />
+          </svg>
+        </button>
+      </div>
+      <button
+        class="w-100 outline-none btn d-flex justify-content-between align-items-center mt-4"
+      >
+        <div class="d-flex align-items-center">
+          <div class="btn outlin-none">
+            <img src="../../assets/AvataradminInbox.png" />
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              class="align-self-end mt-3"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="5" cy="5" r="5" fill="#43B581" />
+            </svg>
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <p class="mb-0">Customer Name</p>
+            <p class="mb-0 font-weight-light">#order number</p>
+          </div>
+        </div>
+        <div
+          class="rounded-button-inbox rounded-circle d-flex justify-content-center align-items-center"
+        >
+          3
+        </div>
+      </button>
+      <div
+        class="w-100 d-flex justify-content-between align-items-center pt-lg-14 pt-4"
+      >
+        <div class="d-flex align-items-center">
+          <button class="btn outline-none">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.295 4L6 6.2869L3.705 4L3 4.70403L6 7.7L9 4.70403L8.295 4Z"
+                fill="#6A7480"
+              />
+            </svg>
+          </button>
+          <p class="mb-0 text-muted font-weight-bold">COMPANY CONTACTS</p>
+        </div>
+        <button class="btn outline-none">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M15 10H10V15H8V10H3V8H8V3H10V8H15V10Z" fill="#6A7480" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-100 d-flex justify-content-center align-items-center pt-2">
+        <p class="text-muted font-weight-bold">Messsage subject</p>
+      </div>
+    </div>
     <div class="pb-4 order-1 order-lg-0">
       <div class="w-100">
         <div
           class="d-flex justify-content-around flex-column flex-md-row align-items-center border-bottom py-15"
         >
-          <div class="width-50 px-4 px-lg-0 d-flex justify-content-around align-items-center">
-            <div class="d-flex flex-column">
+          <div
+            class="width-50 px-4 px-lg-0 d-flex justify-content-around align-items-center"
+          >
+            <div class="d-flex flex-column mx-3">
               <img src="../../assets/messageProfile.png" class="w-100" />
               <p class="btn btn-dark py-0 mt-2">VIP</p>
             </div>
@@ -20,7 +160,7 @@
             </div>
           </div>
           <div
-            class="width-25 pt-4 pt-md-0 d-flex justify-content-around align-items-center"
+            class="width-50 pt-4 pt-md-0 d-flex justify-content-around align-items-center flex-column flex-xl-row"
           >
             <button
               class="d-flex flex-column pt-2 px-2 d-lg-none align-items-center justify-content-center"
@@ -31,32 +171,17 @@
               <span class="px-13 py-1 border-top border-dark"></span>
             </button>
 
-            <svg
-              width="26"
-              height="33"
-              viewBox="0 0 26 33"
-              fill="none"
-              class="btn p-0 outline-none"
-              xmlns="http://www.w3.org/2000/svg"
+            <button
+              class="btn btn-primary px-0 admin-inbox-button admin-btn-color d-flex justify-content-center align-items-center mt-lg-0 mt-2"
             >
-              <path
-                d="M26 17.1107L12.5193 0.207031L10.5923 2.61989L12.5193 5.03616L5.77822 13.4871V13.4905L3.85124 11.0743L1.92562 13.4905L7.70384 20.7342L0 30.3925L1.92562 32.807L9.62946 23.1488L15.4077 30.3925L17.3334 27.9779L15.4077 25.5633L22.1474 17.1107H22.1488L24.0744 19.5252L26 17.1107Z"
-                fill="#267CB2"
-              />
-            </svg>
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              class="btn p-0 outline-none"
-              xmlns="http://www.w3.org/2000/svg"
+              Transfer the chat
+            </button>
+
+            <button
+              class="btn btn-primary px-0 admin-inbox-button d-flex justify-content-center align-items-center mt-2 mt-xl-0"
             >
-              <path
-                d="M14 0C6.2804 0 0 6.2818 0 14C0 21.721 6.2804 28 14 28C21.7196 28 28 21.721 28 14C28 6.2818 21.7196 0 14 0ZM14 22.75C13.034 22.75 12.25 21.9674 12.25 21C12.25 20.034 13.034 19.25 14 19.25C14.966 19.25 15.75 20.034 15.75 21C15.75 21.9674 14.966 22.75 14 22.75ZM15.4 16.625V18.2H12.6V14H14C15.5456 14 16.8 12.7442 16.8 11.2C16.8 9.6544 15.5456 8.4 14 8.4C12.4544 8.4 11.2 9.6544 11.2 11.2H8.4C8.4 8.113 10.913 5.6 14 5.6C17.087 5.6 19.6 8.113 19.6 11.2C19.6 13.8054 17.8122 16.0006 15.4 16.625Z"
-                fill="#267CB2"
-              />
-            </svg>
+              Marked as resolved
+            </button>
           </div>
         </div>
       </div>
@@ -216,29 +341,33 @@
           </button>
           <button class="outline-none">
             <svg
-              width="26"
+              width="24"
               height="26"
-              viewBox="0 0 26 26"
+              viewBox="0 0 24 26"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M13 0C5.8318 0 0 5.8318 0 13C0 20.1695 5.8318 26 13 26C15.6507 26 18.1909 25.2174 20.3476 23.7367L18.8773 21.5943C17.1535 22.7747 15.1229 23.4 13 23.4C7.2657 23.4 2.6 18.7343 2.6 13C2.6 7.2657 7.2657 2.6 13 2.6C18.7343 2.6 23.4 7.2657 23.4 13V14.0166C23.4 15.821 22.6226 16.9 21.32 16.9L21.3174 16.9234C21.2394 16.9065 21.1549 16.9 21.0717 16.9H20.8C20.0681 16.9 18.98 15.8366 18.98 15.1203V13C18.98 9.7032 16.2981 7.02 13 7.02C9.7019 7.02 7.02 9.7019 7.02 13C7.02 16.2981 9.7019 18.98 13 18.98C14.6042 18.98 16.055 18.3378 17.1301 17.3069C17.9738 18.5497 19.409 19.5 20.8 19.5L20.8026 19.4753C20.8832 19.4922 20.9677 19.5 21.0535 19.5H21.32C24.1176 19.5 26 17.2978 26 14.0166V13C26 5.8318 20.1682 0 13 0ZM13 16.3787C11.1358 16.3787 9.62 14.8629 9.62 12.9987C9.62 11.1345 11.1358 9.6187 13 9.6187C14.8642 9.6187 16.38 11.1345 16.38 12.9987C16.38 14.8629 14.8642 16.3787 13 16.3787Z"
-                fill="#4F5659"
+                d="M2.31674 23.6713C-0.81344 20.6097 -0.755101 15.6727 2.39099 12.6222L13.6281 1.72659C16.0022 -0.575427 19.8612 -0.57563 22.2355 1.72659C24.5867 4.00636 24.5896 7.68469 22.2355 9.96715L12.44 19.4557C10.8406 21.0064 8.22754 20.9848 6.65527 19.405C5.14054 17.8831 5.18913 15.4709 6.73306 13.9738L14.4336 6.51738C14.7648 6.19675 15.3074 6.19127 15.6457 6.50515L16.8704 7.64158C17.2087 7.95551 17.2144 8.46992 16.8833 8.79055L9.18357 16.2463C8.91936 16.5025 8.90307 16.9282 9.14886 17.1752C9.38307 17.4105 9.75127 17.4144 9.98929 17.1836L19.7848 7.69505C20.8355 6.67628 20.8355 5.01761 19.7842 3.99828C18.7562 3.0016 17.1079 3.00109 16.0795 3.99828L4.84231 14.8939C2.98001 16.6997 2.95129 19.6226 4.7785 21.4098C6.60047 23.1918 9.54556 23.1941 11.3709 21.4243L20.5884 12.4869C20.9193 12.166 21.462 12.1602 21.8005 12.4739L23.0261 13.6095C23.3646 13.9232 23.3707 14.4376 23.0398 14.7585L13.8223 23.6959C10.6307 26.7904 5.46818 26.7537 2.31674 23.6713Z"
+                fill="#4F5660"
               />
             </svg>
           </button>
-          <button class="outline-none">
+          <button class="outline-none"
+          @click="quickResponses">
             <svg
-              width="29"
-              height="24"
-              viewBox="0 0 29 24"
+              width="20"
+              height="26"
+              viewBox="0 0 20 26"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M26.2812 24H2.71875C1.21721 24 0 22.6569 0 21V3C0 1.34312 1.21721 0 2.71875 0H26.2812C27.7828 0 29 1.34312 29 3V21C29 22.6569 27.7828 24 26.2812 24ZM6.34375 3.5C4.59197 3.5 3.17188 5.067 3.17188 7C3.17188 8.933 4.59197 10.5 6.34375 10.5C8.09553 10.5 9.51562 8.933 9.51562 7C9.51562 5.067 8.09553 3.5 6.34375 3.5ZM3.625 20H25.375V13L20.4181 7.53031C20.1527 7.23744 19.7223 7.23744 19.4568 7.53031L11.7812 16L8.63685 12.5303C8.37143 12.2374 7.94107 12.2374 7.6756 12.5303L3.625 17V20Z"
-                fill="#4F5660"
+                d="M11 1L1 15.4H10L9 25L19 10.6H10L11 1Z"
+                stroke="#4F5660"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               />
             </svg>
           </button>
@@ -283,8 +412,10 @@
     <div
       class="py-15 border-left d-flex flex-column w-xl-25 align-items-center"
     >
-      <div class="d-flex justify-content-center align-items-center w-75">
-        <div class="d-flex justify-content-around align-items-center w-100">
+      <div class="d-flex justify-content-center align-items-center w-100">
+        <div
+          class="d-flex justify-content-around align-items-center w-100 flex-wrap"
+        >
           <button class="fs-14 btn-inbox btn btn-primary">
             {{ $t("inboxAll") }}
           </button>
@@ -293,6 +424,9 @@
           </button>
           <button class="fs-14 btn-inbox btn btn-outline-primary">
             {{ $t("inboxImages") }}
+          </button>
+          <button class="fs-14 btn-inbox btn btn-outline-primary">
+            Orders
           </button>
         </div>
       </div>
@@ -333,12 +467,33 @@ export default {
     sidebarToggle() {
       document.getElementsByClassName("side-bar")[0].classList.toggle("d-none");
     },
+    quickResponses(){
+              this.$router.push({ path: "quick-responses" }).catch(() => {});
+    }
+
   },
 };
 </script>
 <style scoped>
+.rounded-button-inbox {
+  background: #ff3737;
+  width: 20px;
+  height: 20px;
+  color: white;
+  border: 1.5px solid #f7f8fc;
+}
+.search-admin-inbox {
+  height: 46px;
+}
+.admin-inbox-button {
+  min-width: 150px;
+  min-height: 46px;
+}
+.admin-btn-color {
+  background: #8290a5;
+}
 .w-15 {
-  width: 15% !important;
+  min-width: 20%;
 }
 .text-inbox {
   font-weight: 300;
