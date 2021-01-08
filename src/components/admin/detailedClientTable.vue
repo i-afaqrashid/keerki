@@ -5,7 +5,7 @@
     <div
       class="w-90 d-flex justify-content-between flex-column flex-lg-row align-items-center"
     >
-      <p class="fs-19">All Clients</p>
+      <p class="fs-19">All Orders</p>
       <div
         class="d-flex justify-content-around align-items-center flex-column flex-lg-row w-50"
       >
@@ -41,7 +41,7 @@
         <div
           class="d-flex justify-content-between align-items-center w-25-resp pt-4 pt-lg-0"
         >
-          <div class="d-flex align-items-center justify-content-between">
+          <button class="outline-none d-flex align-items-center justify-content-between">
             <svg
               width="16"
               height="16"
@@ -55,8 +55,8 @@
               />
             </svg>
             <p class="mb-0">Sort</p>
-          </div>
-          <div class="d-flex align-items-center justify-content-between">
+          </button>
+          <button class="outline-none d-flex align-items-center justify-content-between">
             <svg
               width="16"
               height="16"
@@ -71,7 +71,7 @@
             </svg>
 
             <p class="mb-0">Filter</p>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -79,21 +79,20 @@
     <table
       class="table table-borderless table-responsive-md table-hover border-bottom clients-table mt-4"
     >
-      <thead class="pt-0">
+      <thead class="pt-0 text-center">
         <tr class="border-bottom">
-          <th class="pt-0" scope="col"></th>
-          <th class="pt-0" scope="col">Status</th>
-          <th class="pt-0" scope="col">Date</th>
-          <th class="pt-0" scope="col">Phone Number</th>
-          <th class="pt-0" scope="col">Order Total</th>
-          <th class="pt-0" scope="col">Order Number</th>
-          <th class="pt-0" scope="col">Country</th>
-          <th class="pt-0" scope="col">Company</th>
-
+          <th class="pt-0 font-weight-light" scope="col"></th>
+          <th class="pt-0 font-weight-light text-left" scope="col">Status</th>
+          <th class="pt-0 font-weight-light" scope="col">Date</th>
+          <th class="pt-0 font-weight-light" scope="col">Phone Number</th>
+          <th class="pt-0 font-weight-light" scope="col">Order Total</th>
+          <th class="pt-0 font-weight-light" scope="col">Order Number</th>
+          <th class="pt-0 font-weight-light" scope="col">Country</th>
+          <th class="pt-0 font-weight-light" scope="col">Company</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -134,20 +133,35 @@
                     />
                   </svg>
 
-                  <span>Edit</span>
+                  <span class="w-50">Edit</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
                 <div
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z" stroke="#52575C" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325" stroke="#52575C" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
+                      stroke="#52575C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
+                      stroke="#52575C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
 
-
-                  <span>Copy</span>
+                  <span class="w-50">Copy</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -175,50 +189,59 @@
                     />
                   </svg>
 
-                  <span>Delete</span>
+                  <span class="w-50">Delete</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
                 <div
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
-<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z" stroke="#52575C" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M6 9L8.5 12L11 9" stroke="#52575C" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.5 6V11" stroke="#52575C" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
+                      stroke="#52575C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6 9L8.5 12L11 9"
+                      stroke="#52575C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8.5 6V11"
+                      stroke="#52575C"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
 
-
-                  <span>Invoice</span>
+                  <span class="w-50">Invoice</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <!-- <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
-            >
-              ACTIVE
-            </button> -->
-            <CustomAlert :alert="200" :type="'NEW'" :color="'cancelled'"/>
+            <CustomAlert :alert="200" :type="'NEW'" :color="'cancelled'" />
           </td>
-          <td>{{ this.phone }}</td>
-          <td>{{ this.dateJoined }}</td>
-          <td>{{ this.country }}</td>
+          <td>May 26, 2019</td>
+          <td>18999897899</td>
+          <td>£2550,30</td>
           <td>
-            <p class="mb-0">David Smith Will</p>
-            <p class="mb-0 fs-12 text-muted font-weight-light">company name</p>
+            <p class="mb-0">#645468468</p>
+            <p class="mb-0 updated-client">Updated 1 day ago</p>
           </td>
-          <td>
-            <img
-              src="../../assets/tableEntry1.png"
-              width="60"
-              height="60"
-              class="rounded-circle object-cover"
-            />
-          </td>
+          <td>China</td>
+          <td>Shudi international...</td>
         </tr>
-        <tr>
+        <tr class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -259,7 +282,7 @@
                     />
                   </svg>
 
-                  <span>Edit</span>
+                  <span class="w-50">Edit</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -267,27 +290,27 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="18"
-                    height="14"
-                    viewBox="0 0 18 14"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M1 7C1 7 3.90909 1 9 1C14.0909 1 17 7 17 7C17 7 14.0909 13 9 13C3.90909 13 1 7 1 7Z"
+                      d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9Z"
+                      d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>View</span>
+                  <span class="w-50">Copy</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -315,7 +338,7 @@
                     />
                   </svg>
 
-                  <span>Delete</span>
+                  <span class="w-50">Delete</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -323,61 +346,51 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10 1H13.3333C13.7754 1 14.1993 1.16389 14.5118 1.45561C14.8244 1.74733 15 2.143 15 2.55556V13.4444C15 13.857 14.8244 14.2527 14.5118 14.5444C14.1993 14.8361 13.7754 15 13.3333 15H10"
+                      d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M6 12L10 8L6 4"
+                      d="M6 9L8.5 12L11 9"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M10 8H1"
+                      d="M8.5 6V11"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>Login</span>
+                  <span class="w-50">Invoice</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
-            >
-              ACTIVE
-            </button>
+            <CustomAlert :alert="200" :type="'DELIVERED'" :color="'done'" />
           </td>
-          <td>{{ this.phone }}</td>
-          <td>{{ this.dateJoined }}</td>
-          <td>{{ this.country }}</td>
+          <td>May 26, 2019</td>
+          <td>18999897899</td>
+          <td>£2550,30</td>
           <td>
-            <p class="mb-0">David Smith Will</p>
-            <p class="mb-0 fs-12 text-muted font-weight-light">company name</p>
+            <p class="mb-0">#645468468</p>
+            <p class="mb-0 updated-client">Updated 1 day ago</p>
           </td>
-          <td>
-            <img
-              src="../../assets/tableEntry2.png"
-              width="60"
-              height="60"
-              class="rounded-circle object-cover"
-            />
-          </td>
+          <td>China</td>
+          <td>Shudi international...</td>
         </tr>
-        <tr>
+        <tr class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -418,7 +431,7 @@
                     />
                   </svg>
 
-                  <span>Edit</span>
+                  <span class="w-50">Edit</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -426,27 +439,27 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="18"
-                    height="14"
-                    viewBox="0 0 18 14"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M1 7C1 7 3.90909 1 9 1C14.0909 1 17 7 17 7C17 7 14.0909 13 9 13C3.90909 13 1 7 1 7Z"
+                      d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9Z"
+                      d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>View</span>
+                  <span class="w-50">Copy</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -474,7 +487,7 @@
                     />
                   </svg>
 
-                  <span>Delete</span>
+                  <span class="w-50">Delete</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -482,61 +495,51 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10 1H13.3333C13.7754 1 14.1993 1.16389 14.5118 1.45561C14.8244 1.74733 15 2.143 15 2.55556V13.4444C15 13.857 14.8244 14.2527 14.5118 14.5444C14.1993 14.8361 13.7754 15 13.3333 15H10"
+                      d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M6 12L10 8L6 4"
+                      d="M6 9L8.5 12L11 9"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M10 8H1"
+                      d="M8.5 6V11"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>Login</span>
+                  <span class="w-50">Invoice</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <button
-              class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
-            >
-              INACTIVE
-            </button>
+            <CustomAlert :alert="200" :type="'DELIVERED'" :color="'done'" />
           </td>
-          <td>{{ this.phone }}</td>
-          <td>{{ this.dateJoined }}</td>
-          <td>{{ this.country }}</td>
+          <td>May 26, 2019</td>
+          <td>18999897899</td>
+          <td>£2550,30</td>
           <td>
-            <p class="mb-0">David Smith Will</p>
-            <p class="mb-0 fs-12 text-muted font-weight-light">company name</p>
+            <p class="mb-0">#645468468</p>
+            <p class="mb-0 updated-client">Updated 1 day ago</p>
           </td>
-          <td>
-            <img
-              src="../../assets/tableEntry3.png"
-              width="60"
-              height="60"
-              class="rounded-circle object-cover"
-            />
-          </td>
+          <td>China</td>
+          <td>Shudi international...</td>
         </tr>
-        <tr>
+        <tr class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -577,7 +580,7 @@
                     />
                   </svg>
 
-                  <span>Edit</span>
+                  <span class="w-50">Edit</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -585,27 +588,27 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="18"
-                    height="14"
-                    viewBox="0 0 18 14"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M1 7C1 7 3.90909 1 9 1C14.0909 1 17 7 17 7C17 7 14.0909 13 9 13C3.90909 13 1 7 1 7Z"
+                      d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9Z"
+                      d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>View</span>
+                  <span class="w-50">Copy</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -633,7 +636,7 @@
                     />
                   </svg>
 
-                  <span>Delete</span>
+                  <span class="w-50">Delete</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -641,61 +644,51 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10 1H13.3333C13.7754 1 14.1993 1.16389 14.5118 1.45561C14.8244 1.74733 15 2.143 15 2.55556V13.4444C15 13.857 14.8244 14.2527 14.5118 14.5444C14.1993 14.8361 13.7754 15 13.3333 15H10"
+                      d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M6 12L10 8L6 4"
+                      d="M6 9L8.5 12L11 9"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M10 8H1"
+                      d="M8.5 6V11"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>Login</span>
+                  <span class="w-50">Invoice</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
-            >
-              ACTIVE
-            </button>
+            <CustomAlert :alert="200" :type="'CANCELLED'" :color="'clientCancel'" />
           </td>
-          <td>{{ this.phone }}</td>
-          <td>{{ this.dateJoined }}</td>
-          <td>{{ this.country }}</td>
+          <td>May 26, 2019</td>
+          <td>18999897899</td>
+          <td>£2550,30</td>
           <td>
-            <p class="mb-0">David Smith Will</p>
-            <p class="mb-0 fs-12 text-muted font-weight-light">company name</p>
+            <p class="mb-0">#645468468</p>
+            <p class="mb-0 updated-client">Updated 1 day ago</p>
           </td>
-          <td>
-            <img
-              src="../../assets/tableEntry4.png"
-              width="60"
-              height="60"
-              class="rounded-circle object-cover"
-            />
-          </td>
+          <td>China</td>
+          <td>Shudi international...</td>
         </tr>
-        <tr>
+        <tr class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -736,7 +729,7 @@
                     />
                   </svg>
 
-                  <span>Edit</span>
+                  <span class="w-50">Edit</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -744,27 +737,27 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="18"
-                    height="14"
-                    viewBox="0 0 18 14"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M1 7C1 7 3.90909 1 9 1C14.0909 1 17 7 17 7C17 7 14.0909 13 9 13C3.90909 13 1 7 1 7Z"
+                      d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9Z"
+                      d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>View</span>
+                  <span class="w-50">Copy</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -792,7 +785,7 @@
                     />
                   </svg>
 
-                  <span>Delete</span>
+                  <span class="w-50">Delete</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -800,61 +793,51 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10 1H13.3333C13.7754 1 14.1993 1.16389 14.5118 1.45561C14.8244 1.74733 15 2.143 15 2.55556V13.4444C15 13.857 14.8244 14.2527 14.5118 14.5444C14.1993 14.8361 13.7754 15 13.3333 15H10"
+                      d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M6 12L10 8L6 4"
+                      d="M6 9L8.5 12L11 9"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M10 8H1"
+                      d="M8.5 6V11"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>Login</span>
+                  <span class="w-50">Invoice</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <button
-              class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
-            >
-              INACTIVE
-            </button>
+            <CustomAlert :alert="200" :type="'IN PROGRESS'" :color="'in-progress'" />
           </td>
-          <td>{{ this.phone }}</td>
-          <td>{{ this.dateJoined }}</td>
-          <td>{{ this.country }}</td>
+          <td>May 26, 2019</td>
+          <td>18999897899</td>
+          <td>£2550,30</td>
           <td>
-            <p class="mb-0">David Smith Will</p>
-            <p class="mb-0 fs-12 text-muted font-weight-light">company name</p>
+            <p class="mb-0">#645468468</p>
+            <p class="mb-0 updated-client">Updated 1 day ago</p>
           </td>
-          <td>
-            <img
-              src="../../assets/tableEntry1.png"
-              width="60"
-              height="60"
-              class="rounded-circle object-cover"
-            />
-          </td>
+          <td>China</td>
+          <td>Shudi international...</td>
         </tr>
-        <tr>
+        <tr class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -895,7 +878,7 @@
                     />
                   </svg>
 
-                  <span>Edit</span>
+                  <span class="w-50">Edit</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -903,27 +886,27 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="18"
-                    height="14"
-                    viewBox="0 0 18 14"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M1 7C1 7 3.90909 1 9 1C14.0909 1 17 7 17 7C17 7 14.0909 13 9 13C3.90909 13 1 7 1 7Z"
+                      d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9Z"
+                      d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>View</span>
+                  <span class="w-50">Copy</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -951,7 +934,7 @@
                     />
                   </svg>
 
-                  <span>Delete</span>
+                  <span class="w-50">Delete</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -959,61 +942,51 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10 1H13.3333C13.7754 1 14.1993 1.16389 14.5118 1.45561C14.8244 1.74733 15 2.143 15 2.55556V13.4444C15 13.857 14.8244 14.2527 14.5118 14.5444C14.1993 14.8361 13.7754 15 13.3333 15H10"
+                      d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M6 12L10 8L6 4"
+                      d="M6 9L8.5 12L11 9"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M10 8H1"
+                      d="M8.5 6V11"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>Login</span>
+                  <span class="w-50">Invoice</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <button
-              class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
-            >
-              INACTIVE
-            </button>
+            <CustomAlert :alert="200" :type="'SHIPPED'" :color="'shipped'" />
           </td>
-          <td>{{ this.phone }}</td>
-          <td>{{ this.dateJoined }}</td>
-          <td>{{ this.country }}</td>
+          <td>May 26, 2019</td>
+          <td>18999897899</td>
+          <td>£2550,30</td>
           <td>
-            <p class="mb-0">David Smith Will</p>
-            <p class="mb-0 fs-12 text-muted font-weight-light">company name</p>
+            <p class="mb-0">#645468468</p>
+            <p class="mb-0 updated-client">Updated 1 day ago</p>
           </td>
-          <td>
-            <img
-              src="../../assets/tableEntry2.png"
-              width="60"
-              height="60"
-              class="rounded-circle object-cover"
-            />
-          </td>
+          <td>China</td>
+          <td>Shudi international...</td>
         </tr>
-        <tr>
+        <tr class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -1054,7 +1027,7 @@
                     />
                   </svg>
 
-                  <span>Edit</span>
+                  <span class="w-50">Edit</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1062,27 +1035,27 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="18"
-                    height="14"
-                    viewBox="0 0 18 14"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M1 7C1 7 3.90909 1 9 1C14.0909 1 17 7 17 7C17 7 14.0909 13 9 13C3.90909 13 1 7 1 7Z"
+                      d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9Z"
+                      d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>View</span>
+                  <span class="w-50">Copy</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1110,7 +1083,7 @@
                     />
                   </svg>
 
-                  <span>Delete</span>
+                  <span class="w-50">Delete</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1118,61 +1091,51 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10 1H13.3333C13.7754 1 14.1993 1.16389 14.5118 1.45561C14.8244 1.74733 15 2.143 15 2.55556V13.4444C15 13.857 14.8244 14.2527 14.5118 14.5444C14.1993 14.8361 13.7754 15 13.3333 15H10"
+                      d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M6 12L10 8L6 4"
+                      d="M6 9L8.5 12L11 9"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M10 8H1"
+                      d="M8.5 6V11"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>Login</span>
+                  <span class="w-50">Invoice</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
-            >
-              ACTIVE
-            </button>
+            <CustomAlert :alert="200" :type="'IN PROGRESS'" :color="'in-progress'" />
           </td>
-          <td>{{ this.phone }}</td>
-          <td>{{ this.dateJoined }}</td>
-          <td>{{ this.country }}</td>
+          <td>May 26, 2019</td>
+          <td>18999897899</td>
+          <td>£2550,30</td>
           <td>
-            <p class="mb-0">David Smith Will</p>
-            <p class="mb-0 fs-12 text-muted font-weight-light">company name</p>
+            <p class="mb-0">#645468468</p>
+            <p class="mb-0 updated-client">Updated 1 day ago</p>
           </td>
-          <td>
-            <img
-              src="../../assets/tableEntry3.png"
-              width="60"
-              height="60"
-              class="rounded-circle object-cover"
-            />
-          </td>
+          <td>China</td>
+          <td>Shudi international...</td>
         </tr>
-        <tr>
+        <tr class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -1213,7 +1176,7 @@
                     />
                   </svg>
 
-                  <span>Edit</span>
+                  <span class="w-50">Edit</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1221,27 +1184,27 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="18"
-                    height="14"
-                    viewBox="0 0 18 14"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M1 7C1 7 3.90909 1 9 1C14.0909 1 17 7 17 7C17 7 14.0909 13 9 13C3.90909 13 1 7 1 7Z"
+                      d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9Z"
+                      d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>View</span>
+                  <span class="w-50">Copy</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1269,7 +1232,7 @@
                     />
                   </svg>
 
-                  <span>Delete</span>
+                  <span class="w-50">Delete</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1277,59 +1240,49 @@
                   class="w-75 d-flex justify-content-around align-items-center"
                 >
                   <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10 1H13.3333C13.7754 1 14.1993 1.16389 14.5118 1.45561C14.8244 1.74733 15 2.143 15 2.55556V13.4444C15 13.857 14.8244 14.2527 14.5118 14.5444C14.1993 14.8361 13.7754 15 13.3333 15H10"
+                      d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M6 12L10 8L6 4"
+                      d="M6 9L8.5 12L11 9"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
-                      d="M10 8H1"
+                      d="M8.5 6V11"
                       stroke="#52575C"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                   </svg>
 
-                  <span>Login</span>
+                  <span class="w-50">Invoice</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
-            >
-              ACTIVE
-            </button>
+            <CustomAlert :alert="200" :type="'CANCELLED'" :color="'clientCancel'" />
           </td>
-          <td>{{ this.phone }}</td>
-          <td>{{ this.dateJoined }}</td>
-          <td>{{ this.country }}</td>
+          <td>May 26, 2019</td>
+          <td>18999897899</td>
+          <td>£2550,30</td>
           <td>
-            <p class="mb-0">David Smith Will</p>
-            <p class="mb-0 fs-12 text-muted font-weight-light">company name</p>
+            <p class="mb-0">#645468468</p>
+            <p class="mb-0 updated-client">Updated 1 day ago</p>
           </td>
-          <td>
-            <img
-              src="../../assets/tableEntry4.png"
-              width="60"
-              height="60"
-              class="rounded-circle object-cover"
-            />
-          </td>
+          <td>China</td>
+          <td>Shudi international...</td>
         </tr>
       </tbody>
     </table>
@@ -1338,7 +1291,7 @@
         <div
           class="d-flex align-items-center width-25 justify-content-lg-around justify-content-between"
         >
-          <p class="mb-0">Rows per page</p>
+          <p class="mb-0 text-muted">Rows per page</p>
           <select class="outline-none select-arrow">
             <option>8</option>
             <option>10</option>
@@ -1347,7 +1300,8 @@
         <div
           class="width-25 d-flex justify-content-between align-items-center pt-4 pt-lg-0"
         >
-          <p class="mb-0">1-8 of 1240</p>
+          <p class="mb-0 text-muted">1-8 of 1240</p>
+          <button class="outline-none">
           <svg
             width="8"
             height="14"
@@ -1362,6 +1316,8 @@
               stroke-linecap="round"
             />
           </svg>
+          </button>
+          <button class="outlne-none">
           <svg
             width="8"
             height="14"
@@ -1376,34 +1332,43 @@
               stroke-linecap="round"
             />
           </svg>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import CustomAlert from '../customAlert'
+import CustomAlert from "../customAlert";
 export default {
   name: "DetailedClientsTable",
-  components:{
-      CustomAlert
+  components: {
+    CustomAlert,
   },
   data() {
     return {
       phone: 18999897899,
       dateJoined: "May 26, 2019",
-      time:"6:30px",
+      time: "6:30px",
       country: "China",
       name: "David Smill Will",
       companyName: "Shudi international...",
-      orderNumber:"#645468468",
-      updated:"Updated 1 day ago",
-      orderTotal:"£2550,30"
+      orderNumber: "#645468468",
+      updated: "Updated 1 day ago",
+      orderTotal: "£2550,30",
     };
   },
 };
 </script>
 <style scoped>
+.updated-client{
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.1px;
+color: #C5C7CD;
+}
 .clients-table tr {
   cursor: pointer !important;
 }

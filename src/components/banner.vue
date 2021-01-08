@@ -193,11 +193,18 @@ export default {
 .cancelled {
   background: #f12b2c;
 }
+.clientCancel{
+  background: #888888;
+}
 .waiting {
   background: #6fa6f6;
 }
 .done {
   background: #66cc66;
+}
+.shipped{
+
+background: #4788E8;
 }
 .status-button {
   border-radius: 100px !important;

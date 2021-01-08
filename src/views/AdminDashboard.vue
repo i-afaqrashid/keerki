@@ -2,8 +2,8 @@
   <div
     class="w-100 d-flex justify-content-center flex-column flex-lg-row bg-f7"
   >
-    <div class="w-18 d-none px-1 d-lg-block side-bar admin-side z-index-2">
-      <div class="d-flex align-content-between flex-column text-white">
+    <div class="w-18 d-none d-lg-block side-bar admin-side z-index-2">
+      <div class="d-flex align-content-between flex-column text-white w-90">
         <div
           class="d-flex w-100 justify-content-center align-items-center flex-column text-white py-5"
         >
@@ -85,6 +85,7 @@
           <div class="w-100 d-flex align-items-center justify-content-between">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              @click="orders"
             >
               <svg
                 width="16"
@@ -204,6 +205,7 @@
           <div class="w-100 d-flex justify-content-between align-items-center">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              @click="messages"
             >
               <svg
                 width="16"
@@ -289,7 +291,7 @@
           hide-header-close
         >
           <div
-            class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
+            class="d-flex flex-column w-100 justify-content-center align-items-center"
           >
             <div class="w-100">
               <h1 class="fs-16">{{ $t("automaticLogout") }}</h1>
@@ -505,8 +507,8 @@
                 placement="bottom"
                 custom-class="pop-over p-0"
               >
-                <div class="d-flex flex-column w-100 p-2" dir="auto">
-                  <div class="px-2 py-2 border-bottom w-100">
+                <div class="d-flex flex-column w-100" dir="auto">
+                  <div class="py-2 border-bottom w-100">
                     <p class="mb-1 fs-20">{{ $t("popupNotifications") }}</p>
                     <p class="fs-14 font-weight-light">
                       {{ $t("popupDaysAgo") }}
@@ -747,8 +749,10 @@ export default {
     };
   },
   methods: {
-    notifications(){
-      this.$router.push({ path: "/admin/dashboard/notifications" }).catch(() => {});
+    notifications() {
+      this.$router
+        .push({ path: "/admin/dashboard/notifications" })
+        .catch(() => {});
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },
 
@@ -773,10 +777,17 @@ export default {
       this.$router.push({ path: "/admin/dashboard/clients" }).catch(() => {});
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },
-    account(){
+    orders() {
+      this.$router.push({ path: "/admin/dashboard/orders" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
+    messages() {
+      this.$router.push({ path: "/admin/dashboard/messages" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
+    account() {
       this.$router.push({ path: "/admin/dashboard/account" }).catch(() => {});
-      
-    }
+    },
   },
 };
 </script>

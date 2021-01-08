@@ -3,7 +3,7 @@
     class="w-90 d-flex justify-content-center align-items-center flex-column pt-5"
   >
     <div
-      class="w-100 client-details-card py-5 d-flex flex-column justify-content-center align-items-center"
+      class="w-100 client-details-card pt-5 pb-1 d-flex flex-column justify-content-center align-items-center"
     >
       <div
         class="w-90 d-flex justify-content-center flex-column align-items-center"
@@ -46,7 +46,7 @@
             <span class="font-weight-light">Balance:</span> $1873
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Membership:</span>
+            <span class="font-weight-light">Membership:&nbsp;</span>
             <button class="btn btn-dark px-4 outline-none py-0">VIP</button>
           </p>
         </div>
@@ -81,7 +81,7 @@
         </button>
       </div>
     </div>
-<div class="w-90 d-flex justify-content-end align-items-center pt-9">
+    <div class="w-90 d-flex justify-content-end align-items-center pt-9">
       <button
         class="outline-none justify-content-center d-flex align-items-center"
       >
@@ -117,18 +117,17 @@
         </svg>
         <p class="mb-0">Export CSV</p>
       </button>
-
     </div>
-          <DetailedClientsTable/>
+    <DetailedClientsTable />
   </div>
 </template>
 <script>
-import DetailedClientsTable from './detailedClientTable'
+import DetailedClientsTable from "./detailedClientTable";
 export default {
   name: "ClientDetailed",
-  components:{
-      DetailedClientsTable
-  }
+  components: {
+    DetailedClientsTable,
+  },
 };
 </script>
 <style scoped>
