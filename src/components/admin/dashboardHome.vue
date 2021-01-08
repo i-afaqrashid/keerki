@@ -37,7 +37,7 @@
 
         <input
           class="w-100 px-5 text-center outline-none quick-search1"
-          placeholder="Quick Search"
+          :placeholder="`${$t('quickSearch')}`"
         />
         <svg
           width="30"
@@ -82,7 +82,7 @@
               fill="#9FA2B4"
             />
           </svg>
-          <p class="font-24 mb-0">Contact</p>
+          <p class="font-24 mb-0">{{ $t("adminContact") }}</p>
         </button>
 
         <b-modal
@@ -98,7 +98,7 @@
           <div class="d-flex justify-content-center align-items-center py-15">
             <div class="w-100">
               <p class="font-24 text-center font-weight-bolder">
-                Who would you like to send a message to?
+                {{ $t("adminContactPopUpHeading") }}
               </p>
               <div
                 class="d-flex w-100 pt-4 justify-content-center align-items-center"
@@ -124,7 +124,9 @@
                         />
                       </svg>
                     </div>
-                    <p class="fs-19 pt-4">Administrators</p>
+                    <p class="fs-19 pt-4">
+                      {{ $t("adminContactPopUpAdministrators") }}
+                    </p>
                   </button>
                   <button class="outline-none" v-b-modal.contact-client>
                     <div
@@ -144,7 +146,9 @@
                         />
                       </svg>
                     </div>
-                    <p class="fs-19 pt-4">Client</p>
+                    <p class="fs-19 pt-4">
+                      {{ $t("adminContactPopUpClient") }}
+                    </p>
                   </button>
                 </div>
               </div>
@@ -164,7 +168,7 @@
             @submit="submitHandler"
           >
             <div class="d-flex flex-column w-90 justify-content-start">
-              <h1 class="fs-19">Contact a Client</h1>
+              <h1 class="fs-19">{{ $t("contactClient") }}</h1>
               <div class="w-100 pt-3">
                 <svg
                   width="14"
@@ -182,21 +186,21 @@
 
                 <input
                   class="w-100 contact-input outline-none px-15 font-weight-light"
-                  placeholder="Search for client name"
+                  :placeholder="`${$t('searchForClientName')}`"
                   required
                 />
               </div>
               <div class="w-100 pt-3">
                 <input
                   class="w-100 contact-input outline-none px-15 font-weight-light"
-                  placeholder="Subject"
+                  :placeholder="`${$t('subject')}`"
                   required
                 />
               </div>
               <div class="w-100 pt-3">
                 <textarea
                   class="w-100 contact-text-area py-2 outline-none px-15 font-weight-light"
-                  placeholder="Write your message here"
+                  :placeholder="`${$t('clientMessage')}`"
                 />
               </div>
               <div class="w-100" dir="ltr">
@@ -218,9 +222,11 @@
                         @change="handleFileInput"
                       />
                       <h1 class="fs-14 text-center mb-0 mx-lg-4">
-                        Drag and drop or
+                        {{ $t("clientDragAndDrop") }}
 
-                        <span class="text-primary">browse</span>
+                        <span class="text-primary">{{
+                          $t("clientBrowse")
+                        }}</span>
                       </h1>
                     </div>
                     <ul class="file-list">
@@ -232,7 +238,7 @@
                 </div>
               </div>
               <button type="submit" class="btn btn-primary rounded-pill mt-4">
-                Submit
+                {{ $t("clientSubmit") }}
               </button>
             </div>
           </form>
@@ -250,7 +256,7 @@
             @submit="submitHandler"
           >
             <div class="d-flex flex-column w-90 justify-content-start">
-              <h1 class="fs-19">Contact an employee</h1>
+              <h1 class="fs-19">{{ $t("contactEmployAdministrator") }}</h1>
               <div class="w-100 pt-3">
                 <svg
                   width="14"
@@ -268,7 +274,7 @@
 
                 <input
                   class="w-100 contact-input outline-none px-15 font-weight-light"
-                  placeholder="Search for Employee"
+                  :placeholder="`${$t('searchForEmployName')}`"
                   required
                 />
               </div>
@@ -277,27 +283,29 @@
                   class="w-100 contact-input outline-none select-arrow px-15 font-weight-lighter"
                   required
                 >
-                  <option class="font-weight-light">Select Department</option>
+                  <option class="font-weight-light">
+                    {{ $t("selectDepartment") }}
+                  </option>
                 </select>
               </div>
               <div class="w-100 pt-3">
                 <input
                   class="w-100 contact-input outline-none px-15 font-weight-light"
-                  placeholder="Order Number"
+                  :placeholder="`${$t('administratorOrderNo')}`"
                   required
                 />
               </div>
               <div class="w-100 pt-3">
                 <input
                   class="w-100 contact-input outline-none px-15 font-weight-light"
-                  placeholder="Subject"
+                  :placeholder="`${$t('administratorMessageSubject')}`"
                   required
                 />
               </div>
               <div class="w-100 pt-3">
                 <textarea
                   class="w-100 contact-text-area py-2 outline-none px-15 font-weight-light"
-                  placeholder="Write your message here"
+                  :placeholder="`${$t('administratorMessage')}`"
                 />
               </div>
               <div class="w-100" dir="ltr">
@@ -319,9 +327,11 @@
                         @change="handleFileInput"
                       />
                       <h1 class="fs-14 text-center mb-0 mx-lg-4">
-                        Drag and drop or
+                        {{ $t("administratorDragAndDrop") }}
 
-                        <span class="text-primary">browse</span>
+                        <span class="text-primary">{{
+                          $t("administratorBrowse")
+                        }}</span>
                       </h1>
                     </div>
                     <p class="mb-0 pt-4 fs-10 font-weight-light text-center">
@@ -338,8 +348,7 @@
                         />
                       </svg>
 
-                      Please upload a PDF, PNG, or JPG image with similar height
-                      and width that is less than 5mb.
+                      {{ $t("administratorUploadFileTypes") }}
                     </p>
                   </div>
                 </div>
@@ -353,7 +362,7 @@
                   <p
                     class="mb-0 fs-14 font-weight-light pt-lg-2 pt-1 mr-2 mr-lg-0"
                   >
-                    Urgent
+                    {{ $t("administratorUrgent") }}
                   </p>
                   <b-form-checkbox
                     v-model="urgent"
@@ -363,7 +372,7 @@
                 </div>
               </div>
               <button type="submit" class="btn btn-primary rounded-pill mt-4">
-                Submit
+                {{ $t("administratorSubmit") }}
               </button>
             </div>
           </form>
@@ -386,7 +395,7 @@
             />
           </svg>
 
-          <p class="font-24 mb-0">Clients</p>
+          <p class="font-24 mb-0">{{ $t("adminClients") }}</p>
         </button>
 
         <b-modal
@@ -404,7 +413,7 @@
             <b-dropdown
               id="dropdown-5"
               menu-class="client-drop-menu"
-              text="Search for..."
+              :text="`${$t('clientsSearchFor')}`"
               variant="transparent"
               class="w-100"
               size="lg"
@@ -512,7 +521,7 @@
             />
           </svg>
 
-          <p class="font-24 mb-0">Orders</p>
+          <p class="font-24 mb-0">{{$t('adminOrders')}}</p>
         </button>
       </div>
       <AdminChart />

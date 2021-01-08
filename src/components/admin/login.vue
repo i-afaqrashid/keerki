@@ -36,7 +36,7 @@
           </svg>
           <input
             class="border border-white rounded-lg text-white login-input w-100 outline-none px-5"
-            placeholder="UserName"
+            :placeholder="`${$t('loginUserName')}`"
             type="text"
             v-model="userName"
             v-on:change="handleUserName"
@@ -68,7 +68,7 @@
 
           <input
             class="border border-white rounded-lg text-white login-input w-100 outline-none px-5"
-            placeholder="Password"
+            :placeholder="`${$t('loginUserPassword')}`"
             type="password"
             required
           />
@@ -78,10 +78,10 @@
             class="btn w-100 login-input shadow-md btn-white btn-light mt-5"
             type="submit"
           >
-            LOGIN
+            {{ $t("loginBtn") }}
           </button>
           <p class="align-self-start fs-16 mb-0 text-white mt-13">
-            Contact Administrator
+            {{ $t("contactAdministrator") }}
           </p>
         </div>
       </div>
