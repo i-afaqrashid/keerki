@@ -32,6 +32,8 @@ import AdminClients from '../components/admin/clients.vue'
 import ClientDetailed from '../components/admin/ClientDetailed.vue'
 import AdminOrders from '../components/admin/orders.vue'
 import AdminOrdersDetailed from '../components/admin/orderDetailed.vue'
+import AdminMessages from '../components/admin/messages.vue'
+import AdminInbox from '../components/admin/adminInbox.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -76,6 +78,14 @@ const routes = [
       {
         path:"orders-detailed",
         component:AdminOrdersDetailed
+      },
+      {
+        path:"messages",
+        component:AdminMessages
+      },
+      {
+        path:"inbox",
+        component:AdminInbox
       }
     ]
   },
