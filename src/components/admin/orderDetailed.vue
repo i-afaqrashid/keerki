@@ -1,6 +1,7 @@
 <template>
   <div
     class="w-90 d-flex justify-content-center align-items-center flex-column pt-5"
+    dir="auto"
   >
     <div
       class="w-100 client-details-card pt-5 pb-1 d-flex flex-column justify-content-center align-items-center"
@@ -11,7 +12,7 @@
         <div
           class="d-flex justify-content-between flex-column flex-sm-row w-75-resp align-items-center"
         >
-          <p class="w-100 font-weight-bold">
+          <p class="w-100 font-weight-bold" >
             <span class="font-weight-light">{{$t('adminOrdersDetailsName')}}</span> David Smith Will
           </p>
           <p class="w-100 font-weight-bold">
@@ -297,6 +298,7 @@
       </div>
       <div
         class="w-90 d-flex flex-column pt-xl-5 flex-xl-row justify-content-around align-items-center"
+      
       >
         <b-modal
           id="cancel-modal"
@@ -308,7 +310,7 @@
           size="lg"
           hide-header-close
         >
-          <div>
+          <div dir="auto">
             <p>
               {{$t('adminOrdersDetailsReasonForCancelling')}}
               <span class="text-muted"

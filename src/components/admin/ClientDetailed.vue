@@ -6,7 +6,7 @@
       class="w-100 client-details-card pt-5 pb-1 d-flex flex-column justify-content-center align-items-center"
     >
       <div
-        class="w-90 d-flex justify-content-center flex-column align-items-center"
+        class="w-90 d-flex justify-content-center flex-column align-items-center" dir="auto"
       >
         <div
           class="d-flex justify-content-between flex-column flex-sm-row w-75-resp align-items-center"
@@ -84,6 +84,7 @@
     <div class="w-90 d-flex justify-content-end align-items-center pt-9">
       <button
         class="outline-none justify-content-center d-flex align-items-center"
+        dir="auto"
       >
         <svg
           width="24"

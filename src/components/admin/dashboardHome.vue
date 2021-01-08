@@ -1,6 +1,7 @@
 <template>
   <div
     class="pt-9 w-95 d-flex flex-colum justify-content-center align-items-center"
+    dir="auto"
   >
     <div class="w-100 d-flex flex-column align-items-center">
       <div class="resp-search bg-white">
@@ -167,7 +168,7 @@
             class="d-flex w-100 justify-content-center"
             @submit="submitHandler"
           >
-            <div class="d-flex flex-column w-90 justify-content-start">
+            <div class="d-flex flex-column w-90 justify-content-start" dir="auto">
               <h1 class="fs-19">{{ $t("contactClient") }}</h1>
               <div class="w-100 pt-3">
                 <svg
@@ -193,7 +194,7 @@
               <div class="w-100 pt-3">
                 <input
                   class="w-100 contact-input outline-none px-15 font-weight-light"
-                  :placeholder="`${$t('subject')}`"
+                  :placeholder="`${$t('clientMessageSubject')}`"
                   required
                 />
               </div>
@@ -255,7 +256,7 @@
             class="d-flex w-100 justify-content-center"
             @submit="submitHandler"
           >
-            <div class="d-flex flex-column w-90 justify-content-start">
+            <div class="d-flex flex-column w-90 justify-content-start" dir="auto">
               <h1 class="fs-19">{{ $t("contactEmployAdministrator") }}</h1>
               <div class="w-100 pt-3">
                 <svg
@@ -355,9 +356,11 @@
               </div>
               <div
                 class="d-flex flex-lg w-100 justify-content-end py-4 align-items-center"
+                dir="ltr"
               >
                 <div
                   class="d-flex align-items-center w-25 justify-content-around"
+                 dir="auto" 
                 >
                   <p
                     class="mb-0 fs-14 font-weight-light pt-lg-2 pt-1 mr-2 mr-lg-0"
@@ -408,6 +411,7 @@
           size="sm"
           hide-header-close
           no-stacking
+          dir="auto"
         >
           <div class="w-100">
             <b-dropdown

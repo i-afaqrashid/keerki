@@ -4,7 +4,7 @@
       <button
         class="w-100 d-flex justify-content-between btn outline-none align-items-center font-weight-bold"
       >
-        <span>Messages</span>
+        <span>{{$t('adminMessagesHeading')}}</span>
         <svg
           width="18"
           height="18"
@@ -23,7 +23,7 @@
       <div class="w-100 bg-white mt-15">
         <input
           class="w-100 outline-none search-admin-inbox fs-10 px-2"
-          :placeholder="'Search'"
+          :placeholder="`${$t('adminMessagesSearch')}`"
         />
         <svg
           width="23"
@@ -59,7 +59,7 @@
               />
             </svg>
           </button>
-          <p class="mb-0 text-muted font-weight-bold">ORDER MESSAGES</p>
+          <p class="mb-0 text-muted font-weight-bold">{{$t('adminMessagesOrderMessages')}}</p>
         </div>
         <button class="btn outline-none">
           <svg
@@ -121,7 +121,7 @@
               />
             </svg>
           </button>
-          <p class="mb-0 text-muted font-weight-bold">COMPANY CONTACTS</p>
+          <p class="mb-0 text-muted font-weight-bold">{{$t('adminMessagesCompanyContact')}}</p>
         </div>
         <button class="btn outline-none">
           <svg
@@ -136,7 +136,7 @@
         </button>
       </div>
       <div class="w-100 d-flex justify-content-center align-items-center pt-2">
-        <p class="text-muted font-weight-bold">Messsage subject</p>
+        <p class="text-muted font-weight-bold">{{$t('adminMessagesSubjects')}}</p>
       </div>
     </div>
     <div class="pb-4 order-1 order-lg-0">
@@ -174,13 +174,13 @@
             <button
               class="btn btn-primary px-0 admin-inbox-button admin-btn-color d-flex justify-content-center align-items-center mt-lg-0 mt-2"
             >
-              Transfer the chat
+              {{$t('adminMessagesTransferTheChat')}}
             </button>
 
             <button
               class="btn btn-primary px-0 admin-inbox-button d-flex justify-content-center align-items-center mt-2 mt-xl-0"
             >
-              Marked as resolved
+              {{$t('adminMessagesMarkAsResolved')}}
             </button>
           </div>
         </div>
@@ -393,19 +393,19 @@
         <textarea
           v-if="this.$i18n.locale === 'ar'"
           class="w-100 text-right messagebox px-4 py-2 outline-none border-bottom"
-          :placeholder="`${$t('inboxMessage')}`"
+          :placeholder="`${$t('adminMessagesPlaceholder')}`"
         ></textarea>
         <textarea
           v-else
           class="w-100 messagebox px-4 py-2 outline-none border-bottom"
-          :placeholder="`${$t('inboxMessage')}`"
+          :placeholder="`${$t('adminMessagesPlaceholder')}`"
         ></textarea>
       </div>
       <div class="d-flex justify-content-end">
         <button
           class="btn btn-outline-primary border-0 outline-none font-weight-bold"
         >
-          {{ $t("inboxSend") }}
+          {{ $t("adminMessagesSend") }}
         </button>
       </div>
     </div>
@@ -417,16 +417,16 @@
           class="d-flex justify-content-around align-items-center w-100 flex-wrap"
         >
           <button class="fs-14 btn-inbox btn btn-primary">
-            {{ $t("inboxAll") }}
+            {{ $t("adminMessagesAll") }}
           </button>
           <button class="fs-14 btn-inbox btn btn-outline-primary mx-2">
-            {{ $t("inboxFile") }}
+            {{ $t("adminMessagesFile") }}
           </button>
           <button class="fs-14 btn-inbox btn btn-outline-primary">
-            {{ $t("inboxImages") }}
+            {{ $t("adminMessagesImages") }}
           </button>
           <button class="fs-14 btn-inbox btn btn-outline-primary">
-            Orders
+            {{ $t("adminMessagesOrders") }}
           </button>
         </div>
       </div>
@@ -434,7 +434,7 @@
       <div class="w-100 bg-white mt-15">
         <input
           class="w-100 px-5 outline-none quick-search"
-          :placeholder="`${$t('inboxSearch')}`"
+          :placeholder="`${$t('adminMessagesQuickSearch')}`"
         />
         <svg
           width="23"
