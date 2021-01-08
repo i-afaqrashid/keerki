@@ -12,10 +12,10 @@
           class="d-flex justify-content-between flex-column flex-sm-row w-75-resp align-items-center"
         >
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Name:</span> David Smith Will
+            <span class="font-weight-light">{{$t('adminOrdersDetailsName')}}</span> David Smith Will
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Address:</span> Guangzhou, street no
+            <span class="font-weight-light">{{$t('adminOrdersDetailsAddress')}}</span> Guangzhou, street no
             15
           </p>
         </div>
@@ -23,20 +23,20 @@
           class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
         >
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Company Name:</span> Shudi
+            <span class="font-weight-light">{{$t('adminOrdersDetailsCompanyName')}}</span> Shudi
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Email:</span> david@email.com
+            <span class="font-weight-light">{{$t('adminOrdersDetailsEmail')}}</span> david@email.com
           </p>
         </div>
         <div
           class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
         >
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Phone:</span> 187171717
+            <span class="font-weight-light">{{$t('adminOrdersDetailsPhone')}}</span> 187171717
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Whatsapp:</span> 1123232323
+            <span class="font-weight-light">{{$t('adminOrdersDetailsWhatsapp')}}</span> 1123232323
           </p>
         </div>
       </div>
@@ -66,7 +66,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="mb-0 w-100">Edit</p>
+          <p class="mb-0 w-100">{{$t('adminOrdersDetailsEdit')}}</p>
         </button>
       </div>
     </div>
@@ -78,15 +78,15 @@
       >
         <div class="mt-5 w-25">
           <div class="width-50">
-            <p class="border-bottom mb-15 fs-22 text-muted">Status</p>
-            <CustomAlert :alert="200" />
+            <p class="border-bottom mb-15 fs-22 text-muted">{{$t('adminOrdersDetailsStatus')}}</p>
+            <CustomAlert :type="`${$t('adminOrdersInprogressBtn')}`" :alert="200" />
           </div>
         </div>
         <div
           class="width-50 flex-column d-flex justify-content-center align-items-center pt-5 pt-lg-0"
         >
           <p class="font-24">
-            <span class="font-weight-light">Order Number:</span> <u>893943</u>
+            <span class="font-weight-light">{{$t('adminOrdersDetailsOrderNumber')}}</span> <u>893943</u>
           </p>
           <div
             class="file-cont w-100 d-flex justify-content-center align-items-center"
@@ -109,7 +109,7 @@
             class="w-100 d-flex justify-content-around pt-4 align-items-center"
           >
             <div class="d-flex">
-              <p class="mb-0 text-muted">Edit</p>
+              <p class="mb-0 text-muted">{{$t('adminOrdersDetailsEdit')}}</p>
               <svg
                 width="20"
                 height="20"
@@ -135,7 +135,7 @@
               </svg>
             </div>
             <div class="d-flex">
-              <p class="mb-0 text-muted">Download</p>
+              <p class="mb-0 text-muted">{{$t('adminOrdersDetailsDownload')}}</p>
               <svg
                 width="20"
                 height="20"
@@ -168,7 +168,7 @@
               </svg>
             </div>
             <div class="d-flex align-items-center">
-              <p class="mb-0 text-muted">View</p>
+              <p class="mb-0 text-muted">{{$t('adminOrdersDetailsView')}}</p>
               <svg
                 width="20"
                 height="16"
@@ -215,7 +215,7 @@
                   />
                 </svg>
               </button>
-              <p class="mb-0">Tags</p>
+              <p class="mb-0">{{$t('adminOrdersDetailsTags')}}</p>
             </div>
           </div>
           <div class="d-flex justify-content-end align-items-center w-100">
@@ -242,7 +242,7 @@
             <div
               class="border-bottom mt-15 fs-22 text-muted d-flex align-items-center pb-2"
             >
-              <p class="mb-0">Rating</p>
+              <p class="mb-0">{{$t('adminOrdersDetailsRating')}}</p>
             </div>
           </div>
           <div class="w-100 d-flex justify-content-end">
@@ -272,27 +272,27 @@
         class="w-90 d-flex flex-column flex-xl-row justify-content-around align-items-center"
       >
         <button class="btn box-buttons button-color2C text-white rounded-pill">
-          Received
+          {{$t('adminOrdersDetailsRecived')}}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          Transfer
+          {{$t('adminOrdersDetailsTransfer')}}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          Pay Now
+          {{$t('adminOrdersDetailsPayNow')}}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          Question
+          {{$t('adminOrdersDetailsQuestion')}}
         </button>
         <button
           class="btn box-buttons button-color29 mt-4 mt-xl-0 text-white rounded-pill"
         >
-          Done
+          {{$t('adminOrdersDetailsDone')}}
         </button>
       </div>
       <div
@@ -310,15 +310,15 @@
         >
           <div>
             <p>
-              Reason for cancellation*
+              {{$t('adminOrdersDetailsReasonForCancelling')}}
               <span class="text-muted"
-                >You must provide a reason to cancel</span
+                >{{$t('adminOrdersDetailsMustProvideReason')}}</span
               >
             </p>
             <div class="modal-orders p-2">
               <input
                 class="bg-transparent w-100 outline-none"
-                placeholder="Write your text here"
+                :placeholder="`${$t('adminOrdersDetailsWriteYourText')}`"
               />
               <div
                 class="d-flex justify-content-end align-items-center pt-9 pt-lg-5"
@@ -330,14 +330,14 @@
                     class="order-color-c7 btn outline-none border rounded-pill modal-order-btn"
                     @click="$bvModal.hide('cancel-modal')"
                   >
-                    Ignore
+                    {{$t('adminOrdersDetailsIgnore')}}
                   </button>
 
                   <button
                     class="btn-primary btn outline-none border rounded-pill modal-order-btn"
                     @click="$bvModal.hide('cancel-modal')"
                   >
-                    Submit
+                    {{$t('adminOrdersDetailsSubmit')}}
                   </button>
                 </div>
               </div>
@@ -348,27 +348,27 @@
           class="btn box-buttons button-colorf1 mt-4 mt-xl-0 text-white rounded-pill"
           v-b-modal.cancel-modal
         >
-          Cancel
+          {{$t('adminOrdersDetailsCancel')}}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          Send SMS
+          {{$t('adminOrdersDetailsSendSms')}}
         </button>
         <button
           class="btn box-buttons button-color6f mt-4 mt-xl-0 text-white rounded-pill"
         >
-          Waiting
+          {{$t('adminOrdersDetailsWaiting')}}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          Shipped
+          {{$t('adminOrdersDetailsShipped')}}
         </button>
         <button
           class="btn box-buttons button-colorfe mt-4 mt-xl-0 text-white rounded-pill"
         >
-          In Progress
+         {{$t('adminOrdersDetailsInprogress')}}
         </button>
       </div>
     </div>
