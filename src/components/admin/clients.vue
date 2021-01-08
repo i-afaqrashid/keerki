@@ -36,7 +36,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        <p class="mb-0">Export CSV</p>
+        <p class="mb-0">{{$t('exportCsv')}}</p>
       </button>
     </div>
     <ClientsTable/>

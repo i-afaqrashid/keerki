@@ -12,7 +12,7 @@
           />
 
           <span class="pt-3 fs-16 font-weight-lighter outline-none">
-            {{ $t("setNewPhoto") }}
+            {{ $t("adminAccountSetNewPhoto") }}
           </span>
         </div>
         <input type="file" @change="handleFileChange" />
@@ -34,7 +34,7 @@
           >
             <input
               class="border-bottom outline-none w-100 pb-4"
-              :placeholder="`${$t('fullName')}`"
+              :placeholder="`${$t('adminAccountFullName')}`"
               v-model="name"
             />
           </div>
@@ -43,13 +43,13 @@
               class="rounded-pill modal-button color-c7 outline-none"
               @click="$bvModal.hide('admin-name-modal')"
             >
-              {{ $t("companyCancel") }}
+              {{ $t("adminAccountCancel") }}
             </button>
             <button
               class="rounded-pill color-ff modal-button outline-none ml-2"
               @click="$bvModal.hide('admin-name-modal')"
             >
-              {{ $t("companySave") }}
+              {{ $t("adminAccountSave") }}
             </button>
           </div>
         </b-modal>
@@ -57,7 +57,7 @@
           class="w-90 border-a9a9 py-4 d-flex justify-content-between align-items-center"
         >
           <p class="mb-0 font-weight-bold">
-            {{ $t("accountName") }} {{ name }}
+            {{ $t("adminAccountName") }} {{ name }}
           </p>
           <button class="outline-none" v-b-modal.admin-name-modal>
             <svg
@@ -87,8 +87,8 @@
         <div
           class="w-90 border-a9a9 py-4 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0 text-muted font-italic">Email: HEDI@MAIL.COM</p>
-          <p class="mb-0 text-muted font-italic">CANNOT EDIT</p>
+          <p class="mb-0 text-muted font-italic">{{ $t("adminAccountEmail") }} HEDI@MAIL.COM</p>
+          <p class="mb-0 text-muted font-italic">{{ $t("adminAccountCannotEdit") }}</p>
         </div>
 
         <b-modal
@@ -105,7 +105,7 @@
           >
             <input
               class="border-bottom outline-none w-100 pb-4"
-              :placeholder="`${$t('phonePlaceholder')}`"
+              :placeholder="`${$t('adminAccountPhoneNumber')}`"
               v-model="number"
               type="number"
               oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
@@ -117,13 +117,13 @@
               class="rounded-pill modal-button color-c7 outline-none"
               @click="$bvModal.hide('admin-phone-modal')"
             >
-              {{ $t("companyCancel") }}
+              {{ $t("adminAccountCancel") }}
             </button>
             <button
               class="rounded-pill color-ff modal-button outline-none ml-2"
               @click="$bvModal.hide('admin-phone-modal')"
             >
-              {{ $t("companySave") }}
+              {{ $t("adminAccountSave") }}
             </button>
           </div>
         </b-modal>
@@ -131,7 +131,7 @@
         <div
           class="w-90 border-a9a9 py-4 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0 font-weight-bold">Phone: {{ number }}</p>
+          <p class="mb-0 font-weight-bold">{{ $t("adminAccountPhone") }} {{ number }}</p>
           <button class="outline-none" v-b-modal.admin-phone-modal>
             <svg
               width="24"
@@ -173,7 +173,7 @@
               >
                 <input
                   class="border-bottom outline-none w-100 pb-4"
-                  :placeholder="`${$t('oldPassword')}`"
+                  :placeholder="`${$t('adminAccountOldPassword')}`"
                   v-modal="password"
                 />
               </div>
@@ -182,7 +182,7 @@
               >
                 <input
                   class="border-bottom outline-none w-100 pb-4"
-                  :placeholder="`${$t('newPassword')}`"
+                  :placeholder="`${$t('adminAccountNewPassword')}`"
                 />
               </div>
               <div
@@ -190,7 +190,7 @@
               >
                 <input
                   class="border-bottom outline-none w-100 pb-4"
-                  :placeholder="`${$t('confirmNewPassword')}`"
+                  :placeholder="`${$t('adminAccountConfirmPassword')}`"
                 />
               </div>
               <div class="d-flex justify-content-end">
@@ -198,13 +198,13 @@
                   class="rounded-pill modal-button color-c7 outline-none"
                   @click="$bvModal.hide('admin-password-modal')"
                 >
-                  {{ $t("companyCancel") }}
+                  {{ $t("adminAccountCancel") }}
                 </button>
                 <button
                   class="rounded-pill color-ff modal-button outline-none ml-2"
                   @click="$bvModal.hide('admin-password-modal')"
                 >
-                  {{ $t("companySave") }}
+                  {{ $t("adminAccountSave") }}
                 </button>
               </div>
             </b-modal>
@@ -241,8 +241,8 @@
         <div
           class="w-90 border-a9a9 py-4 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0 text-muted font-italic">Username: HEDI_NASIR</p>
-          <p class="mb-0 text-muted font-italic">CANNOT EDIT</p>
+          <p class="mb-0 text-muted font-italic">{{ $t("adminAccountUserName") }} HEDI_NASIR</p>
+          <p class="mb-0 text-muted font-italic">{{ $t("adminAccountCannotEdit") }}</p>
         </div>
       </div>
     </div>

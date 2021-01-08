@@ -3,12 +3,12 @@
     <div
       class="admin-chart d-flex flex-column flex-lg-row justify-content-around align-items-center"
     >
-      <div
-        class=" py-4 d-flex justify-content-center align-items-center w-75"
-      >
+      <div class="py-4 d-flex justify-content-center align-items-center w-75">
         <div class="w-90">
           <div class="text-center text-lg-left">
-            <p class="font-24 mb-0 font-weight-bolder">Recent</p>
+            <p class="font-24 mb-0 font-weight-bolder">
+              {{ $t("adminRecent") }}
+            </p>
             <div
               class="d-flex justify-content-between flex-column flex-lg-row align-items-center"
             >
@@ -22,13 +22,17 @@
                   class="d-flex w-25 justify-content-between align-items-center"
                 >
                   <span class="blue-border px-3"> </span>
-                  <p class="mb-0 fs-12 font-weight-lighter">Today</p>
+                  <p class="mb-0 fs-12 font-weight-lighter">
+                    {{ $t("adminToday") }}
+                  </p>
                 </div>
                 <div
                   class="d-flex w-25 justify-content-between align-items-center"
                 >
                   <span class="border-top px-3"> </span>
-                  <p class="mb-0 fs-12 font-weight-lighter">Yesterday</p>
+                  <p class="mb-0 fs-12 font-weight-lighter">
+                    {{ $t("adminYesterday") }}
+                  </p>
                 </div>
               </div>
             </div>
@@ -36,25 +40,37 @@
           </div>
         </div>
       </div>
-      <div class="graph-side-cards right-border-graph d-flex flex-column justify-content-between align-items-center">
-        <div class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom">
-          <p class="fs-16 font-weight-light">No. of Orders</p>
+      <div
+        class="graph-side-cards right-border-graph d-flex flex-column justify-content-between align-items-center"
+      >
+        <div
+          class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom"
+        >
+          <p class="fs-16 font-weight-light">{{ $t("adminNoOfOrders") }}</p>
           <h1 class="font-24 font-weight-bold">449</h1>
         </div>
-        <div class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom">
-          <p class="fs-16 font-weight-light">No. of Orders</p>
+        <div
+          class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom"
+        >
+          <p class="fs-16 font-weight-light">{{ $t("adminNoOfOrders") }}</p>
           <h1 class="font-24 font-weight-bold">449</h1>
         </div>
-        <div class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom">
-          <p class="fs-16 font-weight-light">No. of Orders</p>
+        <div
+          class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom"
+        >
+          <p class="fs-16 font-weight-light">{{ $t("adminNoOfOrders") }}</p>
           <h1 class="font-24 font-weight-bold">449</h1>
         </div>
-        <div class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom">
-          <p class="fs-16 font-weight-light">No. of Orders</p>
+        <div
+          class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom"
+        >
+          <p class="fs-16 font-weight-light">{{ $t("adminNoOfOrders") }}</p>
           <h1 class="font-24 font-weight-bold">449</h1>
         </div>
-        <div class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom">
-          <p class="fs-16 font-weight-light">No. of Orders</p>
+        <div
+          class="w-100 d-flex flex-column align-items-center graph-card justify-content-center border-bottom"
+        >
+          <p class="fs-16 font-weight-light">{{ $t("adminNoOfOrders") }}</p>
           <h1 class="font-24 font-weight-bold">449</h1>
         </div>
       </div>
@@ -67,11 +83,11 @@ export default {
 };
 </script>
 <style scoped>
-.graph-side-cards{
-    width:100%!important;
+.graph-side-cards {
+  width: 100% !important;
 }
-.graph-card{
-    height:120px!important;
+.graph-card {
+  height: 120px !important;
 }
 
 .w-90 {
@@ -92,16 +108,16 @@ export default {
   .right-border-graph {
     border-left: 1px solid #dfe0eb;
   }
-  .graph-side-cards{
-    width:25%!important;
-}
+  .graph-side-cards {
+    width: 25% !important;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .right-border-graph {
     border-left: 1px solid #dfe0eb;
   }
-  .graph-side-cards{
-    width:25%!important;
-}
+  .graph-side-cards {
+    width: 25% !important;
+  }
 }
 </style>

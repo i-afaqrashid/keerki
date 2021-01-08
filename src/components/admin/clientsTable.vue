@@ -5,7 +5,7 @@
     <div
       class="w-90 d-flex justify-content-between flex-column flex-lg-row align-items-center"
     >
-      <p class="fs-19">All Clients</p>
+      <p class="fs-19">{{$t('allClients')}}</p>
       <div class="d-flex justify-content-around align-items-center width-18">
         <button
           class="outline-none d-flex align-items-center w-25 justify-content-between"
@@ -23,7 +23,7 @@
             />
           </svg>
 
-          <p class="mb-0">Sort</p>
+          <p class="mb-0">{{$t('clientsSort')}}</p>
         </button>
         <button
           class="outline-none d-flex w-25 justify-content-between align-items-center"
@@ -41,7 +41,7 @@
             />
           </svg>
 
-          <p class="mb-0">Filter</p>
+          <p class="mb-0">{{$t('clientsFilter')}}</p>
         </button>
       </div>
     </div>
@@ -52,11 +52,11 @@
       <thead>
         <tr class="border-bottom">
           <th scope="col"></th>
-          <th scope="col">Account Status</th>
-          <th scope="col">Phone</th>
-          <th scope="col">Date Joined</th>
-          <th scope="col">Country</th>
-          <th scope="col">Name</th>
+          <th scope="col">{{$t('clientsAccountStatus')}}</th>
+          <th scope="col">{{$t('clientsPhone')}}</th>
+          <th scope="col">{{$t('clientsDateJoined')}}</th>
+          <th scope="col">{{$t('clientsCountry')}}</th>
+          <th scope="col">{{$t('clientsName')}}</th>
           <th scope="col"></th>
         </tr>
       </thead>
@@ -102,7 +102,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -130,7 +130,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">View</span>
+                  <span class="w-50">{{$t('clientView')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -158,7 +158,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -192,7 +192,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Login as</span>
+                  <span class="w-50">{{$t('clientLoginAs')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -201,7 +201,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              ACTIVE
+              {{$t('clientBtnActive')}}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -261,7 +261,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -289,7 +289,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">View</span>
+                  <span class="w-50">{{$t('clientView')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -317,7 +317,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -351,7 +351,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Login as</span>
+                  <span class="w-50">{{$t('clientLoginAs')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -360,7 +360,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              ACTIVE
+              {{$t('clientBtnActive')}}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -420,7 +420,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -448,7 +448,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">View</span>
+                  <span class="w-50">{{$t('clientView')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -476,7 +476,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -510,7 +510,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Login as</span>
+                  <span class="w-50">{{$t('clientLoginAs')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -519,7 +519,7 @@
             <button
               class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
             >
-              INACTIVE
+              {{$t('clientBtnInactive')}}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -579,7 +579,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -607,7 +607,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">View</span>
+                  <span class="w-50">{{$t('clientView')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -635,7 +635,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -669,7 +669,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Login as</span>
+                  <span class="w-50">{{$t('clientLoginAs')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -678,7 +678,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              ACTIVE
+              {{$t('clientBtnActive')}}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -738,7 +738,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -766,7 +766,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">View</span>
+                  <span class="w-50">{{$t('clientView')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -794,7 +794,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -828,7 +828,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Login as</span>
+                  <span class="w-50">{{$t('clientLoginAs')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -837,7 +837,7 @@
             <button
               class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
             >
-              INACTIVE
+              {{$t('clientBtnInactive')}}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -897,7 +897,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -925,7 +925,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">View</span>
+                  <span class="w-50">{{$t('clientView')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -953,7 +953,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -987,7 +987,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Login as</span>
+                  <span class="w-50">{{$t('clientLoginAs')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -996,7 +996,7 @@
             <button
               class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
             >
-              INACTIVE
+              {{$t('clientBtnInactive')}}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -1056,7 +1056,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1084,7 +1084,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">View</span>
+                  <span class="w-50">{{$t('clientView')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1112,7 +1112,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1146,7 +1146,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Login as</span>
+                  <span class="w-50">{{$t('clientLoginAs')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -1155,7 +1155,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              ACTIVE
+              {{$t('clientBtnActive')}}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -1215,7 +1215,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1243,7 +1243,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">View</span>
+                  <span class="w-50">{{$t('clientView')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1271,7 +1271,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1305,7 +1305,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Login as</span>
+                  <span class="w-50">{{$t('clientLoginAs')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -1314,7 +1314,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              ACTIVE
+              {{$t('clientBtnActive')}}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -1340,7 +1340,7 @@
         <div
           class="d-flex align-items-center width-25 justify-content-lg-around justify-content-between"
         >
-          <p class="mb-0 text-muted">Rows per page</p>
+          <p class="mb-0 text-muted">{{$t('clientsTableRowsPerPage')}}</p>
           <select class="outline-none select-arrow">
             <option>8</option>
             <option>10</option>

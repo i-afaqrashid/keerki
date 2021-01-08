@@ -12,10 +12,10 @@
           class="d-flex justify-content-between flex-column flex-sm-row w-75-resp align-items-center"
         >
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Name:</span> David Smith Will
+            <span class="font-weight-light">{{$t('clientDetailsName')}}</span> David Smith Will
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Address:</span> Guangzhou, street no
+            <span class="font-weight-light">{{$t('clientDetailsAddress')}}</span> Guangzhou, street no
             15
           </p>
         </div>
@@ -23,31 +23,31 @@
           class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
         >
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Company Name:</span> Shudi
+            <span class="font-weight-light">{{$t('clientDetailsCompanyName')}}</span> Shudi
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Email:</span> david@email.com
-          </p>
-        </div>
-        <div
-          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
-        >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Phone:</span> 187171717
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Whatsapp:</span> 1123232323
+            <span class="font-weight-light">{{$t('clientDetailsEmail')}}</span> david@email.com
           </p>
         </div>
         <div
           class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
         >
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Balance:</span> $1873
+            <span class="font-weight-light">{{$t('clientDetailsPhone')}}</span> 187171717
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">Membership:&nbsp;</span>
-            <button class="btn btn-dark px-4 outline-none py-0">VIP</button>
+            <span class="font-weight-light">{{$t('clientDetailsWhatsapp')}}</span> 1123232323
+          </p>
+        </div>
+        <div
+          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
+        >
+          <p class="w-100 font-weight-bold">
+            <span class="font-weight-light">{{$t('clientDetailsBalance')}}</span> $1873
+          </p>
+          <p class="w-100 font-weight-bold">
+            <span class="font-weight-light">{{$t('clientDetailsMemberShip')}}&nbsp;</span>
+            <button class="btn btn-dark px-4 outline-none py-0">{{$t('clientMemberShipVip')}}</button>
           </p>
         </div>
       </div>
@@ -77,7 +77,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="mb-0 w-100">Edit</p>
+          <p class="mb-0 w-100">{{$t('clientDetailsEdit')}}</p>
         </button>
       </div>
     </div>
@@ -115,7 +115,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        <p class="mb-0">Export CSV</p>
+        <p class="mb-0">{{$t('clientDetailsExportToCsv')}}</p>
       </button>
     </div>
     <DetailedClientsTable />

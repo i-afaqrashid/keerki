@@ -5,7 +5,7 @@
     <div
       class="w-90 d-flex justify-content-between flex-column flex-lg-row align-items-center"
     >
-      <p class="fs-19">All Orders</p>
+      <p class="fs-19">{{$t('clientDetailsAllOrders')}}</p>
       <div
         class="d-flex justify-content-around align-items-center flex-column flex-lg-row w-50"
       >
@@ -35,7 +35,7 @@
 
           <input
             class="border-bottom outline-none px-2"
-            placeholder="Search Orders"
+            :placeholder="`${$t('clientDetailsSearchOrders')}`"
           />
         </div>
         <div
@@ -54,7 +54,7 @@
                 fill="#C5C7CD"
               />
             </svg>
-            <p class="mb-0">Sort</p>
+            <p class="mb-0">{{$t('clientDetailsOrdersSort')}}</p>
           </button>
           <button class="outline-none d-flex align-items-center justify-content-between">
             <svg
@@ -70,7 +70,7 @@
               />
             </svg>
 
-            <p class="mb-0">Filter</p>
+            <p class="mb-0">{{$t('clientDetailsOrdersFilter')}}</p>
           </button>
         </div>
       </div>
@@ -82,13 +82,13 @@
       <thead class="pt-0 text-center">
         <tr class="border-bottom">
           <th class="pt-0 font-weight-light" scope="col"></th>
-          <th class="pt-0 font-weight-light text-left" scope="col">Status</th>
-          <th class="pt-0 font-weight-light" scope="col">Date</th>
-          <th class="pt-0 font-weight-light" scope="col">Phone Number</th>
-          <th class="pt-0 font-weight-light" scope="col">Order Total</th>
-          <th class="pt-0 font-weight-light" scope="col">Order Number</th>
-          <th class="pt-0 font-weight-light" scope="col">Country</th>
-          <th class="pt-0 font-weight-light" scope="col">Company</th>
+          <th class="pt-0 font-weight-light text-left" scope="col">{{$t('clientDetailsOrdersStatus')}}</th>
+          <th class="pt-0 font-weight-light" scope="col">{{$t('clientDetailsOrdersDate')}}</th>
+          <th class="pt-0 font-weight-light" scope="col">{{$t('clientDetailsOrdersPhoneNumber')}}</th>
+          <th class="pt-0 font-weight-light" scope="col">{{$t('clientDetailsOrdersTotal')}}</th>
+          <th class="pt-0 font-weight-light" scope="col">{{$t('clientDetailsOrderNo')}}</th>
+          <th class="pt-0 font-weight-light" scope="col">{{$t('clientDetailsOrdersCountry')}}</th>
+          <th class="pt-0 font-weight-light" scope="col">{{$t('clientDetailsOrdersCompany')}}</th>
         </tr>
       </thead>
       <tbody>
@@ -133,7 +133,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -161,7 +161,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Copy</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersCopy')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -189,7 +189,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -223,13 +223,13 @@
                     />
                   </svg>
 
-                  <span class="w-50">Invoice</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersInvoice')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'NEW'" :color="'cancelled'" />
+            <CustomAlert :alert="200" :type="`${$t('clientDetailsOrdersNewBtn')}`" :color="'cancelled'" />
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -282,7 +282,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -310,7 +310,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Copy</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersCopy')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -338,7 +338,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -372,13 +372,13 @@
                     />
                   </svg>
 
-                  <span class="w-50">Invoice</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersInvoice')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'DELIVERED'" :color="'done'" />
+            <CustomAlert :alert="200" :type="`${$t('clientDetailsOrdersDeliveredBtn')}`" :color="'done'" />
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -431,7 +431,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -459,7 +459,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Copy</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersCopy')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -487,7 +487,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -521,13 +521,13 @@
                     />
                   </svg>
 
-                  <span class="w-50">Invoice</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersInvoice')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'DELIVERED'" :color="'done'" />
+            <CustomAlert :alert="200" :type="`${$t('clientDetailsOrdersDeliveredBtn')}`" :color="'done'" />
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -580,7 +580,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -608,7 +608,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Copy</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersCopy')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -636,7 +636,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -670,13 +670,13 @@
                     />
                   </svg>
 
-                  <span class="w-50">Invoice</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersInvoice')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'CANCELLED'" :color="'clientCancel'" />
+            <CustomAlert :alert="200" :type="`${$t('clientDetailsOrdersCancelledBtn')}`" :color="'clientCancel'" />
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -729,7 +729,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -757,7 +757,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Copy</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -785,7 +785,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -819,13 +819,13 @@
                     />
                   </svg>
 
-                  <span class="w-50">Invoice</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersInvoice')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'IN PROGRESS'" :color="'in-progress'" />
+            <CustomAlert :alert="200" :type="`${$t('clientDetailsOrdersInprogressBtn')}`" :color="'in-progress'" />
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -878,7 +878,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -906,7 +906,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Copy</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersCopy')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -934,7 +934,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -968,13 +968,13 @@
                     />
                   </svg>
 
-                  <span class="w-50">Invoice</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersInvoice')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'SHIPPED'" :color="'shipped'" />
+            <CustomAlert :alert="200" :type="`${$t('clientDetailsOrdersShippedBtn')}`" :color="'shipped'" />
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -1027,7 +1027,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1055,7 +1055,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Copy</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersCopy')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1083,7 +1083,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1117,13 +1117,13 @@
                     />
                   </svg>
 
-                  <span class="w-50">Invoice</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersInvoice')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'IN PROGRESS'" :color="'in-progress'" />
+            <CustomAlert :alert="200" :type="`${$t('clientDetailsOrdersInprogressBtn')}`" :color="'in-progress'" />
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -1176,7 +1176,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Edit</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersEdit')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1204,7 +1204,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Copy</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersCopy')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1232,7 +1232,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">Delete</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersDelete')}}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1266,13 +1266,13 @@
                     />
                   </svg>
 
-                  <span class="w-50">Invoice</span>
+                  <span class="w-50">{{$t('clientDetailsOrdersInvoice')}}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'CANCELLED'" :color="'clientCancel'" />
+            <CustomAlert :alert="200" :type="`${$t('clientDetailsOrdersCancelledBtn')}`" :color="'clientCancel'" />
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>

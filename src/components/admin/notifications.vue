@@ -6,14 +6,14 @@
       <div class="d-flex w-100 justify-content-center border-bottom align-items-center">
           <div class="d-flex w-90 justify-content-between flex-lg-row flex-column align-items-center">
         <div class="text-center text-lg-left">
-          <h1 class="font-24">All Notifications</h1>
-          <p class="fs-18 text-muted font-weight-light">New Orders</p>
+          <h1 class="font-24">{{$t('adminNotificationsAllNotifications')}}</h1>
+          <p class="fs-18 text-muted font-weight-light">{{$t('adminNotificationsNewOrders')}}</p>
         </div>
         <div class="d-flex width-25 justify-content-between align-items-center">
           <button class="notifications-btn btn-admin-top text-white">
-            UNREAD
+            {{$t('adminNotificationsUnRead')}}
           </button>
-          <button class="btn-admin-top border btn">READ</button>
+          <button class="btn-admin-top border btn">{{$t('adminNotificationsRead')}}</button>
         </div>
       </div>
       </div>
@@ -24,12 +24,12 @@
                   <h1 class="fs-18 font-weight-normal">Saudia Arabia</h1>
                   <div class="width-25 d-flex justify-content-between align-items-center">
                         <p class="mb-0 font-weight-lighter">1 minute ago</p>
-                        <p class=" text-primary mb-0">View Order</p>
+                        <p class=" text-primary mb-0">{{$t('adminNotificationsViewOrder')}}</p>
                   </div>
               </div>
               <div>
 
-                  <button class="admin-dismiss-btn text-white mt-4 mt-lg-0">asds</button>
+                  <button class="admin-dismiss-btn text-white mt-4 mt-lg-0">{{$t('adminNotificationsDismiss')}}</button>
               </div>
 
           </div>
@@ -41,12 +41,12 @@
                   <h1 class="fs-18 font-weight-normal">New Order from Hedi</h1>
                   <div class="width-25 d-flex justify-content-between align-items-center">
                         <p class="mb-0 font-weight-lighter">1 minute ago</p>
-                        <p class=" text-primary mb-0">View Order</p>
+                        <p class=" text-primary mb-0">{{$t('adminNotificationsViewOrder')}}</p>
                   </div>
               </div>
               <div>
 
-                  <button class="admin-dismiss-btn text-white mt-4 mt-lg-0">asds</button>
+                  <button class="admin-dismiss-btn text-white mt-4 mt-lg-0">{{$t('adminNotificationsDismiss')}}</button>
               </div>
 
           </div>
@@ -58,12 +58,12 @@
                   <h1 class="fs-18 font-weight-normal">Chair Order</h1>
                   <div class="width-25 d-flex justify-content-between align-items-center">
                         <p class="mb-0 font-weight-lighter">1 minute ago</p>
-                        <p class=" text-primary mb-0">View Order</p>
+                        <p class=" text-primary mb-0">{{$t('adminNotificationsViewOrder')}}</p>
                   </div>
               </div>
               <div>
 
-                  <button class="admin-dismiss-btn text-white mt-4 mt-lg-0">asds</button>
+                  <button class="admin-dismiss-btn text-white mt-4 mt-lg-0">{{$t('adminNotificationsDismiss')}}</button>
               </div>
 
           </div>
