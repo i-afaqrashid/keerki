@@ -9,22 +9,22 @@
         <button
           class="pb-3 px-2 outline-none border-bottom-open fs-16 font-weight-bold"
         >
-          Open
+          {{$t('adminMessagesOpen')}}
         </button>
         <button
           class="btn btn-outline-primary outline-none fs-16 border"
           disabled
         >
-          Pending
+          {{$t('adminMessagesPending')}}
         </button>
         <button
           class="btn btn-outline-primary outline-none fs-16 border"
           disabled
         >
-          Resolve
+          {{$t('adminMessagesResolve')}}
         </button>
         <button class="btn btn-outline-primary outline-none fs-16 border">
-          Close
+          {{$t('adminMessagesClose')}}
         </button>
       </div>
       <div class="w-100 pt-5">
@@ -54,7 +54,7 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">Open</p>
+              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
 
               <p class="text-muted mb-0">Yesterday at 4:32am</p>
             </div>
@@ -86,7 +86,7 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">Open</p>
+              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
 
               <p class="text-muted mb-0">Yesterday at 4:32am</p>
             </div>
@@ -118,7 +118,7 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">Open</p>
+              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
 
               <p class="text-muted mb-0">Yesterday at 4:32am</p>
             </div>
@@ -150,7 +150,7 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">Open</p>
+              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
 
               <p class="text-muted mb-0">Yesterday at 4:32am</p>
             </div>
@@ -182,7 +182,7 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">Open</p>
+              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
 
               <p class="text-muted mb-0">Yesterday at 4:32am</p>
             </div>
