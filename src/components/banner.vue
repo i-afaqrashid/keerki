@@ -35,6 +35,23 @@ export default {
 </script>
 
 <style>
+.popover-header{
+    border: 0 !important;
+    background:#ffffff!important;
+}
+.popover{
+border-radius: 12px!important;
+border:2px solid #ffffff!important;
+padding:20px 10px!important;
+}
+.arrow::after{
+  display: none!important;
+  border-color: #ffffff;
+
+}
+.arrow::before{
+  border-top-color:white!important;
+}
 .width-25{
   width: 300px!important;
 }

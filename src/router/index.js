@@ -26,11 +26,12 @@ import AdminDashboard from '../views/AdminDashboard.vue'
 import DashboardHome from '../components/admin/dashboardHome.vue'
 import ShippingForm from '../components/shippingForm.vue'
 import Inbox from '../components/inbox.vue'
-import AdminAccount from '../components/admin/settings.vue'
+import AdminAccount from '../components/admin/accountSettings.vue'
 import AdminNotifications from '../components/admin/notifications.vue'
 import AdminClients from '../components/admin/clients.vue'
 import ClientDetailed from '../components/admin/ClientDetailed.vue'
 import AdminOrders from '../components/admin/orders.vue'
+import AdminOrdersDetailed from '../components/admin/orderDetailed.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -71,6 +72,10 @@ const routes = [
       {
         path:"orders",
         component:AdminOrders
+      },
+      {
+        path:"orders-detailed",
+        component:AdminOrdersDetailed
       }
     ]
   },

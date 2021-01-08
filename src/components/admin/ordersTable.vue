@@ -41,7 +41,9 @@
         <div
           class="d-flex justify-content-between align-items-center w-25-resp pt-4 pt-lg-0"
         >
-          <button class="outline-none d-flex align-items-center justify-content-between">
+          <button
+            class="outline-none d-flex align-items-center justify-content-between"
+          >
             <svg
               width="16"
               height="16"
@@ -56,7 +58,9 @@
             </svg>
             <p class="mb-0">Sort</p>
           </button>
-          <button class="outline-none d-flex align-items-center justify-content-between">
+          <button
+            class="outline-none d-flex align-items-center justify-content-between"
+          >
             <svg
               width="16"
               height="16"
@@ -89,10 +93,21 @@
           <th class="pt-0 font-weight-light" scope="col">Order Number</th>
           <th class="pt-0 font-weight-light" scope="col">Country</th>
           <th class="pt-0 font-weight-light" scope="col">Company</th>
+          <th class="pt-0">
+            <div class="d-flex align-items-center justify-content-around">
+              <button
+                class="btn-select-all outline-none btn-primary d-flex justify-content-center align-items-center"
+                @click="selectAllChecks"
+              >
+                -
+              </button>
+              <p class="mb-0 text-primary">(2)</p>
+            </div>
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr class="text-center">
+        <tr @click="rowClicked" class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -240,8 +255,18 @@
           </td>
           <td>China</td>
           <td>Shudi international...</td>
+          <td @click="stopDefault">
+            <b-form-checkbox
+              id="checkbox-c2"
+              name="checkbox-c2"
+              v-model="select1"
+              value="true"
+              unchecked-value="false"
+            >
+            </b-form-checkbox>
+          </td>
         </tr>
-        <tr class="text-center">
+        <tr @click="rowClicked" class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -379,6 +404,7 @@
           </th>
           <td>
             <CustomAlert :alert="200" :type="'DELIVERED'" :color="'done'" />
+            <p class="mb-0 text-status text-left">By Liyong</p>
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -389,8 +415,18 @@
           </td>
           <td>China</td>
           <td>Shudi international...</td>
+          <td @click="stopDefault">
+            <b-form-checkbox
+              id="checkbox-c3"
+              name="checkbox-c3"
+              v-model="select2"
+              value="true"
+              unchecked-value="false"
+            >
+            </b-form-checkbox>
+          </td>
         </tr>
-        <tr class="text-center">
+        <tr @click="rowClicked" class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -528,6 +564,7 @@
           </th>
           <td>
             <CustomAlert :alert="200" :type="'DELIVERED'" :color="'done'" />
+            <p class="mb-0 text-status text-left">By Liyong</p>
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -538,8 +575,18 @@
           </td>
           <td>China</td>
           <td>Shudi international...</td>
+          <td @click="stopDefault">
+            <b-form-checkbox
+              id="checkbox-c4"
+              name="checkbox-c4"
+              v-model="select3"
+              value="true"
+              unchecked-value="false"
+            >
+            </b-form-checkbox>
+          </td>
         </tr>
-        <tr class="text-center">
+        <tr @click="rowClicked" class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -676,7 +723,12 @@
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'CANCELLED'" :color="'clientCancel'" />
+            <CustomAlert
+              :alert="200"
+              :type="'CANCELLED'"
+              :color="'clientCancel'"
+            />
+            <p class="mb-0 text-status text-left">By Smith</p>
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -687,8 +739,18 @@
           </td>
           <td>China</td>
           <td>Shudi international...</td>
+          <td @click="stopDefault">
+            <b-form-checkbox
+              id="checkbox-c5"
+              name="checkbox-c5"
+              v-model="select4"
+              value="true"
+              unchecked-value="false"
+            >
+            </b-form-checkbox>
+          </td>
         </tr>
-        <tr class="text-center">
+        <tr @click="rowClicked" class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -825,7 +887,12 @@
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'IN PROGRESS'" :color="'in-progress'" />
+            <CustomAlert
+              :alert="200"
+              :type="'IN PROGRESS'"
+              :color="'in-progress'"
+            />
+            <p class="mb-0 text-status text-left">By Sara</p>
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -836,8 +903,18 @@
           </td>
           <td>China</td>
           <td>Shudi international...</td>
+          <td @click="stopDefault">
+            <b-form-checkbox
+              id="checkbox-c6"
+              name="checkbox-c6"
+              v-model="select5"
+              value="true"
+              unchecked-value="false"
+            >
+            </b-form-checkbox>
+          </td>
         </tr>
-        <tr class="text-center">
+        <tr @click="rowClicked" class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -975,6 +1052,7 @@
           </th>
           <td>
             <CustomAlert :alert="200" :type="'SHIPPED'" :color="'shipped'" />
+            <p class="mb-0 text-status text-left">By Hedi</p>
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -985,8 +1063,18 @@
           </td>
           <td>China</td>
           <td>Shudi international...</td>
+          <td @click="stopDefault">
+            <b-form-checkbox
+              id="checkbox-c7"
+              name="checkbox-c7"
+              v-model="select6"
+              value="true"
+              unchecked-value="false"
+            >
+            </b-form-checkbox>
+          </td>
         </tr>
-        <tr class="text-center">
+        <tr @click="rowClicked" class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -1123,7 +1211,12 @@
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'IN PROGRESS'" :color="'in-progress'" />
+            <CustomAlert
+              :alert="200"
+              :type="'IN PROGRESS'"
+              :color="'in-progress'"
+            />
+            <p class="mb-0 text-status text-left">By David</p>
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -1134,8 +1227,18 @@
           </td>
           <td>China</td>
           <td>Shudi international...</td>
+          <td @click="stopDefault">
+            <b-form-checkbox
+              id="checkbox-c8"
+              name="checkbox-c8"
+              v-model="select7"
+              value="true"
+              unchecked-value="false"
+            >
+            </b-form-checkbox>
+          </td>
         </tr>
-        <tr class="text-center">
+        <tr @click="rowClicked" class="text-center">
           <th class="pt-0" scope="row">
             <b-dropdown
               size="lg"
@@ -1272,7 +1375,12 @@
             </b-dropdown>
           </th>
           <td>
-            <CustomAlert :alert="200" :type="'CANCELLED'" :color="'clientCancel'" />
+            <CustomAlert
+              :alert="200"
+              :type="'CANCELLED'"
+              :color="'clientCancel'"
+            />
+            <p class="mb-0 text-status text-left">By Jane</p>
           </td>
           <td>May 26, 2019</td>
           <td>18999897899</td>
@@ -1283,6 +1391,16 @@
           </td>
           <td>China</td>
           <td>Shudi international...</td>
+          <td @click="stopDefault">
+            <b-form-checkbox
+              id="checkbox-c9"
+              name="checkbox-c9"
+              v-model="select8"
+              value="true"
+              unchecked-value="false"
+            >
+            </b-form-checkbox>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -1302,36 +1420,36 @@
         >
           <p class="mb-0 text-muted">1-8 of 1240</p>
           <button class="outline-none">
-          <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 13L1.07071 7.07071C1.03166 7.03166 1.03166 6.96834 1.07071 6.92929L7 1"
-              stroke="#9FA2B4"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
+            <svg
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 13L1.07071 7.07071C1.03166 7.03166 1.03166 6.96834 1.07071 6.92929L7 1"
+                stroke="#9FA2B4"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
           </button>
           <button class="outlne-none">
-          <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 13L6.92929 7.07071C6.96834 7.03166 6.96834 6.96834 6.92929 6.92929L1 1"
-              stroke="#9FA2B4"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
+            <svg
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 13L6.92929 7.07071C6.96834 7.03166 6.96834 6.96834 6.92929 6.92929L1 1"
+                stroke="#9FA2B4"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -1347,27 +1465,62 @@ export default {
   },
   data() {
     return {
-      phone: 18999897899,
-      dateJoined: "May 26, 2019",
-      time: "6:30px",
-      country: "China",
-      name: "David Smill Will",
-      companyName: "Shudi international...",
-      orderNumber: "#645468468",
-      updated: "Updated 1 day ago",
-      orderTotal: "£2550,30",
+      select1: false,
+      select2: false,
+      select3: false,
+      select4: false,
+      select5: false,
+      select6: false,
+      select7: false,
+      select8: false,
     };
+  },
+  methods: {
+    selectAllChecks() {
+      this.select1 = !this.select1;
+      this.select2 = !this.select2;
+      this.select3 = !this.select3;
+      this.select4 = !this.select4;
+      this.select5 = !this.select5;
+      this.select6 = !this.select6;
+      this.select7 = !this.select7;
+      this.select8 = !this.select8;
+    },
+    rowClicked() {
+        this.$router
+          .push({ path: "/admin/dashboard/orders-detailed" })
+          .catch(() => {});
+
+    },
+    stopDefault(event) {
+      event.stopPropagation();
+    },
   },
 };
 </script>
 <style scoped>
-.updated-client{
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 16px;
-letter-spacing: 0.1px;
-color: #C5C7CD;
+.text-status {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #c5c7cd;
+  padding-top: 10px;
+}
+.btn-select-all {
+  width: 20px;
+  height: 20px;
+
+  background: #0074bd;
+  border-radius: 3px;
+}
+.updated-client {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #c5c7cd;
 }
 .clients-table tr {
   cursor: pointer !important;
