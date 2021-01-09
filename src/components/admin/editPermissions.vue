@@ -141,7 +141,7 @@
           <p class="text-muted">SENSITIVE</p>
         </div>
         <div
-          class="w-75 mt-3 d-flex justify-content-between align-items-center"
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
           <p class="mb-0">Client details</p>
           <button class="d-flex align-items-center outline-none">
@@ -163,7 +163,7 @@
           </button>
         </div>
         <div
-          class="w-75 mt-3 d-flex justify-content-between align-items-center"
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
           <p class="mb-0">Name</p>
           <button class="d-flex align-items-center outline-none">
@@ -184,7 +184,7 @@
           </button>
         </div>
         <div
-          class="w-75 mt-3 d-flex justify-content-between align-items-center"
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
           <p class="mb-0">Address</p>
           <button class="outline-none d-flex align-items-center">
@@ -205,7 +205,7 @@
           </button>
         </div>
         <div
-          class="w-75 mt-3 d-flex justify-content-between align-items-center"
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
           <p class="mb-0">Email address</p>
           <button class="outline-none d-flex align-items-center">
@@ -226,7 +226,7 @@
           </button>
         </div>
         <div
-          class="w-75 mt-3 d-flex justify-content-between align-items-center"
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
           <p class="mb-0">Phone number</p>
           <button class="outline-none d-flex align-items-center">
@@ -247,7 +247,7 @@
           </button>
         </div>
         <div
-          class="w-75 mt-3 d-flex justify-content-between align-items-center"
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
           <p class="mb-0">Balance</p>
           <button class="outline-none d-flex align-items-center">
@@ -380,6 +380,22 @@
           class="w-90 d-flex justify-content-between align-items-center mt-3"
         >
           <p class="text-muted">MESSAGES</p>
+          <div class="d-flex align-items-center">
+            <svg
+              width="16"
+              height="15"
+              viewBox="0 0 16 15"
+              class="mx-2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.9922 10.1836C10.9375 10.2383 10.9375 10.293 10.9375 10.3477V13.4375H1.3125V3.8125H7.90234C7.95703 3.8125 8.01172 3.8125 8.06641 3.75781L8.94141 2.88281C9.07812 2.74609 8.96875 2.5 8.77734 2.5H1.3125C0.574219 2.5 0 3.10156 0 3.8125V13.4375C0 14.1758 0.574219 14.75 1.3125 14.75H10.9375C11.6484 14.75 12.25 14.1758 12.25 13.4375V9.47266C12.25 9.28125 12.0039 9.17188 11.8672 9.30859L10.9922 10.1836ZM15.2578 4.6875C15.8867 4.05859 15.8867 3.04688 15.2578 2.41797L14.082 1.24219C13.4531 0.613281 12.4414 0.613281 11.8125 1.24219L4.64844 8.40625L4.375 10.8945C4.29297 11.6055 4.89453 12.207 5.60547 12.125L8.09375 11.8516L15.2578 4.6875ZM12.5781 5.50781L7.49219 10.5938L5.6875 10.8125L5.90625 9.00781L10.9922 3.92188L12.5781 5.50781ZM14.3281 3.34766C14.4648 3.45703 14.4648 3.62109 14.3555 3.75781L13.5078 4.60547L11.9219 2.99219L12.7422 2.17188C12.8516 2.03516 13.043 2.03516 13.1523 2.17188L14.3281 3.34766Z"
+                fill="#0074BD"
+              />
+            </svg>
+            <AdminPopUp />
+          </div>
         </div>
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
@@ -428,6 +444,23 @@
           class="w-90 d-flex justify-content-between align-items-center mt-3"
         >
           <p class="text-muted">NOTIFICATIONS</p>
+          <div class="d-flex align-items-center">
+            <svg
+              width="16"
+              height="11"
+              viewBox="0 0 16 11"
+              class="mx-2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.875 2.6875C7.62891 2.71484 7.24609 2.76953 7 2.82422C7.10938 3.01562 7.19141 3.37109 7.21875 3.5625C7.21875 4.41016 6.50781 5.09375 5.6875 5.09375C5.46875 5.09375 5.11328 5.01172 4.94922 4.90234C4.86719 5.14844 4.8125 5.50391 4.8125 5.75C4.8125 7.44531 6.17969 8.8125 7.875 8.8125C9.57031 8.8125 10.9375 7.44531 10.9375 5.75C10.9375 4.08203 9.57031 2.6875 7.875 2.6875ZM15.6406 5.36719C14.1641 2.46875 11.2109 0.5 7.875 0.5C4.51172 0.5 1.55859 2.46875 0.0820312 5.36719C0.0273438 5.47656 0 5.64062 0 5.77734C0 5.88672 0.0273438 6.05078 0.0820312 6.16016C1.55859 9.05859 4.51172 11 7.875 11C11.2109 11 14.1641 9.05859 15.6406 6.16016C15.6953 6.05078 15.7227 5.88672 15.7227 5.75C15.7227 5.64062 15.6953 5.47656 15.6406 5.36719ZM7.875 9.6875C5.16797 9.6875 2.67969 8.18359 1.36719 5.75C2.67969 3.31641 5.16797 1.8125 7.875 1.8125C10.5547 1.8125 13.043 3.31641 14.3555 5.75C13.043 8.18359 10.5547 9.6875 7.875 9.6875Z"
+                fill="#0074BD"
+              />
+            </svg>
+
+            <AdminPopUp />
+          </div>
         </div>
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"

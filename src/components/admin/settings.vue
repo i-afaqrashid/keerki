@@ -1,7 +1,7 @@
 <template>
   <div
     class="w-90 d-flex justify-content-center flex-column align-items-center pt-9"
-  dir="auto"
+    dir="auto"
   >
     <div
       class="setting-cont w-100 py-4 d-flex justify-content-center align-items-center"
@@ -186,13 +186,14 @@
                       <h1 class="fs-28 mb-0">
                         {{ $t("adminSettingsRegisterEmployee") }}
                       </h1>
-                      <div class="w-100 pt-5" >
+                      <div class="w-100 pt-5">
                         <p class="mb-1">{{ $t("adminSettingsName") }}</p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
-                        
                         >
-                        <p class="mb-0 d-none">{{ $t("adminSettingsMinutes") }}</p>
+                          <p class="mb-0 d-none">
+                            {{ $t("adminSettingsMinutes") }}
+                          </p>
                           <input
                             class="settings-input w-48 px-1 outline-none"
                             :placeholder="`${$t('adminSettingsFirstName')}`"
@@ -478,7 +479,6 @@
                       <div class="w-100 pt-15">
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
-                        
                         >
                           <p class="mb-0">
                             {{ $t("adminSettingsEditEmployeePassword") }}
@@ -499,7 +499,7 @@
                             >
                               <div
                                 class="w-100 d-flex justify-content-center align-items-center flex-column"
-                              dir="auto"
+                                dir="auto"
                               >
                                 <div class="d-flex flex-column w-90">
                                   <h1 class="fs-28">
@@ -543,35 +543,33 @@
                                   </div>
                                   <div class="w-100 pt-15">
                                     <p class="mb-1">
-                                      {{
-                                        $t(
-                                          "adminSettingsPassword"
-                                        )
-                                      }}
+                                      {{ $t("adminSettingsPassword") }}
                                     </p>
                                     <div
                                       class="d-flex w-100 justify-content-between align-items-center"
                                     >
                                       <input
                                         class="settings-input width-50 px-1 outline-none"
-                                        :placeholder="`${$t('adminSettingsPassowordPlaceholder')}`"
+                                        :placeholder="`${$t(
+                                          'adminSettingsPassowordPlaceholder'
+                                        )}`"
                                         type="password"
                                         required
                                       />
                                     </div>
                                   </div>
                                   <div class="w-100 pt-15">
-                                    <p class="mb-1"> {{
-                                        $t(
-                                          "adminSettingsConfirmPassword"
-                                        )
-                                      }}</p>
+                                    <p class="mb-1">
+                                      {{ $t("adminSettingsConfirmPassword") }}
+                                    </p>
                                     <div
                                       class="d-flex w-100 justify-content-between align-items-center"
                                     >
                                       <input
                                         class="settings-input width-50 px-1 outline-none"
-                                        :placeholder="`${$t('adminSettingsConfirmPasswordPlaceholder')}`"
+                                        :placeholder="`${$t(
+                                          'adminSettingsConfirmPasswordPlaceholder'
+                                        )}`"
                                         type="password"
                                         required
                                       />
@@ -589,13 +587,14 @@
                                         type="button"
                                         @click="$bvModal.hide('pass-modal')"
                                       >
-                                        {{$t('adminSettingsCancel')}}                                   </button>
+                                        {{ $t("adminSettingsCancel") }}
+                                      </button>
                                       <button
                                         class="btn btn-primary"
                                         type="submit"
                                         @click="$bvModal.hide('pass-modal')"
                                       >
-                                        {{$t('adminSettingsSubmit')}} 
+                                        {{ $t("adminSettingsSubmit") }}
                                       </button>
                                     </div>
                                   </div>
@@ -609,7 +608,7 @@
                         <div
                           class="d-flex w-100 justify-content-between align-items-center text-left"
                         >
-                          <p class="mb-0">{{$t('adminSettingsLastLogin')}} </p>
+                          <p class="mb-0">{{ $t("adminSettingsLastLogin") }}</p>
                           <p class="mb-0 font-weight-light">
                             Yesterday at 3:18pm
                           </p>
@@ -619,7 +618,9 @@
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
-                          <p class="mb-0">{{$t('adminSettingsAccountCreated')}}</p>
+                          <p class="mb-0">
+                            {{ $t("adminSettingsAccountCreated") }}
+                          </p>
                           <p class="mb-0 font-weight-light">
                             Yesterday at 3:18pm
                           </p>
@@ -629,7 +630,9 @@
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
-                          <p class="mb-0">{{$t('adminSettingsLastModified')}}</p>
+                          <p class="mb-0">
+                            {{ $t("adminSettingsLastModified") }}
+                          </p>
                           <p class="mb-0 font-weight-light">
                             Yesterday at 3:18pm by Hedi
                           </p>
@@ -638,20 +641,26 @@
                     </div>
                     <div class="d-flexpb-4 flex-column">
                       <div class="w-100">
-                        <p class="mb-1">{{$t('adminSettingsEditEmployeeEmail')}}</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsEditEmployeeEmail") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            :placeholder="`${$t('adminSettingsEditEmployeeEmailPlaceHolder')}`"
+                            :placeholder="`${$t(
+                              'adminSettingsEditEmployeeEmailPlaceHolder'
+                            )}`"
                             type="email"
                             required
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">{{$t('adminSettingsEditEmployeeWorkPone')}}</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsEditEmployeeWorkPone") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -663,13 +672,17 @@
                           </select>
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            :placeholder="`${$t('adminSettingsEditEmployeeEnterPhone')}`"
+                            :placeholder="`${$t(
+                              'adminSettingsEditEmployeeEnterPhone'
+                            )}`"
                             type="number"
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">{{$t('adminSettingsEditEmployeeUserTimeZone')}}</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsEditEmployeeUserTimeZone") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -682,7 +695,9 @@
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">{{$t('adminSettingsEditEmployeeRole')}}</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsEditEmployeeRole") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -690,20 +705,26 @@
                             class="border p-2 w-100 outline-none select-arrow"
                           >
                             <option>Select</option>
-                            <option>{{$t('adminSettingsRoleAdmin')}}</option>
+                            <option>{{ $t("adminSettingsRoleAdmin") }}</option>
                           </select>
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">{{$t('adminSettingsEditEmployeeAccountStatus')}}</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsEditEmployeeAccountStatus") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
                           <select
                             class="border p-2 w-100 outline-none select-arrow"
                           >
-                            <option>{{$t('adminSettingsEditEmployeeActve')}}</option>
-                            <option>{{$t('adminSettingsEditEmployeeInactive')}}</option>
+                            <option>
+                              {{ $t("adminSettingsEditEmployeeActve") }}
+                            </option>
+                            <option>
+                              {{ $t("adminSettingsEditEmployeeInactive") }}
+                            </option>
                           </select>
                         </div>
                       </div>
@@ -720,26 +741,31 @@
                         type="button"
                         @click="$bvModal.hide('edit-modal')"
                       >
-                        {{$t('adminSettingsCancel')}}
+                        {{ $t("adminSettingsCancel") }}
                       </button>
                       <button class="btn btn-primary" type="submit">
-                        {{$t('adminSettingsSubmit')}}
+                        {{ $t("adminSettingsSubmit") }}
                       </button>
                     </div>
                   </div>
                 </form>
               </div>
             </b-modal>
-            {{$t('adminSettingsEditEmployee')}}
+            {{ $t("adminSettingsEditEmployee") }}
           </button>
-          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
-            {{$t('adminSettingNotifyAllEMployees')}}
+          <button
+            class="settings-btn text-white width-25 btn mt-4 mt-lg-0"
+            @click="notifyAll"
+          >
+            {{ $t("adminSettingNotifyAllEMployees") }}
           </button>
         </div>
       </div>
     </div>
     <div class="w-100 pt-5">
-      <p class="mb-0 font-24 font-weight-bold">{{$t('adminSettingClientSettings')}}</p>
+      <p class="mb-0 font-24 font-weight-bold">
+        {{ $t("adminSettingClientSettings") }}
+      </p>
       <div
         class="setting-cont w-100 py-5 d-flex justify-content-center flex-column align-items-center mt-2"
       >
@@ -747,20 +773,20 @@
           class="d-flex justify-content-around flex-column flex-lg-row w-100 align-items-center"
         >
           <button class="settings-btn text-white width-25 btn">
-           {{$t('adminSettingAddNewClient')}}
+            {{ $t("adminSettingAddNewClient") }}
           </button>
           <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
-            {{$t('adminSettingsNofifyAllClients')}}
+            {{ $t("adminSettingsNofifyAllClients") }}
           </button>
         </div>
         <div
           class="d-flex justify-content-around flex-column flex-lg-row pt-5 w-100 align-items-center"
         >
           <button class="settings-btn text-white width-25 btn" @click="sendSms">
-           {{$t('adminSettingsSendSms')}}
+            {{ $t("adminSettingsSendSms") }}
           </button>
           <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
-            {{$t('adminSettingActivateClient')}}
+            {{ $t("adminSettingActivateClient") }}
           </button>
         </div>
         <div
@@ -770,10 +796,10 @@
             class="settings-btn text-white width-25 btn"
             @click="sendEmail"
           >
-            {{$t('adminSettingSendEmail')}}
+            {{ $t("adminSettingSendEmail") }}
           </button>
           <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
-            {{$t('adminSettingSuspendAccount')}}
+            {{ $t("adminSettingSuspendAccount") }}
           </button>
         </div>
       </div>
@@ -811,6 +837,9 @@ export default {
     },
     allEmployees() {
       this.$router.push({ path: "employees" }).catch(() => {});
+    },
+    notifyAll() {
+      this.$router.push({ path: "notify-employees" }).catch(() => {});
     },
   },
 };

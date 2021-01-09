@@ -1,7 +1,7 @@
 <template>
     <b-dropdown
               size="sm"
-              variant="link"
+              variant="transparent"
               toggle-class="text-decoration-none"
               no-caret
             >

@@ -42,6 +42,7 @@ import AdminSMS from '../components/admin/sendSms.vue'
 import AdminEmail from '../components/admin/sendEmail.vue'
 import AdminEmployees from '../components/admin/allEmployees.vue'
 import EditPermissions from '../components/admin/editPermissions.vue'
+import NotifyEmployees from '../components/admin/notifyEmployees.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -126,6 +127,10 @@ const routes = [
       {
         path:"edit-permissions",
         component:EditPermissions
+      },
+      {
+        path:"notify-employees",
+        component:NotifyEmployees
       }
     ]
   },
