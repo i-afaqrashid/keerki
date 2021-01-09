@@ -12,7 +12,7 @@
           <div
             class="d-flex align-items-center justify-content-center flex-column flex-lg-row"
           >
-            <p class="mb-0 font-weight-bold font-24">Custom Quick Responses</p>
+            <p class="mb-0 font-weight-bold font-24">{{$t('adminMessagesCustomQuickResponse')}}</p>
             <button class="btn outline-none" v-b-modal.add-modal>
               <b-modal
                 id="add-modal"
@@ -77,7 +77,7 @@
                         class="btn done-button text-white"
                         @click="$bvModal.hide('add-modal')"
                       >
-                        ADD
+                        {{$t('adminMessagesAdd')}}
                       </button>
                     </div>
                   </div>
@@ -167,18 +167,18 @@
                         class="btn edit-button text-white"
                         @click="$bvModal.hide('edit-modal')"
                       >
-                        Edit
+                        {{$t('adminMessagesEdit')}}
                       </button>
                     </div>
                   </div>
                 </div>
               </b-modal>
 
-              Edit
+              {{$t('adminMessagesEdit')}}
             </button>
-            <button class="btn btn-ff mt-4 mt-lg-0 text-white">Delete</button>
+            <button class="btn btn-ff mt-4 mt-lg-0 text-white">{{$t('adminMessagesDelete')}}</button>
             <button class="btn btn-7d mt-4 mt-lg-0 text-white">
-              Select All
+              {{$t('adminMessagesSelectAll')}}
             </button>
           </div>
         </div>

@@ -9,7 +9,8 @@
       <div
         class="d-flex justify-content-around align-items-center flex-column flex-lg-row w-50"
       >
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center" dir="auto">
+          <p class="d-none">{{$t('rtlHelper')}}</p>
           <svg
             width="15"
             height="15"

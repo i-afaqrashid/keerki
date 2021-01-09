@@ -385,21 +385,20 @@
           placement="top"
         >
           <p class="w-100 font-weight-bold">
-            In regards with this order: <u class="text-primary">893943</u>
+            {{$t('adminOrdersDetailsInregardWithThisOrder')}}<u class="text-primary">893943</u>
           </p>
           <p>
-            If you have any issues regarding this issue. Please contact the
-            admin and we will resolve the issue as soon as possible.
+            {{$t('adminOrdersDetailsAnyIssue')}}
           </p>
           <div class="d-flex justify-content-between align-items-center">
             <button class="btn rounded-pill btn-transparent border">
-              Cancel
+              {{$t('adminOrdersDetailsCancel')}}
             </button>
             <button
               class="btn rounded-pill btn-primary border"
               v-b-modal.send-message-modal
             >
-              Send a message
+              {{$t('adminOrdersDetailsSendAMessage')}}
             </button>
           </div>
         </b-popover>
@@ -414,11 +413,11 @@
           hide-header-close
         >
           <div>
-            <p>Reason for cancellation</p>
+            <p>{{$t('adminOrdersDetailsReasonForCancelling')}}</p>
             <div class="modal-orders p-2">
               <input
                 class="bg-transparent w-100 outline-none"
-                placeholder="Write your question here"
+                :placeholder="`${$t('adminOrdersDetailsWriteQuestion')}`"
               />
               <div
                 class="d-flex justify-content-end align-items-center pt-9 pt-lg-5"
@@ -430,14 +429,14 @@
                     class="order-color-c7 btn outline-none border rounded-pill modal-order-btn"
                     @click="$bvModal.hide('send-message-modal')"
                   >
-                    Cancel
+                    {{$t('adminOrdersDetailsCancel')}}
                   </button>
 
                   <button
                     class="btn-primary btn outline-none border rounded-pill modal-order-btn"
                     @click="$bvModal.hide('send-message-modal')"
                   >
-                    Submit
+                    {{$t('adminOrdersDetailsSubmit')}}
                   </button>
                 </div>
               </div>

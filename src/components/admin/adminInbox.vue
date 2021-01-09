@@ -20,7 +20,8 @@
           />
         </svg>
       </button>
-      <div class="w-100 bg-white mt-15">
+      <div class="w-100 bg-white mt-15" dir="auto">
+        <p class="d-none">{{$t('rtlHelper')}}</p>
         <input
           class="w-100 outline-none search-admin-inbox fs-10 px-2"
           :placeholder="`${$t('adminMessagesSearch')}`"
@@ -431,7 +432,8 @@
         </div>
       </div>
 
-      <div class="w-100 bg-white mt-15">
+      <div class="w-100 bg-white mt-15" dir="auto">
+        <p class="d-none">{{$t('rtlHelper')}}</p>
         <input
           class="w-100 px-5 outline-none quick-search"
           :placeholder="`${$t('adminMessagesQuickSearch')}`"
