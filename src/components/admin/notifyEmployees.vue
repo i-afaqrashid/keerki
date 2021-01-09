@@ -56,7 +56,7 @@
           >
             Excluded Employee Name
 
-            <button class="btn outline-none p-0 ml-1 align-self-end">
+            <button class="btn outline-none p-0 mx-1 align-self-end">
               <svg
                 width="10"
                 height="10"
@@ -77,7 +77,7 @@
           >
             Selected excluded department
 
-            <button class="btn outline-none p-0 ml-1 align-self-end">
+            <button class="btn outline-none p-0 mx-1 align-self-end">
               <svg
                 width="10"
                 height="10"

@@ -11,6 +11,8 @@
     hider-header
     size="xl"
   >
+    <!-- editPermissionsRoles:"Roles",editPermissionsAddNewRoles:"Add new role",editPermissionsDuplicateSelectedRoles:"Duplicate selected role",editPermissionsDeleteSelectedRole:"Delete select role",editPermissionsUsersAreMoved:"Users are moved to default role and remain active",editPermissionsTechEmployee:"Tech Employee",editPermissionsFinancialEmploye:"Financial Employee",editPermissionsCustomerService:"Customer Service",editPermissionsPermissions:"Permissions",editPermissionsSensitive:"Sensitive",editPermissionsClientDetails:"Client details",editPermissionsName:"Name",editPermissionsAddress:"Address",editPermissionsEmail:"Email Address",editPermissionsPhone:"Phone Number",editPermissionsBalance:"Balance",editPermissionsOrders:"Orders",editPermissionsViewOrders:"View Orders",editPermissionsSendSms:"Send SMS",editPermissionsDone:"Done",editPermissionsTransfer:"Transfer",editPermissionsCancel:"Cancel",editPermissionsMessage:"Messages",editPermissionsViewMessages:"View Messages",editPermissionsReplyToMessages:"Reply to Messages",editPermissionsNotifications:"Notifications",editPermissionsView:"View",editPermissionsClientStatus:"Client status",editPermissionsMoreDetails:"More details about it",editPermissionsAccountStatus:"Account Status",
+        editPermissionsEmployeesAndUserManagment:"Employees and User Managment",editPermissionsCreateUser:"Create User",editPermissionsManageUser:"Manage User",editPermissionsActivate:"Activate, suspend, & delete clients users or edit their profile.",editPermissionsUsers:"Users",editPermissionsMoveUsers:"Move users to this role",editPermissionsMoveUser:"Move user(s) back to default role",editPermissionsSearch:"Search",editPermissionsFirstLast:"First Last Name" -->
     <div class="w-100 d-flex flex-column flex-lg-row justify-content-center">
       <div
         class="w-33-resp py-3 border-right d-flex flex-column align-items-center"
@@ -31,7 +33,7 @@
               fill="white"
             />
           </svg>
-          <p class="mb-0">Roles</p>
+          <p class="mb-0">{{ $t("editPermissionsRoles") }}</p>
         </div>
         <div
           class="mt-4 w-70 align-self-start d-flex align-items-center justify-content-around"
@@ -83,35 +85,39 @@
             </button>
           </div>
           <div class="d-flex flex-column justify-content-center">
-            <p class="mb-0">Add new role</p>
-            <p class="mb-0 mt-2">Duplicate selected role</p>
-            <p class="mb-0 mt-2 pink-text opacity-50">Delete selected role</p>
+            <p class="mb-0">{{ $t("editPermissionsAddNewRoles") }}</p>
+            <p class="mb-0 mt-2">
+              {{ $t("editPermissionsDuplicateSelectedRoles") }}
+            </p>
+            <p class="mb-0 mt-2 pink-text opacity-50">
+              {{ $t("editPermissionsDeleteSelectedRole") }}
+            </p>
           </div>
         </div>
         <div class="w-70 mt-1">
           <p class="mb-0 fs-10 text-muted text-center">
-            Users are moved to default role and remain active
+            {{ $t("editPermissionsUsersAreMoved") }}
           </p>
         </div>
         <div class="w-90 mt-4">
           <button
             class="w-70 bg-primary text-white d-flex justify-content-start align-items-center btn rounded-0"
           >
-            Tech Employee
+            {{ $t("editPermissionsTechEmployee") }}
           </button>
         </div>
         <div class="w-90 mt-2">
           <button
             class="w-100 d-flex justify-content-start align-items-center btn rounded-0"
           >
-            Financial Employee
+            {{ $t("editPermissionsFinancialEmployee") }}
           </button>
         </div>
         <div class="w-90 mt-2">
           <button
             class="w-100 d-flex justify-content-start align-items-center btn rounded-0"
           >
-            Customer Service
+            {{ $t("editPermissionsCustomerService") }}
           </button>
         </div>
       </div>
@@ -135,15 +141,15 @@
             />
           </svg>
 
-          <p class="mb-0">Permissions</p>
+          <p class="mb-0">{{ $t("editPermissionsPermissions") }}</p>
         </div>
         <div class="w-90 mt-3">
-          <p class="text-muted">SENSITIVE</p>
+          <p class="text-muted">{{ $t("editPermissionsSensitive") }}</p>
         </div>
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Client details</p>
+          <p class="mb-0">{{ $t("editPermissionsClientDetails") }}</p>
           <button class="d-flex align-items-center outline-none">
             <svg
               width="19"
@@ -165,7 +171,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Name</p>
+          <p class="mb-0">{{ $t("editPermissionsName") }}</p>
           <button class="d-flex align-items-center outline-none">
             <svg
               width="19"
@@ -186,7 +192,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Address</p>
+          <p class="mb-0">{{ $t("editPermissionsAddress") }}</p>
           <button class="outline-none d-flex align-items-center">
             <svg
               width="19"
@@ -207,7 +213,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Email address</p>
+          <p class="mb-0">{{ $t("editPermissionsEmail") }}</p>
           <button class="outline-none d-flex align-items-center">
             <svg
               width="19"
@@ -228,7 +234,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Phone number</p>
+          <p class="mb-0">{{ $t("editPermissionsPhone") }}</p>
           <button class="outline-none d-flex align-items-center">
             <svg
               width="19"
@@ -249,7 +255,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Balance</p>
+          <p class="mb-0">{{ $t("editPermissionsBalance") }}</p>
           <button class="outline-none d-flex align-items-center">
             <svg
               width="16"
@@ -269,12 +275,12 @@
           </button>
         </div>
         <div class="w-90 mt-3">
-          <p class="text-muted">ORDERS</p>
+          <p class="text-muted">{{ $t("editPermissionsOrders") }}</p>
         </div>
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">View Orders</p>
+          <p class="mb-0">{{ $t("editPermissionsViewOrders") }}</p>
           <button class="outline-none d-flex align-items-center">
             <svg
               width="16"
@@ -295,7 +301,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Send SMS</p>
+          <p class="mb-0">{{ $t("editPermissionsSendSms") }}</p>
           <div class="d-flex align-items-center">
             <svg
               width="16"
@@ -316,7 +322,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Done</p>
+          <p class="mb-0">{{ $t("editPermissionsDone") }}</p>
           <div class="d-flex align-items-center">
             <svg
               width="16"
@@ -337,7 +343,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Transfer</p>
+          <p class="mb-0">{{ $t("editPermissionsTransfer") }}</p>
           <div class="d-flex align-items-center">
             <svg
               width="16"
@@ -358,7 +364,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Cancel</p>
+          <p class="mb-0">{{ $t("editPermissionsCancel") }}</p>
           <div class="d-flex align-items-center">
             <svg
               width="16"
@@ -379,7 +385,7 @@
         <div
           class="w-90 d-flex justify-content-between align-items-center mt-3"
         >
-          <p class="text-muted">MESSAGES</p>
+          <p class="text-muted">{{ $t("editPermissionsMessage") }}</p>
           <div class="d-flex align-items-center">
             <svg
               width="16"
@@ -400,7 +406,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">View Messages</p>
+          <p class="mb-0">{{ $t("editPermissionsViewMessages") }}</p>
           <div class="d-flex align-items-center">
             <svg
               width="16"
@@ -421,100 +427,7 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
-          <p class="mb-0">Reply to Messages</p>
-          <div class="d-flex align-items-center">
-            <svg
-              width="16"
-              height="15"
-              viewBox="0 0 16 15"
-              class="mx-2"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.9922 10.1836C10.9375 10.2383 10.9375 10.293 10.9375 10.3477V13.4375H1.3125V3.8125H7.90234C7.95703 3.8125 8.01172 3.8125 8.06641 3.75781L8.94141 2.88281C9.07812 2.74609 8.96875 2.5 8.77734 2.5H1.3125C0.574219 2.5 0 3.10156 0 3.8125V13.4375C0 14.1758 0.574219 14.75 1.3125 14.75H10.9375C11.6484 14.75 12.25 14.1758 12.25 13.4375V9.47266C12.25 9.28125 12.0039 9.17188 11.8672 9.30859L10.9922 10.1836ZM15.2578 4.6875C15.8867 4.05859 15.8867 3.04688 15.2578 2.41797L14.082 1.24219C13.4531 0.613281 12.4414 0.613281 11.8125 1.24219L4.64844 8.40625L4.375 10.8945C4.29297 11.6055 4.89453 12.207 5.60547 12.125L8.09375 11.8516L15.2578 4.6875ZM12.5781 5.50781L7.49219 10.5938L5.6875 10.8125L5.90625 9.00781L10.9922 3.92188L12.5781 5.50781ZM14.3281 3.34766C14.4648 3.45703 14.4648 3.62109 14.3555 3.75781L13.5078 4.60547L11.9219 2.99219L12.7422 2.17188C12.8516 2.03516 13.043 2.03516 13.1523 2.17188L14.3281 3.34766Z"
-                fill="#0074BD"
-              />
-            </svg>
-
-            <AdminPopUp />
-          </div>
-        </div>
-        <div
-          class="w-90 d-flex justify-content-between align-items-center mt-3"
-        >
-          <p class="text-muted">NOTIFICATIONS</p>
-          <div class="d-flex align-items-center">
-            <svg
-              width="16"
-              height="11"
-              viewBox="0 0 16 11"
-              class="mx-2"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.875 2.6875C7.62891 2.71484 7.24609 2.76953 7 2.82422C7.10938 3.01562 7.19141 3.37109 7.21875 3.5625C7.21875 4.41016 6.50781 5.09375 5.6875 5.09375C5.46875 5.09375 5.11328 5.01172 4.94922 4.90234C4.86719 5.14844 4.8125 5.50391 4.8125 5.75C4.8125 7.44531 6.17969 8.8125 7.875 8.8125C9.57031 8.8125 10.9375 7.44531 10.9375 5.75C10.9375 4.08203 9.57031 2.6875 7.875 2.6875ZM15.6406 5.36719C14.1641 2.46875 11.2109 0.5 7.875 0.5C4.51172 0.5 1.55859 2.46875 0.0820312 5.36719C0.0273438 5.47656 0 5.64062 0 5.77734C0 5.88672 0.0273438 6.05078 0.0820312 6.16016C1.55859 9.05859 4.51172 11 7.875 11C11.2109 11 14.1641 9.05859 15.6406 6.16016C15.6953 6.05078 15.7227 5.88672 15.7227 5.75C15.7227 5.64062 15.6953 5.47656 15.6406 5.36719ZM7.875 9.6875C5.16797 9.6875 2.67969 8.18359 1.36719 5.75C2.67969 3.31641 5.16797 1.8125 7.875 1.8125C10.5547 1.8125 13.043 3.31641 14.3555 5.75C13.043 8.18359 10.5547 9.6875 7.875 9.6875Z"
-                fill="#0074BD"
-              />
-            </svg>
-
-            <AdminPopUp />
-          </div>
-        </div>
-        <div
-          class="w-70 mt-3 d-flex justify-content-between align-items-center"
-        >
-          <p class="mb-0">View</p>
-          <div class="d-flex align-items-center">
-            <svg
-              width="16"
-              height="11"
-              viewBox="0 0 16 11"
-              fill="none"
-              class="mx-2"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.875 2.6875C7.62891 2.71484 7.24609 2.76953 7 2.82422C7.10938 3.01562 7.19141 3.37109 7.21875 3.5625C7.21875 4.41016 6.50781 5.09375 5.6875 5.09375C5.46875 5.09375 5.11328 5.01172 4.94922 4.90234C4.86719 5.14844 4.8125 5.50391 4.8125 5.75C4.8125 7.44531 6.17969 8.8125 7.875 8.8125C9.57031 8.8125 10.9375 7.44531 10.9375 5.75C10.9375 4.08203 9.57031 2.6875 7.875 2.6875ZM15.6406 5.36719C14.1641 2.46875 11.2109 0.5 7.875 0.5C4.51172 0.5 1.55859 2.46875 0.0820312 5.36719C0.0273438 5.47656 0 5.64062 0 5.77734C0 5.88672 0.0273438 6.05078 0.0820312 6.16016C1.55859 9.05859 4.51172 11 7.875 11C11.2109 11 14.1641 9.05859 15.6406 6.16016C15.6953 6.05078 15.7227 5.88672 15.7227 5.75C15.7227 5.64062 15.6953 5.47656 15.6406 5.36719ZM7.875 9.6875C5.16797 9.6875 2.67969 8.18359 1.36719 5.75C2.67969 3.31641 5.16797 1.8125 7.875 1.8125C10.5547 1.8125 13.043 3.31641 14.3555 5.75C13.043 8.18359 10.5547 9.6875 7.875 9.6875Z"
-                fill="#0074BD"
-              />
-            </svg>
-            <AdminPopUp />
-          </div>
-        </div>
-        <div
-          class="w-70 mt-3 d-flex justify-content-between align-items-center"
-        >
-          <div>
-            <p class="mb-1">Client status</p>
-            <p class="mb-0 fs-10 text-muted">More details about it</p>
-          </div>
-          <div class="d-flex align-items-center">
-            <svg
-              width="16"
-              height="15"
-              class="mx-2"
-              viewBox="0 0 16 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.9922 10.1836C10.9375 10.2383 10.9375 10.293 10.9375 10.3477V13.4375H1.3125V3.8125H7.90234C7.95703 3.8125 8.01172 3.8125 8.06641 3.75781L8.94141 2.88281C9.07812 2.74609 8.96875 2.5 8.77734 2.5H1.3125C0.574219 2.5 0 3.10156 0 3.8125V13.4375C0 14.1758 0.574219 14.75 1.3125 14.75H10.9375C11.6484 14.75 12.25 14.1758 12.25 13.4375V9.47266C12.25 9.28125 12.0039 9.17188 11.8672 9.30859L10.9922 10.1836ZM15.2578 4.6875C15.8867 4.05859 15.8867 3.04688 15.2578 2.41797L14.082 1.24219C13.4531 0.613281 12.4414 0.613281 11.8125 1.24219L4.64844 8.40625L4.375 10.8945C4.29297 11.6055 4.89453 12.207 5.60547 12.125L8.09375 11.8516L15.2578 4.6875ZM12.5781 5.50781L7.49219 10.5938L5.6875 10.8125L5.90625 9.00781L10.9922 3.92188L12.5781 5.50781ZM14.3281 3.34766C14.4648 3.45703 14.4648 3.62109 14.3555 3.75781L13.5078 4.60547L11.9219 2.99219L12.7422 2.17188C12.8516 2.03516 13.043 2.03516 13.1523 2.17188L14.3281 3.34766Z"
-                fill="#0074BD"
-              />
-            </svg>
-
-            <AdminPopUp />
-          </div>
-        </div>
-        <div
-          class="w-70 mt-3 d-flex justify-content-between align-items-center"
-        >
-          <div>
-            <p class="mb-1">Account status</p>
-            <p class="mb-0 fs-10 text-muted">More details about it</p>
-          </div>
+          <p class="mb-0">{{ $t("editPermissionsReplyToMessages") }}</p>
           <div class="d-flex align-items-center">
             <svg
               width="16"
@@ -536,23 +449,18 @@
         <div
           class="w-90 d-flex justify-content-between align-items-center mt-3"
         >
-          <p class="text-muted">EMPLOYEES AND USER MANAGMENT</p>
-        </div>
-        <div
-          class="w-70 mt-3 d-flex justify-content-between align-items-center"
-        >
-          <p class="mb-0">Create User</p>
+          <p class="text-muted">{{ $t("editPermissionsNotifications") }}</p>
           <div class="d-flex align-items-center">
             <svg
-              width="19"
-              height="15"
-              viewBox="0 0 19 15"
-              fill="none"
+              width="16"
+              height="11"
+              viewBox="0 0 16 11"
               class="mx-2"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M18.3359 13.6289L1.98438 0.859375C1.90234 0.804688 1.79297 0.75 1.71094 0.75C1.57422 0.75 1.4375 0.832031 1.35547 0.914062L1.08203 1.26953C1.02734 1.32422 0.972656 1.46094 0.972656 1.54297C0.972656 1.65234 1.05469 1.81641 1.16406 1.87109L17.5156 14.668C17.5703 14.7227 17.6797 14.75 17.7891 14.75C17.8984 14.75 18.0352 14.6953 18.1172 14.5859L18.3906 14.2578C18.4453 14.2031 18.5 14.0664 18.5 13.9844C18.5 13.875 18.418 13.7109 18.3359 13.6289ZM9.09375 4.76953L12.7852 7.64062C12.7305 6 11.3906 4.6875 9.75 4.6875C9.55859 4.71484 9.28516 4.74219 9.09375 4.76953ZM10.3789 10.7578L6.6875 7.88672C6.74219 9.52734 8.08203 10.8125 9.75 10.8125C9.91406 10.8125 10.1875 10.7852 10.3789 10.7578ZM9.75 3.8125C12.4297 3.8125 14.918 5.31641 16.2305 7.75C15.957 8.26953 15.4375 9.00781 15.0273 9.41797L16.0664 10.2109C16.5586 9.69141 17.1875 8.78906 17.5156 8.16016C17.5703 8.05078 17.625 7.88672 17.625 7.75C17.625 7.64062 17.5703 7.47656 17.5156 7.36719C16.0391 4.46875 13.0859 2.5 9.75 2.5C8.73828 2.5 7.78125 2.69141 6.87891 3.01953L8.13672 4.03125C8.65625 3.89453 9.20312 3.8125 9.75 3.8125ZM9.75 11.6875C7.04297 11.6875 4.55469 10.1836 3.24219 7.75C3.51562 7.25781 4.03516 6.51953 4.44531 6.10938L3.40625 5.31641C2.91406 5.83594 2.28516 6.73828 1.95703 7.36719C1.90234 7.47656 1.875 7.64062 1.875 7.77734C1.875 7.88672 1.90234 8.05078 1.95703 8.16016C3.43359 11.0586 6.38672 13 9.75 13C10.7344 13 11.6914 12.8086 12.5938 12.5078L11.3359 11.4961C10.8164 11.6328 10.2695 11.6875 9.75 11.6875Z"
+                d="M7.875 2.6875C7.62891 2.71484 7.24609 2.76953 7 2.82422C7.10938 3.01562 7.19141 3.37109 7.21875 3.5625C7.21875 4.41016 6.50781 5.09375 5.6875 5.09375C5.46875 5.09375 5.11328 5.01172 4.94922 4.90234C4.86719 5.14844 4.8125 5.50391 4.8125 5.75C4.8125 7.44531 6.17969 8.8125 7.875 8.8125C9.57031 8.8125 10.9375 7.44531 10.9375 5.75C10.9375 4.08203 9.57031 2.6875 7.875 2.6875ZM15.6406 5.36719C14.1641 2.46875 11.2109 0.5 7.875 0.5C4.51172 0.5 1.55859 2.46875 0.0820312 5.36719C0.0273438 5.47656 0 5.64062 0 5.77734C0 5.88672 0.0273438 6.05078 0.0820312 6.16016C1.55859 9.05859 4.51172 11 7.875 11C11.2109 11 14.1641 9.05859 15.6406 6.16016C15.6953 6.05078 15.7227 5.88672 15.7227 5.75C15.7227 5.64062 15.6953 5.47656 15.6406 5.36719ZM7.875 9.6875C5.16797 9.6875 2.67969 8.18359 1.36719 5.75C2.67969 3.31641 5.16797 1.8125 7.875 1.8125C10.5547 1.8125 13.043 3.31641 14.3555 5.75C13.043 8.18359 10.5547 9.6875 7.875 9.6875Z"
                 fill="#0074BD"
               />
             </svg>
@@ -563,10 +471,114 @@
         <div
           class="w-70 mt-3 d-flex justify-content-between align-items-center"
         >
+          <p class="mb-0">{{ $t("editPermissionsView") }}</p>
+          <div class="d-flex align-items-center">
+            <svg
+              width="16"
+              height="11"
+              viewBox="0 0 16 11"
+              fill="none"
+              class="mx-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.875 2.6875C7.62891 2.71484 7.24609 2.76953 7 2.82422C7.10938 3.01562 7.19141 3.37109 7.21875 3.5625C7.21875 4.41016 6.50781 5.09375 5.6875 5.09375C5.46875 5.09375 5.11328 5.01172 4.94922 4.90234C4.86719 5.14844 4.8125 5.50391 4.8125 5.75C4.8125 7.44531 6.17969 8.8125 7.875 8.8125C9.57031 8.8125 10.9375 7.44531 10.9375 5.75C10.9375 4.08203 9.57031 2.6875 7.875 2.6875ZM15.6406 5.36719C14.1641 2.46875 11.2109 0.5 7.875 0.5C4.51172 0.5 1.55859 2.46875 0.0820312 5.36719C0.0273438 5.47656 0 5.64062 0 5.77734C0 5.88672 0.0273438 6.05078 0.0820312 6.16016C1.55859 9.05859 4.51172 11 7.875 11C11.2109 11 14.1641 9.05859 15.6406 6.16016C15.6953 6.05078 15.7227 5.88672 15.7227 5.75C15.7227 5.64062 15.6953 5.47656 15.6406 5.36719ZM7.875 9.6875C5.16797 9.6875 2.67969 8.18359 1.36719 5.75C2.67969 3.31641 5.16797 1.8125 7.875 1.8125C10.5547 1.8125 13.043 3.31641 14.3555 5.75C13.043 8.18359 10.5547 9.6875 7.875 9.6875Z"
+                fill="#0074BD"
+              />
+            </svg>
+            <AdminPopUp />
+          </div>
+        </div>
+        <div
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
+        >
           <div>
-            <p class="mb-1">Manage user</p>
+            <p class="mb-1">{{ $t("editPermissionsClientStatus") }}</p>
             <p class="mb-0 fs-10 text-muted">
-              Activate, suspend, & delete clients users or edit their profile.
+              {{ $t("editPermissionsMoreDetails") }}
+            </p>
+          </div>
+          <div class="d-flex align-items-center">
+            <svg
+              width="16"
+              height="15"
+              class="mx-2"
+              viewBox="0 0 16 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.9922 10.1836C10.9375 10.2383 10.9375 10.293 10.9375 10.3477V13.4375H1.3125V3.8125H7.90234C7.95703 3.8125 8.01172 3.8125 8.06641 3.75781L8.94141 2.88281C9.07812 2.74609 8.96875 2.5 8.77734 2.5H1.3125C0.574219 2.5 0 3.10156 0 3.8125V13.4375C0 14.1758 0.574219 14.75 1.3125 14.75H10.9375C11.6484 14.75 12.25 14.1758 12.25 13.4375V9.47266C12.25 9.28125 12.0039 9.17188 11.8672 9.30859L10.9922 10.1836ZM15.2578 4.6875C15.8867 4.05859 15.8867 3.04688 15.2578 2.41797L14.082 1.24219C13.4531 0.613281 12.4414 0.613281 11.8125 1.24219L4.64844 8.40625L4.375 10.8945C4.29297 11.6055 4.89453 12.207 5.60547 12.125L8.09375 11.8516L15.2578 4.6875ZM12.5781 5.50781L7.49219 10.5938L5.6875 10.8125L5.90625 9.00781L10.9922 3.92188L12.5781 5.50781ZM14.3281 3.34766C14.4648 3.45703 14.4648 3.62109 14.3555 3.75781L13.5078 4.60547L11.9219 2.99219L12.7422 2.17188C12.8516 2.03516 13.043 2.03516 13.1523 2.17188L14.3281 3.34766Z"
+                fill="#0074BD"
+              />
+            </svg>
+
+            <AdminPopUp />
+          </div>
+        </div>
+        <div
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <p class="mb-1">{{ $t("editPermissionsAccountStatus") }}</p>
+            <p class="mb-0 fs-10 text-muted">
+              {{ $t("editPermissionsMoreDetails") }}
+            </p>
+          </div>
+          <div class="d-flex align-items-center">
+            <svg
+              width="16"
+              height="15"
+              viewBox="0 0 16 15"
+              class="mx-2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.9922 10.1836C10.9375 10.2383 10.9375 10.293 10.9375 10.3477V13.4375H1.3125V3.8125H7.90234C7.95703 3.8125 8.01172 3.8125 8.06641 3.75781L8.94141 2.88281C9.07812 2.74609 8.96875 2.5 8.77734 2.5H1.3125C0.574219 2.5 0 3.10156 0 3.8125V13.4375C0 14.1758 0.574219 14.75 1.3125 14.75H10.9375C11.6484 14.75 12.25 14.1758 12.25 13.4375V9.47266C12.25 9.28125 12.0039 9.17188 11.8672 9.30859L10.9922 10.1836ZM15.2578 4.6875C15.8867 4.05859 15.8867 3.04688 15.2578 2.41797L14.082 1.24219C13.4531 0.613281 12.4414 0.613281 11.8125 1.24219L4.64844 8.40625L4.375 10.8945C4.29297 11.6055 4.89453 12.207 5.60547 12.125L8.09375 11.8516L15.2578 4.6875ZM12.5781 5.50781L7.49219 10.5938L5.6875 10.8125L5.90625 9.00781L10.9922 3.92188L12.5781 5.50781ZM14.3281 3.34766C14.4648 3.45703 14.4648 3.62109 14.3555 3.75781L13.5078 4.60547L11.9219 2.99219L12.7422 2.17188C12.8516 2.03516 13.043 2.03516 13.1523 2.17188L14.3281 3.34766Z"
+                fill="#0074BD"
+              />
+            </svg>
+
+            <AdminPopUp />
+          </div>
+        </div>
+        <div
+          class="w-90 d-flex justify-content-between align-items-center mt-3"
+        >
+          <p class="text-muted">
+            {{ $t("editPermissionsEmployeesAndUserManagment") }}
+          </p>
+        </div>
+        <div
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
+        >
+          <p class="mb-0">{{ $t("editPermissionsCreateUser") }}</p>
+          <div class="d-flex align-items-center">
+            <svg
+              width="19"
+              height="15"
+              viewBox="0 0 19 15"
+              fill="none"
+              class="mx-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3359 13.6289L1.98438 0.859375C1.90234 0.804688 1.79297 0.75 1.71094 0.75C1.57422 0.75 1.4375 0.832031 1.35547 0.914062L1.08203 1.26953C1.02734 1.32422 0.972656 1.46094 0.972656 1.54297C0.972656 1.65234 1.05469 1.81641 1.16406 1.87109L17.5156 14.668C17.5703 14.7227 17.6797 14.75 17.7891 14.75C17.8984 14.75 18.0352 14.6953 18.1172 14.5859L18.3906 14.2578C18.4453 14.2031 18.5 14.0664 18.5 13.9844C18.5 13.875 18.418 13.7109 18.3359 13.6289ZM9.09375 4.76953L12.7852 7.64062C12.7305 6 11.3906 4.6875 9.75 4.6875C9.55859 4.71484 9.28516 4.74219 9.09375 4.76953ZM10.3789 10.7578L6.6875 7.88672C6.74219 9.52734 8.08203 10.8125 9.75 10.8125C9.91406 10.8125 10.1875 10.7852 10.3789 10.7578ZM9.75 3.8125C12.4297 3.8125 14.918 5.31641 16.2305 7.75C15.957 8.26953 15.4375 9.00781 15.0273 9.41797L16.0664 10.2109C16.5586 9.69141 17.1875 8.78906 17.5156 8.16016C17.5703 8.05078 17.625 7.88672 17.625 7.75C17.625 7.64062 17.5703 7.47656 17.5156 7.36719C16.0391 4.46875 13.0859 2.5 9.75 2.5C8.73828 2.5 7.78125 2.69141 6.87891 3.01953L8.13672 4.03125C8.65625 3.89453 9.20312 3.8125 9.75 3.8125ZM9.75 11.6875C7.04297 11.6875 4.55469 10.1836 3.24219 7.75C3.51562 7.25781 4.03516 6.51953 4.44531 6.10938L3.40625 5.31641C2.91406 5.83594 2.28516 6.73828 1.95703 7.36719C1.90234 7.47656 1.875 7.64062 1.875 7.77734C1.875 7.88672 1.90234 8.05078 1.95703 8.16016C3.43359 11.0586 6.38672 13 9.75 13C10.7344 13 11.6914 12.8086 12.5938 12.5078L11.3359 11.4961C10.8164 11.6328 10.2695 11.6875 9.75 11.6875Z"
+                fill="#0074BD"
+              />
+            </svg>
+
+            <AdminPopUp />
+          </div>
+        </div>
+        <div
+          class="w-70 mt-3 d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <p class="mb-1">{{ $t("editPermissionsManageUser") }}</p>
+            <p class="mb-0 fs-10 text-muted">
+              {{ $t("editPermissionsActivate") }}
             </p>
           </div>
           <div class="d-flex align-items-center">
@@ -605,7 +617,7 @@
             />
           </svg>
 
-          <p class="mb-0">Users</p>
+          <p class="mb-0">{{ $t("editPermissionsUsers") }}</p>
         </div>
         <div
           class="mt-4 w-100 align-self-start d-flex align-items-center justify-content-around"
@@ -642,9 +654,9 @@
             </button>
           </div>
           <div class="d-flex flex-column justify-content-center">
-            <p class="mb-0 mt-1">Move users to this role</p>
+            <p class="mb-0 mt-1">{{ $t("editPermissionsMoveUsers") }}</p>
             <p class="mb-0 mt-2 pink-text opacity-50">
-              Move user(s) back to default role
+              {{ $t("editPermissionsMoveUser") }}
             </p>
           </div>
         </div>
@@ -668,7 +680,7 @@
             </svg>
             <input
               class="w-100 rounded-lg border px-15 outline-none py-1"
-              placeholder="Search"
+              :placeholder="`${$t('editPermissionsSearch')}`"
             />
           </div>
         </div>
@@ -682,7 +694,7 @@
               value="accepted"
               unchecked-value="not_accepted"
             >
-              First Last Name
+              {{ $t("editPermissionsFirstLast") }}
             </b-form-checkbox>
           </div>
         </div>
@@ -696,7 +708,7 @@
               value="accepted"
               unchecked-value="not_accepted"
             >
-              First Last Name
+              {{ $t("editPermissionsFirstLast") }}
             </b-form-checkbox>
           </div>
         </div>
@@ -710,7 +722,7 @@
               value="accepted"
               unchecked-value="not_accepted"
             >
-              First Last Name
+              {{ $t("editPermissionsFirstLast") }}
             </b-form-checkbox>
           </div>
         </div>
@@ -724,7 +736,7 @@
               value="accepted"
               unchecked-value="not_accepted"
             >
-              First Last Name
+              {{ $t("editPermissionsFirstLast") }}
             </b-form-checkbox>
           </div>
         </div>
@@ -738,7 +750,7 @@
               value="accepted"
               unchecked-value="not_accepted"
             >
-              First Last Name
+              {{ $t("editPermissionsFirstLast") }}
             </b-form-checkbox>
           </div>
         </div>
@@ -752,7 +764,7 @@
               value="accepted"
               unchecked-value="not_accepted"
             >
-              First Last Name
+              {{ $t("editPermissionsFirstLast") }}
             </b-form-checkbox>
           </div>
         </div>
