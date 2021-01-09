@@ -11,8 +11,7 @@
     hider-header
     size="xl"
   >
-    <!-- editPermissionsRoles:"Roles",editPermissionsAddNewRoles:"Add new role",editPermissionsDuplicateSelectedRoles:"Duplicate selected role",editPermissionsDeleteSelectedRole:"Delete select role",editPermissionsUsersAreMoved:"Users are moved to default role and remain active",editPermissionsTechEmployee:"Tech Employee",editPermissionsFinancialEmploye:"Financial Employee",editPermissionsCustomerService:"Customer Service",editPermissionsPermissions:"Permissions",editPermissionsSensitive:"Sensitive",editPermissionsClientDetails:"Client details",editPermissionsName:"Name",editPermissionsAddress:"Address",editPermissionsEmail:"Email Address",editPermissionsPhone:"Phone Number",editPermissionsBalance:"Balance",editPermissionsOrders:"Orders",editPermissionsViewOrders:"View Orders",editPermissionsSendSms:"Send SMS",editPermissionsDone:"Done",editPermissionsTransfer:"Transfer",editPermissionsCancel:"Cancel",editPermissionsMessage:"Messages",editPermissionsViewMessages:"View Messages",editPermissionsReplyToMessages:"Reply to Messages",editPermissionsNotifications:"Notifications",editPermissionsView:"View",editPermissionsClientStatus:"Client status",editPermissionsMoreDetails:"More details about it",editPermissionsAccountStatus:"Account Status",
-        editPermissionsEmployeesAndUserManagment:"Employees and User Managment",editPermissionsCreateUser:"Create User",editPermissionsManageUser:"Manage User",editPermissionsActivate:"Activate, suspend, & delete clients users or edit their profile.",editPermissionsUsers:"Users",editPermissionsMoveUsers:"Move users to this role",editPermissionsMoveUser:"Move user(s) back to default role",editPermissionsSearch:"Search",editPermissionsFirstLast:"First Last Name" -->
+
     <div class="w-100 d-flex flex-column flex-lg-row justify-content-center">
       <div
         class="w-33-resp py-3 border-right d-flex flex-column align-items-center"

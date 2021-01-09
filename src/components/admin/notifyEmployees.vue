@@ -1,7 +1,7 @@
 <template>
   <div class="w-90 pt-9">
     <div class="w-90 border-bottom pb-4 border-dark">
-      <h1 class="font-24 mb-0">Notify All Keerki Employees</h1>
+      <h1 class="font-24 mb-0">{{$t('notifyNotifyAll')}}</h1>
     </div>
 
     <div
