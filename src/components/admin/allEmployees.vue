@@ -1,7 +1,7 @@
 <template>
   <div class="w-90 pt-9">
     <div class="w-90 border-bottom pb-4 border-dark">
-      <h1 class="font-24 mb-0">All Keerki Employees</h1>
+      <h1 class="font-24 mb-0">{{$t('adminAllKeerkiEmployees')}}</h1>
     </div>
     <div
       class="w-90 d-flex justify-content-center flex-column mt-4 align-items-center"

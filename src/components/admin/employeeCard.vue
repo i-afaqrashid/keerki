@@ -1,6 +1,7 @@
 <template>
   <div
     class="employee-card py-3 w-48 d-flex flex-column justify-content-center align-items-center"
+  dir="auto"
   >
     <div class="profile-circle rounded-circle p-1">
       <img
@@ -45,7 +46,7 @@
           />
         </svg>
 
-        <p class="mb-0 w-75">42 <span class="text-muted">replies</span></p>
+        <p class="mb-0 w-75">42 <span class="text-muted">{{$t('adminEmployeesReplies')}}</span></p>
       </div>
     </div>
     <div class="w-100 d-flex justify-content-center align-items-center mt-4">
@@ -88,7 +89,7 @@
           />
         </svg>
 
-        <p class="mb-0 w-75">Date <span class="text-muted">Last login</span></p>
+        <p class="mb-0 w-75">{{$t('adminEmployeeDate')}} <span class="text-muted">Last login</span></p>
       </div>
     </div>
     <div class="w-100 d-flex justify-content-center align-items-center mt-4">
@@ -104,12 +105,12 @@
           <circle cx="6.5" cy="6.5" r="6.5" fill="#46D68C" />
         </svg>
 
-        <p class="mb-0 w-75">Status <span class="text-muted">Active</span></p>
+        <p class="mb-0 w-75">{{$t('adminEmployeeStatus')}} <span class="text-muted">{{$t('AdminEmployeesActive')}}</span></p>
       </div>
     </div>
     <div class="w-100 d-flex justify-content-center align-items-center mt-4">
       <button class="btn edit-btn text-white" @click="editEmployee">
-        Edit Account
+        {{$t('AdminEmployeesEditAccountBtn')}}
       </button>
     </div>
   </div>

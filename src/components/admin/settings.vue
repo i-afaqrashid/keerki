@@ -1,6 +1,7 @@
 <template>
   <div
     class="w-90 d-flex justify-content-center flex-column align-items-center pt-9"
+  dir="auto"
   >
     <div
       class="setting-cont w-100 py-4 d-flex justify-content-center align-items-center"
@@ -10,7 +11,9 @@
           <div
             class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
           >
-            <p class="fs-14 font-weight-bold mb-0 width-25">Session Time out</p>
+            <p class="fs-14 font-weight-bold mb-0 width-25">
+              {{ $t("adminSettingsSessionTimeOut") }}
+            </p>
             <div
               class="d-flex justify-content-between width-25 flex-column flex-lg-row"
             >
@@ -23,7 +26,7 @@
                 <div
                   class="grey-bg border-left d-flex justify-content-center align-items-center"
                 >
-                  <p class="mb-0">Hours</p>
+                  <p class="mb-0">{{ $t("adminSettingsHours") }}</p>
                 </div>
               </div>
               <div class="border rounded-lg d-flex mt-15 mt-lg-0">
@@ -35,7 +38,7 @@
                 <div
                   class="grey-bg border-left d-flex justify-content-center align-items-center"
                 >
-                  <p class="mb-0">Minutes</p>
+                  <p class="mb-0">{{ $t("adminSettingsMinutes") }}</p>
                 </div>
               </div>
             </div>
@@ -48,7 +51,7 @@
             class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
-              Auto send SMS reminders to clients
+              {{ $t("adminSettingsAutoSendSms") }}
             </p>
             <div
               class="d-flex justify-content-between width-25 flex-column flex-lg-row"
@@ -62,7 +65,7 @@
                 <div
                   class="grey-bg border-left d-flex justify-content-center align-items-center"
                 >
-                  <p class="mb-0">days</p>
+                  <p class="mb-0">{{ $t("adminSettingsDays") }}</p>
                 </div>
               </div>
             </div>
@@ -75,7 +78,7 @@
             class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
-              Deativate employee due to inactivity
+              {{ $t("adminSettingsDeactivateEmployee") }}
             </p>
             <div
               class="d-flex justify-content-between width-25 flex-column flex-lg-row"
@@ -89,7 +92,7 @@
                 <div
                   class="grey-bg border-left d-flex justify-content-center align-items-center"
                 >
-                  <p class="mb-0">days</p>
+                  <p class="mb-0">{{ $t("adminSettingsDays") }}</p>
                 </div>
               </div>
             </div>
@@ -102,7 +105,7 @@
             class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
-              Deactivate user for short time
+              {{ $t("adminSettingsDeactivateUser") }}
             </p>
             <div
               class="d-flex justify-content-between width-25 flex-column flex-lg-row"
@@ -125,7 +128,7 @@
             class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
-              Remove user from Admin dashboard
+              {{ $t("adminSettingsRemoveUser") }}
             </p>
             <div
               class="d-flex justify-content-between width-25 flex-column flex-lg-row"
@@ -144,7 +147,9 @@
       </div>
     </div>
     <div class="w-100 pt-5">
-      <p class="mb-0 font-24 font-weight-bold">Employees Settings</p>
+      <p class="mb-0 font-24 font-weight-bold">
+        {{ $t("adminSettingsEmployeeSetting") }}
+      </p>
       <div
         class="setting-cont w-100 py-5 d-flex justify-content-center flex-column align-items-center mt-2"
       >
@@ -155,7 +160,7 @@
             class="settings-btn text-white width-25 btn"
             v-b-modal.new-employee-modal
           >
-            Add New Employee
+            {{ $t("adminSettingsAddNewEmploy") }}
 
             <b-modal
               id="new-employee-modal"
@@ -175,48 +180,57 @@
                 >
                   <div
                     class="w-100 d-flex justify-content-around flex-column flex-lg-row"
+                    dir="auto"
                   >
                     <div class="d-flex pb-4 flex-column">
-                      <h1 class="fs-28 mb-0">Register an Employee</h1>
-                      <div class="w-100 pt-5">
-                        <p class="mb-1">*Name</p>
+                      <h1 class="fs-28 mb-0">
+                        {{ $t("adminSettingsRegisterEmployee") }}
+                      </h1>
+                      <div class="w-100 pt-5" >
+                        <p class="mb-1">{{ $t("adminSettingsName") }}</p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
+                        
                         >
+                        <p class="mb-0 d-none">{{ $t("adminSettingsMinutes") }}</p>
                           <input
                             class="settings-input w-48 px-1 outline-none"
-                            placeholder="First"
+                            :placeholder="`${$t('adminSettingsFirstName')}`"
                             type="text"
                             required
                           />
                           <input
                             class="settings-input w-48 px-1 outline-none"
-                            placeholder="Last"
+                            :placeholder="`${$t('adminSettingsLastName')}`"
                             required
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">*Username</p>
+                        <p class="mb-1">{{ $t("adminSettingsUsername") }}</p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            placeholder="Username"
+                            :placeholder="`${$t(
+                              'adminSettingsUsernamePlaceholder'
+                            )}`"
                             type="text"
                             required
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">*Password</p>
+                        <p class="mb-1">{{ $t("adminSettingsPassword") }}</p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            placeholder="Password"
+                            :placeholder="`${$t(
+                              'adminSettingsPassowordPlaceholder'
+                            )}`"
                             :type="passwordType1"
                             required
                           />
@@ -242,13 +256,17 @@
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">*Confirm Password</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsConfirmPassword") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            placeholder="Confirm Password"
+                            :placeholder="`${$t(
+                              'adminSettingsConfirmPasswordPlaceholder'
+                            )}`"
                             :type="passwordType2"
                             required
                           />
@@ -276,33 +294,39 @@
                     </div>
                     <div class="d-flexpb-4 flex-column">
                       <div class="w-100">
-                        <p class="mb-1">*Email</p>
+                        <p class="mb-1">{{ $t("adminSettingsEmail") }}</p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            placeholder="Email"
+                            :placeholder="`${$t(
+                              'adminSettingsEmailPlaceholder'
+                            )}`"
                             type="text"
                             required
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-3">
-                        <p class="mb-1">*Confirm Email Address</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsConfirmEmail") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            placeholder="Confirm Email Address"
+                            :placeholder="`${$t(
+                              'adminSettingsEmailPlaceholder'
+                            )}`"
                             type="text"
                             required
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">Work phone</p>
+                        <p class="mb-1">{{ $t("adminSettingsWorkPhone") }}</p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -314,13 +338,15 @@
                           </select>
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            placeholder="Enter your phone number"
+                            :placeholder="`${$t('adminSettingsEnterPhone')}`"
                             type="number"
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">*User’s time zone</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsUserTimeZone") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -333,7 +359,7 @@
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">*Role</p>
+                        <p class="mb-1">{{ $t("adminSettingsRole") }}</p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -341,7 +367,7 @@
                             class="border p-2 w-100 outline-none select-arrow"
                           >
                             <option>Select</option>
-                            <option>Admin</option>
+                            <option>{{ $t("adminSettingsRoleAdmin") }}</option>
                           </select>
                         </div>
                       </div>
@@ -366,10 +392,7 @@
                         </svg>
                       </button>
                       <p class="fs-12 font-weight-lighter">
-                        Password must be different from last 3 passwords.
-                        Password must be at least 8 characters and include at
-                        least one lowercase letter, uppercase letter, number,
-                        and special character.
+                        {{ $t("adminSettingsPassowordDescription") }}
                       </p>
                     </div>
                     <div
@@ -380,10 +403,10 @@
                         type="button"
                         @click="$bvModal.hide('new-employee-modal')"
                       >
-                        Cancel
+                        {{ $t("adminSettingsCancel") }}
                       </button>
                       <button class="btn btn-primary" type="submit">
-                        Submit
+                        {{ $t("adminSettingsSubmit") }}
                       </button>
                     </div>
                   </div>
@@ -395,7 +418,7 @@
             class="settings-btn text-white width-25 btn mt-4 mt-lg-0"
             @click="allEmployees"
           >
-            View All Employees
+            {{ $t("adminSettingsViewAllEmployees") }}
           </button>
         </div>
         <div
@@ -422,23 +445,32 @@
                 >
                   <div
                     class="w-100 d-flex justify-content-around flex-column flex-lg-row"
+                    dir="auto"
                   >
                     <div class="d-flex pb-4 flex-column">
-                      <h1 class="fs-28 mb-0">Edit Employee</h1>
+                      <h1 class="fs-28 mb-0">
+                        {{ $t("adminSettingsEditEmployee") }}
+                      </h1>
                       <div class="w-100 pt-5">
-                        <p class="mb-1">*Name</p>
+                        <p class="mb-1">
+                          {{ $t("adminSettingsEditEmployeeName") }}
+                        </p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
                             class="settings-input w-50 px-1 outline-none"
-                            placeholder="First"
+                            :placeholder="`${$t(
+                              'adminSettingsEditEmployeeFirst'
+                            )}`"
                             type="text"
                             required
                           />
                           <input
                             class="settings-input w-50 px-1 outline-none"
-                            placeholder="Last"
+                            :placeholder="`${$t(
+                              'adminSettingsEditEmployeeFirst'
+                            )}`"
                             required
                           />
                         </div>
@@ -446,14 +478,17 @@
                       <div class="w-100 pt-15">
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
+                        
                         >
-                          <p class="mb-0">Password:</p>
+                          <p class="mb-0">
+                            {{ $t("adminSettingsEditEmployeePassword") }}
+                          </p>
                           <button
                             class="change-pass outline-none"
                             type="button"
                             v-b-modal.pass-modal
                           >
-                            Change Password
+                            {{ $t("adminSettingsEditEmployeeChangePassword") }}
                             <b-modal
                               id="pass-modal"
                               centered
@@ -464,13 +499,22 @@
                             >
                               <div
                                 class="w-100 d-flex justify-content-center align-items-center flex-column"
+                              dir="auto"
                               >
                                 <div class="d-flex flex-column w-90">
-                                  <h1 class="fs-28">Change Password</h1>
+                                  <h1 class="fs-28">
+                                    {{
+                                      $t(
+                                        "adminSettingsEditEmployeeChangePassword"
+                                      )
+                                    }}
+                                  </h1>
                                   <p class="py-4">
-                                    Password must be different from last 3
-                                    passwords. Password must be at least 8
-                                    characters and include at least one:
+                                    {{
+                                      $t(
+                                        "adminSettingsEditEmployeeChangePasswordDescription"
+                                      )
+                                    }}
                                   </p>
 
                                   <div
@@ -498,26 +542,36 @@
                                     </p>
                                   </div>
                                   <div class="w-100 pt-15">
-                                    <p class="mb-1">*Password</p>
+                                    <p class="mb-1">
+                                      {{
+                                        $t(
+                                          "adminSettingsPassword"
+                                        )
+                                      }}
+                                    </p>
                                     <div
                                       class="d-flex w-100 justify-content-between align-items-center"
                                     >
                                       <input
                                         class="settings-input width-50 px-1 outline-none"
-                                        placeholder="Password"
+                                        :placeholder="`${$t('adminSettingsPassowordPlaceholder')}`"
                                         type="password"
                                         required
                                       />
                                     </div>
                                   </div>
                                   <div class="w-100 pt-15">
-                                    <p class="mb-1">*Confirm Password</p>
+                                    <p class="mb-1"> {{
+                                        $t(
+                                          "adminSettingsConfirmPassword"
+                                        )
+                                      }}</p>
                                     <div
                                       class="d-flex w-100 justify-content-between align-items-center"
                                     >
                                       <input
                                         class="settings-input width-50 px-1 outline-none"
-                                        placeholder="Confirm Passsword"
+                                        :placeholder="`${$t('adminSettingsConfirmPasswordPlaceholder')}`"
                                         type="password"
                                         required
                                       />
@@ -535,14 +589,13 @@
                                         type="button"
                                         @click="$bvModal.hide('pass-modal')"
                                       >
-                                        Cancel
-                                      </button>
+                                        {{$t('adminSettingsCancel')}}                                   </button>
                                       <button
                                         class="btn btn-primary"
                                         type="submit"
                                         @click="$bvModal.hide('pass-modal')"
                                       >
-                                        Submit
+                                        {{$t('adminSettingsSubmit')}} 
                                       </button>
                                     </div>
                                   </div>
@@ -556,7 +609,7 @@
                         <div
                           class="d-flex w-100 justify-content-between align-items-center text-left"
                         >
-                          <p class="mb-0">Last login:</p>
+                          <p class="mb-0">{{$t('adminSettingsLastLogin')}} </p>
                           <p class="mb-0 font-weight-light">
                             Yesterday at 3:18pm
                           </p>
@@ -566,7 +619,7 @@
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
-                          <p class="mb-0">Account Created:</p>
+                          <p class="mb-0">{{$t('adminSettingsAccountCreated')}}</p>
                           <p class="mb-0 font-weight-light">
                             Yesterday at 3:18pm
                           </p>
@@ -576,7 +629,7 @@
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
-                          <p class="mb-0">Last modified:</p>
+                          <p class="mb-0">{{$t('adminSettingsLastModified')}}</p>
                           <p class="mb-0 font-weight-light">
                             Yesterday at 3:18pm by Hedi
                           </p>
@@ -585,20 +638,20 @@
                     </div>
                     <div class="d-flexpb-4 flex-column">
                       <div class="w-100">
-                        <p class="mb-1">*Email</p>
+                        <p class="mb-1">{{$t('adminSettingsEditEmployeeEmail')}}</p>
                         <div
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            placeholder="first.last@keerki.com"
+                            :placeholder="`${$t('adminSettingsEditEmployeeEmailPlaceHolder')}`"
                             type="email"
                             required
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">Work phone</p>
+                        <p class="mb-1">{{$t('adminSettingsEditEmployeeWorkPone')}}</p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -610,13 +663,13 @@
                           </select>
                           <input
                             class="settings-input w-100 px-1 outline-none"
-                            placeholder="Enter your phone number"
+                            :placeholder="`${$t('adminSettingsEditEmployeeEnterPhone')}`"
                             type="number"
                           />
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">*User’s time zone</p>
+                        <p class="mb-1">{{$t('adminSettingsEditEmployeeUserTimeZone')}}</p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -629,7 +682,7 @@
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">*Role</p>
+                        <p class="mb-1">{{$t('adminSettingsEditEmployeeRole')}}</p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
@@ -637,20 +690,20 @@
                             class="border p-2 w-100 outline-none select-arrow"
                           >
                             <option>Select</option>
-                            <option>Admin</option>
+                            <option>{{$t('adminSettingsRoleAdmin')}}</option>
                           </select>
                         </div>
                       </div>
                       <div class="w-100 pt-15">
-                        <p class="mb-1">*Account Status</p>
+                        <p class="mb-1">{{$t('adminSettingsEditEmployeeAccountStatus')}}</p>
                         <div
                           class="d-flex w-100 justify-content-center align-items-center"
                         >
                           <select
                             class="border p-2 w-100 outline-none select-arrow"
                           >
-                            <option>Active</option>
-                            <option>Inactive</option>
+                            <option>{{$t('adminSettingsEditEmployeeActve')}}</option>
+                            <option>{{$t('adminSettingsEditEmployeeInactive')}}</option>
                           </select>
                         </div>
                       </div>
@@ -667,26 +720,26 @@
                         type="button"
                         @click="$bvModal.hide('edit-modal')"
                       >
-                        Cancel
+                        {{$t('adminSettingsCancel')}}
                       </button>
                       <button class="btn btn-primary" type="submit">
-                        Submit
+                        {{$t('adminSettingsSubmit')}}
                       </button>
                     </div>
                   </div>
                 </form>
               </div>
             </b-modal>
-            Edit Employee
+            {{$t('adminSettingsEditEmployee')}}
           </button>
           <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
-            Notify All Employees
+            {{$t('adminSettingNotifyAllEMployees')}}
           </button>
         </div>
       </div>
     </div>
     <div class="w-100 pt-5">
-      <p class="mb-0 font-24 font-weight-bold">Clients Settings</p>
+      <p class="mb-0 font-24 font-weight-bold">{{$t('adminSettingClientSettings')}}</p>
       <div
         class="setting-cont w-100 py-5 d-flex justify-content-center flex-column align-items-center mt-2"
       >
@@ -694,20 +747,20 @@
           class="d-flex justify-content-around flex-column flex-lg-row w-100 align-items-center"
         >
           <button class="settings-btn text-white width-25 btn">
-            Add New Client
+           {{$t('adminSettingAddNewClient')}}
           </button>
           <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
-            Notify all clients by notification
+            {{$t('adminSettingsNofifyAllClients')}}
           </button>
         </div>
         <div
           class="d-flex justify-content-around flex-column flex-lg-row pt-5 w-100 align-items-center"
         >
           <button class="settings-btn text-white width-25 btn" @click="sendSms">
-            Send SMS to all clients
+           {{$t('adminSettingsSendSms')}}
           </button>
           <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
-            Activate Client Account
+            {{$t('adminSettingActivateClient')}}
           </button>
         </div>
         <div
@@ -717,10 +770,10 @@
             class="settings-btn text-white width-25 btn"
             @click="sendEmail"
           >
-            Send Email to All Clients
+            {{$t('adminSettingSendEmail')}}
           </button>
           <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
-            Suspend Client Account
+            {{$t('adminSettingSuspendAccount')}}
           </button>
         </div>
       </div>

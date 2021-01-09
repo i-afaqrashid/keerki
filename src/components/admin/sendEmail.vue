@@ -1,6 +1,6 @@
 <template>
   <div class="w-90 pt-9">
-    <h1>Send Email</h1>
+    <h1>{{$t('adminSendEmail')}}</h1>
     <div
       class="w-100 pt-5 d-flex flex-column align-items-center justify-content-center sms-cont"
     >
@@ -26,23 +26,23 @@
 
           <input
             class="sms-search px-5 text-muted w-100 outline-none"
-            :placeholder="selectedType"
+            :placeholder="`${$t('adminAllClientsSelected')}`"
             :disabled="selectedType === 'All clients selected'"
           />
         </div>
-        <div
+       <div
           class="w-48 d-flex justify-content-around align-items-center mt-4 mt-lg-0"
         >
           <select
             class="border outline-none px-2 font-weight-bolder select-arrow w-48 sms-select"
             @change="selectHandler"
           >
-            <option value="All clients selected">All Clients</option>
-            <option value="Search and Exclude Clients">All but Exclude</option>
-            <option value="Search VIP Clients">VIP Clients</option>
-            <option value="Search New Users">New users - no orders</option>
+            <option value="All clients selected">{{$t('adminAllClients')}}</option>
+            <option value="Search and Exclude Clients">{{$t('adminAllButExcluded')}}</option>
+            <option value="Search VIP Clients">{{$t('adminVipClients')}}</option>
+            <option value="Search New Users">{{$t('adminNoUsers')}}</option>
           </select>
-          <button class="btn border sms-button text-white px-4">Search</button>
+          <button class="btn border sms-button text-white px-4">{{$t('adminSearch')}}</button>
         </div>
       </div>
       <div class="w-90 d-flex justify-content-center align-items-center my-3">
@@ -51,7 +51,7 @@
             v-if="selectedType !== 'All clients selected'"
             class="btn excluded d-flex justify-content-center align-items-center"
           >
-            Excluded client name
+            {{$t('adminExclueName')}}
 
             <button class="btn outline-none p-0 ml-1 align-self-end">
               <svg
@@ -73,7 +73,7 @@
       <div class="w-90 sms-message-cont pt-4 mt-5">
         <textarea
           class="w-100 outline-none sms-text px-4"
-          placeholder="Enter you message here"
+          :placeholder="`${$t('adminEnterYourSms')}`"
         ></textarea>
       </div>
       <div class="d-flex justify-content-end sms-footer w-90">
@@ -122,7 +122,7 @@
       </div>
       <div class="mt-5 d-flex justify-content-end align-items-center w-90">
         <div class="d-flex justify-content-center align-items-center">
-          <button class="btn sms-send text-white">SEND</button>
+          <button class="btn sms-send text-white">{{$t('adminSend')}}</button>
         </div>
       </div>
     </div>
