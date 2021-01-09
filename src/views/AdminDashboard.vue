@@ -1,21 +1,25 @@
 <template>
   <div
     class="w-100 d-flex justify-content-center flex-column flex-lg-row bg-f7"
+    dir="ltr"
   >
     <div class="w-18 d-none d-lg-block side-bar admin-side z-index-2">
       <div class="d-flex align-content-between flex-column text-white w-90">
         <div
           class="d-flex w-100 justify-content-center align-items-center flex-column text-white py-5"
+        
         >
           <div>
-            <h1 class="font-24">Dashboard</h1>
+            <h1 class="font-24">{{ $t("adminDashboardHeading") }}</h1>
           </div>
           <div class="w-100">
             <div
               class="d-flex justify-content-around align-items-center w-100 pt-16"
             >
               <img src="../assets/logoSign.png" width="30" height="30" />
-              <h1 class="fs-19 mb-0 text-muted">Keerki Dashboard</h1>
+              <h1 class="fs-19 mb-0 text-muted">
+                {{ $t("adminDashboardKeerkiDashboard") }}
+              </h1>
             </div>
           </div>
           <div class="w-100 pt-16">
@@ -38,9 +42,9 @@
                 />
               </svg>
 
-              <span class="fs-19 mb-0 text-muted w-50 text-left"
-                >Dashboard</span
-              >
+              <span class="fs-19 mb-0 text-muted w-50 text-left">{{
+                $t("adminDashboardHeading")
+              }}</span>
             </button>
           </div>
           <span class="divider w-100"></span>
@@ -64,7 +68,9 @@
                 />
               </svg>
 
-              <span class="fs-19 mb-0 text-muted w-50 text-left">Clients</span>
+              <span class="fs-19 mb-0 text-muted w-50 text-left">{{
+                $t("adminDashboardClientsBtn")
+              }}</span>
             </button>
             <svg
               width="18"
@@ -101,7 +107,9 @@
                 />
               </svg>
 
-              <span class="fs-19 mb-0 text-muted w-50 text-left">Orders</span>
+              <span class="fs-19 mb-0 text-muted w-50 text-left">{{
+                $t("adminDashboardOrdersBtn")
+              }}</span>
             </button>
             <svg
               width="18"
@@ -146,7 +154,9 @@
                 </defs>
               </svg>
 
-              <span class="fs-19 mb-0 text-muted w-50 text-left">Contact</span>
+              <span class="fs-19 mb-0 text-muted w-50 text-left">{{
+                $t("adminDashboardContactBtn")
+              }}</span>
             </button>
             <svg
               width="18"
@@ -183,9 +193,9 @@
                 />
               </svg>
 
-              <span class="fs-19 mb-0 text-muted w-50 text-left"
-                >Notifications</span
-              >
+              <span class="fs-19 mb-0 text-muted w-50 text-left">{{
+                $t("adminDashboardNotificationsBtn")
+              }}</span>
             </button>
             <svg
               width="18"
@@ -222,7 +232,9 @@
                 />
               </svg>
 
-              <span class="fs-19 mb-0 text-muted w-50 text-left">Messages</span>
+              <span class="fs-19 mb-0 text-muted w-50 text-left">{{
+                $t("adminDashboardMessagesBtn")
+              }}</span>
             </button>
             <svg
               width="18"
@@ -262,7 +274,9 @@
                 />
               </svg>
 
-              <span class="fs-19 mb-0 text-muted w-50 text-left">Settings</span>
+              <span class="fs-19 mb-0 text-muted w-50 text-left">{{
+                $t("adminDashboardSettingsBtn")
+              }}</span>
             </button>
             <svg
               width="18"
@@ -315,10 +329,12 @@
           </div>
         </b-modal>
         <button
-          class="btn btn-outline-secondary mb-4 mb-lg-0 text-white border-radius-13 width-75 d-flex justify-content-around align-items-center"
+          class="btn btn-outline-secondary mb-4 mb-lg-0 text-white border-radius-13 w-75 d-flex justify-content-around align-items-center"
           v-b-modal.log-out-modal2
         >
-          <span class="w-75 text-right">Logout</span>
+          <span class="w-75 text-right">{{
+            $t("adminDashboardLogoutBtn")
+          }}</span>
           <svg
             width="17"
             height="17"
@@ -398,7 +414,7 @@
 
                 <input
                   class="w-100 px-5 search-field text-center outline-none"
-                  placeholder="Quick Search"
+                  :placeholder="`${$t('adminDashBoardQuickSearch')}`"
                 />
                 <svg
                   width="30"
@@ -427,7 +443,7 @@
                 v-else
                 class="width-75 fs-24 font-weight-bolder pt-lg-0 pt-15"
               >
-                Dashboard
+                {{ $t("adminDashboardHeading") }}
               </div>
             </div>
           </div>
@@ -443,7 +459,7 @@
               </button>
 
               <button v-else class="btn py-0 btn-primary rounded-pill">
-                Admin
+                {{ $t("adminDashboardUserAdmin") }}
               </button>
             </div>
             <div
@@ -483,7 +499,65 @@
                   />
                 </svg>
               </button>
-              <button class="outline-none">
+              <b-popover
+                target="popover-messages"
+                triggers="hover"
+                placement="bottom"
+                custom-class="pop-over p-0"
+              >
+                <div class="d-flex flex-column w-100 p-2" dir="auto">
+                  <div class="px-2 py-2 border-bottom w-100">
+                    <p class="mb-1 fs-20">{{ $t("popupMessages") }}</p>
+                    <p class="fs-14 font-weight-light">
+                      {{ $t("popupDaysAgo") }}
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex w-100 justify-content-between align-items-center mt-3"
+                  >
+                    <p class="font-12 mb-0">{{ $t("popupNewMessages") }}</p>
+                    <p class="font-11 mb-0">{{ $t("popupDismiss") }}</p>
+                  </div>
+                  <div
+                    class="w-100 py-2 mt-3 d-flex justify-content-center align-items-center"
+                  >
+                    <button
+                      class="btn noti-btn w-100 d-flex align-items-center justify-content-center py-3"
+                      dir="ltr"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 8H15"
+                          stroke="#625D5D"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 1L15 8L8 15"
+                          stroke="#625D5D"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+
+                      <p class="fs-18 mb-0 ml-3">{{ $t("popupViewAll") }}</p>
+                    </button>
+                  </div>
+                </div>
+              </b-popover>
+              <button
+                class="outline-none"
+                v-b-popover.hover.top
+                id="popover-messages"
+              >
                 <svg
                   width="24"
                   height="20"
@@ -518,7 +592,7 @@
                   <div
                     class="d-flex w-100 justify-content-between align-items-center mt-3"
                   >
-                    <p class="font-12 mb-0">You have 3 new orders</p>
+                    <p class="font-12 mb-0">{{$t('adminDashboardNotificationNumberOfNotifications')}}</p>
                     <p class="font-11 mb-0">{{ $t("popupDismiss") }}</p>
                   </div>
                   <div
@@ -633,7 +707,7 @@
                     triggers="focus"
                     custom-class="w-100"
                   >
-                    <template #title>My Account</template>
+                    <template #title>{{$t('adminDashboardMyaccount')}}</template>
                     <button
                       class="btn btn-transparent rounded-0 w-100 d-flex justify-content-around align-items-center"
                       @click="account"
@@ -660,7 +734,7 @@
                         />
                       </svg>
 
-                      <span class="flex-grow-1 text-left">Account details</span>
+                      <span class="flex-grow-1 text-left">{{$t('adminDashboardAccountDetails')}}</span>
                     </button>
                     <button
                       class="btn btn-transparent rounded-0 w-100 d-flex justify-content-center align-items-center"
@@ -688,7 +762,7 @@
                         />
                       </svg>
 
-                      <span class="flex-grow-1 text-left">Change Password</span>
+                      <span class="flex-grow-1 text-left">{{$t('adminDashboardChangePassword')}}</span>
                     </button>
                     <router-link to="/admin">
                       <button
@@ -726,7 +800,7 @@
                         </svg>
 
                         <span class="flex-grow-1 text-left color-ff3"
-                          >Log out</span
+                          >{{$t('adminDashboardLogoutBtn')}}</span
                         >
                       </button>
                     </router-link>
