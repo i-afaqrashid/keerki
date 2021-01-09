@@ -391,7 +391,10 @@
               </div>
             </b-modal>
           </button>
-          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
+          <button
+            class="settings-btn text-white width-25 btn mt-4 mt-lg-0"
+            @click="allEmployees"
+          >
             View All Employees
           </button>
         </div>
@@ -710,8 +713,9 @@
         <div
           class="d-flex justify-content-around flex-column flex-lg-row pt-5 w-100 align-items-center"
         >
-          <button class="settings-btn text-white width-25 btn"
-          @click="sendEmail"
+          <button
+            class="settings-btn text-white width-25 btn"
+            @click="sendEmail"
           >
             Send Email to All Clients
           </button>
@@ -751,6 +755,9 @@ export default {
     },
     sendEmail() {
       this.$router.push({ path: "email" }).catch(() => {});
+    },
+    allEmployees() {
+      this.$router.push({ path: "employees" }).catch(() => {});
     },
   },
 };

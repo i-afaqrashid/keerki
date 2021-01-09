@@ -40,6 +40,8 @@ import AdminFunctionalityUnavailable from '../components/admin/functionalityUnav
 import AdminSettings from '../components/admin/settings.vue'
 import AdminSMS from '../components/admin/sendSms.vue'
 import AdminEmail from '../components/admin/sendEmail.vue'
+import AdminEmployees from '../components/admin/allEmployees.vue'
+import EditPermissions from '../components/admin/editPermissions.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -116,6 +118,14 @@ const routes = [
       {
         path:'email',
         component:AdminEmail
+      },
+      {
+        path:"employees",
+        component:AdminEmployees
+      },
+      {
+        path:"edit-permissions",
+        component:EditPermissions
       }
     ]
   },
