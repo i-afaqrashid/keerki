@@ -122,6 +122,7 @@
           <div class="w-100 d-flex align-items-center justify-content-between">
             <button
               class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              @click="toContact"
             >
               <svg
                 width="16"
@@ -766,6 +767,10 @@ export default {
       this.$router.push({ path: "/admin" });
     },
     dashboard() {
+      this.$router.push({ path: "/admin/dashboard" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
+    toContact() {
       this.$router.push({ path: "/admin/dashboard" }).catch(() => {});
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },

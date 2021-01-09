@@ -510,6 +510,7 @@
         </b-modal>
         <button
           class="admin-card btn mt-5 mt-lg-0 btn-transparent d-flex flex-column justify-content-around align-items-center align-content-around"
+        @click="orders"
         >
           <svg
             width="53"
@@ -552,6 +553,10 @@ export default {
       e.preventDefault();
       this.$bvModal.hide("contact-client");
       this.$bvModal.hide("contact-admin");
+    },
+        orders() {
+      this.$router.push({ path: "/admin/dashboard/orders" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },
     handleFileDrop(e) {
       let droppedFiles = e.dataTransfer.files;

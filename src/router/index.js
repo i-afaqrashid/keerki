@@ -35,6 +35,11 @@ import AdminOrdersDetailed from '../components/admin/orderDetailed.vue'
 import AdminMessages from '../components/admin/messages.vue'
 import AdminInbox from '../components/admin/adminInbox.vue'
 import QuickResponses from '../components/admin/quickResponses.vue'
+import AdminContentUnavailable from '../components/admin/contentUnAvailable.vue'
+import AdminFunctionalityUnavailable from '../components/admin/functionalityUnavailable.vue'
+import AdminSettings from '../components/admin/settings.vue'
+import AdminSMS from '../components/admin/sendSms.vue'
+import AdminEmail from '../components/admin/sendEmail.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -91,6 +96,26 @@ const routes = [
       {
         path:"quick-responses",
         component:QuickResponses
+      },
+      {
+        path:"content-unavailable",
+        component:AdminContentUnavailable
+      },
+      {
+        path:"functionality-unavailable",
+        component:AdminFunctionalityUnavailable
+      },
+      {
+        path:"settings",
+        component:AdminSettings
+      },
+      {
+        path:"sms",
+        component:AdminSMS
+      },
+      {
+        path:'email',
+        component:AdminEmail
       }
     ]
   },
