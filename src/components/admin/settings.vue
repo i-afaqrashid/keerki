@@ -772,10 +772,12 @@
         <div
           class="d-flex justify-content-around flex-column flex-lg-row w-100 align-items-center"
         >
-          <button class="settings-btn text-white width-25 btn">
+          <button class="settings-btn text-white width-25 btn" v-b-modal.new-employee-modal>
             {{ $t("adminSettingAddNewClient") }}
           </button>
-          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
+          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0"
+          @click="notifyAll"
+          >
             {{ $t("adminSettingsNofifyAllClients") }}
           </button>
         </div>
@@ -785,7 +787,7 @@
           <button class="settings-btn text-white width-25 btn" @click="sendSms">
             {{ $t("adminSettingsSendSms") }}
           </button>
-          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
+          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0" @click="allEmployees">
             {{ $t("adminSettingActivateClient") }}
           </button>
         </div>
@@ -798,7 +800,7 @@
           >
             {{ $t("adminSettingSendEmail") }}
           </button>
-          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0">
+          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0" @click="allEmployees">
             {{ $t("adminSettingSuspendAccount") }}
           </button>
         </div>

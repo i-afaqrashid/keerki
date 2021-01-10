@@ -5,43 +5,125 @@
     <div
       class="w-90 d-flex justify-content-between flex-column flex-lg-row align-items-center"
     >
-      <p class="fs-19">{{$t('allClients')}}</p>
+      <p class="fs-19">{{ $t("allClients") }}</p>
       <div class="d-flex justify-content-around align-items-center width-18">
         <button
           class="outline-none d-flex align-items-center w-25 justify-content-between"
         >
-          <svg
-            width="14"
-            height="12"
-            viewBox="0 0 14 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <b-dropdown
+            variant="link"
+            toggle-class="text-decoration-none"
+            no-caret
           >
-            <path
-              d="M0.128568 2.26839L2.31563 0.125478C2.48647 -0.0418526 2.7636 -0.0417991 2.93434 0.125478L5.12132 2.26839C5.39667 2.53812 5.20059 3.00001 4.81195 3.00001H3.5V11.5714C3.5 11.8081 3.30414 12 3.0625 12H2.1875C1.94586 12 1.75 11.8081 1.75 11.5714V3.00001H0.437935C0.0485329 3.00001 -0.146209 2.53758 0.128568 2.26839ZM6.5625 1.7143H13.5625C13.8041 1.7143 14 1.52243 14 1.28573V0.428584C14 0.191879 13.8041 1.34454e-05 13.5625 1.34454e-05H6.5625C6.32086 1.34454e-05 6.125 0.191879 6.125 0.428584V1.28573C6.125 1.52243 6.32086 1.7143 6.5625 1.7143ZM6.125 4.71429V3.85715C6.125 3.62045 6.32086 3.42858 6.5625 3.42858H11.8125C12.0541 3.42858 12.25 3.62045 12.25 3.85715V4.71429C12.25 4.951 12.0541 5.14287 11.8125 5.14287H6.5625C6.32086 5.14287 6.125 4.951 6.125 4.71429ZM6.125 11.5714V10.7143C6.125 10.4776 6.32086 10.2857 6.5625 10.2857H8.3125C8.55414 10.2857 8.75 10.4776 8.75 10.7143V11.5714C8.75 11.8081 8.55414 12 8.3125 12H6.5625C6.32086 12 6.125 11.8081 6.125 11.5714ZM6.125 8.14286V7.28572C6.125 7.04901 6.32086 6.85715 6.5625 6.85715H10.0625C10.3041 6.85715 10.5 7.04901 10.5 7.28572V8.14286C10.5 8.37957 10.3041 8.57143 10.0625 8.57143H6.5625C6.32086 8.57143 6.125 8.37957 6.125 8.14286Z"
-              fill="#C5C7CD"
-            />
-          </svg>
+            <template #button-content>
+              <div class="d-flex align-items-center text-dark">
+                <svg
+                  width="14"
+                  height="12"
+                  viewBox="0 0 14 12"
+                  fill="none"
+                  class="mx-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.128568 2.26839L2.31563 0.125478C2.48647 -0.0418526 2.7636 -0.0417991 2.93434 0.125478L5.12132 2.26839C5.39667 2.53812 5.20059 3.00001 4.81195 3.00001H3.5V11.5714C3.5 11.8081 3.30414 12 3.0625 12H2.1875C1.94586 12 1.75 11.8081 1.75 11.5714V3.00001H0.437935C0.0485329 3.00001 -0.146209 2.53758 0.128568 2.26839ZM6.5625 1.7143H13.5625C13.8041 1.7143 14 1.52243 14 1.28573V0.428584C14 0.191879 13.8041 1.34454e-05 13.5625 1.34454e-05H6.5625C6.32086 1.34454e-05 6.125 0.191879 6.125 0.428584V1.28573C6.125 1.52243 6.32086 1.7143 6.5625 1.7143ZM6.125 4.71429V3.85715C6.125 3.62045 6.32086 3.42858 6.5625 3.42858H11.8125C12.0541 3.42858 12.25 3.62045 12.25 3.85715V4.71429C12.25 4.951 12.0541 5.14287 11.8125 5.14287H6.5625C6.32086 5.14287 6.125 4.951 6.125 4.71429ZM6.125 11.5714V10.7143C6.125 10.4776 6.32086 10.2857 6.5625 10.2857H8.3125C8.55414 10.2857 8.75 10.4776 8.75 10.7143V11.5714C8.75 11.8081 8.55414 12 8.3125 12H6.5625C6.32086 12 6.125 11.8081 6.125 11.5714ZM6.125 8.14286V7.28572C6.125 7.04901 6.32086 6.85715 6.5625 6.85715H10.0625C10.3041 6.85715 10.5 7.04901 10.5 7.28572V8.14286C10.5 8.37957 10.3041 8.57143 10.0625 8.57143H6.5625C6.32086 8.57143 6.125 8.37957 6.125 8.14286Z"
+                    fill="#C5C7CD"
+                  />
+                </svg>
 
-          <p class="mb-0">{{$t('clientsSort')}}</p>
+                <p class="mb-0">{{ $t("clientsSort") }}</p>
+              </div>
+            </template>
+            <b-dropdown-item href="#">{{ $t("sortNewToOld") }}</b-dropdown-item>
+            <b-dropdown-item href="#">{{ $t("sortOldToNew") }}</b-dropdown-item>
+            <b-dropdown-item href="#">{{
+              $t("sortHighToLow")
+            }}</b-dropdown-item>
+            <b-dropdown-item href="#">{{
+              $t("sortLowToHigh")
+            }}</b-dropdown-item>
+          </b-dropdown>
         </button>
         <button
           class="outline-none d-flex w-25 justify-content-between align-items-center"
         >
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 12 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <b-dropdown
+            variant="link"
+            toggle-class="text-decoration-none"
+            no-caret
           >
-            <path
-              d="M11.4369 0H0.563154C0.0635131 0 -0.188604 0.606234 0.165419 0.960258L4.5 5.29549V10.125C4.5 10.3085 4.58955 10.4805 4.73993 10.5858L6.61493 11.8979C6.98484 12.1568 7.5 11.8944 7.5 11.437V5.29549L11.8347 0.960258C12.188 0.606937 11.9376 0 11.4369 0Z"
-              fill="#C5C7CD"
-            />
-          </svg>
+            <template #button-content>
+              <div class="d-flex align-items-center text-dark">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  class="mx-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.4369 0H0.563154C0.0635131 0 -0.188604 0.606234 0.165419 0.960258L4.5 5.29549V10.125C4.5 10.3085 4.58955 10.4805 4.73993 10.5858L6.61493 11.8979C6.98484 12.1568 7.5 11.8944 7.5 11.437V5.29549L11.8347 0.960258C12.188 0.606937 11.9376 0 11.4369 0Z"
+                    fill="#C5C7CD"
+                  />
+                </svg>
+                <p class="mb-0">{{ $t("adminOrdersFilter") }}</p>
+              </div>
+            </template>
+            <div class="px-3">
+              <b-form-checkbox
+                id="checkbox-ct1"
+                name="checkbox-ct1"
+                value="accepted"
+                unchecked-value="not_accepted"
+              >
+                {{ $t("filterInProgress") }}
+              </b-form-checkbox>
+            </div>
 
-          <p class="mb-0">{{$t('clientsFilter')}}</p>
+            <div class="px-3 mt-1">
+              <b-form-checkbox
+                id="checkbox-ct2"
+                name="checkbox-ct2"
+                value="accepted"
+                unchecked-value="not_accepted"
+              >
+                {{ $t("filterShipped") }}
+              </b-form-checkbox>
+            </div>
+
+            <div class="px-3 mt-1">
+              <b-form-checkbox
+                id="checkbox-ct3"
+                name="checkbox-ct3"
+                value="accepted"
+                unchecked-value="not_accepted"
+              >
+                {{ $t("filterDelivered") }}
+              </b-form-checkbox>
+            </div>
+
+            <div class="px-3 mt-1">
+              <b-form-checkbox
+                id="checkbox-ct4"
+                name="checkbox-ct4"
+                value="accepted"
+                unchecked-value="not_accepted"
+              >
+                {{ $t("filterWaiting") }}
+              </b-form-checkbox>
+            </div>
+            <div class="px-3 mt-1">
+              <b-form-checkbox
+                id="checkbox-ct5"
+                name="checkbox-ct5"
+                value="accepted"
+                unchecked-value="not_accepted"
+              >
+                {{ $t("filterCancelled") }}
+              </b-form-checkbox>
+            </div>
+          </b-dropdown>
         </button>
       </div>
     </div>
@@ -52,11 +134,11 @@
       <thead>
         <tr class="border-bottom">
           <th scope="col"></th>
-          <th scope="col">{{$t('clientsAccountStatus')}}</th>
-          <th scope="col">{{$t('clientsPhone')}}</th>
-          <th scope="col">{{$t('clientsDateJoined')}}</th>
-          <th scope="col">{{$t('clientsCountry')}}</th>
-          <th scope="col">{{$t('clientsName')}}</th>
+          <th scope="col">{{ $t("clientsAccountStatus") }}</th>
+          <th scope="col">{{ $t("clientsPhone") }}</th>
+          <th scope="col">{{ $t("clientsDateJoined") }}</th>
+          <th scope="col">{{ $t("clientsCountry") }}</th>
+          <th scope="col">{{ $t("clientsName") }}</th>
           <th scope="col"></th>
         </tr>
       </thead>
@@ -102,7 +184,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientEdit')}}</span>
+                  <span class="w-50">{{ $t("clientEdit") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -130,7 +212,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientView')}}</span>
+                  <span class="w-50">{{ $t("clientView") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -158,7 +240,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientDelete')}}</span>
+                  <span class="w-50">{{ $t("clientDelete") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -192,7 +274,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientLoginAs')}}</span>
+                  <span class="w-50">{{ $t("clientLoginAs") }}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -201,7 +283,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              {{$t('clientBtnActive')}}
+              {{ $t("clientBtnActive") }}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -261,7 +343,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientEdit')}}</span>
+                  <span class="w-50">{{ $t("clientEdit") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -289,7 +371,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientView')}}</span>
+                  <span class="w-50">{{ $t("clientView") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -317,7 +399,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientDelete')}}</span>
+                  <span class="w-50">{{ $t("clientDelete") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -351,7 +433,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientLoginAs')}}</span>
+                  <span class="w-50">{{ $t("clientLoginAs") }}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -360,7 +442,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              {{$t('clientBtnActive')}}
+              {{ $t("clientBtnActive") }}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -420,7 +502,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientEdit')}}</span>
+                  <span class="w-50">{{ $t("clientEdit") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -448,7 +530,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientView')}}</span>
+                  <span class="w-50">{{ $t("clientView") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -476,7 +558,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientDelete')}}</span>
+                  <span class="w-50">{{ $t("clientDelete") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -510,7 +592,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientLoginAs')}}</span>
+                  <span class="w-50">{{ $t("clientLoginAs") }}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -519,7 +601,7 @@
             <button
               class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
             >
-              {{$t('clientBtnInactive')}}
+              {{ $t("clientBtnInactive") }}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -579,7 +661,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientEdit')}}</span>
+                  <span class="w-50">{{ $t("clientEdit") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -607,7 +689,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientView')}}</span>
+                  <span class="w-50">{{ $t("clientView") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -635,7 +717,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientDelete')}}</span>
+                  <span class="w-50">{{ $t("clientDelete") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -669,7 +751,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientLoginAs')}}</span>
+                  <span class="w-50">{{ $t("clientLoginAs") }}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -678,7 +760,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              {{$t('clientBtnActive')}}
+              {{ $t("clientBtnActive") }}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -738,7 +820,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientEdit')}}</span>
+                  <span class="w-50">{{ $t("clientEdit") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -766,7 +848,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientView')}}</span>
+                  <span class="w-50">{{ $t("clientView") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -794,7 +876,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientDelete')}}</span>
+                  <span class="w-50">{{ $t("clientDelete") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -828,7 +910,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientLoginAs')}}</span>
+                  <span class="w-50">{{ $t("clientLoginAs") }}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -837,7 +919,7 @@
             <button
               class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
             >
-              {{$t('clientBtnInactive')}}
+              {{ $t("clientBtnInactive") }}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -897,7 +979,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientEdit')}}</span>
+                  <span class="w-50">{{ $t("clientEdit") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -925,7 +1007,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientView')}}</span>
+                  <span class="w-50">{{ $t("clientView") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -953,7 +1035,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientDelete')}}</span>
+                  <span class="w-50">{{ $t("clientDelete") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -987,7 +1069,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientLoginAs')}}</span>
+                  <span class="w-50">{{ $t("clientLoginAs") }}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -996,7 +1078,7 @@
             <button
               class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
             >
-              {{$t('clientBtnInactive')}}
+              {{ $t("clientBtnInactive") }}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -1056,7 +1138,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientEdit')}}</span>
+                  <span class="w-50">{{ $t("clientEdit") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1084,7 +1166,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientView')}}</span>
+                  <span class="w-50">{{ $t("clientView") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1112,7 +1194,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientDelete')}}</span>
+                  <span class="w-50">{{ $t("clientDelete") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1146,7 +1228,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientLoginAs')}}</span>
+                  <span class="w-50">{{ $t("clientLoginAs") }}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -1155,7 +1237,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              {{$t('clientBtnActive')}}
+              {{ $t("clientBtnActive") }}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -1215,7 +1297,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientEdit')}}</span>
+                  <span class="w-50">{{ $t("clientEdit") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1243,7 +1325,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientView')}}</span>
+                  <span class="w-50">{{ $t("clientView") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1271,7 +1353,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientDelete')}}</span>
+                  <span class="w-50">{{ $t("clientDelete") }}</span>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item>
@@ -1305,7 +1387,7 @@
                     />
                   </svg>
 
-                  <span class="w-50">{{$t('clientLoginAs')}}</span>
+                  <span class="w-50">{{ $t("clientLoginAs") }}</span>
                 </div>
               </b-dropdown-item>
             </b-dropdown>
@@ -1314,7 +1396,7 @@
             <button
               class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
             >
-              {{$t('clientBtnActive')}}
+              {{ $t("clientBtnActive") }}
             </button>
           </td>
           <td @click="rowClicked">{{ this.phone }}</td>
@@ -1340,7 +1422,7 @@
         <div
           class="d-flex align-items-center width-25 justify-content-lg-around justify-content-between"
         >
-          <p class="mb-0 text-muted">{{$t('clientsTableRowsPerPage')}}</p>
+          <p class="mb-0 text-muted">{{ $t("clientsTableRowsPerPage") }}</p>
           <select class="outline-none select-arrow">
             <option>8</option>
             <option>10</option>
@@ -1351,36 +1433,36 @@
         >
           <p class="mb-0 text-muted">1-8 of 1240</p>
           <button class="outline-none">
-          <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 13L1.07071 7.07071C1.03166 7.03166 1.03166 6.96834 1.07071 6.92929L7 1"
-              stroke="#9FA2B4"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
+            <svg
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 13L1.07071 7.07071C1.03166 7.03166 1.03166 6.96834 1.07071 6.92929L7 1"
+                stroke="#9FA2B4"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
           </button>
           <button class="outline-none">
-          <svg
-            width="8"
-            height="14"
-            viewBox="0 0 8 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 13L6.92929 7.07071C6.96834 7.03166 6.96834 6.96834 6.92929 6.92929L1 1"
-              stroke="#9FA2B4"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
+            <svg
+              width="8"
+              height="14"
+              viewBox="0 0 8 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 13L6.92929 7.07071C6.96834 7.03166 6.96834 6.96834 6.92929 6.92929L1 1"
+                stroke="#9FA2B4"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
           </button>
         </div>
       </div>

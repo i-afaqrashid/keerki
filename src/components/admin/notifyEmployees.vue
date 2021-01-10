@@ -40,7 +40,6 @@
             class="border outline-none px-2 font-weight-bolder select-arrow w-48 sms-select"
             @change="selectHandler"
           >
-          <!-- notifyAllEmployeesSelected -->
             <option :value="`${$t('notifyAllEmployeesSelected')}`">{{$t('notifyAllEmployees')}}</option>
             <option :value="`${$t('notifySelectedExcludedEmployee')}`">{{$t('notifyAllButExclude')}}</option>
             <option :value="`${$t('notifySearchDepartments')}`">{{$t('notifyDepartment')}}</option>
@@ -57,7 +56,7 @@
           >
             {{$t('notifyExcludedEmployeeName')}}
 
-            <button class="btn outline-none p-0 mx-1 align-self-end">
+            <button class="btn outline-none p-0 d-flex justify-content-center align-items-center mx-2">
               <svg
                 width="10"
                 height="10"
@@ -78,7 +77,7 @@
           >
                 {{$t('notifySelectedExcludedDepartment')}}
 
-            <button class="btn outline-none p-0 mx-1 align-self-end">
+            <button class="btn outline-none p-0 mx-2 d-flex justify-content-center align-items-center ">
               <svg
                 width="10"
                 height="10"

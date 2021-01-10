@@ -12,32 +12,49 @@
         <div
           class="d-flex justify-content-between flex-column flex-sm-row w-75-resp align-items-center"
         >
-          <p class="w-100 font-weight-bold" >
-            <span class="font-weight-light">{{$t('adminOrdersDetailsName')}}</span> David Smith Will
+          <p class="w-100 font-weight-bold">
+            <span class="font-weight-light">{{
+              $t("adminOrdersDetailsName")
+            }}</span>
+            David Smith Will
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('adminOrdersDetailsAddress')}}</span> Guangzhou, street no
-            15
-          </p>
-        </div>
-        <div
-          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
-        >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('adminOrdersDetailsCompanyName')}}</span> Shudi
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('adminOrdersDetailsEmail')}}</span> david@email.com
+            <span class="font-weight-light">{{
+              $t("adminOrdersDetailsAddress")
+            }}</span>
+            Guangzhou, street no 15
           </p>
         </div>
         <div
           class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
         >
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('adminOrdersDetailsPhone')}}</span> 187171717
+            <span class="font-weight-light">{{
+              $t("adminOrdersDetailsCompanyName")
+            }}</span>
+            Shudi
           </p>
           <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('adminOrdersDetailsWhatsapp')}}</span> 1123232323
+            <span class="font-weight-light">{{
+              $t("adminOrdersDetailsEmail")
+            }}</span>
+            david@email.com
+          </p>
+        </div>
+        <div
+          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
+        >
+          <p class="w-100 font-weight-bold">
+            <span class="font-weight-light">{{
+              $t("adminOrdersDetailsPhone")
+            }}</span>
+            187171717
+          </p>
+          <p class="w-100 font-weight-bold">
+            <span class="font-weight-light">{{
+              $t("adminOrdersDetailsWhatsapp")
+            }}</span>
+            1123232323
           </p>
         </div>
       </div>
@@ -67,7 +84,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="mb-0 w-100">{{$t('adminOrdersDetailsEdit')}}</p>
+          <p class="mb-0 w-100">{{ $t("adminOrdersDetailsEdit") }}</p>
         </button>
       </div>
     </div>
@@ -79,15 +96,23 @@
       >
         <div class="mt-5 w-25">
           <div class="width-50">
-            <p class="border-bottom mb-15 fs-22 text-muted">{{$t('adminOrdersDetailsStatus')}}</p>
-            <CustomAlert :type="`${$t('adminOrdersInprogressBtn')}`" :alert="200" />
+            <p class="border-bottom mb-15 fs-22 text-muted">
+              {{ $t("adminOrdersDetailsStatus") }}
+            </p>
+            <CustomAlert
+              :type="`${$t('adminOrdersInprogressBtn')}`"
+              :alert="200"
+            />
           </div>
         </div>
         <div
           class="width-50 flex-column d-flex justify-content-center align-items-center pt-5 pt-lg-0"
         >
           <p class="font-24">
-            <span class="font-weight-light">{{$t('adminOrdersDetailsOrderNumber')}}</span> <u>893943</u>
+            <span class="font-weight-light">{{
+              $t("adminOrdersDetailsOrderNumber")
+            }}</span>
+            <u>893943</u>
           </p>
           <div
             class="file-cont w-100 d-flex justify-content-center align-items-center"
@@ -110,7 +135,7 @@
             class="w-100 d-flex justify-content-around pt-4 align-items-center"
           >
             <div class="d-flex">
-              <p class="mb-0 text-muted">{{$t('adminOrdersDetailsEdit')}}</p>
+              <p class="mb-0 text-muted">{{ $t("adminOrdersDetailsEdit") }}</p>
               <svg
                 width="20"
                 height="20"
@@ -136,7 +161,9 @@
               </svg>
             </div>
             <div class="d-flex">
-              <p class="mb-0 text-muted">{{$t('adminOrdersDetailsDownload')}}</p>
+              <p class="mb-0 text-muted">
+                {{ $t("adminOrdersDetailsDownload") }}
+              </p>
               <svg
                 width="20"
                 height="20"
@@ -169,7 +196,7 @@
               </svg>
             </div>
             <div class="d-flex align-items-center">
-              <p class="mb-0 text-muted">{{$t('adminOrdersDetailsView')}}</p>
+              <p class="mb-0 text-muted">{{ $t("adminOrdersDetailsView") }}</p>
               <svg
                 width="20"
                 height="16"
@@ -216,7 +243,7 @@
                   />
                 </svg>
               </button>
-              <p class="mb-0">{{$t('adminOrdersDetailsTags')}}</p>
+              <p class="mb-0">{{ $t("adminOrdersDetailsTags") }}</p>
             </div>
           </div>
           <div class="d-flex justify-content-end align-items-center w-100">
@@ -243,7 +270,7 @@
             <div
               class="border-bottom mt-15 fs-22 text-muted d-flex align-items-center pb-2"
             >
-              <p class="mb-0">{{$t('adminOrdersDetailsRating')}}</p>
+              <p class="mb-0">{{ $t("adminOrdersDetailsRating") }}</p>
             </div>
           </div>
           <div class="w-100 d-flex justify-content-end">
@@ -273,32 +300,174 @@
         class="w-90 d-flex flex-column flex-xl-row justify-content-around align-items-center"
       >
         <button class="btn box-buttons button-color2C text-white rounded-pill">
-          {{$t('adminOrdersDetailsRecived')}}
+          {{ $t("adminOrdersDetailsRecived") }}
+        </button>
+        <b-modal
+          id="transfer-modal"
+          centered
+          hide-footer
+          body-class="client-drop-modal"
+          header-class="header-class2"
+          no-stacking
+          dir="auto"
+        >
+          <div class="w-100">
+            <div dir="auto">
+              <p class="d-none">{{ $t("clientsSearchFor") }}</p>
+              <svg
+                width="14"
+                height="15"
+                viewBox="0 0 14 15"
+                fill="none"
+                class="position-absolute mt-20 mx-15"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8906 13.5742L10.582 10.2656C10.5 10.2109 10.418 10.1562 10.3359 10.1562H9.98047C10.8281 9.17188 11.375 7.85938 11.375 6.4375C11.375 3.32031 8.80469 0.75 5.6875 0.75C2.54297 0.75 0 3.32031 0 6.4375C0 9.58203 2.54297 12.125 5.6875 12.125C7.10938 12.125 8.39453 11.6055 9.40625 10.7578V11.1133C9.40625 11.1953 9.43359 11.2773 9.48828 11.3594L12.7969 14.668C12.9336 14.8047 13.1523 14.8047 13.2617 14.668L13.8906 14.0391C14.0273 13.9297 14.0273 13.7109 13.8906 13.5742ZM5.6875 10.8125C3.25391 10.8125 1.3125 8.87109 1.3125 6.4375C1.3125 4.03125 3.25391 2.0625 5.6875 2.0625C8.09375 2.0625 10.0625 4.03125 10.0625 6.4375C10.0625 8.87109 8.09375 10.8125 5.6875 10.8125Z"
+                  fill="#747474"
+                />
+              </svg>
+
+              <input
+                class="w-100 py-4 px-11 outline-none"
+                :placeholder="`${$t('clientsSearchFor')}`"
+              />
+            </div>
+            <div
+              class="w-100 d-flex justify-content-center align-items-center flex-column overflow-scroll pt-5 h-300"
+            >
+              <div
+                class="d-flex justify-content-around w-50 align-items-center pt-9 mt-4"
+              >
+                <div class="p-1 rounded-circle border">
+                  <img
+                    src="../../assets/ordersModal.jpeg"
+                    class="rounded-circle"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+
+                <div class="mx-2">
+                  <p class="mb-0">First Last Name (Employee)</p>
+                  <p
+                    class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                  >
+                    Employee role
+                  </p>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-around w-50 align-items-center mt-4"
+              >
+                <div class="p-1 rounded-circle border">
+                  <img
+                    src="../../assets/ordersModal.jpeg"
+                    class="rounded-circle"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+
+                <div class="mx-2">
+                  <p class="mb-0">First Last Name (Employee)</p>
+                  <p
+                    class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                  >
+                    Employee role
+                  </p>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-around w-50 align-items-center mt-4"
+              >
+                <div class="p-1 rounded-circle border">
+                  <img
+                    src="../../assets/ordersModal.jpeg"
+                    class="rounded-circle"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+
+                <div class="mx-2">
+                  <p class="mb-0">First Last Name (Employee)</p>
+                  <p
+                    class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                  >
+                    Employee role
+                  </p>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-around w-50 align-items-center mt-4"
+              >
+                <div class="p-1 rounded-circle border">
+                  <img
+                    src="../../assets/ordersModal.jpeg"
+                    class="rounded-circle"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+
+                <div class="mx-2">
+                  <p class="mb-0">First Last Name (Employee)</p>
+                  <p
+                    class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                  >
+                    Employee role
+                  </p>
+                </div>
+              </div>
+              <div
+                class="d-flex justify-content-around w-50 align-items-center mt-4"
+              >
+                <div class="p-1 rounded-circle border">
+                  <img
+                    src="../../assets/ordersModal.jpeg"
+                    class="rounded-circle"
+                    width="50"
+                    height="50"
+                  />
+                </div>
+
+                <div class="mx-2">
+                  <p class="mb-0">First Last Name (Employee)</p>
+                  <p
+                    class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                  >
+                    Employee role
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </b-modal>
+        <button
+          class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
+          v-b-modal.transfer-modal
+        >
+          {{ $t("adminOrdersDetailsTransfer") }}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          {{$t('adminOrdersDetailsTransfer')}}
+          {{ $t("adminOrdersDetailsPayNow") }}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          {{$t('adminOrdersDetailsPayNow')}}
-        </button>
-        <button
-          class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
-        >
-          {{$t('adminOrdersDetailsQuestion')}}
+          {{ $t("adminOrdersDetailsQuestion") }}
         </button>
         <button
           class="btn box-buttons button-color29 mt-4 mt-xl-0 text-white rounded-pill"
         >
-          {{$t('adminOrdersDetailsDone')}}
+          {{ $t("adminOrdersDetailsDone") }}
         </button>
       </div>
       <div
         class="w-90 d-flex flex-column pt-xl-5 flex-xl-row justify-content-around align-items-center"
-      
       >
         <b-modal
           id="cancel-modal"
@@ -312,10 +481,10 @@
         >
           <div dir="auto">
             <p>
-              {{$t('adminOrdersDetailsReasonForCancelling')}}
-              <span class="text-muted"
-                >{{$t('adminOrdersDetailsMustProvideReason')}}</span
-              >
+              {{ $t("adminOrdersDetailsReasonForCancelling") }}
+              <span class="text-muted">{{
+                $t("adminOrdersDetailsMustProvideReason")
+              }}</span>
             </p>
             <div class="modal-orders p-2">
               <input
@@ -332,14 +501,14 @@
                     class="order-color-c7 btn outline-none border rounded-pill modal-order-btn"
                     @click="$bvModal.hide('cancel-modal')"
                   >
-                    {{$t('adminOrdersDetailsIgnore')}}
+                    {{ $t("adminOrdersDetailsIgnore") }}
                   </button>
 
                   <button
                     class="btn-primary btn outline-none border rounded-pill modal-order-btn"
                     @click="$bvModal.hide('cancel-modal')"
                   >
-                    {{$t('adminOrdersDetailsSubmit')}}
+                    {{ $t("adminOrdersDetailsSubmit") }}
                   </button>
                 </div>
               </div>
@@ -350,27 +519,27 @@
           class="btn box-buttons button-colorf1 mt-4 mt-xl-0 text-white rounded-pill"
           v-b-modal.cancel-modal
         >
-          {{$t('adminOrdersDetailsCancel')}}
+          {{ $t("adminOrdersDetailsCancel") }}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          {{$t('adminOrdersDetailsSendSms')}}
+          {{ $t("adminOrdersDetailsSendSms") }}
         </button>
         <button
           class="btn box-buttons button-color6f mt-4 mt-xl-0 text-white rounded-pill"
         >
-          {{$t('adminOrdersDetailsWaiting')}}
+          {{ $t("adminOrdersDetailsWaiting") }}
         </button>
         <button
           class="btn box-buttons button-color2C mt-4 mt-xl-0 text-white rounded-pill"
         >
-          {{$t('adminOrdersDetailsShipped')}}
+          {{ $t("adminOrdersDetailsShipped") }}
         </button>
         <button
           class="btn box-buttons button-colorfe mt-4 mt-xl-0 text-white rounded-pill"
         >
-         {{$t('adminOrdersDetailsInprogress')}}
+          {{ $t("adminOrdersDetailsInprogress") }}
         </button>
       </div>
     </div>
@@ -385,20 +554,21 @@
           placement="top"
         >
           <p class="w-100 font-weight-bold">
-            {{$t('adminOrdersDetailsInregardWithThisOrder')}}<u class="text-primary">893943</u>
+            {{ $t("adminOrdersDetailsInregardWithThisOrder")
+            }}<u class="text-primary">893943</u>
           </p>
           <p>
-            {{$t('adminOrdersDetailsAnyIssue')}}
+            {{ $t("adminOrdersDetailsAnyIssue") }}
           </p>
           <div class="d-flex justify-content-between align-items-center">
             <button class="btn rounded-pill btn-transparent border">
-              {{$t('adminOrdersDetailsCancel')}}
+              {{ $t("adminOrdersDetailsCancel") }}
             </button>
             <button
               class="btn rounded-pill btn-primary border"
               v-b-modal.send-message-modal
             >
-              {{$t('adminOrdersDetailsSendAMessage')}}
+              {{ $t("adminOrdersDetailsSendAMessage") }}
             </button>
           </div>
         </b-popover>
@@ -413,7 +583,7 @@
           hide-header-close
         >
           <div>
-            <p>{{$t('adminOrdersDetailsReasonForCancelling')}}</p>
+            <p>{{ $t("adminOrdersDetailsReasonForCancelling") }}</p>
             <div class="modal-orders p-2">
               <input
                 class="bg-transparent w-100 outline-none"
@@ -429,14 +599,14 @@
                     class="order-color-c7 btn outline-none border rounded-pill modal-order-btn"
                     @click="$bvModal.hide('send-message-modal')"
                   >
-                    {{$t('adminOrdersDetailsCancel')}}
+                    {{ $t("adminOrdersDetailsCancel") }}
                   </button>
 
                   <button
                     class="btn-primary btn outline-none border rounded-pill modal-order-btn"
                     @click="$bvModal.hide('send-message-modal')"
                   >
-                    {{$t('adminOrdersDetailsSubmit')}}
+                    {{ $t("adminOrdersDetailsSubmit") }}
                   </button>
                 </div>
               </div>
@@ -530,6 +700,10 @@ export default {
 }
 .button-color2C {
   background: #2c5282 !important;
+}
+.button-color2A4 {
+  background: #2a4eaa !important;
+  border-radius: 4px;
 }
 .button-colorf1 {
   background: #f12b2c !important;

@@ -49,11 +49,10 @@
         <div class="w-90 d-flex">
           <div
           v-if="selectedType !== 'All clients selected'"
-            class="btn excluded d-flex justify-content-center align-items-center"
+            class="btn excluded d-flex justify-content-around align-items-center"
           >
-            {{$t('adminExclueName')}}
-
-            <button class="btn outline-none p-0 ml-1 align-self-end">
+            <p class="mb-0">{{$t('adminExclueName')}}</p>
+            <button class="btn outline-none p-0 d-flex justify-content-center align-items-center mx-2">
               <svg
                 width="10"
                 height="10"

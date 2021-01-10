@@ -4,7 +4,7 @@
       <button
         class="w-100 d-flex justify-content-between btn outline-none align-items-center font-weight-bold"
       >
-        <span>{{$t('adminMessagesHeading')}}</span>
+        <span>{{ $t("adminMessagesHeading") }}</span>
         <svg
           width="18"
           height="18"
@@ -21,7 +21,7 @@
         </svg>
       </button>
       <div class="w-100 bg-white mt-15" dir="auto">
-        <p class="d-none">{{$t('rtlHelper')}}</p>
+        <p class="d-none">{{ $t("rtlHelper") }}</p>
         <input
           class="w-100 outline-none search-admin-inbox fs-10 px-2"
           :placeholder="`${$t('adminMessagesSearch')}`"
@@ -60,7 +60,9 @@
               />
             </svg>
           </button>
-          <p class="mb-0 text-muted font-weight-bold">{{$t('adminMessagesOrderMessages')}}</p>
+          <p class="mb-0 text-muted font-weight-bold">
+            {{ $t("adminMessagesOrderMessages") }}
+          </p>
         </div>
         <button class="btn outline-none">
           <svg
@@ -122,7 +124,9 @@
               />
             </svg>
           </button>
-          <p class="mb-0 text-muted font-weight-bold">{{$t('adminMessagesCompanyContact')}}</p>
+          <p class="mb-0 text-muted font-weight-bold">
+            {{ $t("adminMessagesCompanyContact") }}
+          </p>
         </div>
         <button class="btn outline-none">
           <svg
@@ -137,7 +141,9 @@
         </button>
       </div>
       <div class="w-100 d-flex justify-content-center align-items-center pt-2">
-        <p class="text-muted font-weight-bold">{{$t('adminMessagesSubjects')}}</p>
+        <p class="text-muted font-weight-bold">
+          {{ $t("adminMessagesSubjects") }}
+        </p>
       </div>
     </div>
     <div class="pb-4 order-1 order-lg-0 w-75-resp">
@@ -174,14 +180,233 @@
 
             <button
               class="btn btn-primary px-0 admin-inbox-button admin-btn-color d-flex justify-content-center align-items-center mt-lg-0 mt-2"
+              v-b-modal.transfer-modal
             >
-              {{$t('adminMessagesTransferTheChat')}}
+              {{ $t("adminMessagesTransferTheChat") }}
             </button>
 
-            <button
-              class="btn btn-primary px-0 admin-inbox-button d-flex justify-content-center align-items-center mt-2 mt-xl-0"
+            <b-modal
+              id="transfer-modal"
+              centered
+              hide-footer
+              body-class="client-drop-modal"
+              header-class="header-class2"
+              no-stacking
+              dir="auto"
             >
-              {{$t('adminMessagesMarkAsResolved')}}
+              <div class="w-100">
+                <div dir="auto">
+                  <p class="d-none">{{ $t("clientsSearchFor") }}</p>
+                  <svg
+                    width="14"
+                    height="15"
+                    viewBox="0 0 14 15"
+                    fill="none"
+                    class="position-absolute mt-20 mx-15"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.8906 13.5742L10.582 10.2656C10.5 10.2109 10.418 10.1562 10.3359 10.1562H9.98047C10.8281 9.17188 11.375 7.85938 11.375 6.4375C11.375 3.32031 8.80469 0.75 5.6875 0.75C2.54297 0.75 0 3.32031 0 6.4375C0 9.58203 2.54297 12.125 5.6875 12.125C7.10938 12.125 8.39453 11.6055 9.40625 10.7578V11.1133C9.40625 11.1953 9.43359 11.2773 9.48828 11.3594L12.7969 14.668C12.9336 14.8047 13.1523 14.8047 13.2617 14.668L13.8906 14.0391C14.0273 13.9297 14.0273 13.7109 13.8906 13.5742ZM5.6875 10.8125C3.25391 10.8125 1.3125 8.87109 1.3125 6.4375C1.3125 4.03125 3.25391 2.0625 5.6875 2.0625C8.09375 2.0625 10.0625 4.03125 10.0625 6.4375C10.0625 8.87109 8.09375 10.8125 5.6875 10.8125Z"
+                      fill="#747474"
+                    />
+                  </svg>
+
+                  <input
+                    class="w-100 py-4 px-11 outline-none"
+                    :placeholder="`${$t('clientsSearchFor')}`"
+                  />
+                </div>
+                <div
+                  class="w-100 d-flex justify-content-center align-items-center flex-column overflow-scroll pt-5 h-300"
+                >
+                  <div
+                    class="d-flex justify-content-around w-50 align-items-center pt-9 mt-4"
+                  >
+                    <div class="p-1 rounded-circle border">
+                      <img
+                        src="../../assets/ordersModal.jpeg"
+                        class="rounded-circle"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+
+                    <div class="mx-2">
+                      <p class="mb-0">First Last Name (Employee)</p>
+                      <p
+                        class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                      >
+                        Employee role
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around w-50 align-items-center mt-4"
+                  >
+                    <div class="p-1 rounded-circle border">
+                      <img
+                        src="../../assets/ordersModal.jpeg"
+                        class="rounded-circle"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+
+                    <div class="mx-2">
+                      <p class="mb-0">First Last Name (Employee)</p>
+                      <p
+                        class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                      >
+                        Employee role
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around w-50 align-items-center mt-4"
+                  >
+                    <div class="p-1 rounded-circle border">
+                      <img
+                        src="../../assets/ordersModal.jpeg"
+                        class="rounded-circle"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+
+                    <div class="mx-2">
+                      <p class="mb-0">First Last Name (Employee)</p>
+                      <p
+                        class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                      >
+                        Employee role
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around w-50 align-items-center mt-4"
+                  >
+                    <div class="p-1 rounded-circle border">
+                      <img
+                        src="../../assets/ordersModal.jpeg"
+                        class="rounded-circle"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+
+                    <div class="mx-2">
+                      <p class="mb-0">First Last Name (Employee)</p>
+                      <p
+                        class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                      >
+                        Employee role
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around w-50 align-items-center mt-4"
+                  >
+                    <div class="p-1 rounded-circle border">
+                      <img
+                        src="../../assets/ordersModal.jpeg"
+                        class="rounded-circle"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+
+                    <div class="mx-2">
+                      <p class="mb-0">First Last Name (Employee)</p>
+                      <p
+                        class="mb-0 font-weight-light d-flex justify-content-center align-items-center w-75 text-white button-color2A4"
+                      >
+                        Employee role
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </b-modal>
+            <b-modal
+              id="modal-rating"
+              centered
+              hide-footer
+              content-class="content-class"
+              header-class="rating-header"
+              size="lg"
+            >
+              <div
+                class="d-flex justify-content-around align-items-center pb-4"
+              >
+                <div>
+                  <p class="text-center font-24 font-weight-bolder">
+                    {{ $t("issueHasBeenResolved") }}
+                  </p>
+                  <div
+                    class="d-flex w-100 justify-content-center flex-column align-items-center"
+                  >
+                    <b-form-rating
+                      id="rating-lg-no-border"
+                      color="#FFC145"
+                      class="outline-none"
+                      v-model="value"
+                      no-border
+                    ></b-form-rating>
+                    <button class="btn btn-outline-secondary mt-4">
+                      {{ $t("requestRatingFromClient") }}
+                    </button>
+                  </div>
+                  <div
+                    v-if="this.value < 5 && this.value"
+                    class="d-flex flex-column justify-content-center align-items-center w-100 pt-5"
+                  >
+                    <p class="font-weight-light">
+                      {{ $t("inboxImprove") }}
+                    </p>
+                    <textarea
+                      v-if="this.$i18n.locale === 'ar'"
+                      class="w-100 bg-light outline-none text-right rating-text-area p-3"
+                    ></textarea>
+                    <textarea
+                      v-else
+                      class="w-100 bg-light outline-none rating-text-area p-3"
+                    ></textarea>
+                    <button
+                      class="btn btn-primary rounded-pill px-4 py-0 position-absolute mt-9 mr-sm-18 mr-11"
+                      @click="$bvModal.hide('modal-rating')"
+                    >
+                      {{ $t("inboxSend") }}
+                    </button>
+                  </div>
+                  <div
+                    v-else-if="this.value == 5"
+                    class="d-flex w-100 justify-content-center align-items-center pt-5"
+                  >
+                    <p>{{ $t("inboxThanks") }}</p>
+                  </div>
+                </div>
+
+                <div>
+                  <svg
+                    width="143"
+                    height="143"
+                    viewBox="0 0 143 143"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M143 71.5C143 110.988 110.988 143 71.5 143C32.0115 143 0 110.988 0 71.5C0 32.0115 32.0115 0 71.5 0C110.988 0 143 32.0115 143 71.5ZM63.2296 109.359L116.278 56.3103C118.079 54.5089 118.079 51.5881 116.278 49.7868L109.755 43.2633C107.953 41.4616 105.032 41.4616 103.231 43.2633L59.9677 86.526L39.7693 66.3275C37.9679 64.5262 35.0471 64.5262 33.2455 66.3275L26.722 72.851C24.9206 74.6523 24.9206 77.5732 26.722 79.3745L56.7058 109.358C58.5075 111.16 61.428 111.16 63.2296 109.359Z"
+                      fill="#46D68C"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </b-modal>
+            <button
+              class="btn btn-color29 text-white px-0 admin-inbox-button d-flex justify-content-center align-items-center mt-2 mt-xl-0"
+              v-b-modal.modal-rating
+            >
+              {{ $t("adminMessagesMarkAsResolved") }}
             </button>
           </div>
         </div>
@@ -354,8 +579,7 @@
               />
             </svg>
           </button>
-          <button class="outline-none"
-          @click="quickResponses">
+          <button class="outline-none" @click="quickResponses">
             <svg
               width="20"
               height="26"
@@ -433,7 +657,7 @@
       </div>
 
       <div class="w-100 bg-white mt-15" dir="auto">
-        <p class="d-none">{{$t('rtlHelper')}}</p>
+        <p class="d-none">{{ $t("rtlHelper") }}</p>
         <input
           class="w-100 px-5 outline-none quick-search"
           :placeholder="`${$t('adminMessagesQuickSearch')}`"
@@ -469,10 +693,9 @@ export default {
     sidebarToggle() {
       document.getElementsByClassName("side-bar")[0].classList.toggle("d-none");
     },
-    quickResponses(){
-              this.$router.push({ path: "quick-responses" }).catch(() => {});
-    }
-
+    quickResponses() {
+      this.$router.push({ path: "quick-responses" }).catch(() => {});
+    },
   },
 };
 </script>
@@ -504,5 +727,8 @@ export default {
 }
 .admin-inbox-side {
   background: #f2f3f5;
+}
+.btn-color29 {
+  background: #29cc97 !important;
 }
 </style>

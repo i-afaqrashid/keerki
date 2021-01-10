@@ -7,7 +7,6 @@
       <div class="d-flex align-content-between flex-column text-white w-90">
         <div
           class="d-flex w-100 justify-content-center align-items-center flex-column text-white py-5"
-        
         >
           <div>
             <h1 class="font-24">{{ $t("adminDashboardHeading") }}</h1>
@@ -381,40 +380,83 @@
                 v-if="this.$route.fullPath != '/admin/dashboard'"
                 class="width-75 pt-lg-0 pt-15"
               >
-                <svg
-                  width="34"
-                  height="34"
-                  viewBox="0 0 34 34"
-                  fill="none"
-                  class="position-absolute mx-4 mt-2"
-                  xmlns="http://www.w3.org/2000/svg"
+                <b-dropdown
+                  size="lg"
+                  variant="link"
+                  toggle-class="text-decoration-none outline-none"
+                  no-caret
+                  menu-class="mt-11"
                 >
-                  <path
-                    d="M4.25 17H29.75"
-                    stroke="#C5C7CD"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M4.25 8.5H29.75"
-                    stroke="#C5C7CD"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M4.25 25.5H29.75"
-                    stroke="#C5C7CD"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                  <template #button-content>
+                    <svg
+                      width="34"
+                      height="34"
+                      viewBox="0 0 34 34"
+                      fill="none"
+                      class="position-absolute mt-19"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.25 17H29.75"
+                        stroke="#C5C7CD"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.25 8.5H29.75"
+                        stroke="#C5C7CD"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.25 25.5H29.75"
+                        stroke="#C5C7CD"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </template>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByUserName")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByFirstLastName")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByEmail")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByDate")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByOrderNumber")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByProductName")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByOrderStatus")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByClientAddress")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByClientPhone")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByClientCompanyName")
+                  }}</b-dropdown-item>
+                  <b-dropdown-item @click.native="searchHandler">{{
+                    $t("adminDashboardSearchByClientMemberShip")
+                  }}</b-dropdown-item>
+                </b-dropdown>
 
                 <input
                   class="w-100 px-5 search-field text-center outline-none"
-                  :placeholder="`${$t('adminDashBoardQuickSearch')}`"
+                  :placeholder="quickSearch"
                 />
                 <svg
                   width="30"
@@ -592,7 +634,11 @@
                   <div
                     class="d-flex w-100 justify-content-between align-items-center mt-3"
                   >
-                    <p class="font-12 mb-0">{{$t('adminDashboardNotificationNumberOfNotifications')}}</p>
+                    <p class="font-12 mb-0">
+                      {{
+                        $t("adminDashboardNotificationNumberOfNotifications")
+                      }}
+                    </p>
                     <p class="font-11 mb-0">{{ $t("popupDismiss") }}</p>
                   </div>
                   <div
@@ -707,7 +753,9 @@
                     triggers="focus"
                     custom-class="w-100"
                   >
-                    <template #title>{{$t('adminDashboardMyaccount')}}</template>
+                    <template #title>{{
+                      $t("adminDashboardMyaccount")
+                    }}</template>
                     <button
                       class="btn btn-transparent rounded-0 w-100 d-flex justify-content-around align-items-center"
                       @click="account"
@@ -734,7 +782,9 @@
                         />
                       </svg>
 
-                      <span class="flex-grow-1 text-left">{{$t('adminDashboardAccountDetails')}}</span>
+                      <span class="flex-grow-1 text-left">{{
+                        $t("adminDashboardAccountDetails")
+                      }}</span>
                     </button>
                     <button
                       class="btn btn-transparent rounded-0 w-100 d-flex justify-content-center align-items-center"
@@ -762,7 +812,9 @@
                         />
                       </svg>
 
-                      <span class="flex-grow-1 text-left">{{$t('adminDashboardChangePassword')}}</span>
+                      <span class="flex-grow-1 text-left">{{
+                        $t("adminDashboardChangePassword")
+                      }}</span>
                     </button>
                     <router-link to="/admin">
                       <button
@@ -799,9 +851,9 @@
                           />
                         </svg>
 
-                        <span class="flex-grow-1 text-left color-ff3"
-                          >{{$t('adminDashboardLogoutBtn')}}</span
-                        >
+                        <span class="flex-grow-1 text-left color-ff3">{{
+                          $t("adminDashboardLogoutBtn")
+                        }}</span>
                       </button>
                     </router-link>
                   </b-popover>
@@ -821,6 +873,7 @@ export default {
   data() {
     return {
       role: localStorage.getItem("role"),
+      quickSearch:this.$t("adminDashBoardQuickSearch")
     };
   },
   methods: {
@@ -866,6 +919,9 @@ export default {
     },
     account() {
       this.$router.push({ path: "/admin/dashboard/account" }).catch(() => {});
+    },
+    searchHandler(e) {
+      this.quickSearch=e.target.innerText
     },
   },
 };

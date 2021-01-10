@@ -53,7 +53,7 @@
           >
             {{$t('adminExclueName')}}
 
-            <button class="btn outline-none p-0 ml-1 align-self-end">
+            <button class="btn outline-none p-0 d-flex justify-content-center align-items-center mx-2">
               <svg
                 width="10"
                 height="10"

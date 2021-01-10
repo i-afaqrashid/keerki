@@ -12,7 +12,9 @@
           <div
             class="d-flex align-items-center justify-content-center flex-column flex-lg-row"
           >
-            <p class="mb-0 font-weight-bold font-24">{{$t('adminMessagesCustomQuickResponse')}}</p>
+            <p class="mb-0 font-weight-bold font-24">
+              {{ $t("adminMessagesCustomQuickResponse") }}
+            </p>
             <button class="btn outline-none" v-b-modal.add-modal>
               <b-modal
                 id="add-modal"
@@ -77,7 +79,7 @@
                         class="btn done-button text-white"
                         @click="$bvModal.hide('add-modal')"
                       >
-                        {{$t('adminMessagesAdd')}}
+                        {{ $t("adminMessagesAdd") }}
                       </button>
                     </div>
                   </div>
@@ -167,18 +169,53 @@
                         class="btn edit-button text-white"
                         @click="$bvModal.hide('edit-modal')"
                       >
-                        {{$t('adminMessagesEdit')}}
+                        {{ $t("adminMessagesEdit") }}
                       </button>
                     </div>
                   </div>
                 </div>
               </b-modal>
 
-              {{$t('adminMessagesEdit')}}
+              {{ $t("adminMessagesEdit") }}
             </button>
-            <button class="btn btn-ff mt-4 mt-lg-0 text-white">{{$t('adminMessagesDelete')}}</button>
+
+            <b-modal
+              id="delete-rating"
+              centered
+              hide-footer
+              hide-header
+              content-class="content-class"
+              size="lg"
+            >
+              <div
+                class="d-flex pt-5 justify-content-center align-items-center flex-column"
+              >
+                <h1 class="fs-30">{{ $t("adminMessageDeletePopup") }}</h1>
+                <div
+                  class="w-100 d-flex justify-content-end align-items-center mt-9"
+                >
+                  <div
+                    class="d-flex justify-content-around width-50 align-items-center"
+                  >
+                    <button class="btn btn-67 mt-4 mt-lg-0 text-white">
+                      {{ $t("adminMessageDeleteNo") }}
+                    </button>
+                    <button class="btn btn-ff mt-4 mt-lg-0 text-white">
+                      {{ $t("adminMessageDeleteYes") }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </b-modal>
+
+            <button
+              class="btn btn-ff mt-4 mt-lg-0 text-white"
+              v-b-modal.delete-rating
+            >
+              {{ $t("adminMessagesDelete") }}
+            </button>
             <button class="btn btn-7d mt-4 mt-lg-0 text-white">
-              {{$t('adminMessagesSelectAll')}}
+              {{ $t("adminMessagesSelectAll") }}
             </button>
           </div>
         </div>
