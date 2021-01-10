@@ -140,7 +140,7 @@
         <p class="text-muted font-weight-bold">{{$t('adminMessagesSubjects')}}</p>
       </div>
     </div>
-    <div class="pb-4 order-1 order-lg-0">
+    <div class="pb-4 order-1 order-lg-0 w-75-resp">
       <div class="w-100">
         <div
           class="d-flex justify-content-around flex-column flex-md-row align-items-center border-bottom py-15"

@@ -40,10 +40,11 @@
             class="border outline-none px-2 font-weight-bolder select-arrow w-48 sms-select"
             @change="selectHandler"
           >
-            <option value="All employees selected">All Employees</option>
-            <option value="Selected excluded employee name">All but Exclude</option>
-            <option value="Search Departments">Department</option>
-            <option value="Search and Exclude Departments">Exclude department</option>
+          <!-- notifyAllEmployeesSelected -->
+            <option :value="`${$t('notifyAllEmployeesSelected')}`">{{$t('notifyAllEmployees')}}</option>
+            <option :value="`${$t('notifySelectedExcludedEmployee')}`">{{$t('notifyAllButExclude')}}</option>
+            <option :value="`${$t('notifySearchDepartments')}`">{{$t('notifyDepartment')}}</option>
+            <option :value="`${$t('notifySearchAndExcludeDepartments')}`">{{$t('notifyExcludeDepartment')}}</option>
           </select>
           <button class="btn border sms-button text-white px-4">{{$t('adminSearch')}}</button>
         </div>
@@ -54,7 +55,7 @@
           v-if="selectedType == 'Selected excluded employee name'"
             class="btn excluded d-flex justify-content-center align-items-center"
           >
-            Excluded Employee Name
+            {{$t('notifyExcludedEmployeeName')}}
 
             <button class="btn outline-none p-0 mx-1 align-self-end">
               <svg
@@ -75,7 +76,7 @@
           v-if="selectedType == 'Search and Exclude Departments'"
             class="btn excluded d-flex justify-content-center align-items-center"
           >
-            Selected excluded department
+                {{$t('notifySelectedExcludedDepartment')}}
 
             <button class="btn outline-none p-0 mx-1 align-self-end">
               <svg
@@ -95,10 +96,11 @@
         </div>
       </div>
       <div class="w-90 sms-message-cont mt-5">
-          <input class="w-100 outline-none sms-input p-4" placeholder="Subject">
+          <input class="w-100 outline-none sms-input p-4" :placeholder="`${$t('notifySubject')}`">
         <textarea
           class="w-100 outline-none sms-text p-4"
-          :placeholder="`Send to all employees a message`"
+          :placeholder="`${$t('notifySendToAllEmployees')}`"
+
         ></textarea>
       </div>
       <div class="d-flex justify-content-end sms-footer w-90">
