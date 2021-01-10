@@ -23,6 +23,7 @@
               <b-dropdown-item href="#">
                 <div
                   class="d-flex justify-content-between align-items-center w-75"
+                
                 >
                   <svg
                     width="16"
@@ -36,7 +37,7 @@
                       fill="#267CB2"
                     />
                   </svg>
-                  <p class="mb-0 w-50">Can View</p>
+                  <p class="mb-0 w-50">{{$t('permissionCanEdit')}}</p>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item href="#">
@@ -56,7 +57,7 @@
                     />
                   </svg>
 
-                  <p class="mb-0 w-50">Can Edit</p>
+                  <p class="mb-0 w-50">{{$t('permissionsCanEdit')}}</p>
                 </div>
               </b-dropdown-item>
               <b-dropdown-item href="#">
@@ -76,7 +77,7 @@
                     />
                   </svg>
 
-                  <p class="mb-0 w-50">Hide</p>
+                  <p class="mb-0 w-50">{{$t('permissionsHide')}}</p>
                 </div>
               </b-dropdown-item>
             </b-dropdown>

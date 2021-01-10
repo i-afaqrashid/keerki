@@ -662,7 +662,7 @@
         <div
           class="mt-4 w-100 align-self-start d-flex align-items-center justify-content-around"
         >
-          <div class="w-75-resp">
+          <div class="w-75-resp" >
             <svg
               width="14"
               height="15"
@@ -677,10 +677,12 @@
                 fill-opacity="0.55"
               />
             </svg>
+            <div dir="auto">
+              <p class="d-none">{{$t('editPermissionsSearch')}}</p>
             <input
               class="w-100 rounded-lg border px-15 outline-none py-1"
               :placeholder="`${$t('editPermissionsSearch')}`"
-            />
+            /></div>
           </div>
         </div>
         <div
