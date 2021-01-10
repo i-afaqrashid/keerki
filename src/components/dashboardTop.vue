@@ -379,7 +379,6 @@ export default {
   data() {
     return {
       visible: localStorage.newUser == "true" ? true : false,
-      checked: false,
       index: 0,
       data: [
         {
@@ -448,12 +447,11 @@ export default {
     },
     toggleView(e) {
       e.preventDefault();
-      this.checked = !this.checked;
-      this.checked &&
+      !this.checked &&
         this.$router
           .push({ path: "/dashboard/order-history/order-template" })
           .catch(() => {});
-      !this.checked && this.$router.go(-1);
+      this.checked && this.$router.go(-1);
     },
   },
   props: {
@@ -468,6 +466,10 @@ export default {
       default: function () {
         return this.$t("dashboardDescription");
       },
+    },
+    checked: {
+      type: Boolean,
+      default:false,
     },
   },
 };

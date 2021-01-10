@@ -3,6 +3,7 @@
     <DashboardTop
       :Heading="$t('orderHistoryHeading')"
       :Text="$t('orderHistoryDescription')"
+      v-bind:checked="false"
     />
     <div class="orders w-100 p-15 my-5" dir="auto">
       <div
@@ -176,14 +177,12 @@
                 {{ $t("orderProducts") }}
               </th>
               <th scope="col" class="font-weight-normal py-lg-15">
-                <b-form-checkbox
-                  id="checkbox-11"
-                  name="checkbox-11"
-                  value="true"
-                  unchecked-value="false"
-                  v-model="checkbox1"
+                <button
+                  @click="deselectAll"
+                  class="btn-primary p-0 btn-select-table outline-none"
                 >
-                </b-form-checkbox>
+                  -
+                </button>
               </th>
             </tr>
           </thead>
@@ -544,3 +543,10 @@ export default {
   },
 };
 </script>
+<style>
+.btn-select-table {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 3px !important;
+}
+</style>

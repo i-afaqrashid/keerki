@@ -1,5 +1,5 @@
 <template>
-  <div class="w-90 pt-9">
+  <div class="w-90 pt-9 min-vh-100">
     <div
       class="w-100 notifications-cont pt-4 pb-11 flex-column d-flex justify-content-center align-items-center"
     >

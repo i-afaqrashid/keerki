@@ -12,9 +12,10 @@
         class="login-logo"
       />
     </div>
-    <div class="w-66 bg-white">
-      <router-link to="/login">
-      <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none d-flex align-items-center justify-content-center">
+    <div class="w-66 bg-white mt-5">
+      <button class="d-flex pt-5 ml-4 ml-lg-5 outline-none d-flex align-items-center justify-content-center"
+      @click="$router.go(-1)"
+      >
         <svg
           width="20"
           height="20"
@@ -29,9 +30,8 @@
         </svg>
         <p class="font-weight-lighter ml-3 mb-0">{{$t('back')}}</p>
       </button>
-      </router-link>
       <div
-        class="w-100 pt-lg-8 text-center flex-column d-flex justify-content-center align-items-center"
+        class="w-100 pt-lg-11 text-center flex-column d-flex justify-content-center align-items-center"
       >
         <img
           class="d-block d-lg-none"

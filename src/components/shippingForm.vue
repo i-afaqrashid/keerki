@@ -1,6 +1,6 @@
 <template>
   <form
-    class="px-lg-9 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
+    class="px-lg-9 pt-9 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
     dir="auto"
     @submit="formSubmit"
   >
@@ -258,6 +258,12 @@
       class="w-100 d-flex flex-column flex-lg-row justify-content-center mt-5 align-items-center font-weight-bolder"
       dir="ltr"
     >
+      <button
+        class="btn btn-outline-secondary w-100 text-dark bg-white form-buttons"
+        type="reset"
+      >
+        {{ $t("companyInfoReset") }}
+      </button>
       <button
         class="btn btn-secondary w-100 text-dark ml-lg-4 mt-4 mt-lg-0 form-buttons"
         type="submit"

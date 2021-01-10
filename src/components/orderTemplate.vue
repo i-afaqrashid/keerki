@@ -3,6 +3,8 @@
   <DashboardTop
       :Heading="$t('orderHistoryHeading')"
       :Text="$t('orderHistoryDescription')"
+      v-bind:checked="true"
+
     />
   <div class="mb-11">
     <div class="d-flex justify-content-center flex-column flex-lg-row mt-11">

@@ -3,7 +3,7 @@
     class="w-100 d-flex justify-content-center flex-column flex-lg-row bg-f7"
     dir="ltr"
   >
-    <div class="w-18 d-none d-lg-block side-bar admin-side z-index-2">
+    <div class="w-18 d-none d-lg-block side-bar admin-side z-index-2 min-vh-100">
       <div class="d-flex align-content-between flex-column text-white w-90">
         <div
           class="d-flex w-100 justify-content-center align-items-center flex-column text-white py-5"
@@ -873,7 +873,7 @@ export default {
   data() {
     return {
       role: localStorage.getItem("role"),
-      quickSearch:this.$t("adminDashBoardQuickSearch")
+      quickSearch: this.$t("adminDashBoardQuickSearch"),
     };
   },
   methods: {
@@ -921,7 +921,7 @@ export default {
       this.$router.push({ path: "/admin/dashboard/account" }).catch(() => {});
     },
     searchHandler(e) {
-      this.quickSearch=e.target.innerText
+      this.quickSearch = e.target.innerText;
     },
   },
 };

@@ -1,5 +1,7 @@
 <template>
-  <div class="d-flex w-100 min-vh-100>" dir="ltr">
+<div dir="ltr">
+     <DashboardHeader/>
+  <div class="d-flex w-100 min-vh-100>">
     <div
       class="d-none w-33 min-vh-100 sign-up-image d-lg-flex justify-content-center align-items-center"
     >
@@ -13,26 +15,24 @@
     <div
       class="w-66 bg-white d-flex justify-content-center align-items-center flex-column"
     >
-      <router-link to="/" class="align-self-start">
-        <button
-          class="d-flex ml-4 ml-lg-5 outline-none d-flex align-items-center justify-content-center"
+      <button
+        class="d-flex ml-4 ml-lg-5 align-self-start outline-none d-flex align-items-center justify-content-center"
+        @click="$router.go(-1)"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M14.8627 3.225L13.3794 1.75L5.1377 10L13.3877 18.25L14.8627 16.775L8.0877 10L14.8627 3.225Z"
-              fill="#8692A6"
-            />
-          </svg>
-          <p class="font-weight-lighter ml-3 mb-0">{{ $t("back") }}</p>
-        </button>
-      </router-link>
-
+          <path
+            d="M14.8627 3.225L13.3794 1.75L5.1377 10L13.3877 18.25L14.8627 16.775L8.0877 10L14.8627 3.225Z"
+            fill="#8692A6"
+          />
+        </svg>
+        <p class="font-weight-lighter ml-3 mb-0">{{ $t("back") }}</p>
+      </button>
       <div
         class="w-70 pt-lg-11 px-4 text-left flex-column d-flex justify-content-center align-items-center"
       >
@@ -79,8 +79,10 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 <script>
+import DashboardHeader from '../components/dashboardHeader'
 export default {
   name: "Forgot",
   methods: {
@@ -89,6 +91,10 @@ export default {
       this.$router.push({ path: "reset" });
     },
   },
+  components:{
+    DashboardHeader
+  }
+  ,
   data() {
     return {
       form: {

@@ -3,7 +3,7 @@
     <div class="w-100 pb-4 order-1 order-lg-0">
       <div class="w-100">
         <div
-          class="d-flex justify-content-between flex-column flex-md-row align-items-center border-bottom py-15"
+          class="d-flex justify-content-between flex-column flex-md-row align-items-center border-bottom pt-lg-11 py-4"
         >
           <div
             class="width-50 d-flex justify-content-around align-items-center"

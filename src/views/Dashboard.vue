@@ -1,9 +1,11 @@
 <template>
   <div class="bg-white" dir="ltr">
-    <DashboardHeader />
-    <div class="d-flex flex-column flex-lg-row">
+    <DashboardHeader           v-if="this.$route.fullPath != '/dashboard/inbox'" />
+    <FormHeader v-else/>
+    <div class="d-flex flex-column flex-lg-row mt-5">
       <div
-        class="w-21 z-index-2 px-3 side-bar d-none d-lg-flex align-items-center flex-column pt-11 border-right" dir="auto"
+        class="w-21 z-index-2 px-3 side-bar d-none d-lg-flex align-items-center flex-column pt-11 border-right"
+        dir="auto"
       >
         <div
           class="d-flex flex-column justify-content-between align-items-between"
@@ -279,7 +281,7 @@
         <b-button
           variant="outline-secondary"
           v-b-modal.log-out-modal
-          class="text-success px-5 mt-8 mb-5 d-flex flex-nowrap align-items-center border-radius-13"
+          class="text-success px-5 mt-11 mb-5 d-flex flex-nowrap align-items-center border-radius-13"
           >{{ $t("logout") }}
           <svg
             width="17"
@@ -312,6 +314,26 @@
             />
           </svg>
         </b-button>
+        <div
+          v-if="this.$route.fullPath === '/dashboard/inbox'"
+          class="text-dark align-self-start mt-14 mb-4"
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 15C30 23.2861 23.2837 30 15 30C6.71631 30 0 23.2861 0 15C0 6.71873 6.71631 0 15 0C23.2837 0 30 6.71873 30 15ZM15.4025 4.95968C12.1063 4.95968 10.004 6.34821 8.35319 8.81601C8.13931 9.13573 8.21087 9.56692 8.5174 9.79935L10.6161 11.3907C10.9309 11.6294 11.3795 11.5726 11.6241 11.2623C12.7046 9.89189 13.4454 9.0972 15.09 9.0972C16.3256 9.0972 17.854 9.89244 17.854 11.0906C17.854 11.9964 17.1062 12.4616 15.8862 13.1456C14.4634 13.9432 12.5806 14.9359 12.5806 17.4194V17.6613C12.5806 18.0621 12.9056 18.3871 13.3065 18.3871H16.6935C17.0944 18.3871 17.4194 18.0621 17.4194 17.6613V17.5807C17.4194 15.8592 22.4508 15.7875 22.4508 11.129C22.4508 7.62085 18.8118 4.95968 15.4025 4.95968ZM15 19.9597C13.4658 19.9597 12.2177 21.2078 12.2177 22.7419C12.2177 24.276 13.4658 25.5242 15 25.5242C16.5342 25.5242 17.7823 24.276 17.7823 22.7419C17.7823 21.2078 16.5342 19.9597 15 19.9597Z"
+              fill="#0278AE"
+            />
+          </svg>
+          <p class="btn p-0 outline-none mb-0 ml-2">
+            {{ $t("help") }}
+          </p>
+        </div>
       </div>
       <div class="w-100">
         <router-view></router-view>
@@ -321,13 +343,14 @@
 </template>
 <script>
 import DashboardHeader from "../components/dashboardHeader";
+import FormHeader from '../components/formHeader'
 
 export default {
   name: "Dashboard",
   methods: {
     logout() {
       localStorage.clear();
-      this.$router.push({ path: "../../login" });
+      this.$router.push({ path: "/" });
       this.$bvModal.hide("log-out-modal");
     },
     overview() {
@@ -353,6 +376,7 @@ export default {
   },
   components: {
     DashboardHeader,
+    FormHeader
   },
 };
 </script>

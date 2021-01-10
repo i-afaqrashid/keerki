@@ -1,6 +1,6 @@
 <template>
   <div class="pb-lg-5 mb-lg-5" dir="ltr">
-    <b-navbar toggleable="lg" type="dark" variant="primary">
+    <b-navbar toggleable="lg" type="dark" variant="primary" fixed="top">
       <b-navbar-toggle target="nav-collapse" class="white"></b-navbar-toggle>
       <b-navbar-nav class="d-lg-none">
         <img src="../assets/logo.png" width="100" />
