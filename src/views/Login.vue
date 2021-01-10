@@ -15,7 +15,7 @@
       />
     </div>
     <div
-      class="w-66 bg-white d-flex t-5 justify-content-center align-items-center flex-column"
+      class="w-66 bg-white d-flex mt-5 justify-content-center align-items-center flex-column"
     >
       <router-link to="/" class= " align-self-start" >
         <button
