@@ -283,7 +283,7 @@
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary rounded-pill mt-4">
+              <button type="submit" class="btn btn-blue-color text-white rounded-pill mt-4">
                 {{ $t("clientSubmit") }}
               </button>
             </div>
@@ -422,7 +422,7 @@
                   ></b-form-checkbox>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary rounded-pill mt-4">
+              <button type="submit" class="btn btn-blue-color text-white rounded-pill mt-4">
                 {{ $t("administratorSubmit") }}
               </button>
             </div>
@@ -456,6 +456,7 @@
           body-class="client-drop-modal"
           header-class="header-class2"
           no-stacking
+          size="sm"
           dir="auto"
         >
           <div class="w-100">
@@ -481,10 +482,12 @@
               />
             </div>
             <div
-              class="w-100 d-flex justify-content-center align-items-center flex-column overflow-scroll pt-5 h-300"
-            >
+              class="w-100 d-flex justify-content-center align-items-center flex-column overflow-scroll pt-11 h-300"
+            > 
+            <div class="w-100">
+            
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <svg
                   width="14"
@@ -499,13 +502,13 @@
                     fill-opacity="0.55"
                   />
                 </svg>
-                <div>
+                <div class="w-75">
                   <p class="mb-0">First Last Name (client)</p>
                   <p class="mb-0 font-weight-light">first.last@email.com</p>
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <svg
                   width="14"
@@ -520,13 +523,13 @@
                     fill-opacity="0.55"
                   />
                 </svg>
-                <div>
+                <div class="w-75">
                   <p class="mb-0">First Last Name (client)</p>
                   <p class="mb-0 font-weight-light">first.last@email.com</p>
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <svg
                   width="14"
@@ -541,13 +544,13 @@
                     fill-opacity="0.55"
                   />
                 </svg>
-                <div>
+                <div class="w-75">
                   <p class="mb-0">First Last Name (client)</p>
                   <p class="mb-0 font-weight-light">first.last@email.com</p>
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <svg
                   width="14"
@@ -562,13 +565,13 @@
                     fill-opacity="0.55"
                   />
                 </svg>
-                <div>
+                <div class="w-75">
                   <p class="mb-0">First Last Name (client)</p>
                   <p class="mb-0 font-weight-light">first.last@email.com</p>
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <svg
                   width="14"
@@ -583,11 +586,12 @@
                     fill-opacity="0.55"
                   />
                 </svg>
-                <div>
+                <div class="w-75">
                   <p class="mb-0">First Last Name (client)</p>
                   <p class="mb-0 font-weight-light">first.last@email.com</p>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </b-modal>
@@ -674,6 +678,9 @@ export default {
 };
 </script>
 <style>
+.btn-blue-color{
+  background:#2C5282!important;
+}
 .h-300 {
   height: 300px;
 }

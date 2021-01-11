@@ -36,7 +36,8 @@
                 </div>
               </div>
             </div>
-            <img src="../../assets/graph.png" class="w-100 pt-5" />
+            <!-- <img src="../../assets/graph.png" class="w-100 pt-5" /> -->
+            <DashboardChart />
           </div>
         </div>
       </div>
@@ -78,8 +79,10 @@
   </div>
 </template>
 <script>
+import DashboardChart from "./dashboardChart";
 export default {
   name: "AdminChart",
+  components: { DashboardChart },
 };
 </script>
 <style scoped>

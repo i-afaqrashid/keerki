@@ -99,7 +99,7 @@
                 <b-button
                   size="lg"
                   type="submit"
-                  class="w-100 bg-info mt-11 text-white py-3 mb-5"
+                  class="w-100 border-0 bg-info mt-11 text-white py-3 mb-5"
                   >{{ $t("login") }}</b-button
                 >
                 <div

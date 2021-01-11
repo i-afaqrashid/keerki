@@ -13,7 +13,7 @@
       />
     </div>
     <div
-      class="w-66 bg-white d-flex justify-content-center align-items-center flex-column"
+      class="w-66 bg-white d-flex min-vh-100 justify-content-center align-items-center flex-column"
     >
       <button
         class="d-flex ml-4 ml-lg-5 align-self-start outline-none d-flex align-items-center justify-content-center"
@@ -70,7 +70,7 @@
                 v-b-modal.modal-center
                 size="lg"
                 type="submit"
-                class="w-100 bg-info text-white py-3 mb-5"
+                class="w-100 bg-info border-0 text-white py-3 mb-5"
                 >{{ $t("requestNewPassword") }}</b-button
               >
             </b-form>

@@ -1,6 +1,7 @@
 <template>
+<div class="w-100 d-flex justify-content-center align-items-center">
   <form
-    class="px-lg-9 pt-9 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
+    class="w-70 pt-9 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
     dir="auto"
     @submit="formSubmit"
   >
@@ -135,6 +136,7 @@
       </button>
     </div>
   </form>
+</div>
 </template>
 <style scoped>
 .file-list {

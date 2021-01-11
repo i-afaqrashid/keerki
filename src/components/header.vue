@@ -60,14 +60,32 @@
             </p>
             <p>
               <b-nav-item-dropdown :text="`${$t('setLanguage')}`">
-                <b-dropdown-item @click="switchLocale('en')"
-                  >ENGLISH</b-dropdown-item
+                <b-dropdown-item @click="switchLocale('en')">
+                  <img
+                    src="../assets/enFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                  ENGLISH
+                </b-dropdown-item>
+                <b-dropdown-item @click="switchLocale('ar')">
+                  <img
+                    src="../assets/arFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                  عربى</b-dropdown-item
                 >
-                <b-dropdown-item @click="switchLocale('ar')"
-                  >عربى</b-dropdown-item
-                >
-                <b-dropdown-item @click="switchLocale('ch')"
-                  >中文</b-dropdown-item
+                <b-dropdown-item @click="switchLocale('ch')">
+                  <img
+                    src="../assets/chFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                  中文</b-dropdown-item
                 >
               </b-nav-item-dropdown>
             </p>

@@ -123,7 +123,7 @@
                 }}</b-form-checkbox>
                 <b-button
                   size="lg"
-                  class="w-100 bg-info mt-11 text-white py-3 mb-5"
+                  class="w-100 border-0 bg-info mt-11 text-white py-3 mb-5"
                   type="submit"
                   >{{ $t("registerAccountBtn") }}</b-button
                 >
@@ -132,9 +132,20 @@
                 >
                   {{ $t("or") }}
                 </div>
+
+                <router-link to="/login">
+                  <button
+                    dir="auto"
+                    type="button"
+                    class="btn w-100 btn-white text-center shadow-sm form-input mt-5"
+                  >
+                    {{$t('signupLoginNow')}}
+                  </button>
+                </router-link>
+
                 <button
                   type="button"
-                  class="btn w-100 btn-white d-flex align-items-center justify-content-between shadow-sm form-input mt-5"
+                  class="btn w-100 btn-white d-flex align-items-center justify-content-between shadow-sm form-input mt-3"
                 >
                   <svg
                     width="34"
