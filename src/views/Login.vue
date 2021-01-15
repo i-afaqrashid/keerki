@@ -53,6 +53,7 @@
                 {{ $t("loginDescription") }}
               </p>
             </div>
+
             <CustomAlert v-else v-bind:alert="type" />
             <p class="horizontal-line"></p>
             <div>

@@ -1,9 +1,9 @@
 <template>
   <div dir="ltr">
     <div class="d-flex flex-column flex-lg-row align-items-center w-100 pt-5 pt-xl-8">
-      <div class="d-flex flex-column w-25 ml-xl-4">
+      <div class="d-flex flex-column width-25 ml-xl-4">
         <div
-          class="d-flex text-center text-white justify-content-center align-items-center w-100 ml-lg-3"
+          class="d-flex text-center text-white justify-content-center align-items-center w-100 ml-3"
         >
           <svg
             width="42"
@@ -86,7 +86,7 @@
         </div>
       </div>
       <div
-        class="d-flex text-white flex-column flex-lg-row justify-content-center align-items-center w-50"
+        class="d-flex text-white justify-content-around justify-content-lg-center align-items-center width-50"
       >
         <div class="pt-5 pt-lg-0">
           <p class="font-weight-normal fs-20">{{$t("main")}}</p>
@@ -95,7 +95,7 @@
           <p>{{ $t("about") }}</p>
           <p>{{ $t("contact") }}</p>
         </div>
-        <div class="pl-lg-8 pl-4 pt-5 pt-lg-0">
+        <div class="pl-lg-8 pt-5 pt-lg-0">
           <p class="font-weight-normal fs-20" >{{$t("resources")}}</p>
           <p class="pt-3">{{$t("freeCatalog")}}</p>
           <p>{{$t("blog")}}</p>
@@ -103,7 +103,7 @@
           <p>{{$t("updates")}}</p>
         </div>
       </div>
-      <div class="w-25 pr-lg-9">
+      <div class="width-25 mt-4 mt-lg-0">
         <img src="../assets/logo.png" class="w-100" />
       </div>
     </div>

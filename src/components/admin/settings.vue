@@ -9,15 +9,15 @@
       <div class="w-75">
         <div class="d-flex justify-content-center align-items-center w-75-resp">
           <div
-            class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
+            class="w-100 d-flex justify-content-around align-items-center flex-column flex-md-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
               {{ $t("adminSettingsSessionTimeOut") }}
             </p>
             <div
-              class="d-flex justify-content-between width-25 flex-column flex-lg-row"
+              class="d-flex justify-content-between width-25 flex-column flex-md-row"
             >
-              <div class="border rounded-lg d-flex mt-15 mt-lg-0">
+              <div class="border rounded-lg d-flex mt-15 mt-md-0">
                 <select class="select-arrow setting-select outline-none">
                   <option>0</option>
                   <option>1</option>
@@ -29,7 +29,7 @@
                   <p class="mb-0">{{ $t("adminSettingsHours") }}</p>
                 </div>
               </div>
-              <div class="border rounded-lg d-flex mt-15 mt-lg-0">
+              <div class="border rounded-lg d-flex mt-15 mt-md-0">
                 <select class="select-arrow setting-select outline-none">
                   <option>15</option>
                   <option>30</option>
@@ -48,15 +48,15 @@
           class="d-flex justify-content-center align-items-center w-75-resp mt-15"
         >
           <div
-            class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
+            class="w-100 d-flex justify-content-around align-items-center flex-column flex-md-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
               {{ $t("adminSettingsAutoSendSms") }}
             </p>
             <div
-              class="d-flex justify-content-between width-25 flex-column flex-lg-row"
+              class="d-flex justify-content-between width-25 flex-column flex-md-row"
             >
-              <div class="border rounded-lg d-flex mt-15 mt-lg-0">
+              <div class="border rounded-lg d-flex mt-15 mt-md-0">
                 <select class="select-arrow setting-select outline-none">
                   <option>7</option>
                   <option>14</option>
@@ -75,15 +75,15 @@
           class="d-flex justify-content-center align-items-center w-75-resp mt-15"
         >
           <div
-            class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
+            class="w-100 d-flex justify-content-around align-items-center flex-column flex-md-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
               {{ $t("adminSettingsDeactivateEmployee") }}
             </p>
             <div
-              class="d-flex justify-content-between width-25 flex-column flex-lg-row"
+              class="d-flex justify-content-between width-25 flex-column flex-md-row"
             >
-              <div class="border rounded-lg d-flex mt-15 mt-lg-0">
+              <div class="border rounded-lg d-flex mt-15 mt-md-0">
                 <select class="select-arrow setting-select outline-none">
                   <option>90</option>
                   <option>30</option>
@@ -102,15 +102,15 @@
           class="d-flex justify-content-center align-items-center w-75-resp mt-15"
         >
           <div
-            class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
+            class="w-100 d-flex justify-content-around align-items-center flex-column flex-md-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
               {{ $t("adminSettingsDeactivateUser") }}
             </p>
             <div
-              class="d-flex justify-content-between width-25 flex-column flex-lg-row"
+              class="d-flex justify-content-between width-25 flex-column flex-md-row"
             >
-              <div class="border rounded-lg d-flex mt-15 mt-lg-0 w-75">
+              <div class="border rounded-lg d-flex mt-15 mt-md-0 w-75">
                 <select class="select-arrow setting-select w-100 outline-none">
                   <option>-- Select --</option>
                   <option>David - Employee</option>
@@ -125,15 +125,15 @@
           class="d-flex justify-content-center align-items-center w-75-resp mt-15"
         >
           <div
-            class="w-100 d-flex justify-content-around align-items-center flex-column flex-lg-row"
+            class="w-100 d-flex justify-content-around align-items-center flex-column flex-md-row"
           >
             <p class="fs-14 font-weight-bold mb-0 width-25">
               {{ $t("adminSettingsRemoveUser") }}
             </p>
             <div
-              class="d-flex justify-content-between width-25 flex-column flex-lg-row"
+              class="d-flex justify-content-between width-25 flex-column flex-md-row"
             >
-              <div class="border rounded-lg d-flex mt-15 mt-lg-0 w-75">
+              <div class="border rounded-lg d-flex mt-15 mt-md-0 w-75">
                 <select class="select-arrow setting-select w-100 outline-none">
                   <option>-- Select --</option>
                   <option>David - Admin</option>
@@ -154,7 +154,7 @@
         class="setting-cont w-100 py-5 d-flex justify-content-center flex-column align-items-center mt-2"
       >
         <div
-          class="d-flex justify-content-around flex-column flex-lg-row w-100 align-items-center"
+          class="d-flex justify-content-around flex-column flex-md-row w-100 align-items-center"
         >
           <button
             class="settings-btn text-white width-25 btn"
@@ -167,7 +167,7 @@
               centered
               hide-footer
               header-class="border-0"
-              hider-header
+              hide-header
               no-stacking
               size="xl"
             >
@@ -243,7 +243,7 @@
                             <svg
                               width="21"
                               height="16"
-                              class="position-relative mx-lg-n5 mx-n4 float-right"
+                              class="position-relative mx-n15 mx-lg-0 mx-xl-n15 float-right"
                               viewBox="0 0 21 16"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
@@ -279,7 +279,7 @@
                             <svg
                               width="21"
                               height="16"
-                              class="position-relative mx-lg-n5 mx-n4 float-right"
+                              class="position-relative mx-n15 mx-lg-0 mx-xl-n15 float-right"
                               viewBox="0 0 21 16"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
@@ -372,6 +372,19 @@
                           </select>
                         </div>
                       </div>
+                      <div class="w-100 py-15">
+                        <p class="mb-1">{{ $t("adminSettingsDepartment") }}</p>
+                        <div
+                          class="d-flex w-100 justify-content-center align-items-center"
+                        >
+                          <select
+                            class="border p-2 w-100 outline-none select-arrow"
+                          >
+                            <option>Select</option>
+                            <option>Department</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div
@@ -416,14 +429,14 @@
             </b-modal>
           </button>
           <button
-            class="settings-btn text-white width-25 btn mt-4 mt-lg-0"
+            class="settings-btn text-white width-25 btn mt-4 mt-md-0"
             @click="allEmployees"
           >
             {{ $t("adminSettingsViewAllEmployees") }}
           </button>
         </div>
         <div
-          class="d-flex justify-content-around flex-column flex-lg-row pt-5 w-100 align-items-center"
+          class="d-flex justify-content-around flex-column flex-md-row pt-5 w-100 align-items-center"
         >
           <button
             class="settings-btn text-white width-25 btn"
@@ -434,7 +447,7 @@
               centered
               hide-footer
               header-class="border-0"
-              hider-header
+              hide-header
               size="xl"
             >
               <div
@@ -494,7 +507,7 @@
                               centered
                               hide-footer
                               header-class="border-0"
-                              hider-header
+                              hide-header
                               size="xl"
                             >
                               <div
@@ -754,7 +767,7 @@
             {{ $t("adminSettingsEditEmployee") }}
           </button>
           <button
-            class="settings-btn text-white width-25 btn mt-4 mt-lg-0"
+            class="settings-btn text-white width-25 btn mt-4 mt-md-0"
             @click="notifyAll"
           >
             {{ $t("adminSettingNotifyAllEMployees") }}
@@ -770,29 +783,36 @@
         class="setting-cont w-100 py-5 d-flex justify-content-center flex-column align-items-center mt-2"
       >
         <div
-          class="d-flex justify-content-around flex-column flex-lg-row w-100 align-items-center"
+          class="d-flex justify-content-around flex-column flex-md-row w-100 align-items-center"
         >
-          <button class="settings-btn text-white width-25 btn" v-b-modal.new-employee-modal>
+          <button
+            class="settings-btn text-white width-25 btn"
+            v-b-modal.new-employee-modal
+          >
             {{ $t("adminSettingAddNewClient") }}
           </button>
-          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0"
-          @click="notifyAll"
+          <button
+            class="settings-btn text-white width-25 btn mt-4 mt-md-0"
+            @click="notifyAll"
           >
             {{ $t("adminSettingsNofifyAllClients") }}
           </button>
         </div>
         <div
-          class="d-flex justify-content-around flex-column flex-lg-row pt-5 w-100 align-items-center"
+          class="d-flex justify-content-around flex-column flex-md-row pt-5 w-100 align-items-center"
         >
           <button class="settings-btn text-white width-25 btn" @click="sendSms">
             {{ $t("adminSettingsSendSms") }}
           </button>
-          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0" @click="allEmployees">
+          <button
+            class="settings-btn text-white width-25 btn mt-4 mt-md-0"
+            @click="allEmployees"
+          >
             {{ $t("adminSettingActivateClient") }}
           </button>
         </div>
         <div
-          class="d-flex justify-content-around flex-column flex-lg-row pt-5 w-100 align-items-center"
+          class="d-flex justify-content-around flex-column flex-md-row pt-5 w-100 align-items-center"
         >
           <button
             class="settings-btn text-white width-25 btn"
@@ -800,7 +820,10 @@
           >
             {{ $t("adminSettingSendEmail") }}
           </button>
-          <button class="settings-btn text-white width-25 btn mt-4 mt-lg-0" @click="allEmployees">
+          <button
+            class="settings-btn text-white width-25 btn mt-4 mt-md-0"
+            @click="allEmployees"
+          >
             {{ $t("adminSettingSuspendAccount") }}
           </button>
         </div>

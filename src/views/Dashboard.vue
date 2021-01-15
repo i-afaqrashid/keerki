@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white" dir="ltr">
-    <DashboardHeader           v-if="this.$route.fullPath != '/dashboard/inbox'" />
-    <FormHeader v-else/>
+    <DashboardHeader v-if="this.$route.fullPath != '/dashboard/inbox'" />
+    <FormHeader v-else />
     <div class="d-flex flex-column flex-lg-row mt-5">
       <div
         class="w-21 z-index-2 px-3 side-bar d-none d-lg-flex align-items-center flex-column pt-11 border-right"
@@ -30,21 +30,21 @@
             >
               <path
                 d="M7.35889 23.5415L7.35889 6.45776"
-                stroke="#197BBD"
+                stroke="#696969"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
               <path
                 d="M7.35892 23.5413L25.6274 23.5413"
-                stroke="#197BBD"
+                stroke="#696969"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
               <path
                 d="M11.4614 16.6341C13.8436 14.5994 15.5523 13.436 17.4791 11.8206L18.6749 16.2009L23.8856 12.0935"
-                stroke="#197BBD"
+                stroke="#696969"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -252,7 +252,7 @@
           centered
           hide-footer
           header-class="header-class"
-          hider-header
+          hide-header
           hide-header-close
         >
           <div
@@ -343,7 +343,7 @@
 </template>
 <script>
 import DashboardHeader from "../components/dashboardHeader";
-import FormHeader from '../components/formHeader'
+import FormHeader from "../components/formHeader";
 
 export default {
   name: "Dashboard",
@@ -355,28 +355,23 @@ export default {
     },
     overview() {
       this.$router.push({ path: "/dashboard" }).catch(() => {});
-      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     notifications() {
       this.$router.push({ path: "/dashboard/notifications" }).catch(() => {});
-      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     messages() {
       this.$router.push({ path: "/dashboard/messages" }).catch(() => {});
-      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     orderHistory() {
       this.$router.push({ path: "/dashboard/order-history" }).catch(() => {});
-      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     account() {
       this.$router.push({ path: "/dashboard/account" }).catch(() => {});
-      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
   },
   components: {
     DashboardHeader,
-    FormHeader
+    FormHeader,
   },
 };
 </script>

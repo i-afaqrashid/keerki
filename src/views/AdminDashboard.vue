@@ -3,7 +3,9 @@
     class="w-100 d-flex justify-content-center flex-column flex-lg-row bg-f7"
     dir="ltr"
   >
-    <div class="w-18 d-none d-lg-block side-bar admin-side z-index-2 min-vh-100">
+    <div
+      class="w-18 d-none d-lg-block side-bar admin-side z-index-2 min-vh-100"
+    >
       <div class="d-flex align-content-between flex-column text-white w-90">
         <div
           class="d-flex w-100 justify-content-center align-items-center flex-column text-white py-5"
@@ -16,14 +18,14 @@
               class="d-flex justify-content-around align-items-center w-100 pt-16"
             >
               <img src="../assets/logoSign.png" width="30" height="30" />
-              <h1 class="fs-19 mb-0 text-muted">
+              <h1 class="fs-16 mb-0 text-muted">
                 {{ $t("adminDashboardKeerkiDashboard") }}
               </h1>
             </div>
           </div>
           <div class="w-100 pt-16">
             <button
-              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              class="bg-transparent p-0 admin-hover border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
               @click="dashboard"
             >
               <svg
@@ -49,7 +51,7 @@
           <span class="divider w-100"></span>
           <div class="w-100 d-flex align-items-center justify-content-between">
             <button
-              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              class="bg-transparent admin-hover p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
               @click="clients"
             >
               <svg
@@ -71,7 +73,7 @@
                 $t("adminDashboardClientsBtn")
               }}</span>
             </button>
-            <svg
+            <!-- <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -85,11 +87,11 @@
                 d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
                 fill="#CCCCCE"
               />
-            </svg>
+            </svg> -->
           </div>
           <div class="w-100 d-flex align-items-center justify-content-between">
             <button
-              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              class="bg-transparent p-0 admin-hover border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
               @click="orders"
             >
               <svg
@@ -110,7 +112,7 @@
                 $t("adminDashboardOrdersBtn")
               }}</span>
             </button>
-            <svg
+            <!-- <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -124,11 +126,11 @@
                 d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
                 fill="#CCCCCE"
               />
-            </svg>
+            </svg> -->
           </div>
           <div class="w-100 d-flex align-items-center justify-content-between">
             <button
-              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              class="bg-transparent p-0 border-0 w-75 admin-hover justify-content-around outline-none d-flex align-items-center h-56"
               @click="toContact"
             >
               <svg
@@ -157,7 +159,7 @@
                 $t("adminDashboardContactBtn")
               }}</span>
             </button>
-            <svg
+            <!-- <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -171,11 +173,11 @@
                 d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
                 fill="#CCCCCE"
               />
-            </svg>
+            </svg> -->
           </div>
           <div class="w-100 d-flex align-items-center justify-content-between">
             <button
-              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              class="bg-transparent p-0 border-0 w-75 admin-hover justify-content-around outline-none d-flex align-items-center h-56"
               @click="notifications"
             >
               <svg
@@ -196,7 +198,7 @@
                 $t("adminDashboardNotificationsBtn")
               }}</span>
             </button>
-            <svg
+            <!-- <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -210,11 +212,11 @@
                 d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
                 fill="#CCCCCE"
               />
-            </svg>
+            </svg> -->
           </div>
           <div class="w-100 d-flex justify-content-between align-items-center">
             <button
-              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              class="bg-transparent p-0 border-0 w-75 admin-hover justify-content-around outline-none d-flex align-items-center h-56"
               @click="messages"
             >
               <svg
@@ -235,7 +237,7 @@
                 $t("adminDashboardMessagesBtn")
               }}</span>
             </button>
-            <svg
+            <!-- <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -249,13 +251,13 @@
                 d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
                 fill="#CCCCCE"
               />
-            </svg>
+            </svg> -->
           </div>
           <span class="divider w-100"></span>
 
           <div class="w-100 d-flex align-items-center justify-content-between">
             <button
-              class="bg-transparent p-0 border-0 w-75 justify-content-around outline-none d-flex align-items-center h-56"
+              class="bg-transparent p-0 border-0 w-75 admin-hover justify-content-around outline-none d-flex align-items-center h-56"
               @click="settings"
             >
               <svg
@@ -277,7 +279,7 @@
                 $t("adminDashboardSettingsBtn")
               }}</span>
             </button>
-            <svg
+            <!-- <svg
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -291,7 +293,7 @@
                 d="M5.20711 4.79289C4.81658 4.40237 4.18342 4.40237 3.79289 4.79289C3.40237 5.18342 3.40237 5.81658 3.79289 6.20711L8.29289 10.7071C8.68342 11.0976 9.31658 11.0976 9.70711 10.7071L14.2071 6.20711C14.5976 5.81658 14.5976 5.18342 14.2071 4.79289C13.8166 4.40237 13.1834 4.40237 12.7929 4.79289L9 8.58579L5.20711 4.79289Z"
                 fill="#CCCCCE"
               />
-            </svg>
+            </svg> -->
           </div>
         </div>
       </div>
@@ -301,7 +303,7 @@
           centered
           hide-footer
           header-class="header-class"
-          hider-header
+          hide-header
           hide-header-close
         >
           <div
@@ -375,7 +377,9 @@
           class="w-95 d-flex justify-content-around flex-column flex-lg-row align-items-center"
         >
           <div class="w-95 d-flex order-1 order-lg-0">
-            <div class="w-95 d-flex justify-content-between align-items-center">
+            <div
+              class="w-95 d-flex justify-content-between flex-column flex-lg-row align-items-center"
+            >
               <div
                 v-if="this.$route.fullPath != '/admin/dashboard'"
                 class="width-75 pt-lg-0 pt-15"
@@ -483,29 +487,73 @@
               </div>
               <div
                 v-else
-                class="width-75 fs-24 font-weight-bolder pt-lg-0 pt-15"
+                class="width-75 fs-24 font-weight-bolder pt-lg-3 pt-15"
               >
                 {{ $t("adminDashboardHeading") }}
+              </div>
+              <p class="d-flex align-items-center pt-15 pt-lg-3 justify-content-center mb-0">
+                <img
+                  v-if="this.$i18n.locale == 'en'"
+                  src="../assets/enFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+                <img
+                  v-else-if="this.$i18n.locale == 'ar'"
+                  src="../assets/arFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+                <img
+                  v-else
+                  if="this.$i18n.locale == 'ch'"
+                  src="../assets/chFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+              </p>
+              <div class="pt-3">
+              <b-dropdown :text="`${$t('setLanguage')}`" variant="transparent">
+                <b-dropdown-item @click="switchLocale('en')">
+                  <img
+                    src="../assets/enFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                  ENGLISH</b-dropdown-item
+                >
+                <b-dropdown-item @click="switchLocale('ar')">
+                  <img
+                    src="../assets/arFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                  عربى</b-dropdown-item
+                >
+                <b-dropdown-item @click="switchLocale('ch')">
+                  <img
+                    src="../assets/chFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                  中文</b-dropdown-item
+                >
+              </b-dropdown>
               </div>
             </div>
           </div>
           <div
-            class="w-95 d-flex flex-column flex-lg-row flex-wrap justify-content-between align-items-center pt-4 pt-lg-0"
+            class="width-50-resp d-flex flex-column flex-lg-row flex-wrap justify-content-between align-items-center pt-3"
           >
-            <div class="d-none d-lg-block">
-              <button
-                v-if="role == 'employee'"
-                class="btn py-0 employee-btn rounded-pill"
-              >
-                Employee
-              </button>
-
-              <button v-else class="btn py-0 btn-primary rounded-pill">
-                {{ $t("adminDashboardUserAdmin") }}
-              </button>
-            </div>
+            
             <div
-              class="width-75 d-flex justify-content-around align-items-center pt-15 pt-lg-0"
+              class="w-100 d-flex justify-content-around align-items-center pt-15 pt-lg-0"
             >
               <button
                 class="btn btn-transparent outline-none d-block d-lg-none p-0"
@@ -595,6 +643,18 @@
                   </div>
                 </div>
               </b-popover>
+              <div class="d-none d-lg-block">
+              <button
+                v-if="role == 'employee'"
+                class="btn py-0 employee-btn rounded-pill"
+              >
+                Employee
+              </button>
+
+              <button v-else class="btn py-0 btn-245 text-white rounded-pill">
+                {{ $t("adminDashboardUserAdmin") }}
+              </button>
+            </div>
               <button
                 class="outline-none"
                 v-b-popover.hover.top
@@ -613,8 +673,8 @@
                   />
                 </svg>
                 <span
-                  class="rounded-circle red-circle position-absolute text-center text-white bg-red mt-n2 ml-n2"
-                  style="width: 20px; height: 20px"
+                  class="rounded-circle fs-10 red-circle position-absolute text-center text-white d-flex justify-content-center align-content-center bg-red mt-n15 ml-3"
+                  style="width: 15px; height: 14px"
                   >5</span
                 >
               </button>
@@ -699,23 +759,12 @@
                 </svg>
 
                 <span
-                  class="rounded-circle red-circle position-absolute text-center text-white bg-red mt-n2 ml-n2"
-                  style="width: 20px; height: 20px"
+                  class="rounded-circle red-circle fs-10 position-absolute text-center text-white d-flex justify-content-center align-content-center bg-red mt-n15 ml-3"
+                  style="width: 15px; height: 14px"
                   >5</span
                 >
               </button>
-              <span>
-                <svg
-                  width="2"
-                  height="32"
-                  viewBox="0 0 2 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M1 0V32" stroke="#DFE0EB" />
-                </svg>
-              </span>
-              <h1 class="mb-0 fs-18">Nasir Bello</h1>
+              <h1 class="mb-0 fs-18 border-left p-2">Nasir Bello</h1>
               <div class="d-flex align-center">
                 <img
                   src="../assets/photoprofileImage.png"
@@ -913,6 +962,16 @@ export default {
       this.$router.push({ path: "/admin/dashboard/orders" }).catch(() => {});
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },
+
+    switchLocale(locale) {
+      if (this.$i18n.locale !== locale) {
+        document.getElementById("app").classList.remove(this.$i18n.locale);
+        localStorage.currentLanguage = locale;
+        document.getElementById("app").classList.add(locale);
+        this.$i18n.locale = locale;
+      }
+    },
+
     messages() {
       this.$router.push({ path: "/admin/dashboard/messages" }).catch(() => {});
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
@@ -927,6 +986,16 @@ export default {
 };
 </script>
 <style scoped>
+.width-50-resp{
+  width: 100%;
+}
+
+.btn-245{
+  background: #245AAB;
+}
+.admin-hover:hover{
+  transform: scale(1.1);
+}
 .employee-btn {
   background: #64bb9f;
   color: white !important;
@@ -988,6 +1057,10 @@ export default {
   .w-82 {
     width: 82 !important;
   }
+  .width-50-resp{
+  width: 53%;
+}
+
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .width-75 {
@@ -999,5 +1072,9 @@ export default {
   .w-82 {
     width: 82 !important;
   }
+  .width-50-resp{
+  width: 67%;
+}
+
 }
 </style>

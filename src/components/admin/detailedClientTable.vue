@@ -173,26 +173,26 @@
     >
       <thead class="pt-0 text-center">
         <tr class="border-bottom">
-          <th class="pt-0 font-weight-light" scope="col"></th>
-          <th class="pt-0 font-weight-light text-left" scope="col">
+          <th class="pt-0" scope="col"></th>
+          <th class="pt-0 fs-18 text-left" scope="col">
             {{ $t("clientDetailsOrdersStatus") }}
           </th>
-          <th class="pt-0 font-weight-light" scope="col">
+          <th class="pt-0 fs-18" scope="col">
             {{ $t("clientDetailsOrdersDate") }}
           </th>
-          <th class="pt-0 font-weight-light" scope="col">
+          <th class="pt-0 fs-18" scope="col">
             {{ $t("clientDetailsOrdersPhoneNumber") }}
           </th>
-          <th class="pt-0 font-weight-light" scope="col">
+          <th class="pt-0 fs-18" scope="col">
             {{ $t("clientDetailsOrdersTotal") }}
           </th>
-          <th class="pt-0 font-weight-light" scope="col">
+          <th class="pt-0 fs-18" scope="col">
             {{ $t("clientDetailsOrderNo") }}
           </th>
-          <th class="pt-0 font-weight-light" scope="col">
+          <th class="pt-0 fs-18" scope="col">
             {{ $t("clientDetailsOrdersCountry") }}
           </th>
-          <th class="pt-0 font-weight-light" scope="col">
+          <th class="pt-0 fs-18" scope="col">
             {{ $t("clientDetailsOrdersCompany") }}
           </th>
         </tr>

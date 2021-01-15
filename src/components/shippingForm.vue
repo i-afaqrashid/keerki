@@ -5,6 +5,24 @@
       dir="auto"
       @submit="formSubmit"
     >
+      <button
+        class="d-flex pb-5 align-self-start outline-none d-flex align-items-center justify-content-center"
+        @click="$router.push('/dashboard/order-form')"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.8627 3.225L13.3794 1.75L5.1377 10L13.3877 18.25L14.8627 16.775L8.0877 10L14.8627 3.225Z"
+            fill="#8692A6"
+          />
+        </svg>
+        <p class="font-weight-lighter ml-3 mb-0">{{ $t("back") }}</p>
+      </button>
       <h1
         v-if="this.$i18n.locale == 'ar'"
         class="w-100 text-right border-3 font-24 py-2"

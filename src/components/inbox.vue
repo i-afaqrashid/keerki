@@ -425,6 +425,7 @@ export default {
 <style>
 .overflow-scroll{
   overflow-y: scroll!important;
+  overflow-x:hidden!important;
 }
 .rating-text-area {
   height: 130px !important;

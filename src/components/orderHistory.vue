@@ -5,7 +5,7 @@
       :Text="$t('orderHistoryDescription')"
     />
     <div
-      class="d-flex justify-content-around align-items-center flex-column flex-lg-row pt-lg-9 pt-11 px-0 px-lg-9 flex-wrap"
+      class="d-flex justify-content-around align-items-center flex-wrap pt-lg-9 pt-11 px-0 px-lg-9 flex-wrap"
     >
       <DashboardCard
         v-bind:title="`${$t('quoteOrders')}`"

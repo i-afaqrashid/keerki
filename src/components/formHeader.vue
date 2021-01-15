@@ -10,7 +10,7 @@
           class="d-flex flex-column ml-xl-5 flex-lg-row align-items-center justify-content-around w-100 mr-lg-5"
         >
           <b-navbar-nav
-            class="d-flex justify-content-center align-items-center text-left w-100 outline-none ml-0 ml-lg-5"
+            class="d-flex justify-content-center mt-4 mt-lg-0 align-items-lg-center align-items-start text-left width-50 outline-none ml-0 ml-lg-5"
           >
             <div class="bg-secondary rounded-circle">
               <svg
@@ -49,10 +49,8 @@
                 </g>
               </svg>
             </div>
-            <div
-              class="mx-lg-4 my-4 my-lg-0 text-white text-center text-lg-left"
-            >
-              <p class="mb-0 fs-16">Hedi</p>
+            <div class="mx-lg-4 my-2 my-lg-0 text-white">
+              <p class="mb-0 fs-16 font-weight-bolder">Hedi</p>
               <router-link to="/dashboard/account" class="text-white">
                 <p class="mb-0 fs-16">{{ $t("formHeaderAccountDetails") }}</p>
               </router-link>
@@ -60,7 +58,7 @@
             <svg
               width="26"
               height="24"
-              class="mx-2"
+              class="mx-lg-2"
               viewBox="0 0 26 24"
               fill="none"
               v-if="this.$route.fullPath == '/dashboard/inbox'"
@@ -83,6 +81,7 @@
               height="24"
               viewBox="0 0 26 24"
               fill="none"
+              class="my-2 my-lg-0"
               v-if="this.$route.fullPath == '/dashboard/inbox'"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -108,15 +107,15 @@
           </b-navbar-nav>
 
           <b-navbar-nav
-            class="d-flex justify-content-lg-center align-items-lg-center text-light pt-lg-3 w-100 pr-lg-11"
+            class="d-flex justify-content-around align-items-lg-center text-light pt-lg-3 w-100"
           >
             <router-link to="/">
               <p class="pl-lg-5 text-white">{{ $t("home") }}</p></router-link
             >
-            <p class="pl-lg-5">{{ $t("product") }}</p>
-            <p class="pl-lg-5">{{ $t("about") }}</p>
-            <p class="pl-lg-5">{{ $t("contact") }}</p>
-            <p class="pl-lg-5 d-flex align-items-center">
+            <p class="">{{ $t("product") }}</p>
+            <p class="">{{ $t("about") }}</p>
+            <p class="">{{ $t("contact") }}</p>
+            <p class="d-flex align-items-center d-lg-none">
               <img
                 v-if="this.$i18n.locale == 'en'"
                 src="../assets/enFlag.png"
@@ -140,7 +139,30 @@
                 class="rounded-circle"
               />
             </p>
-            <p>
+
+            <p class="d-flex align-items-center">
+              <img
+                v-if="this.$i18n.locale == 'en'"
+                src="../assets/enFlag.png"
+                width="24"
+                height="24"
+                class="rounded-circle d-none d-lg-block"
+              />
+              <img
+                v-else-if="this.$i18n.locale == 'ar'"
+                src="../assets/arFlag.png"
+                width="24"
+                height="24"
+                class="rounded-circle d-none d-lg-block"
+              />
+              <img
+                v-else
+                if="this.$i18n.locale == 'ch'"
+                src="../assets/chFlag.png"
+                width="24"
+                height="24"
+                class="rounded-circle d-none d-lg-block"
+              />
               <b-nav-item-dropdown :text="`${$t('setLanguage')}`">
                 <b-dropdown-item @click="switchLocale('en')">
                   <img
@@ -177,7 +199,7 @@
           </b-navbar-nav>
         </div>
       </b-collapse>
-      <b-navbar-nav class="ml-auto d-none d-lg-block w-25">
+      <b-navbar-nav class="ml-auto d-none d-lg-block width-25">
         <img src="../assets/logo.png" class="w-50" />
       </b-navbar-nav>
     </b-navbar>

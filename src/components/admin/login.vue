@@ -12,7 +12,7 @@
         >
           <AdminCustomAlert v-bind:alert="type" />
         </div>
-        <div class="mt-15">
+        <div class="mt-15 w-300">
           <svg
             width="20"
             height="20"
@@ -43,7 +43,7 @@
             required
           />
         </div>
-        <div class="mt-3">
+        <div class="mt-3 w-300">
           <svg
             width="20"
             height="20"
@@ -73,7 +73,7 @@
             required
           />
         </div>
-        <div style="width: 300px">
+        <div class="w-300">
           <button
             class="btn w-100 login-input shadow-md btn-white btn-light mt-5"
             type="submit"
@@ -113,6 +113,9 @@ export default {
 };
 </script>
 <style scoped>
+.w-300{
+  width:300px;
+}
 .login-bg {
   background-image: url("../../assets/adminBG.png");
   background-position: center;

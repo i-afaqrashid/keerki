@@ -1,5 +1,5 @@
 <template>
-  <div  class="px-4 px-lg-15">
+  <div class="px-4 px-lg-15">
     <DashboardTop
       :Heading="$t('dashboardHeading')"
       :Text="$t('dashboardDescription')"
@@ -24,7 +24,7 @@
         </div>
 
         <div
-          class="d-flex justify-content-around align-items-center flex-column flex-wrap flex-lg-row pt-lg-9 pt-11 px-0 w-100"
+          class="d-flex justify-content-around align-items-center flex-wrap pt-lg-9 pt-11 px-0 w-100"
         >
           <DashboardCard
             v-bind:title="`${$t('orderFormQuote')}`"

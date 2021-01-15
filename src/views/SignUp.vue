@@ -76,20 +76,97 @@
                     class="form-input outline-none border rounded-lg px-3"
                   />
                 </b-form-group>
-                <b-form-group
-                  id="input-group-3"
-                  :label="`${$t('phone')}`"
-                  label-for="input-3"
-                >
-                  <input
-                    id="input-3"
-                    v-model="form.number"
-                    type="text"
-                    :placeholder="`${$t('phonePlaceholder')}`"
-                    required
-                    class="form-input outline-none border rounded-lg px-3"
-                  />
-                </b-form-group>
+                <p class="mb-1">{{ $t("phone") }}</p>
+
+                <div class="d-flex w-100">
+                  <select
+                    name="countrycode"
+                    class="catalog-input outline-none select-arrow bg-white select-width border d-flex justify-content-center align-items-center px-2"
+                    id="countrycode"
+                    @change="displayCountryCode"
+                  >
+                    <option data-countryCode="SA" value="966">
+                      +986 {{ $t("ksa") }}
+                    </option>
+                    <option data-countryCode="AE" value="971">
+                      +971 {{ $t("uae") }}
+                    </option>
+                    <option data-countryCode="QA" value="974">
+                      +974 {{ $t("qatar") }}
+                    </option>
+                    <option data-countryCode="QA" value="973">
+                      +973 {{ $t("bahrain") }}
+                    </option>
+                    <option data-countryCode="OM" value="968">
+                      +978 {{ $t("oman") }}
+                    </option>
+                    <option data-countryCode="LB" value="961">
+                      +961 {{ $t("lebanon") }}
+                    </option>
+                    <option data-countryCode="JO" value="962">
+                      +961 {{ $t("jordan") }}
+                    </option>
+                    <option data-countryCode="EG" value="20">
+                      +961 {{ $t("egypt") }}
+                    </option>
+                    <option data-countryCode="DE" value="40">
+                      +961 {{ $t("germany") }}
+                    </option>
+                    <option data-countryCode="AD" value="376">
+                      +376 Andorra
+                    </option>
+                    <option data-countryCode="AO" value="244">
+                      +244 Angola
+                    </option>
+                    <option data-countryCode="AI" value="1264">
+                      +1264 Anguilla
+                    </option>
+                    <option data-countryCode="AG" value="1268">
+                      +1268 Antigua
+                    </option>
+                    <option data-countryCode="AR" value="54">
+                      +54 Argentina
+                    </option>
+                    <option data-countryCode="AM" value="374">
+                      +374 Armenia
+                    </option>
+                    <option data-countryCode="AW" value="297">
+                      +297 Aruba
+                    </option>
+                    <option data-countryCode="AU" value="61">
+                      +61 Australia
+                    </option>
+                    <option data-countryCode="AT" value="43">
+                      +43 Austria
+                    </option>
+                    <option data-countryCode="AZ" value="994">
+                      +994 Azerbaijan
+                    </option>
+                    <option data-countryCode="BS" value="1242">
+                      +1242 Bahamas
+                    </option>
+                    <option data-countryCode="BD" value="880">
+                      +880 Bangladesh
+                    </option>
+                    <option data-countryCode="BB" value="1246">
+                      +1246 Barbados
+                    </option>
+                    <option data-countryCode="BY" value="375">
+                      +375 Belarus
+                    </option>
+                  </select>
+
+                  <b-form-group id="input-group-3" class="w-100 ml-1">
+                    <input
+                      id="input-3"
+                      v-model="form.number"
+                      type="text"
+                      :placeholder="`${$t('phonePlaceholder')}`"
+                      required
+                      class="form-input outline-none border rounded-lg px-3"
+                    />
+                  </b-form-group>
+                </div>
                 <b-form-group
                   id="input-group-4"
                   :label="`${$t('createPassword')}`"
@@ -118,9 +195,21 @@
                     class="form-input outline-none border rounded-lg px-3"
                   />
                 </b-form-group>
-                <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0" required>{{
-                  $t("termsAndConditions")
-                }}</b-form-checkbox>
+                <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0 outline-none" required >
+                  <button v-b-modal.terms-modal class="outline-none">
+                    {{ $t("termsAndConditions") }}
+                  </button>
+                </b-form-checkbox>
+
+                 <b-modal
+            id="terms-modal"
+            centered
+            hide-footer
+            no-stacking
+          >
+          <h1>Terms and Conditions</h1>
+          <h4>{{ $t("randomLarge") }}</h4>
+          </b-modal>
                 <b-button
                   size="lg"
                   class="w-100 border-0 bg-info mt-11 text-white py-3 mb-5"
@@ -139,7 +228,7 @@
                     type="button"
                     class="btn w-100 btn-white text-center shadow-sm form-input mt-5"
                   >
-                    {{$t('signupLoginNow')}}
+                    {{ $t("signupLoginNow") }}
                   </button>
                 </router-link>
 
@@ -240,6 +329,11 @@ export default {
     onSubmit(event) {
       event.preventDefault();
       this.$router.push({ path: "success" });
+    },
+    displayCountryCode() {
+      var countrycode = document.getElementById("countrycode");
+      countrycode.options[countrycode.selectedIndex].text =
+        "+" + countrycode.value;
     },
   },
 };

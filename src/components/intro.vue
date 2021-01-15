@@ -9,10 +9,11 @@
       <h4 class="font-weight-normal pt-4 w-60 fs-20 text-center">
         {{ $t("randomLarge") }}
       </h4>
+    <div class="d-flex justify-content-between mt-5 align-items-center flex-column flex-sm-row">
 
       <router-link to="/dashboard/order-form">
         <b-button
-          class="p-3 mt-5 mb-4 btn-width-160"
+          class="p-3 btn-width-160 mx-3"
           squared
           variant="secondary"
           >{{ $t("tryForFree") }}</b-button
@@ -94,9 +95,32 @@
                 <option data-countryCode="DE" value="40">
                   +961 {{ $t("germany") }}
                 </option>
-                <option data-countryCode="OT" value="Others">
-                  {{ $t("otherLanguages") }}
+                <option data-countryCode="AD" value="376">+376 Andorra</option>
+                <option data-countryCode="AO" value="244">+244 Angola</option>
+                <option data-countryCode="AI" value="1264">
+                  +1264 Anguilla
                 </option>
+                <option data-countryCode="AG" value="1268">
+                  +1268 Antigua
+                </option>
+                <option data-countryCode="AR" value="54">+54 Argentina</option>
+                <option data-countryCode="AM" value="374">+374 Armenia</option>
+                <option data-countryCode="AW" value="297">+297 Aruba</option>
+                <option data-countryCode="AU" value="61">+61 Australia</option>
+                <option data-countryCode="AT" value="43">+43 Austria</option>
+                <option data-countryCode="AZ" value="994">
+                  +994 Azerbaijan
+                </option>
+                <option data-countryCode="BS" value="1242">
+                  +1242 Bahamas
+                </option>
+                <option data-countryCode="BD" value="880">
+                  +880 Bangladesh
+                </option>
+                <option data-countryCode="BB" value="1246">
+                  +1246 Barbados
+                </option>
+                <option data-countryCode="BY" value="375">+375 Belarus</option>
               </select>
               <input
                 id="input-7"
@@ -122,13 +146,15 @@
       </b-modal>
       <b-button
         v-b-modal.catalogs-modal
-        class="p-3 btn-width-160"
+        class="p-3 btn-width-160 mt-3 mt-sm-0"
         squared
         variant="outline-light"
         >{{ $t("catalogs") }}</b-button
       >
     </div>
-    <div class="mt-5 mt-xl-8">
+      
+    </div>
+    <div class="mt-5">
       <img src="../assets/introImage.png" class="img-fluid w-100 introImage" />
     </div>
   </div>

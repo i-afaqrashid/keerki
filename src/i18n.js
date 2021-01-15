@@ -82,7 +82,9 @@ const messages = {
         , sortNewToOld: "New To Old", sortOldToNew: "Old To New", sortHighToLow: "High To Low", sortLowToHigh: "Low To High", filterCancelled: "Cancelled", filterWaiting: "Waiting", filterDelivered: "Delivered", filterShipped: "Shipped", filterInProgress: "In Progress"
         , adminDashboardSearchByUserName: "Search By UserName", adminDashboardSearchByEmail: "Search By Email", adminDashboardSearchByDate: "Search By Date", adminDashboardSearchByOrderNumber: "Search By Order Number", adminDashboardSearchByProductName: "Search By Product Name", adminDashboardSearchByOrderStatus: "Search By Order Status", adminDashboardSearchByClientAddress: "Search By Client Address", adminDashboardSearchByClientPhone: "Search By Client Phone", adminDashboardSearchByClientCompanyName: "Search By Client CompanyName", adminDashboardSearchByClientMemberShip: "Search By Client MemberShip", adminDashboardSearchByFirstLastName: "Search By First & Last Name"
         , issueHasBeenResolved: "Issue has been Resloved", requestRatingFromClient: "Request Rating From Client"
-        , adminMessageDeletePopup: "Are you sure you want to delete this response",adminMessageDeleteNo:"No",adminMessageDeleteYes:"Yes",signupLoginNow:"Got an account? Login now"
+        , adminMessageDeletePopup: "Are you sure you want to delete this response",adminMessageDeleteNo:"No",adminMessageDeleteYes:"Yes",signupLoginNow:"Got an account? Login now",adminSettingsDepartment:"*Department",orderSearchByName:"Search by name",orderSearchByDate:"Search by Date",
+        serviceHistory:"Service Orders History",quotesHistory:"Quote Orders History",shippingHistory:"Shipping Orders History",
+        adminOrdersEnquiry:"Your Enquiry here",intClient:"International Client",localClient:"Local Client"
     },
     'ar':
     {
@@ -163,7 +165,9 @@ const messages = {
         , adminDashboardSearchByUserName: "البحث عن طريق اسم المستخدم", adminDashboardSearchByEmail: "البحث عن طريق البريد الإلكتروني", adminDashboardSearchByDate: "البحث بالتاريخ", adminDashboardSearchByOrderNumber: "البحث عن طريق رقم الطلب", adminDashboardSearchByProductName: "البحث عن طريق اسم المنتج", adminDashboardSearchByOrderStatus: "البحث حسب حالة الطلب", adminDashboardSearchByClientAddress: "البحث عن طريق عنوان العميل", adminDashboardSearchByClientPhone: "البحث عن طريق هاتف العميل", adminDashboardSearchByClientCompanyName: "البحث حسب اسم الشركة العميل", adminDashboardSearchByClientMemberShip: "البحث عن طريق Client MemberShip", adminDashboardSearchByFirstLastName: "البحث بالاسم الأول والأخير"
         , issueHasBeenResolved: "تم حل المشكلة", requestRatingFromClient: "طلب التقييم من العميل"
         , adminMessageDeletePopup: "هل أنت متأكد أنك تريد حذف هذه الاستجابة"
-        ,adminMessageDeleteNo:"لا",adminMessageDeleteYes:"نعم",signupLoginNow:"لديك حساب؟ تسجيل الدخول الآن"
+        ,adminMessageDeleteNo:"لا",adminMessageDeleteYes:"نعم",signupLoginNow:"لديك حساب؟ تسجيل الدخول الآن",adminSettingsDepartment:"*قسم",
+        orderSearchByName:"البحث عن طريق الإسم",orderSearchByDate:"البحث بالتاريخ",serviceHistory:"سجل أوامر الخدمة",quotesHistory:"تاريخ أوامر الاقتباس",shippingHistory:"سجل طلبات الشحن",adminOrdersEnquiry:"استفسارك هنا",
+        intClient:"العميل الدولي",localClient:"العميل المحلي"
 
 
 
@@ -247,7 +251,8 @@ const messages = {
         , adminDashboardSearchByUserName: "按用户名搜索", adminDashboardSearchByEmail: "通过电子邮件搜索", adminDashboardSearchByDate: "按日期搜索", adminDashboardSearchByOrderNumber: "按订单号搜索", adminDashboardSearchByProductName: "按产品名称搜索", adminDashboardSearchByOrderStatus: "按订单状态搜索", adminDashboardSearchByClientAddress: "按客户地址搜索", adminDashboardSearchByClientPhone: "通过客户电话搜索", adminDashboardSearchByClientCompanyName: "按客户公司名称搜索", adminDashboardSearchByClientMemberShip: "按客户会员搜索", adminDashboardSearchByFirstLastName: "按名字和姓氏搜索"
         , issueHasBeenResolved: "问题已解决", requestRatingFromClient: "要求客户评分"
         , adminMessageDeletePopup: "您确定要删除此回复吗"
-        ,adminMessageDeleteNo:"没有",adminMessageDeleteYes:"是",signupLoginNow:"有帐号？现在登录"
+        ,adminMessageDeleteNo:"没有",adminMessageDeleteYes:"是",signupLoginNow:"有帐号？现在登录",adminSettingsDepartment:"*部门",orderSearchByName:"依名称搜寻",orderSearchByDate:"按日期搜索",serviceHistory:"服务订单历史记录",quotesHistory:"报价单历史",shippingHistory:"装运订单历史记录",adminOrdersEnquiry:"您的询问在这里"
+        ,intClient:"国际客户",localClient:"本地客户"
 
 
     }

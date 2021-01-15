@@ -9,7 +9,9 @@ import Reset from '../views/Reset.vue'
 import DashboardOverview from '../components/dashboardOverview.vue';
 import OrderHistory from '../components/orderHistory.vue';
 import OrderType from '../components/orderType.vue'
-import Orders from '../components/orders.vue'
+import ShippingOrders from '../components/shippingOrders.vue'
+import QuoteOrders from '../components/quoteOrders.vue'
+import ServiceOrders from '../components/serviceOrders.vue'
 import Account from '../components/account.vue'
 import Notification from '../components/notifications.vue'
 import OrderTemplate from '../components/orderTemplate.vue'
@@ -228,15 +230,15 @@ const routes = [
           },
           {
             path: 'quote-orders',
-            component: Orders
+            component: QuoteOrders
           },
           {
             path: 'service-orders',
-            component: Orders
+            component: ServiceOrders
           },
           {
             path: 'shipping-orders',
-            component: Orders
+            component: ShippingOrders
           },
           {
             path: "order-template",

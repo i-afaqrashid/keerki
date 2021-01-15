@@ -8,14 +8,14 @@
     >
       <div class="width-50">
         <img
-          src="https://s3-alpha-sig.figma.com/img/d879/2c40/43e06ab6fdbaee0dc45666f2b048ef18?Expires=1610323200&Signature=CirXP8LwD2x4mC-bP9tLY3190nVWkB2CEey6v8oXQdPe0DltOO9CEQB2hXwubL4c7U6WuP-XSNNt~WFAr6nw5z3tw01j43x1AR08FupB1HnEZHg~DY8uj0e3zRF2W5GN3q2CyP66e8~GBJE~7mNhRWUta3SiO3G3cFLS1mdLubuHoxHgcgQ6YlsCWBGXd2lkqqmNduyt8YPnqJKCOFZHt~RDrjQ4ksXQUzDY9i9pdDvYWe17pWDymtWJKP7WVgkSsUUiAK6oKzW-ct~Tr9MM2nwuNx0UEoQr54wpeR3HKsqmMh1RaYEZO3EF2buMhPgWElDV2oPit6BjVL0WLCDssA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+          src="https://s3-alpha-sig.figma.com/img/d879/2c40/43e06ab6fdbaee0dc45666f2b048ef18?Expires=1611532800&Signature=ExmWMjVUl6YFAjq3mcTGg1Ro1J3ovZWPliW3C6x8C7IZhi2fVJ5bTruE1u-m9MA2mJZOlotes7P6Cc~VVHNEVyTWSgp4vqNDBVF544WSZbaThRaUM6VXhkPYE1dbcvAEd-a70M7vYk79S3ZK18T-jVEErTfgT7Q67JPelJwnqBTD2HmGjuHeJ~7Xsc2fHao4FuyGpXYUGx2MN6PsPAZM5QNUeChA5O9N81aGtWh3xyuelR7Uffsm3jDyq6b9LkKGIifKTdtjPk1~bDgQIR6elsUjo6wBkAU3y6ONjl~YbGgfETtV3YT4oFwC3nnRyYSkmpa5ltW9uhO4nbYRTMoe-w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
           class="border-primary bannerImage"
         />
       </div>
       <div
-        class="d-flex pt-5 pt-lg-0 flex-grow-1 w-50 text-white text-center flex-column justify-content-center align-items-center width-50"
+        class="d-flex pt-5 pt-lg-0 flex-grow-1 width-50 text-white text-center flex-column justify-content-center align-items-center width-50"
       >
-        <h1 class="" style="width:70%">{{ $t("containerOffer") }}</h1>
+        <h1 class="w-75-resp">{{ $t("containerOffer") }}</h1>
         <router-link to="/dashboard/order-form">
           <b-button
             class="p-3 mt-5 mb-4 btn-width"
@@ -35,40 +35,39 @@ export default {
 </script>
 
 <style>
-.popover-header{
-    border: 0 !important;
-    background:#ffffff!important;
+.popover-header {
+  border: 0 !important;
+  background: #ffffff !important;
 }
-.popover{
-border-radius: 12px!important;
-border:2px solid #ffffff!important;
-padding:20px 10px!important;
+.popover {
+  border-radius: 12px !important;
+  border: 2px solid #ffffff !important;
+  padding: 20px 10px !important;
 }
-.arrow::after{
-  display: none!important;
+.arrow::after {
+  display: none !important;
   border-color: #ffffff;
+}
+.arrow::before {
+  border-top-color: white !important;
+}
+.width-25 {
+  width: 300px !important;
+}
 
-}
-.arrow::before{
-  border-top-color:white!important;
-}
-.width-25{
-  width: 300px!important;
-}
-
-.select-width{
-  width:30%!important;
-   border: 1px solid transparent;
+.select-width {
+  width: 30% !important;
+  border: 1px solid transparent;
   height: 64px !important;
 }
-.input-width{
-  width:65%!important;
+.input-width {
+  width: 65% !important;
 }
-.width-83{
-  width:83%!important;
+.width-83 {
+  width: 83% !important;
 }
-.width-30{
-  width:30%!important;
+.width-30 {
+  width: 30% !important;
 }
 .bannerImage {
   width: 100%;
@@ -94,7 +93,7 @@ padding:20px 10px!important;
   width: 100% !important;
 }
 .w-84 {
-  width: 84% !important;
+  width: 84%;
 }
 .faded-circle {
   width: 8px;
@@ -210,7 +209,7 @@ padding:20px 10px!important;
 .cancelled {
   background: #f12b2c;
 }
-.clientCancel{
+.clientCancel {
   background: #888888;
 }
 .waiting {
@@ -219,9 +218,8 @@ padding:20px 10px!important;
 .done {
   background: #66cc66;
 }
-.shipped{
-
-background: #4788E8;
+.shipped {
+  background: #4788e8;
 }
 .status-button {
   border-radius: 100px !important;
@@ -248,7 +246,7 @@ background: #4788E8;
   align-items: initial;
 }
 .active-notification {
-  border-left: 5px solid #245aab;
+  border-left: 5px solid #f12b2c;
 }
 .notifications-btn {
   width: 124px;
@@ -306,8 +304,8 @@ background: #4788E8;
   font-size: 11px;
   color: #f12b2c;
 }
-.font-11{
-  font-size:11px;
+.font-11 {
+  font-size: 11px;
 }
 .fs-11 {
   font-size: 11px;
@@ -324,7 +322,7 @@ background: #4788E8;
 .fs-13 {
   font-size: 13px;
 }
-.fs-19{
+.fs-19 {
   font-size: 19px;
 }
 .dashboard-card {
@@ -340,6 +338,10 @@ background: #4788E8;
   width: 176px !important;
   height: 40px !important;
   outline: none !important;
+}
+.dashboard-btn:hover{
+  border:1px solid black;
+  transform: scale(1.1)
 }
 btn:focus,
 a:focus,
@@ -380,8 +382,7 @@ btn-secondary:focus {
 .modal-input:focus,
 .modal-input:hover,
 .select-width:focus,
-.select-width:hover
- {
+.select-width:hover {
   background: #ffffff;
   border: 1px solid #1565d8;
   box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.11);
@@ -476,15 +477,18 @@ btn-secondary:focus {
   width: 224px;
 }
 @media only screen and (max-width: 576px) {
+  .w-84{
+    width:100%!important;
+  }
   .w-30 {
-  width: 80%;
-}
-  .width-83{
-  width:83%!important;
-}
-.width-30{
-  width:100%!important;
-}
+    width: 80%;
+  }
+  .width-83 {
+    width: 83% !important;
+  }
+  .width-30 {
+    width: 100% !important;
+  }
   .bannerImage {
     width: 100%;
     border-radius: 0px;
@@ -525,15 +529,15 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
-    .w-30 {
-  width: 60%;
-}
-  .width-83{
-  width:83%!important;
-}
-.width-30{
-  width:100%!important;
-}
+  .w-30 {
+    width: 60%;
+  }
+  .width-83 {
+    width: 83% !important;
+  }
+  .width-30 {
+    width: 100% !important;
+  }
 
   .bannerImage {
     width: 100%;
@@ -574,20 +578,19 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .w-30 {
-  width: 60%;
-}
-  .width-83{
-  width:83%!important;
-}
-.width-30{
-  width:100%!important;
-}
+  .w-30 {
+    width: 60%;
+  }
+  .width-83 {
+    width: 83% !important;
+  }
+  .width-30 {
+    width: 100% !important;
+  }
 
   .bannerImage {
     width: 100%;
     border-radius: 0px;
-
   }
   .width-76 {
     width: 85% !important;
@@ -627,20 +630,18 @@ btn-secondary:focus {
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-
-    .w-30 {
-  width: 40%;
-}
-    .width-83{
-  width:65%!important;
-}
-.width-30{
-  width:50%!important;
-}
+  .w-30 {
+    width: 40%;
+  }
+  .width-83 {
+    width: 65% !important;
+  }
+  .width-30 {
+    width: 50% !important;
+  }
   .bannerImage {
     width: 100%;
-  height: 330px!important;
-
+    height: 330px !important;
   }
   .width-76 {
     width: 76% !important;
@@ -689,7 +690,7 @@ btn-secondary:focus {
 @media only screen and (min-width: 1200px) {
   bannerImage {
     width: 100%;
-    height:300px!important
+    height: 300px !important;
   }
   .width-76 {
     width: 76% !important;

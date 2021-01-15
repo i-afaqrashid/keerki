@@ -1,18 +1,18 @@
 <template>
   <div
-    class="d-flex mt-5 mt-lg-6 flex-column justify-content-center text-white text-center align-items-center"  dir="ltr"
+    class="d-flex mt-5 mt-lg-6 flex-column justify-content-center text-white text-center align-items-center"
+    dir="ltr"
   >
     <h1 class="font-weight-normal w-60 fs-46">
       {{ $t("gallery") }}
     </h1>
-    <h4 class="font-weight-normal pt-4 w-30 fs-20" >
+    <h4 class="font-weight-normal pt-4 w-30 fs-20">
       {{ $t("galleryText") }}
     </h4>
     <div
       class="d-flex flex-column flex-lg-row w-100 justify-content-center align-items-center mt-11"
     >
       <div>
-        
         <img
           src="../../assets/Rectang1.png"
           width="225"
@@ -74,12 +74,9 @@
       </div>
     </div>
     <div class="d-flex justify-content-center align-items-center w-100 mt-5">
-      <b-button
-        class="py-3 w-152"
-        squared
-        variant="outline-light"
-        >{{ $t("seeMore") }}</b-button
-      >
+      <b-button class="py-3 w-152" squared variant="outline-light">{{
+        $t("seeMore")
+      }}</b-button>
     </div>
   </div>
 </template>

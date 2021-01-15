@@ -1,6 +1,6 @@
 <template>
   <div
-    class="employee-card py-3 w-48 d-flex flex-column justify-content-center align-items-center"
+    class="employee-card py-3 w-48 d-flex flex-column justify-content-center align-items-center border mt-4 mt-lg-0"
   dir="auto"
   >
     <div class="profile-circle rounded-circle p-1">

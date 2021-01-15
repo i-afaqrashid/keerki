@@ -7,7 +7,7 @@
     <div class="d-flex flex-column">
       <div class="d-flex flex-column flex-xl-row">
         <div
-          class="d-flex justify-content-around align-items-center flex-column flex-lg-row pt-lg-9 pt-11 px-0 w-100"
+          class="d-flex justify-content-around align-items-center flex-wrap pt-lg-9 pt-11 px-0 w-100"
         >
           <DashboardCard
             v-bind:title="`${$t('overViewOrderHistory')}`"
@@ -22,7 +22,7 @@
           />
         </div>
         <div
-          class="d-flex justify-content-around align-items-center flex-column flex-lg-row pt-xl-9 pt-lg-0 px-0 w-100"
+          class="d-flex justify-content-around align-items-center flex-wrap pt-xl-9 pt-lg-0 px-0 w-100"
         >
           <DashboardCard
             v-bind:title="`${$t('overViewAccount')}`"
@@ -42,9 +42,70 @@
           />
         </div>
       </div>
-      <div
-        class="text-dark d-none d-lg-flex justify-content-end align-items-center mt-14"
+      <button
+        class="text-dark align-self-end mt-14"
+        id="popover-order-message1"
       >
+        <b-popover
+          target="popover-order-message1"
+          triggers="hover"
+          placement="top"
+          custom-class="border"
+        >
+          <p>
+            {{ $t("adminOrdersDetailsAnyIssue") }}
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <button
+              class="btn rounded-pill btn-primary border"
+              v-b-modal.send-message-modal
+            >
+              {{ $t("adminOrdersDetailsSendAMessage") }}
+            </button>
+          </div>
+        </b-popover>
+        <b-modal
+          id="send-message-modal"
+          centered
+          hide-footer
+          content-class="content-class"
+          header-class="header-class"
+          hide-header
+          size="lg"
+          hide-header-close
+        >
+          <div>
+            <p>{{ $t("adminOrdersEnquiry") }}</p>
+            <div class="modal-orders p-2">
+              <input
+                class="bg-transparent w-100 outline-none"
+                :placeholder="`${$t('adminOrdersDetailsWriteQuestion')}`"
+              />
+              <div
+                class="d-flex justify-content-end align-items-center pt-9 pt-lg-5"
+              >
+                <div
+                  class="d-flex justify-content-around align-items-center w-xl-35"
+                >
+                  <button
+                    class="order-color-c7 btn outline-none border rounded-pill modal-order-btn"
+                    @click="$bvModal.hide('send-message-modal')"
+                  >
+                    {{ $t("adminOrdersDetailsCancel") }}
+                  </button>
+
+                  <button
+                    class="btn-primary btn outline-none border rounded-pill modal-order-btn"
+                    @click="$bvModal.hide('send-message-modal')"
+                  >
+                    {{ $t("adminOrdersDetailsSubmit") }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </b-modal>
+
         <svg
           width="30"
           height="30"
@@ -57,12 +118,10 @@
             fill="#0278AE"
           />
         </svg>
-        <router-link to="/dashboard/content-unavailable"
-          ><p class="btn p-0 outline-none mb-0 ml-2">
-            {{ $t("help") }}
-          </p></router-link
-        >
-      </div>
+        <p class="btn p-0 outline-none mb-0 ml-2">
+          {{ $t("help") }}
+        </p>
+      </button>
     </div>
   </div>
 </template>
@@ -72,23 +131,19 @@ import DashboardTop from "../components/dashboardTop";
 
 export default {
   name: "DashboardOverview",
-    components: {
+  components: {
     DashboardCard,
     DashboardTop,
   },
   methods: {
     orderHistory() {
-      console.log(this.data);
       this.$router.push({ path: "/dashboard/order-history" }).catch(() => {});
-      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     notification() {
       this.$router.push({ path: "/dashboard/notifications" }).catch(() => {});
-      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     account() {
       this.$router.push({ path: "/dashboard/account" }).catch(() => {});
-      document.getElementsByClassName("side-bar")[0].classList.add("d-none");
     },
     form() {
       this.$router.push({ path: "/dashboard/order-form" }).catch(() => {});

@@ -133,7 +133,7 @@
           centered
           hide-footer
           header-class="header-class"
-          hider-header
+          hide-header
           size="lg"
           hide-header-close
           no-stacking
@@ -204,7 +204,7 @@
           hide-footer
           content-class="client-class"
           header-class="rating-header"
-          hider-header
+          hide-header
         >
           <form
             class="d-flex w-100 justify-content-center"
@@ -283,7 +283,10 @@
                   </div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-blue-color text-white rounded-pill mt-4">
+              <button
+                type="submit"
+                class="btn btn-blue-color text-white rounded-pill mt-4"
+              >
                 {{ $t("clientSubmit") }}
               </button>
             </div>
@@ -295,7 +298,7 @@
           hide-footer
           content-class="client-class"
           header-class="rating-header"
-          hider-header
+          hide-header
         >
           <form
             class="d-flex w-100 justify-content-center"
@@ -422,7 +425,10 @@
                   ></b-form-checkbox>
                 </div>
               </div>
-              <button type="submit" class="btn btn-blue-color text-white rounded-pill mt-4">
+              <button
+                type="submit"
+                class="btn btn-blue-color text-white rounded-pill mt-4"
+              >
                 {{ $t("administratorSubmit") }}
               </button>
             </div>
@@ -430,7 +436,7 @@
         </b-modal>
         <button
           class="admin-card btn mt-5 mt-lg-0 btn-transparent d-flex flex-column justify-content-around align-items-center align-content-around"
-          v-b-modal.client-modal
+          v-b-modal.client-modal @click="clients"
         >
           <svg
             width="53"
@@ -449,7 +455,7 @@
           <p class="font-24 mb-0">{{ $t("adminClients") }}</p>
         </button>
 
-        <b-modal
+        <!-- <b-modal
           id="client-modal"
           centered
           hide-footer
@@ -461,13 +467,13 @@
         >
           <div class="w-100">
             <div dir="auto">
-              <p class="d-none">{{$t('clientsSearchFor')}}</p>
+              <p class="d-none">{{ $t("clientsSearchFor") }}</p>
               <svg
                 width="14"
                 height="15"
                 viewBox="0 0 14 15"
                 fill="none"
-                class=" position-absolute mt-20 mx-15"
+                class="position-absolute mt-20 mx-15"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -483,118 +489,117 @@
             </div>
             <div
               class="w-100 d-flex justify-content-center align-items-center flex-column overflow-scroll pt-11 h-300"
-            > 
-            <div class="w-100">
-            
-              <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
-              >
-                <svg
-                  width="14"
-                  height="16"
-                  viewBox="0 0 14 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            >
+              <div class="w-100">
+                <div
+                  class="d-flex justify-content-around w-100 align-items-center mt-4"
                 >
-                  <path
-                    d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
-                    fill="black"
-                    fill-opacity="0.55"
-                  />
-                </svg>
-                <div class="w-75">
-                  <p class="mb-0">First Last Name (client)</p>
-                  <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div class="w-75">
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around w-100 align-items-center mt-4"
+                >
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div class="w-75">
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around w-100 align-items-center mt-4"
+                >
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div class="w-75">
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around w-100 align-items-center mt-4"
+                >
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div class="w-75">
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
+                </div>
+                <div
+                  class="d-flex justify-content-around w-100 align-items-center mt-4"
+                >
+                  <svg
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
+                      fill="black"
+                      fill-opacity="0.55"
+                    />
+                  </svg>
+                  <div class="w-75">
+                    <p class="mb-0">First Last Name (client)</p>
+                    <p class="mb-0 font-weight-light">first.last@email.com</p>
+                  </div>
                 </div>
               </div>
-              <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
-              >
-                <svg
-                  width="14"
-                  height="16"
-                  viewBox="0 0 14 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
-                    fill="black"
-                    fill-opacity="0.55"
-                  />
-                </svg>
-                <div class="w-75">
-                  <p class="mb-0">First Last Name (client)</p>
-                  <p class="mb-0 font-weight-light">first.last@email.com</p>
-                </div>
-              </div>
-              <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
-              >
-                <svg
-                  width="14"
-                  height="16"
-                  viewBox="0 0 14 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
-                    fill="black"
-                    fill-opacity="0.55"
-                  />
-                </svg>
-                <div class="w-75">
-                  <p class="mb-0">First Last Name (client)</p>
-                  <p class="mb-0 font-weight-light">first.last@email.com</p>
-                </div>
-              </div>
-              <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
-              >
-                <svg
-                  width="14"
-                  height="16"
-                  viewBox="0 0 14 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
-                    fill="black"
-                    fill-opacity="0.55"
-                  />
-                </svg>
-                <div class="w-75">
-                  <p class="mb-0">First Last Name (client)</p>
-                  <p class="mb-0 font-weight-light">first.last@email.com</p>
-                </div>
-              </div>
-              <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
-              >
-                <svg
-                  width="14"
-                  height="16"
-                  viewBox="0 0 14 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.78125 9.5C8.875 9.5 8.46875 10 7 10C5.5 10 5.09375 9.5 4.1875 9.5C1.875 9.5 0 11.4062 0 13.7188V14.5C0 15.3438 0.65625 16 1.5 16H12.5C13.3125 16 14 15.3438 14 14.5V13.7188C14 11.4062 12.0938 9.5 9.78125 9.5ZM12.5 14.5H1.5V13.7188C1.5 12.2188 2.6875 11 4.1875 11C4.65625 11 5.375 11.5 7 11.5C8.59375 11.5 9.3125 11 9.78125 11C11.2812 11 12.5 12.2188 12.5 13.7188V14.5ZM7 9C9.46875 9 11.5 7 11.5 4.5C11.5 2.03125 9.46875 0 7 0C4.5 0 2.5 2.03125 2.5 4.5C2.5 7 4.5 9 7 9ZM7 1.5C8.625 1.5 10 2.875 10 4.5C10 6.15625 8.625 7.5 7 7.5C5.34375 7.5 4 6.15625 4 4.5C4 2.875 5.34375 1.5 7 1.5Z"
-                    fill="black"
-                    fill-opacity="0.55"
-                  />
-                </svg>
-                <div class="w-75">
-                  <p class="mb-0">First Last Name (client)</p>
-                  <p class="mb-0 font-weight-light">first.last@email.com</p>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
-        </b-modal>
+        </b-modal> -->
         <button
           class="admin-card btn mt-5 mt-lg-0 btn-transparent d-flex flex-column justify-content-around align-items-center align-content-around"
           @click="orders"
@@ -646,6 +651,10 @@ export default {
       this.$router.push({ path: "/admin/dashboard/orders" }).catch(() => {});
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },
+     clients() {
+      this.$router.push({ path: "/admin/dashboard/clients" }).catch(() => {});
+      document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
     handleFileDrop(e) {
       let droppedFiles = e.dataTransfer.files;
       if (!droppedFiles) return;
@@ -678,8 +687,8 @@ export default {
 };
 </script>
 <style>
-.btn-blue-color{
-  background:#2C5282!important;
+.btn-blue-color {
+  background: #2c5282 !important;
 }
 .h-300 {
   height: 300px;
@@ -748,6 +757,10 @@ export default {
   border: 1px solid #dfe0eb !important;
   height: 175px !important;
   border-radius: 10px !important;
+}
+.admin-card:hover {
+  background: #f7f7f7 !important;
+  transform: scale(1.1);
 }
 .resp-search {
   width: 80% !important;

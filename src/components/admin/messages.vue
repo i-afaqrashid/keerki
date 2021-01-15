@@ -9,22 +9,22 @@
         <button
           class="pb-3 px-2 outline-none border-bottom-open fs-16 font-weight-bold"
         >
-          {{$t('adminMessagesOpen')}}
+          {{ $t("adminMessagesOpen") }}
         </button>
         <button
           class="btn btn-outline-primary outline-none fs-16 border"
           disabled
         >
-          {{$t('adminMessagesPending')}}
+          {{ $t("adminMessagesPending") }}
         </button>
         <button
           class="btn btn-outline-primary outline-none fs-16 border"
           disabled
         >
-          {{$t('adminMessagesResolve')}}
+          {{ $t("adminMessagesResolve") }}
         </button>
         <button class="btn btn-outline-primary outline-none fs-16 border">
-          {{$t('adminMessagesClose')}}
+          {{ $t("adminMessagesClose") }}
         </button>
       </div>
       <div class="w-100 pt-5">
@@ -35,10 +35,8 @@
           <div
             class="w-100 border-left-yellow py-3 d-flex flex-column flex-lg-row justify-content-center align-items-center"
           >
-            <div
-              class="w-90 d-flex justify-content-between align-items-center flex-column flex-lg-row"
-            >
-              <div class="width-50">
+            <div class="w-90 d-flex justify-content-between align-items-center">
+              <div class="w-50">
                 <div
                   class="d-flex justify-content-between w-30-resp align-items-center"
                 >
@@ -54,23 +52,29 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
+              <div
+                class="w-50 d-flex justify-content-between flex-column flex-lg-row align-items-end"
+              >
+                <p class="text-muted mb-0 w-75 text-right text-lg-center">
+                  {{ $t("adminMessagesOpen") }}
+                </p>
 
-              <p class="text-muted mb-0">Yesterday at 4:32am</p>
+                <p class="text-muted mb-0 text-right mt-11 mt-lg-0">
+                  Yesterday at 4:32am
+                </p>
+              </div>
             </div>
           </div>
         </button>
         <button
-          class="w-100 outline-none border mt-2 d-flex justify-content-center flex-column align-items-center"
+          class="outline-none w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div
             class="w-100 border-left-yellow py-3 d-flex flex-column flex-lg-row justify-content-center align-items-center"
           >
-            <div
-              class="w-90 d-flex justify-content-between align-items-center flex-column flex-lg-row"
-            >
-              <div class="width-50">
+            <div class="w-90 d-flex justify-content-between align-items-center">
+              <div class="w-50">
                 <div
                   class="d-flex justify-content-between w-30-resp align-items-center"
                 >
@@ -86,23 +90,29 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
+              <div
+                class="w-50 d-flex justify-content-between flex-column flex-lg-row align-items-end"
+              >
+                <p class="text-muted mb-0 w-75 text-right text-lg-center">
+                  {{ $t("adminMessagesOpen") }}
+                </p>
 
-              <p class="text-muted mb-0">Yesterday at 4:32am</p>
+                <p class="text-muted mb-0 text-right mt-11 mt-lg-0">
+                  Yesterday at 4:32am
+                </p>
+              </div>
             </div>
           </div>
         </button>
         <button
-          class="w-100 outline-none border mt-2 d-flex justify-content-center flex-column align-items-center"
+          class="outline-none w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div
             class="w-100 border-left-yellow py-3 d-flex flex-column flex-lg-row justify-content-center align-items-center"
           >
-            <div
-              class="w-90 d-flex justify-content-between align-items-center flex-column flex-lg-row"
-            >
-              <div class="width-50">
+            <div class="w-90 d-flex justify-content-between align-items-center">
+              <div class="w-50">
                 <div
                   class="d-flex justify-content-between w-30-resp align-items-center"
                 >
@@ -118,23 +128,29 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
+              <div
+                class="w-50 d-flex justify-content-between flex-column flex-lg-row align-items-end"
+              >
+                <p class="text-muted mb-0 w-75 text-right text-lg-center">
+                  {{ $t("adminMessagesOpen") }}
+                </p>
 
-              <p class="text-muted mb-0">Yesterday at 4:32am</p>
+                <p class="text-muted mb-0 text-right mt-11 mt-lg-0">
+                  Yesterday at 4:32am
+                </p>
+              </div>
             </div>
           </div>
         </button>
         <button
-          class="outline-none w-100 border mt-2 d-flex justify-content-center flex-column align-items-center"
+          class="outline-none w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div
             class="w-100 border-left-yellow py-3 d-flex flex-column flex-lg-row justify-content-center align-items-center"
           >
-            <div
-              class="w-90 d-flex justify-content-between align-items-center flex-column flex-lg-row"
-            >
-              <div class="width-50">
+            <div class="w-90 d-flex justify-content-between align-items-center">
+              <div class="w-50">
                 <div
                   class="d-flex justify-content-between w-30-resp align-items-center"
                 >
@@ -150,23 +166,29 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
+              <div
+                class="w-50 d-flex justify-content-between flex-column flex-lg-row align-items-end"
+              >
+                <p class="text-muted mb-0 w-75 text-right text-lg-center">
+                  {{ $t("adminMessagesOpen") }}
+                </p>
 
-              <p class="text-muted mb-0">Yesterday at 4:32am</p>
+                <p class="text-muted mb-0 text-right mt-11 mt-lg-0">
+                  Yesterday at 4:32am
+                </p>
+              </div>
             </div>
           </div>
         </button>
         <button
-          class="w-100 outline-none border mt-2 d-flex justify-content-center flex-column align-items-center"
+          class="outline-none w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div
             class="w-100 border-left-yellow py-3 d-flex flex-column flex-lg-row justify-content-center align-items-center"
           >
-            <div
-              class="w-90 d-flex justify-content-between align-items-center flex-column flex-lg-row"
-            >
-              <div class="width-50">
+            <div class="w-90 d-flex justify-content-between align-items-center">
+              <div class="w-50">
                 <div
                   class="d-flex justify-content-between w-30-resp align-items-center"
                 >
@@ -182,9 +204,17 @@
                   <p class="mb-0 fs-14">Lorem Ipsum</p>
                 </div>
               </div>
-              <p class="text-muted mb-0">{{$t('adminMessagesOpen')}}</p>
+              <div
+                class="w-50 d-flex justify-content-between flex-column flex-lg-row align-items-end"
+              >
+                <p class="text-muted mb-0 w-75 text-right text-lg-center">
+                  {{ $t("adminMessagesOpen") }}
+                </p>
 
-              <p class="text-muted mb-0">Yesterday at 4:32am</p>
+                <p class="text-muted mb-0 text-right mt-11 mt-lg-0">
+                  Yesterday at 4:32am
+                </p>
+              </div>
             </div>
           </div>
         </button>
@@ -195,10 +225,10 @@
 <script>
 export default {
   name: "AdminMessages",
-    methods: {
+  methods: {
     inbox() {
       this.$router.push({ path: "inbox" }).catch(() => {});
-    }
+    },
   },
 };
 </script>
@@ -220,6 +250,16 @@ export default {
   width: 49px;
   height: 49px;
   border: 1.5px solid #dfe0eb;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .w-30-resp {
+    width: 55% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .w-30-resp {
+    width: 50% !important;
+  }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .w-30-resp {

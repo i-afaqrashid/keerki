@@ -1,5 +1,5 @@
 <template>
-  <div  class="px-4 px-lg-15">
+  <div class="px-4 px-lg-15">
     <DashboardTop
       :Heading="$t('messagesHeading')"
       :Text="$t('messagesDescription')"
@@ -28,7 +28,10 @@
             </button>
           </div>
         </div>
-        <div class="border-top d-flex flex-column flex-lg-row">
+        <button
+          class="border-top d-flex flex-column flex-lg-row notification-hover w-100 outline-none"
+          @click="inbox"
+        >
           <div class="active-notification py-lg-4 py-2 w-100">
             <div
               class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
@@ -41,12 +44,9 @@
                   <p class="mb-0 font-weight-lighter ml-2 ml-lg-0">
                     {{ $t("message1Minute") }}
                   </p>
-                  <router-link to="/dashboard/inbox">
-
                   <p class="mb-0 btn text-primary ml-lg-5 ml-3 p-0">
                     {{ $t("messageReply") }}
                   </p>
-                  </router-link>
                 </div>
               </div>
               <div class="px-5 mt-2 mt-lg-0">
@@ -58,8 +58,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="border-bottom border-top d-flex flex-column flex-lg-row">
+        </button>
+        <button
+          class="border-bottom border-top d-flex flex-column flex-lg-row notification-hover w-100 outline-none"
+          @click="inbox"
+        >
           <div class="active-notification py-lg-4 py-2 w-100">
             <div
               class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
@@ -72,12 +75,9 @@
                   <p class="mb-0 font-weight-lighter ml-2 ml-lg-0">
                     {{ $t("message1Minute") }}
                   </p>
-                  <router-link to="/dashboard/inbox">
-
                   <p class="btn mb-0 text-primary ml-16 p-0">
                     {{ $t("messageReply") }}
                   </p>
-                  </router-link>
                 </div>
               </div>
               <div class="px-5 mt-2 mt-lg-0">
@@ -89,8 +89,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="border-bottom mb-5 mb-md-9 d-flex flex-column flex-lg-row">
+        </button>
+        <button
+          class="border-bottom mb-5 mb-md-9 d-flex flex-column flex-lg-row notification-hover w-100 outline-none"
+          @click="inbox"
+        >
           <div class="active-notification py-lg-4 py-2 w-100">
             <div
               class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
@@ -103,11 +106,10 @@
                   <p class="mb-0 font-weight-lighter ml-2 ml-lg-0">
                     {{ $t("message1Minute") }}
                   </p>
-                  <router-link to="/dashboard/inbox">
-                    <p class="mb-0 text-primary ml-lg-4 ml-3 p-0 btn">
-                      {{ $t("messageReply") }}
-                    </p>
-                  </router-link>
+
+                  <p class="mb-0 text-primary ml-lg-4 ml-3 p-0 btn">
+                    {{ $t("messageReply") }}
+                  </p>
                 </div>
               </div>
               <div class="px-5 mt-2 mt-lg-0">
@@ -119,7 +121,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </button>
       </div>
       <div
         class="d-none d-lg-flex align-items-center justify-content-end text-dark w-100 mt-lg-4"
@@ -147,6 +149,11 @@ export default {
   name: "Messages",
   components: {
     DashboardTop,
+  },
+  methods: {
+    inbox() {
+      this.$router.push("/dashboard/inbox");
+    },
   },
 };
 </script>

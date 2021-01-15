@@ -8,7 +8,7 @@
     content-class="client-class"
     header-class="header-class2"
     body-class="body-class2"
-    hider-header
+    hide-header
     size="xl"
   >
 

@@ -3,55 +3,350 @@
     class="w-90 d-flex justify-content-center align-items-center flex-column pt-5"
   >
     <div
-      class="w-100 client-details-card pt-5 pb-1 d-flex flex-column justify-content-center align-items-center"
+      class="w-100 client-details-card pb-1 d-flex flex-column justify-content-center align-items-center"
     >
       <div
-        class="w-90 d-flex justify-content-center flex-column align-items-center" dir="auto"
+        class="w-100 d-flex justify-content-center flex-column align-items-center"
+        dir="auto"
       >
+        <table class="table table-borderless">
+          <tbody>
+            <tr class="border-bottom">
+              <td class="border-right p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="text-muted font-weight-light">{{
+                    $t("clientDetailsName")
+                  }}</span>
+                  David Smith Will
+                </p>
+              </td>
+              <td class="p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsAddress")
+                  }}</span>
+                  Guangzhou, street no 15
+                </p>
+              </td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="border-right p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsCompanyName")
+                  }}</span>
+                  Shudi
+                </p>
+              </td>
+              <td class="p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsEmail")
+                  }}</span>
+                  david@email.com
+                </p>
+              </td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="border-right p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="text-muted font-weight-light">{{
+                    $t("clientDetailsPhone")
+                  }}</span>
+                  187171717
+                </p>
+              </td>
+              <td class="p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsWhatsapp")
+                  }}</span>
+                  1123232323
+                </p>
+              </td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="border-right p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsBalance")
+                  }}</span>
+                  $1873
+                </p>
+              </td>
+              <td class="p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted"
+                    >{{ $t("clientDetailsMemberShip") }}&nbsp;</span
+                  >
+                  <button class="btn btn-dark px-4 outline-none py-0">
+                    {{ $t("clientMemberShipVip") }}
+                  </button>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="w-90 d-flex mt-2 justify-content-end align-items-center">
         <div
-          class="d-flex justify-content-between flex-column flex-sm-row w-75-resp align-items-center"
+          class="d-flex width-25-resp justify-content-between align-items-center"
         >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('clientDetailsName')}}</span> David Smith Will
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('clientDetailsAddress')}}</span> Guangzhou, street no
-            15
-          </p>
-        </div>
-        <div
-          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
-        >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('clientDetailsCompanyName')}}</span> Shudi
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('clientDetailsEmail')}}</span> david@email.com
-          </p>
-        </div>
-        <div
-          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
-        >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('clientDetailsPhone')}}</span> 187171717
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('clientDetailsWhatsapp')}}</span> 1123232323
-          </p>
-        </div>
-        <div
-          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
-        >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('clientDetailsBalance')}}</span> $1873
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{$t('clientDetailsMemberShip')}}&nbsp;</span>
-            <button class="btn btn-dark px-4 outline-none py-0">{{$t('clientMemberShipVip')}}</button>
-          </p>
+          <p class="mb-0 text-muted">{{ $t("adminOrdersDetailsTags") }}:</p>
+          <div
+            class="d-flex justify-content-around align-items-center flex-wrap w-75-resp"
+          >
+            <button
+              v-for="item in tags"
+              :class="
+                'font-11 tag-btn outline-none text-dark px-2 ' + item.color
+              "
+              :key="item.id"
+            >
+              {{ item.text }}
+            </button>
+          </div>
+
+          <button
+            class="d-flex justify-content-center align-items-center tags-add-btn outline-none text-white"
+            v-b-modal.add-modal
+            @click="addNewItem"
+          >
+            +
+          </button>
+
+          <b-modal
+            id="add-modal"
+            centered
+            hide-footer
+            header-class="pt-4 pb-0 border-0 outline-none"
+            content-class="rounded-lg"
+            body-class="p-0"
+            no-stacking
+          >
+            <div
+              class="d-flex justify-content-center align-items-center pt-4 pb-15"
+            >
+              <div class="w-100">
+                <div
+                  class="px-4 d-flex justify-content-between align-items-center pb-15 border-bottom"
+                >
+                  <h1 class="fs-18 mb-0 text-dark font-weight-bold">
+                    Clients Tag and Classification
+                  </h1>
+                  <button
+                    class="d-flex justify-content-center align-items-center tags-add-btn outline-none text-white"
+                    @click="addNewItem"
+                  >
+                    +
+                  </button>
+                </div>
+                <div
+                  v-for="(item, index) in tags"
+                  :key="item.id"
+                  class="w-100 py-4 border-bottom d-flex align-items-center justify-content-center"
+                >
+                  <div
+                    class="w-90 px-1 d-flex justify-content-between align-items-center"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button
+                        class="color-select rounded-circle tagYellow"
+                        @click="changeColor('tagYellow', index)"
+                      ></button>
+                      <button
+                        class="color-select rounded-circle tagGreen"
+                        @click="changeColor('tagGreen', index)"
+                      ></button>
+                      <button
+                        class="color-select rounded-circle tagBlue"
+                        @click="changeColor('tagBlue', index)"
+                      ></button>
+                    </div>
+                    <div
+                      v-if="!item.dropDown"
+                      class="tags-container d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="border h-36 w-100 d-flex align-items-center justify-content-center"
+                      >
+                        <div
+                          class="w-90 px-md-2 d-flex justify-content-between align-items-center"
+                        >
+                          <button
+                            :class="
+                              'font-11 tag-btn outline-none text-dark px-2 ' +
+                              item.color
+                            "
+                          >
+                            {{ item.text }}
+                          </button>
+                          <button
+                            class="outline-none"
+                            @click="dropHandler(index)"
+                          >
+                            <svg
+                              width="12"
+                              height="8"
+                              viewBox="0 0 12 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1 1.5L6 6.5L11 1.5"
+                                stroke="#A0A4A8"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <button
+                        class="delete-btn ml-2 outline-none rounded-circle d-flex justify-content-center align-items-center"
+                        @click="deleteHandler(index)"
+                      >
+                        <svg
+                          width="9"
+                          height="9"
+                          viewBox="0 0 9 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0.76001 2.12012H1.51557H7.56001"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2.60572 2.25601V1.50801C2.60572 1.30963 2.68759 1.11937 2.83334 0.979094C2.97908 0.838817 3.17675 0.76001 3.38286 0.76001H4.93715C5.14326 0.76001 5.34093 0.838817 5.48667 0.979094C5.63241 1.11937 5.71429 1.30963 5.71429 1.50801V2.25601M6.88 2.25601V7.49201C6.88 7.69039 6.79813 7.88065 6.65238 8.02093C6.50664 8.1612 6.30897 8.24001 6.10286 8.24001H2.21715C2.01103 8.24001 1.81336 8.1612 1.66762 8.02093C1.52188 7.88065 1.44 7.69039 1.44 7.49201V2.25601H6.88Z"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M3.47998 4.15991V6.19991"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M4.84003 4.15991V6.19991"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      v-else
+                      class="tags-container d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="border h-139 w-100 d-flex justify-content-center"
+                      >
+                        <div
+                          class="w-100 px-md-2 d-flex justify-content-between"
+                        >
+                          <div
+                            class="d-flex flex-column justify-content-end pb-2"
+                          >
+                            <input
+                              class="font-11 tag-btn outline-none text-dark px-2 border"
+                              @keypress="
+                                (e) => {
+                                  inputHandler(e, index);
+                                }
+                              "
+                            />
+                            <button
+                              class="font-11 tag-btn outline-none text-dark px-2 mt-3 tagGreen"
+                              @click="changeTag($t('intClient'), index,'tagGreen')"
+                            >
+                              {{ $t("intClient") }}
+                            </button>
+                            <button
+                              class="font-11 tag-btn outline-none text-dark px-2 tagYellow mt-2"
+                              @click="changeTag($t('localClient'), index,'tagYellow')"
+                            >
+                              {{ $t("localClient") }}
+                            </button>
+                          </div>
+                          <button
+                            class="outline-none border-left pl-2"
+                            @click="dropHandler(index)"
+                          >
+                            <svg
+                              width="12"
+                              height="8"
+                              viewBox="0 0 12 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M1 1.5L6 6.5L11 1.5"
+                                stroke="#A0A4A8"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+
+                      <button
+                        class="delete-btn ml-2 outline-none rounded-circle d-flex justify-content-center align-items-center"
+                        @click="deleteHandler(index)"
+                      >
+                        <svg
+                          width="9"
+                          height="9"
+                          viewBox="0 0 9 9"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0.76001 2.12012H1.51557H7.56001"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M2.60572 2.25601V1.50801C2.60572 1.30963 2.68759 1.11937 2.83334 0.979094C2.97908 0.838817 3.17675 0.76001 3.38286 0.76001H4.93715C5.14326 0.76001 5.34093 0.838817 5.48667 0.979094C5.63241 1.11937 5.71429 1.30963 5.71429 1.50801V2.25601M6.88 2.25601V7.49201C6.88 7.69039 6.79813 7.88065 6.65238 8.02093C6.50664 8.1612 6.30897 8.24001 6.10286 8.24001H2.21715C2.01103 8.24001 1.81336 8.1612 1.66762 8.02093C1.52188 7.88065 1.44 7.69039 1.44 7.49201V2.25601H6.88Z"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M3.47998 4.15991V6.19991"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M4.84003 4.15991V6.19991"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </b-modal>
         </div>
       </div>
-      <div class="w-90 d-flex align-items-center">
+      <div class="w-90 d-flex my-4 align-items-center">
         <button
           class="btn p-0 mb-0 outline-none d-flex align-items-center justify-content-around"
         >
@@ -77,7 +372,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <p class="mb-0 w-100">{{$t('clientDetailsEdit')}}</p>
+          <p class="mb-0 w-100">{{ $t("clientDetailsEdit") }}</p>
         </button>
       </div>
     </div>
@@ -116,22 +411,143 @@
             stroke-linejoin="round"
           />
         </svg>
-        <p class="mb-0">{{$t('clientDetailsExportToCsv')}}</p>
+        <p class="mb-0">{{ $t("clientDetailsExportToCsv") }}</p>
       </button>
     </div>
     <DetailedClientsTable />
   </div>
 </template>
 <script>
+import Vue from "vue";
 import DetailedClientsTable from "./detailedClientTable";
 export default {
   name: "ClientDetailed",
   components: {
     DetailedClientsTable,
   },
+  data() {
+    return {
+      currentColor1: "tagGreen",
+      text: this.$t("intClient"),
+      dropDown: false,
+      tags: [
+        {
+          color: "tagYellow",
+          text: this.$t("localClient"),
+          dropDown: false,
+          id: 1,
+        },
+        {
+          color: "tagGreen",
+          text: this.$t("intClient"),
+          dropDown: false,
+          id: 2,
+        },
+      ],
+    };
+  },
+  methods: {
+    changeColor(color, index) {
+      let d = this.tags[index];
+      d.color = color;
+      Vue.set(this.tags, index, d);
+    },
+    dropHandler(index) {
+      let d = this.tags[index];
+      d.dropDown = !d.dropDown;
+      Vue.set(this.tags, index, d);
+    },
+    changeTag(tag, index,color) {
+      let d = this.tags[index];
+      d.text = tag;
+      d.color = color;
+      Vue.set(this.tags, index, d);
+      this.dropHandler(index);
+    },
+    inputHandler(e, index) {
+      if (e.keyCode === 13) {
+        let d = this.tags[index];
+        d.text = e.target.value;
+        Vue.set(this.tags, index, d);
+        this.dropHandler(index);
+      }
+    },
+    deleteHandler(index) {
+      this.tags.splice(index, 1);
+    },
+    addNewItem() {
+      let d = this.tags;
+      d.push({
+        color: "tagBlue",
+        text: "",
+        dropDown: true,
+        id: 3,
+      });
+      this.tags = d;
+    },
+  },
 };
 </script>
 <style scoped>
+.tags-container {
+  width: 50% !important;
+}
+.delete-btn {
+  background: #ff3737;
+  width: 17px;
+  height: 17px;
+}
+.color-select {
+  width: 24px;
+  height: 24px;
+  outline: none !important;
+  margin: 0 5px;
+}
+.color-select:hover {
+  border: 2px solid #000000;
+}
+.h-36 {
+  height: 36px;
+  border: 1px solid #dbdde0 !important;
+  border-radius: 8px;
+}
+.h-139 {
+  height: 120px;
+  border: 1px solid #48a3ff !important;
+  border-radius: 8px;
+}
+.tagYellow {
+  background: #ffdc89;
+}
+.tagGreen {
+  background: #87f5b3;
+}
+.tagBlue {
+  background: #80bfff;
+}
+.width-25-resp {
+  width: 100%;
+}
+.tag-btn {
+  height: 23px;
+  border-radius: 5px;
+}
+.btn-ffd {
+  background: #ffdc89;
+  border: 1px solid #efac0f;
+}
+.btn-87 {
+  background: #87f5b3;
+}
+.btn-80 {
+  background: #80bfff;
+}
+.tags-add-btn {
+  width: 24px;
+  height: 19px;
+  background: #6e7f97;
+  border-radius: 2px;
+}
 .client-details-card {
   background: #ffffff;
   border: 1px solid #dfe0eb;
@@ -140,14 +556,31 @@ export default {
 .w-75-resp {
   width: 100%;
 }
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .width-25-resp {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .width-25-resp {
+    width: 38%;
+  }
+}
+
 @media (max-width: 1200px) and (min-width: 992px) {
   .w-75-resp {
     width: 75%;
+  }
+  .width-25-resp {
+    width: 37%;
   }
 }
 @media (min-width: 1200px) {
   .w-75-resp {
     width: 75%;
+  }
+  .width-25-resp {
+    width: 30%;
   }
 }
 </style>

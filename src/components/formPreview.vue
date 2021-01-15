@@ -1,6 +1,7 @@
 <template>
   <div
-    class="px-lg-9 min-vh-100 pb-11 px-4 d-flex flex-column justify-content-center align-items-center" dir="ltr"
+    class="px-lg-9 min-vh-100 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
+    dir="ltr"
   >
     <div
       class="form-preview d-flex justify-content-center align-items-center p-lg-8 p-5"
@@ -33,7 +34,7 @@
             stroke-linejoin="round"
           />
         </svg>
-        <p class="mb-0 fs-36 ml-4">{{$t('formPreviewEdit')}}</p>
+        <p class="mb-0 fs-36 ml-4">{{ $t("formPreviewEdit") }}</p>
       </button>
       <button class="d-flex align-items-center outline-none mt-5 mt-lg-0">
         <svg
@@ -50,9 +51,16 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           />
+          <path
+            d="M21 16.3496C23.7614 16.3496 26 14.4597 26 12.1284C26 9.79712 23.7614 7.90723 21 7.90723C18.2386 7.90723 16 9.79712 16 12.1284C16 14.4597 18.2386 16.3496 21 16.3496Z"
+            stroke="#404040"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
 
-        <p class="mb-0 fs-36 ml-4">{{$t('formPreviewView')}}</p>
+        <p class="mb-0 fs-36 ml-4">{{ $t("formPreviewView") }}</p>
       </button>
     </div>
     <div
@@ -62,13 +70,13 @@
         class="btn btn-outline-secondary w-100 text-dark bg-white form-buttons"
         @click="cancelSubmit"
       >
-        {{$t('formPreviewCancel')}}
+        {{ $t("formPreviewCancel") }}
       </button>
       <button
         class="btn btn-secondary w-100 text-dark ml-lg-4 mt-4 mt-lg-0 form-buttons"
         @click="sendForm"
       >
-        {{$t('formPreviewSend')}}
+        {{ $t("formPreviewSend") }}
       </button>
     </div>
   </div>
@@ -80,9 +88,9 @@ export default {
     cancelSubmit() {
       this.$router.go(-1);
     },
-    sendForm(){
-        this.$router.push({ path: "/dashboard/order-form" })
-    }
+    sendForm() {
+      this.$router.push({ path: "/dashboard/order-form" });
+    },
   },
 };
 </script>

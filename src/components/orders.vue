@@ -9,18 +9,19 @@
       <div
         class="d-flex flex-column flex-lg-row justify-content-between w-100 align-items-sm-center flex-sm-wrap pl-lg-15"
       >
-        <p class="fs-20 mb-0 font-weight-bold">{{ $t("orderFormHistory") }}</p>
+        <p class="fs-20 mb-0 font-weight-bold">{{this.heading}}</p>
         <div class="d-flex flex-column flex-lg-row mt-3 mt-lg-0">
-          <div class="d-flex flex-column flex-lg-row border rounded-lg p-0">
+          <div class="d-flex flex-column flex-lg-row rounded-lg p-0">
             <div
-              class="btn outline-none d-flex align-items-center justify-content-center border-right px-2 py-1 color-f5"
+              class="btn outline-none d-flex align-items-center justify-content-center border border-right-0 px-2 py-1 color-f5"
             >
-              <div class="border-0 outline-none ml-2 color-f5">
+              <div class="border-0 outline-none color-f5">
                 <svg
                   width="14"
                   height="15"
                   viewBox="0 0 14 15"
                   fill="none"
+                  class="position-absolute ml-n1 mt-1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -29,83 +30,84 @@
                     fill-opacity="0.55"
                   />
                 </svg>
-
-                <b-dropdown
-                  id="dropdown-1"
-                  :text="$t('orderSearchByNumber')"
-                  variant="transparent"
-                  class="outline-none"
-                  left
-                  offset="-50"
+                <select
+                  class="outline-none select-arrow px-2"
+                  @change="searchHandler"
                 >
-                  <div class="overflow-scroll">
-                    <b-dropdown-item>
-                      <div
-                        class="d-flex justify-content-between align-items-center w-100"
-                      >
-                        <p class="">
-                          <CustomAlert
-                            v-bind:alert="200"
-                            v-bind:type="`${$t('inProgressBtn')}`"
-                          />
-                        </p>
-                        <div
-                          class="d-flex justify-content-center align-items-center flex-column mx-3"
-                        >
-                          <p class="mb-1">{{ $t("orderNumber") }}</p>
-                          <p class="font-weight-light">
-                            {{ $t("dateUpdated") }}
-                          </p>
-                        </div>
-                      </div>
-                    </b-dropdown-item>
-                    <b-dropdown-item>
-                      <div
-                        class="d-flex justify-content-between align-items-center w-100"
-                      >
-                        <p class="">
-                          <CustomAlert
-                            v-bind:alert="200"
-                            v-bind:type="`${$t('doneBtn')}`"
-                            v-bind:color="'done'"
-                          />
-                        </p>
-                        <div
-                          class="d-flex justify-content-center align-items-center flex-column mx-3"
-                        >
-                          <p class="mb-1">{{ $t("orderNumber") }}</p>
-                          <p class="font-weight-light">
-                            {{ $t("dateUpdated") }}
-                          </p>
-                        </div>
-                      </div>
-                    </b-dropdown-item>
-                    <b-dropdown-item>
-                      <div
-                        class="d-flex justify-content-between align-items-center w-100"
-                      >
-                        <p class="">
-                          <CustomAlert
-                            v-bind:alert="200"
-                            v-bind:type="`${$t('canceledBtn')}`"
-                            v-bind:color="'cancelled'"
-                          />
-                        </p>
-                        <div
-                          class="d-flex justify-content-center align-items-center flex-column mx-3"
-                        >
-                          <p class="mb-1">{{ $t("orderNumber") }}</p>
-                          <p class="font-weight-light">
-                            {{ $t("dateUpdated") }}
-                          </p>
-                        </div>
-                      </div>
-                    </b-dropdown-item>
-                  </div>
-                </b-dropdown>
+                  <option value="number">
+                    {{ $t("orderSearchByNumber") }}
+                  </option>
+                  <option value="name">{{ $t("orderSearchByName") }}</option>
+                  <option value="date">{{ $t("orderSearchByDate") }}</option>
+                </select>
               </div>
             </div>
-            <input class="outline-none" />
+            <VueBootstrapTypeahead
+              v-if="!search || search == 'number'"
+              :data="[
+                {
+                  orderNo: '123',
+                  dateCompleted: '22-07',
+                  status: `${$t('inProgressBtn')}`,
+                  color: 'in-progress',
+                },
+                {
+                  orderNo: '456',
+                  dateCompleted: '09-02',
+                  status: `${$t('doneBtn')}`,
+                  color: 'done',
+                },
+                {
+                  orderNo: '789',
+                  dateCompleted: '01-04',
+                  status: `${$t('canceledBtn')}`,
+                  color: 'cancelled',
+                },
+              ]"
+              :serializer="(item) => item.orderNo"
+              :placeholder="`${$t('orderSearchByNumber')}`"
+            >
+              <template slot="suggestion" slot-scope="{ data, htmlText }">
+                <div class="d-flex align-items-center">
+                  <CustomAlert
+                    v-bind:alert="200"
+                    v-bind:type="data.status"
+                    v-bind:color="data.color"
+                  />
+                  <div class="d-flex flex-column">
+                    <span class="ml-4" v-html="htmlText"></span>
+                    <span class="ml-4" v-html="data.dateCompleted"></span>
+                  </div>
+                </div>
+              </template>
+            </VueBootstrapTypeahead>
+            <VueBootstrapTypeahead
+              v-else-if="search == 'name'"
+              :data="[
+                { productName: 'Chairs', dateUpdated: '22-07' },
+                { productName: 'Cup', dateUpdated: '22-07' },
+                { productName: 'Tables', dateUpdated: '22-07' },
+              ]"
+              :serializer="(item) => item.productName"
+              :placeholder="`${$t('orderSearchByName')}`"
+            >
+              <template slot="suggestion" slot-scope="{ data, htmlText }">
+                <div class="d-flex align-items-center">
+                  <div class="d-flex flex-column">
+                    <span class="font-weight-bold" v-html="htmlText"></span>
+                    <span
+                      class="font-weight-light"
+                      v-html="data.dateUpdated"
+                    ></span>
+                  </div>
+                </div>
+              </template>
+            </VueBootstrapTypeahead>
+            <input
+              type="date"
+              v-else
+              class="border rounded-lg outline-none text-muted px-20 h-38"
+            />
           </div>
           <button
             v-if="
@@ -158,22 +160,22 @@
         <table
           class="table table-responsive-sm table-borderless text-center table-hover"
         >
-          <thead>
+          <thead class="border-top border-bottom">
             <tr>
-              <th scope="col" class="font-weight-normal py-lg-15">
+              <th scope="col" class="font-weight-bolder fs-18 py-lg-15">
                 {{ $t("orderStatus") }}
               </th>
-              <th scope="col" class="font-weight-normal py-lg-15">
+              <th scope="col" class="fs-18 font-weight-bolder py-lg-15">
                 {{ $t("orderDate") }}
               </th>
-              <th scope="col" class="font-weight-normal py-lg-15">
+              <th scope="col" class="fs-18 font-weight-bolder py-lg-15">
                 {{ $t("orderPrice") }}
               </th>
-              <th scope="col" class="font-weight-normal py-lg-15">
+              <th scope="col" class="fs-18 font-weight-bolder py-lg-15">
                 {{ $t("orderCategories") }}
               </th>
-              <th scope="col" class="font-weight-normal py-lg-15"></th>
-              <th scope="col" class="font-weight-normal py-lg-15">
+              <th scope="col" class="fs-18 font-weight-bolder py-lg-15"></th>
+              <th scope="col" class="fs-18 font-weight-bolder py-lg-15">
                 {{ $t("orderProducts") }}
               </th>
               <th scope="col" class="font-weight-normal py-lg-15">
@@ -181,7 +183,7 @@
                   @click="deselectAll"
                   class="btn-primary p-0 btn-select-table outline-none"
                 >
-                  -
+                  &#10003;
                 </button>
               </th>
             </tr>
@@ -208,6 +210,7 @@
                     height="14"
                     viewBox="0 0 15 14"
                     fill="none"
+                    class="mx-2"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -270,6 +273,7 @@
                     height="14"
                     viewBox="0 0 15 14"
                     fill="none"
+                    class="mx-2"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -332,6 +336,7 @@
                     height="14"
                     viewBox="0 0 15 14"
                     fill="none"
+                    class="mx-2"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -394,6 +399,7 @@
                     height="14"
                     viewBox="0 0 15 14"
                     fill="none"
+                    class="mx-2"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -455,6 +461,7 @@
                     height="14"
                     viewBox="0 0 15 14"
                     fill="none"
+                    class="mx-2"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
@@ -496,6 +503,59 @@
             </tr>
           </tbody>
         </table>
+        <div class="d-flex justify-content-md-end align-items-center w-90">
+          <div
+            class="w-50 d-flex flex-column flex-lg-row justify-content-between"
+          >
+            <div
+              class="d-flex align-items-center width-25 justify-content-lg-around justify-content-center"
+            >
+              <p class="mb-0 text-muted">{{ $t("clientsTableRowsPerPage") }}</p>
+              <select class="outline-none select-arrow">
+                <option>8</option>
+                <option>10</option>
+              </select>
+            </div>
+            <div
+              class="width-25 d-flex justify-content-lg-between justify-content-center align-items-center pt-4 pt-lg-0"
+            >
+              <p class="mb-0 text-muted">1-8 of 1240</p>
+              <button class="outline-none">
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  class="mx-2 mx-lg-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 13L1.07071 7.07071C1.03166 7.03166 1.03166 6.96834 1.07071 6.92929L7 1"
+                    stroke="#9FA2B4"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <button class="outline-none">
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 13L6.92929 7.07071C6.96834 7.03166 6.96834 6.96834 6.92929 6.92929L1 1"
+                    stroke="#9FA2B4"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -503,11 +563,13 @@
 <script>
 import CustomAlert from "../components/customAlert";
 import DashboardTop from "./dashboardTop";
+import VueBootstrapTypeahead from "vue-bootstrap-typeahead";
 export default {
   name: "Orders",
   components: {
     CustomAlert,
     DashboardTop,
+    VueBootstrapTypeahead,
   },
   data() {
     return {
@@ -521,8 +583,15 @@ export default {
       checkbox4: false,
       checkbox5: false,
       checkbox6: false,
+      search: null,
+      buttons: ["inprogress", "done", "cancel", "waiting"],
     };
   },
+   props: {
+    heading: {
+      type: String,
+    }
+   },
   methods: {
     deselectAll() {
       this.checkbox1 = false;
@@ -540,6 +609,9 @@ export default {
       this.checkbox5 = true;
       this.checkbox6 = true;
     },
+    searchHandler(e) {
+      this.search = e.target.value;
+    },
   },
 };
 </script>
@@ -548,5 +620,8 @@ export default {
   width: 20px !important;
   height: 20px !important;
   border-radius: 3px !important;
+}
+.h-38 {
+  height: 38px !important;
 }
 </style>

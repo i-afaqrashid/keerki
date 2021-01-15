@@ -21,7 +21,7 @@
                 centered
                 hide-footer
                 header-class="header-class"
-                hider-header
+                hide-header
                 size="lg"
                 hide-header-close
               >
@@ -111,7 +111,7 @@
                 centered
                 hide-footer
                 header-class="header-class"
-                hider-header
+                hide-header
                 size="lg"
                 hide-header-close
               >

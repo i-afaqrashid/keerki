@@ -26,7 +26,7 @@
           hide-footer
           content-class="content-class"
           header-class="header-class"
-          hider-header
+          hide-header
           hide-header-close
         >
           <div
@@ -97,7 +97,7 @@
           hide-footer
           content-class="content-class"
           header-class="header-class"
-          hider-header
+          hide-header
           hide-header-close
         >
           <div
@@ -165,7 +165,7 @@
               hide-footer
               content-class="content-class"
               header-class="header-class"
-              hider-header
+              hide-header
               hide-header-close
             >
               <div

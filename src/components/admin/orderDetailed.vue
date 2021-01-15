@@ -4,61 +4,71 @@
     dir="auto"
   >
     <div
-      class="w-100 client-details-card pt-5 pb-1 d-flex flex-column justify-content-center align-items-center"
+      class="w-100 client-details-card pb-1 d-flex flex-column justify-content-center align-items-center"
     >
       <div
-        class="w-90 d-flex justify-content-center flex-column align-items-center"
+        class="w-100 d-flex justify-content-center flex-column align-items-center"
       >
-        <div
-          class="d-flex justify-content-between flex-column flex-sm-row w-75-resp align-items-center"
-        >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{
-              $t("adminOrdersDetailsName")
-            }}</span>
-            David Smith Will
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{
-              $t("adminOrdersDetailsAddress")
-            }}</span>
-            Guangzhou, street no 15
-          </p>
-        </div>
-        <div
-          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
-        >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{
-              $t("adminOrdersDetailsCompanyName")
-            }}</span>
-            Shudi
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{
-              $t("adminOrdersDetailsEmail")
-            }}</span>
-            david@email.com
-          </p>
-        </div>
-        <div
-          class="d-flex justify-content-between w-75-resp flex-column flex-sm-row pt-4 align-items-center"
-        >
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{
-              $t("adminOrdersDetailsPhone")
-            }}</span>
-            187171717
-          </p>
-          <p class="w-100 font-weight-bold">
-            <span class="font-weight-light">{{
-              $t("adminOrdersDetailsWhatsapp")
-            }}</span>
-            1123232323
-          </p>
-        </div>
+        <table class="table table-borderless">
+          <tbody>
+            <tr class="border-bottom">
+              <td class="border-right p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="text-muted font-weight-light">{{
+                    $t("clientDetailsName")
+                  }}</span>
+                  David Smith Will
+                </p>
+              </td>
+              <td class="p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsAddress")
+                  }}</span>
+                  Guangzhou, street no 15
+                </p>
+              </td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="border-right p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsCompanyName")
+                  }}</span>
+                  Shudi
+                </p>
+              </td>
+              <td class="p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsEmail")
+                  }}</span>
+                  david@email.com
+                </p>
+              </td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="border-right p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="text-muted font-weight-light">{{
+                    $t("clientDetailsPhone")
+                  }}</span>
+                  187171717
+                </p>
+              </td>
+              <td class="p-lg-4">
+                <p class="font-weight-bold">
+                  <span class="font-weight-light text-muted">{{
+                    $t("clientDetailsWhatsapp")
+                  }}</span>
+                  1123232323
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="w-90 d-flex align-items-center">
+      <div class="w-90 d-flex align-items-center my-4">
         <button
           class="btn p-0 mb-0 outline-none d-flex align-items-center justify-content-around"
         >
@@ -246,23 +256,50 @@
               <p class="mb-0">{{ $t("adminOrdersDetailsTags") }}</p>
             </div>
           </div>
-          <div class="d-flex justify-content-end align-items-center w-100">
-            <div class="d-flex justify-content-around w-75">
-              <button class="tags-btn px-4 outline-none btn-light rounded-pill">
-                Electronics
-              </button>
-              <button class="tags-btn px-4 outline-none btn-light rounded-pill">
-                Furniture
-              </button>
-            </div>
-          </div>
-          <div class="d-flex justify-content-end align-items-center w-100 py-2">
-            <div class="d-flex justify-content-around w-75">
-              <button class="tags-btn px-4 outline-none btn-light rounded-pill">
-                Other
-              </button>
-              <button class="tags-btn px-4 outline-none btn-light rounded-pill">
-                Wedding Items
+          <div class="w-100 d-flex justify-content-end align-item-center">
+            <div
+              class="bg-white px-4 rounded-lg border py-2 d-flex justify-content-between"
+            >
+              <div>
+                <div class="d-flex align-items-center w-100">
+                  <div class="d-flex justify-content-around">
+                    <button class="tags-btn px-2 outline-none">
+                      Electronics
+                      <button class="px-1 text-muted opacity-50">X</button>
+                    </button>
+                    <button class="tags-btn px-2 outline-none mx-2">
+                      Chairs
+
+                      <button class="px-1 text-muted opacity-50">X</button>
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center w-100 py-2">
+                  <div class="d-flex w-100">
+                    <button class="tags-btn px-2 outline-none">
+                      Doors
+
+                      <button class="px-1 text-muted opacity-50">X</button>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button class="outline-none">
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1.5L6 6.5L11 1.5"
+                    stroke="#A0A4A8"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </button>
             </div>
           </div>
@@ -272,14 +309,6 @@
             >
               <p class="mb-0">{{ $t("adminOrdersDetailsRating") }}</p>
             </div>
-          </div>
-          <div class="w-100 d-flex justify-content-end">
-            <b-form-rating
-              id="rating-lg-no-border"
-              color="#000000"
-              no-border
-              size="lg"
-            ></b-form-rating>
           </div>
           <div class="w-100 d-flex justify-content-end">
             <b-form-rating
@@ -294,7 +323,7 @@
       </div>
     </div>
     <div
-      class="buttons-cont d-flex justify-content-center py-5 align-items-center flex-column w-75 mt-5"
+      class="buttons-cont d-flex justify-content-center py-5 align-items-center flex-row flex-xl-column w-75-resp mt-5"
     >
       <div
         class="w-90 d-flex flex-column flex-xl-row justify-content-around align-items-center"
@@ -337,7 +366,7 @@
               class="w-100 d-flex justify-content-center align-items-center flex-column overflow-scroll pt-5 h-300"
             >
               <div
-                class="d-flex justify-content-around w-50 align-items-center pt-9 mt-4"
+                class="d-flex justify-content-around w-100 align-items-center pt-9 mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -358,7 +387,7 @@
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -379,7 +408,7 @@
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -400,7 +429,7 @@
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -421,7 +450,7 @@
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-50 align-items-center mt-4"
+                class="d-flex justify-content-around w-100 align-items-center mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -475,7 +504,7 @@
           hide-footer
           content-class="content-class"
           header-class="header-class"
-          hider-header
+          hide-header
           size="lg"
           hide-header-close
         >
@@ -516,7 +545,7 @@
           </div>
         </b-modal>
         <button
-          class="btn box-buttons button-colorf1 mt-4 mt-xl-0 text-white rounded-pill"
+          class="btn box-buttons button-colorf1 text-white rounded-pill"
           v-b-modal.cancel-modal
         >
           {{ $t("adminOrdersDetailsCancel") }}
@@ -578,12 +607,12 @@
           hide-footer
           content-class="content-class"
           header-class="header-class"
-          hider-header
+          hide-header
           size="lg"
           hide-header-close
         >
           <div>
-            <p>{{ $t("adminOrdersDetailsReasonForCancelling") }}</p>
+            <p>{{ $t("adminOrdersEnquiry") }}</p>
             <div class="modal-orders p-2">
               <input
                 class="bg-transparent w-100 outline-none"
@@ -653,7 +682,7 @@ export default {
   },
   data() {
     return {
-      ratingValue: 5,
+      ratingValue: 0,
     };
   },
 };
@@ -718,7 +747,9 @@ export default {
   background: transparent !important;
 }
 .tags-btn {
-  background: #dcdcdc;
+  background: #f3f3f3;
+  border: 1.5px solid #a2a2a2;
+  border-radius: 5px;
   height: 32px !important;
   font-style: normal;
   font-weight: 600;

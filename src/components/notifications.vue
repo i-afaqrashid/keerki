@@ -26,7 +26,7 @@
           </button>
         </div>
       </div>
-      <div class="border-top d-flex flex-column flex-lg-row">
+      <button class="border-top d-flex flex-column flex-lg-row w-100 outline-none notification-hover">
         <div class="active-notification py-lg-4 py-2 w-100">
           <div
             class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
@@ -49,8 +49,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="border-bottom border-top d-flex flex-column flex-lg-row">
+      </button>
+      <button class="border-bottom border-top d-flex flex-column flex-lg-row notification-hover w-100 outline-none">
         <div class="active-notification py-lg-4 py-2 w-100">
           <div
             class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
@@ -73,8 +73,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="border-bottom mb-5 mb-md-9 d-flex flex-column flex-lg-row">
+      </button>
+      <button class="border-bottom mb-5 mb-md-9 d-flex flex-column flex-lg-row notification-hover w-100 outline-none">
         <div class="active-notification py-lg-4 py-2 w-100">
           <div
             class="d-flex w-100 flex-column flex-sm-row justify-content-between px-3 px-lg-0 align-notifications align-items-lg-center"
@@ -97,7 +97,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </button>
     </div>
     <div
       class="d-none d-lg-flex align-items-center justify-content-end text-dark w-100 mt-lg-4"
@@ -128,3 +128,8 @@ export default {
   }
 };
 </script>
+<style>
+.notification-hover:hover{
+background: #dedede;
+}
+</style>
