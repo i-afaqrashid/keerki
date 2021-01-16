@@ -1,6 +1,6 @@
 <template>
   <div
-    class="px-lg-9 min-vh-100 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
+    class="px-lg-9 pt-9 min-vh-100 pb-11 px-4 d-flex flex-column justify-content-center align-items-center"
     dir="ltr"
   >
     <div

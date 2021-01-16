@@ -133,13 +133,13 @@
     >
       <thead>
         <tr class="border-bottom">
-          <th scope="col"></th>
-          <th scope="col">{{ $t("clientsAccountStatus") }}</th>
-          <th scope="col">{{ $t("clientsPhone") }}</th>
-          <th scope="col">{{ $t("clientsDateJoined") }}</th>
-          <th scope="col">{{ $t("clientsCountry") }}</th>
-          <th scope="col">{{ $t("clientsName") }}</th>
-          <th scope="col"></th>
+          <th class="fs-18" scope="col"></th>
+          <th class="fs-18" scope="col">{{ $t("clientsAccountStatus") }}</th>
+          <th class="fs-18" scope="col">{{ $t("clientsPhone") }}</th>
+          <th class="fs-18" scope="col">{{ $t("clientsDateJoined") }}</th>
+          <th class="fs-18" scope="col">{{ $t("clientsCountry") }}</th>
+          <th class="fs-18" scope="col">{{ $t("clientsName") }}</th>
+          <th class="fs-18" scope="col"></th>
         </tr>
       </thead>
       <tbody>
