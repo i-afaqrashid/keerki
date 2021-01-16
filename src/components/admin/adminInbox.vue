@@ -359,7 +359,6 @@
                         {{ $t("requestRatingFromClient") }}
                       </button>
                     </div>
-                    
                   </div>
 
                   <div>
@@ -501,7 +500,379 @@
       <div
         class="w-100 p-2 send-bar d-flex justify-content-between align-items-center"
       >
+        <b-modal
+          id="edit-modal"
+          centered
+          hide-footer
+          header-class="header-class"
+          hide-header
+          size="lg"
+          hide-header-close
+        >
+          <div class="w-100">
+            <textarea class="quick-resp-text w-100 outline-none p-4"></textarea>
+            <div class="w-90 d-flex justify-content-between align-items-center">
+              <div>
+                <button class="btn outline-none">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                      fill="#CFCFCF"
+                    />
+                    <path
+                      d="M7.59396 17.0598C7.62646 17.1891 8.43752 20.2224 12.9998 20.2224C17.5628 20.2224 18.3731 17.1891 18.4056 17.0598C18.4453 16.9031 18.3746 16.7406 18.2345 16.6597C18.0936 16.5795 17.9174 16.6034 17.8011 16.7153C17.7874 16.729 16.3899 18.0558 12.9998 18.0558C9.60968 18.0558 8.21146 16.7291 8.19846 16.7161C8.12913 16.6474 8.03668 16.6113 7.94424 16.6113C7.88357 16.6113 7.82218 16.6265 7.76657 16.6575C7.62501 16.7384 7.55424 16.9024 7.59396 17.0598Z"
+                      fill="#4F5660"
+                    />
+                    <path
+                      d="M8.66664 12.2777C9.66382 12.2777 10.4722 11.146 10.4722 9.74995C10.4722 8.35389 9.66382 7.22217 8.66664 7.22217C7.66946 7.22217 6.86108 8.35389 6.86108 9.74995C6.86108 11.146 7.66946 12.2777 8.66664 12.2777Z"
+                      fill="#4F5660"
+                    />
+                    <path
+                      d="M17.3334 12.2777C18.3306 12.2777 19.1389 11.146 19.1389 9.74995C19.1389 8.35389 18.3306 7.22217 17.3334 7.22217C16.3362 7.22217 15.5278 8.35389 15.5278 9.74995C15.5278 11.146 16.3362 12.2777 17.3334 12.2777Z"
+                      fill="#4F5660"
+                    />
+                  </svg>
+                </button>
+                <button class="btn outline-none">
+                  <svg
+                    width="24"
+                    height="26"
+                    viewBox="0 0 24 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.31674 23.6713C-0.81344 20.6097 -0.755101 15.6727 2.39099 12.6222L13.6281 1.72659C16.0022 -0.575427 19.8612 -0.57563 22.2355 1.72659C24.5867 4.00636 24.5896 7.68469 22.2355 9.96715L12.44 19.4557C10.8406 21.0064 8.22754 20.9848 6.65527 19.405C5.14054 17.8831 5.18913 15.4709 6.73306 13.9738L14.4336 6.51738C14.7648 6.19675 15.3074 6.19127 15.6457 6.50515L16.8704 7.64158C17.2087 7.95551 17.2144 8.46992 16.8833 8.79055L9.18357 16.2463C8.91936 16.5025 8.90307 16.9282 9.14886 17.1752C9.38307 17.4105 9.75127 17.4144 9.98929 17.1836L19.7848 7.69505C20.8355 6.67628 20.8355 5.01761 19.7842 3.99828C18.7562 3.0016 17.1079 3.00109 16.0795 3.99828L4.84231 14.8939C2.98001 16.6997 2.95129 19.6226 4.7785 21.4098C6.60047 23.1918 9.54556 23.1941 11.3709 21.4243L20.5884 12.4869C20.9193 12.166 21.462 12.1602 21.8005 12.4739L23.0261 13.6095C23.3646 13.9232 23.3707 14.4376 23.0398 14.7585L13.8223 23.6959C10.6307 26.7904 5.46818 26.7537 2.31674 23.6713Z"
+                      fill="#4F5660"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div>
+                <button
+                  class="btn edit-button text-white"
+                  @click="$bvModal.hide('edit-modal')"
+                >
+                  {{ $t("adminMessagesEdit") }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </b-modal>
+        <b-modal
+          id="delete-rating"
+          centered
+          hide-footer
+          hide-header
+          content-class="content-class"
+          size="lg"
+        >
+          <div
+            class="d-flex pt-5 justify-content-center align-items-center flex-column"
+          >
+            <h1 class="fs-30">{{ $t("adminMessageDeletePopup") }}</h1>
+            <div
+              class="w-100 d-flex justify-content-end align-items-center mt-9"
+            >
+              <div
+                class="d-flex justify-content-around width-50 align-items-center"
+              >
+                <button
+                  class="btn btn-67 mt-4 mt-lg-0 text-white"
+                  @click="$bvModal.hide('delete-rating')"
+                >
+                  {{ $t("adminMessageDeleteNo") }}
+                </button>
+                <button
+                  class="btn btn-ff mt-4 mt-lg-0 mx-2 mx-lg-0 text-white"
+                  @click="$bvModal.hide('delete-rating')"
+                >
+                  {{ $t("adminMessageDeleteYes") }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </b-modal>
         <div class="d-flex justify-content-around align-items-center width-25">
+          <b-dropdown
+            size="lg"
+            variant="link"
+            toggle-class="text-decoration-none p-0 outline-none"
+            dropup
+            left
+            no-caret
+          >
+            <template #button-content>
+              <svg
+                width="20"
+                height="26"
+                viewBox="0 0 20 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 1L1 15.4H10L9 25L19 10.6H10L11 1Z"
+                  stroke="#4F5660"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </template>
+            <b-dropdown-text>
+              <p class="mb-0 font-weight-bolder">Use a quick response</p>
+            </b-dropdown-text>
+            <b-dropdown-divider />
+            <div
+              class="w-100 d-flex justify-content-center align-items-center flex-column"
+            >
+              <div class="w-100 px-2">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  class="position-absolute mt-3 mx-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.48656 4.83133C1.48656 2.98056 2.98056 1.48656 4.83133 1.48656C6.6821 1.48656 8.1761 2.98056 8.1761 4.83133C8.1761 6.6821 6.6821 8.1761 4.83133 8.1761C2.98056 8.1761 1.48656 6.6821 1.48656 4.83133ZM9.29102 8.1761H8.70383L8.49571 7.97541C9.22413 7.12807 9.66266 6.02802 9.66266 4.83133C9.66266 2.16295 7.49971 0 4.83133 0C2.16295 0 0 2.16295 0 4.83133C0 7.49971 2.16295 9.66266 4.83133 9.66266C6.02802 9.66266 7.12807 9.22413 7.97541 8.49571L8.1761 8.70383V9.29102L11.8925 13L13 11.8925L9.48095 8.36641L9.29102 8.1761Z"
+                    fill="#63656F"
+                  />
+                </svg>
+
+                <input
+                  placeholder="Search"
+                  class="px-4 rounded-lg py-2 border outline-none"
+                />
+              </div>
+              <div
+                class="align-self-start w-100 px-2 mt-3 d-flex justify-content-between align-items-center"
+              >
+                <p class="mb-0">Sure, Let's get started</p>
+                <div>
+                  <button class="outline-none" v-b-modal.edit-modal>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.3333 2.00004C11.5084 1.82494 11.7163 1.68605 11.9451 1.59129C12.1738 1.49653 12.419 1.44775 12.6667 1.44775C12.9143 1.44775 13.1595 1.49653 13.3883 1.59129C13.617 1.68605 13.8249 1.82494 14 2.00004C14.1751 2.17513 14.314 2.383 14.4087 2.61178C14.5035 2.84055 14.5523 3.08575 14.5523 3.33337C14.5523 3.58099 14.5035 3.82619 14.4087 4.05497C14.314 4.28374 14.1751 4.49161 14 4.66671L5 13.6667L1.33333 14.6667L2.33333 11L11.3333 2.00004Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="outline-none">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="outline-none" v-b-modal.delete-rating>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 4H2.33333H13"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.33333 3.99992V2.66659C4.33333 2.31296 4.4738 1.97382 4.72385 1.72378C4.9739 1.47373 5.31304 1.33325 5.66666 1.33325H8.33333C8.68695 1.33325 9.02609 1.47373 9.27614 1.72378C9.52619 1.97382 9.66666 2.31296 9.66666 2.66659V3.99992M11.6667 3.99992V13.3333C11.6667 13.6869 11.5262 14.026 11.2761 14.2761C11.0261 14.5261 10.687 14.6666 10.3333 14.6666H3.66666C3.31304 14.6666 2.9739 14.5261 2.72385 14.2761C2.4738 14.026 2.33333 13.6869 2.33333 13.3333V3.99992H11.6667Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="align-self-start w-100 px-2 mt-3 d-flex justify-content-between align-items-center"
+              >
+                <p class="mb-0">I need info</p>
+                <div>
+                  <button class="outline-none" v-b-modal.edit-modal>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.3333 2.00004C11.5084 1.82494 11.7163 1.68605 11.9451 1.59129C12.1738 1.49653 12.419 1.44775 12.6667 1.44775C12.9143 1.44775 13.1595 1.49653 13.3883 1.59129C13.617 1.68605 13.8249 1.82494 14 2.00004C14.1751 2.17513 14.314 2.383 14.4087 2.61178C14.5035 2.84055 14.5523 3.08575 14.5523 3.33337C14.5523 3.58099 14.5035 3.82619 14.4087 4.05497C14.314 4.28374 14.1751 4.49161 14 4.66671L5 13.6667L1.33333 14.6667L2.33333 11L11.3333 2.00004Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="outline-none">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="outline-none" v-b-modal.delete-rating>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 4H2.33333H13"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.33333 3.99992V2.66659C4.33333 2.31296 4.4738 1.97382 4.72385 1.72378C4.9739 1.47373 5.31304 1.33325 5.66666 1.33325H8.33333C8.68695 1.33325 9.02609 1.47373 9.27614 1.72378C9.52619 1.97382 9.66666 2.31296 9.66666 2.66659V3.99992M11.6667 3.99992V13.3333C11.6667 13.6869 11.5262 14.026 11.2761 14.2761C11.0261 14.5261 10.687 14.6666 10.3333 14.6666H3.66666C3.31304 14.6666 2.9739 14.5261 2.72385 14.2761C2.4738 14.026 2.33333 13.6869 2.33333 13.3333V3.99992H11.6667Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div
+                class="align-self-start pb-5 w-100 px-2 mt-3 d-flex justify-content-between align-items-center"
+              >
+                <p class="mb-0">I'm not able to do this</p>
+                <div>
+                  <button class="outline-none" v-b-modal.edit-modal>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.3333 2.00004C11.5084 1.82494 11.7163 1.68605 11.9451 1.59129C12.1738 1.49653 12.419 1.44775 12.6667 1.44775C12.9143 1.44775 13.1595 1.49653 13.3883 1.59129C13.617 1.68605 13.8249 1.82494 14 2.00004C14.1751 2.17513 14.314 2.383 14.4087 2.61178C14.5035 2.84055 14.5523 3.08575 14.5523 3.33337C14.5523 3.58099 14.5035 3.82619 14.4087 4.05497C14.314 4.28374 14.1751 4.49161 14 4.66671L5 13.6667L1.33333 14.6667L2.33333 11L11.3333 2.00004Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="outline-none">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3333 6H7.33333C6.59695 6 6 6.59695 6 7.33333V13.3333C6 14.0697 6.59695 14.6667 7.33333 14.6667H13.3333C14.0697 14.6667 14.6667 14.0697 14.6667 13.3333V7.33333C14.6667 6.59695 14.0697 6 13.3333 6Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.33333 9.99992H2.66666C2.31304 9.99992 1.9739 9.85944 1.72385 9.60939C1.4738 9.35935 1.33333 9.02021 1.33333 8.66659V2.66659C1.33333 2.31296 1.4738 1.97382 1.72385 1.72378C1.9739 1.47373 2.31304 1.33325 2.66666 1.33325H8.66666C9.02028 1.33325 9.35942 1.47373 9.60947 1.72378C9.85952 1.97382 10 2.31296 10 2.66659V3.33325"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button class="outline-none" v-b-modal.delete-rating>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      class="mx-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 4H2.33333H13"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.33333 3.99992V2.66659C4.33333 2.31296 4.4738 1.97382 4.72385 1.72378C4.9739 1.47373 5.31304 1.33325 5.66666 1.33325H8.33333C8.68695 1.33325 9.02609 1.47373 9.27614 1.72378C9.52619 1.97382 9.66666 2.31296 9.66666 2.66659V3.99992M11.6667 3.99992V13.3333C11.6667 13.6869 11.5262 14.026 11.2761 14.2761C11.0261 14.5261 10.687 14.6666 10.3333 14.6666H3.66666C3.31304 14.6666 2.9739 14.5261 2.72385 14.2761C2.4738 14.026 2.33333 13.6869 2.33333 13.3333V3.99992H11.6667Z"
+                        stroke="#52575C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <b-dropdown-divider />
+            <div class="w-100">
+              <input
+                class="outline-none w-100 px-3"
+                placeholder="Create a new quick response"
+              />
+            </div>
+          </b-dropdown>
           <button class="outline-none">
             <svg
               width="29"
@@ -553,23 +924,6 @@
               <path
                 d="M2.31674 23.6713C-0.81344 20.6097 -0.755101 15.6727 2.39099 12.6222L13.6281 1.72659C16.0022 -0.575427 19.8612 -0.57563 22.2355 1.72659C24.5867 4.00636 24.5896 7.68469 22.2355 9.96715L12.44 19.4557C10.8406 21.0064 8.22754 20.9848 6.65527 19.405C5.14054 17.8831 5.18913 15.4709 6.73306 13.9738L14.4336 6.51738C14.7648 6.19675 15.3074 6.19127 15.6457 6.50515L16.8704 7.64158C17.2087 7.95551 17.2144 8.46992 16.8833 8.79055L9.18357 16.2463C8.91936 16.5025 8.90307 16.9282 9.14886 17.1752C9.38307 17.4105 9.75127 17.4144 9.98929 17.1836L19.7848 7.69505C20.8355 6.67628 20.8355 5.01761 19.7842 3.99828C18.7562 3.0016 17.1079 3.00109 16.0795 3.99828L4.84231 14.8939C2.98001 16.6997 2.95129 19.6226 4.7785 21.4098C6.60047 23.1918 9.54556 23.1941 11.3709 21.4243L20.5884 12.4869C20.9193 12.166 21.462 12.1602 21.8005 12.4739L23.0261 13.6095C23.3646 13.9232 23.3707 14.4376 23.0398 14.7585L13.8223 23.6959C10.6307 26.7904 5.46818 26.7537 2.31674 23.6713Z"
                 fill="#4F5660"
-              />
-            </svg>
-          </button>
-          <button class="outline-none" @click="quickResponses">
-            <svg
-              width="20"
-              height="26"
-              viewBox="0 0 20 26"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11 1L1 15.4H10L9 25L19 10.6H10L11 1Z"
-                stroke="#4F5660"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
               />
             </svg>
           </button>
@@ -670,13 +1024,37 @@ export default {
     sidebarToggle() {
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },
-    quickResponses() {
-      this.$router.push({ path: "quick-responses" }).catch(() => {});
-    },
   },
 };
 </script>
 <style scoped>
+.quick-resp-text {
+  min-height: 221px;
+  background: #f3f3f3;
+  border-radius: 20px;
+}
+.done-button {
+  background: #29cc97;
+  border-radius: 5px;
+  min-width: 154px;
+  min-height: 40px;
+}
+.edit-button {
+  background: #245aab;
+  border-radius: 5px;
+  min-width: 154px;
+  min-height: 40px;
+}
+.btn-67 {
+  background: #678aaa;
+  min-width: 132px;
+}
+
+.btn-ff {
+  background: #ff3737;
+  min-width: 132px;
+}
+
 .rounded-button-inbox {
   background: #ff3737;
   width: 20px;

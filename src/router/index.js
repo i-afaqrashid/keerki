@@ -36,7 +36,6 @@ import AdminOrders from '../components/admin/orders.vue'
 import AdminOrdersDetailed from '../components/admin/orderDetailed.vue'
 import AdminMessages from '../components/admin/messages.vue'
 import AdminInbox from '../components/admin/adminInbox.vue'
-import QuickResponses from '../components/admin/quickResponses.vue'
 import AdminContentUnavailable from '../components/admin/contentUnAvailable.vue'
 import AdminFunctionalityUnavailable from '../components/admin/functionalityUnavailable.vue'
 import AdminSettings from '../components/admin/settings.vue'
@@ -45,6 +44,7 @@ import AdminEmail from '../components/admin/sendEmail.vue'
 import AdminEmployees from '../components/admin/allEmployees.vue'
 import EditPermissions from '../components/admin/editPermissions.vue'
 import NotifyEmployees from '../components/admin/notifyEmployees.vue'
+import NotifyClients from '../components/admin/notifyClients.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -98,10 +98,7 @@ const routes = [
         path:"inbox",
         component:AdminInbox
       },
-      {
-        path:"quick-responses",
-        component:QuickResponses
-      },
+
       {
         path:"content-unavailable",
         component:AdminContentUnavailable
@@ -133,6 +130,10 @@ const routes = [
       {
         path:"notify-employees",
         component:NotifyEmployees
+      },
+      {
+        path:"notify-clients",
+        component:NotifyClients
       }
     ]
   },

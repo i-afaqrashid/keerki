@@ -84,7 +84,7 @@ const messages = {
         , issueHasBeenResolved: "Issue has been Resloved", requestRatingFromClient: "Request Rating From Client"
         , adminMessageDeletePopup: "Are you sure you want to delete this response",adminMessageDeleteNo:"No",adminMessageDeleteYes:"Yes",signupLoginNow:"Got an account? Login now",adminSettingsDepartment:"*Department",orderSearchByName:"Search by name",orderSearchByDate:"Search by Date",
         serviceHistory:"Service Orders History",quotesHistory:"Quote Orders History",shippingHistory:"Shipping Orders History",
-        adminOrdersEnquiry:"Your Enquiry here",intClient:"International Client",localClient:"Local Client"
+        adminOrdersEnquiry:"Your Enquiry here",intClient:"International Client",localClient:"Local Client",notifyAllClients:"Notify All Keerki Clients",notifyAllClientsSelected:"Notify All Clients",notifyNotifyAllClients:"All Clients",notifySelectedExcludedClient:"Selected excluded client name",notifyExcludedClientName:"Excluded Client Name",notifySendToAllClients:"Send to all clients a message",adminSettingsBalance:"Balance",adminSettingsBalancePlaceHolder:"Current Balance",adminSettingsAddress:"*Address",adminSettingsAddressPlaceHolder:"Address",adminSettingsPhone:"Phone",adminSettingsCompanyPlaceHolder:"Company Name",adminSettingsCompany:"*Company",adminSettingsMemberShip:"*Membership",adminSettingsRegisterClient:"Register a Client"
     },
     'ar':
     {

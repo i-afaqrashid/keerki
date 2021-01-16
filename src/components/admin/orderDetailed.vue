@@ -256,35 +256,36 @@
               <p class="mb-0">{{ $t("adminOrdersDetailsTags") }}</p>
             </div>
           </div>
-          <div class="w-100 d-flex justify-content-end align-item-center">
+          <div class="w-100 px-2 d-flex justify-content-end align-item-center">
             <div
-              class="bg-white px-4 rounded-lg border py-2 d-flex justify-content-between"
+              class="bg-white px-4 w-100 rounded-lg border py-2 d-flex justify-content-between"
             >
-              <div>
-                <div class="d-flex align-items-center w-100">
-                  <div class="d-flex justify-content-around">
-                    <button class="tags-btn px-2 outline-none">
-                      Electronics
-                      <button class="px-1 text-muted opacity-50">X</button>
-                    </button>
-                    <button class="tags-btn px-2 outline-none mx-2">
-                      Chairs
-
-                      <button class="px-1 text-muted opacity-50">X</button>
-                    </button>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center w-100 py-2">
-                  <div class="d-flex w-100">
-                    <button class="tags-btn px-2 outline-none">
-                      Doors
-
-                      <button class="px-1 text-muted opacity-50">X</button>
-                    </button>
-                  </div>
-                </div>
+              <div v-if="tags.length>0" class="d-flex flex-wrap">
+                <button
+                  v-for="(item,index) in tags"
+                  :key="item.id"
+                  class="tags-btn px-2 mx-1 outline-none mt-2"
+                >
+                  {{ item.name }}
+                  <button class="px-1 text-muted opacity-50 outline-none"
+                  @click="deleteTag(index)"
+                  >
+                    X
+                  </button>
+                </button>
+                <input
+                  class="outline-none mt-2 px-2 w-50"
+                  placeholder="Add new tag"
+                  @keypress="tagsInputHandler"
+                />
               </div>
-              <button class="outline-none">
+              <div v-else>
+                <p class="mb-0">Categories</p>
+              </div>
+
+              <button class="outline-none"
+              @click="addData"
+              >
                 <svg
                   width="12"
                   height="8"
@@ -680,9 +681,53 @@ export default {
   components: {
     CustomAlert,
   },
+  methods: {
+    tagsInputHandler(e) {
+      this.id++;
+      if (e.keyCode === 13) {
+        let d = this.tags;
+        d.push({
+          name: e.target.value,
+          id: this.id,
+        });
+        e.target.value = "";
+        this.tags = d;
+      }
+    },
+    addData(){
+      if(this.tags.length == 0)
+      {
+         let d = this.tags;
+        d.push({
+          name: "Chair",
+          id: this.id,
+        });
+        this.tags = d;
+      }
+      
+    },
+    deleteTag(index){
+      this.tags.splice(index, 1);
+    }
+  },
   data() {
     return {
       ratingValue: 0,
+      id:3,
+      tags: [
+        {
+          name: "Electronics",
+          id: 1,
+        },
+        {
+          name: "Chairs",
+          id: 2,
+        },
+        {
+          name: "Doors",
+          id: 3,
+        },
+      ],
     };
   },
 };

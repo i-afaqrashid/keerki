@@ -65,7 +65,8 @@
                 },
               ]"
               :serializer="(item) => item.orderNo"
-              :placeholder="`${$t('orderSearchByNumber')}`"
+              :placeholder="`${$t('clientsSearchFor')}`"
+              :minMatchingChars="1"
             >
               <template slot="suggestion" slot-scope="{ data, htmlText }">
                 <div class="d-flex align-items-center">
@@ -90,6 +91,7 @@
               ]"
               :serializer="(item) => item.productName"
               :placeholder="`${$t('orderSearchByName')}`"
+              :minMatchingChars="1"
             >
               <template slot="suggestion" slot-scope="{ data, htmlText }">
                 <div class="d-flex align-items-center">

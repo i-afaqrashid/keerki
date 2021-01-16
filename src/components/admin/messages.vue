@@ -29,7 +29,7 @@
       </div>
       <div class="w-100 pt-5">
         <button
-          class="outline-none w-100 border d-flex justify-content-center flex-column align-items-center"
+          class="outline-none notification-hover w-100 border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div
@@ -67,7 +67,7 @@
           </div>
         </button>
         <button
-          class="outline-none w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
+          class="outline-none w-100 mt-2 notification-hover border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div
@@ -105,7 +105,7 @@
           </div>
         </button>
         <button
-          class="outline-none w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
+          class="outline-none notification-hover w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div
@@ -143,7 +143,7 @@
           </div>
         </button>
         <button
-          class="outline-none w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
+          class="outline-none notification-hover w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div
@@ -181,7 +181,7 @@
           </div>
         </button>
         <button
-          class="outline-none w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
+          class="outline-none notification-hover w-100 mt-2 border d-flex justify-content-center flex-column align-items-center"
           @click="inbox"
         >
           <div

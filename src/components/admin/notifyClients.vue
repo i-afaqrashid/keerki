@@ -1,8 +1,11 @@
 <template>
   <div class="w-90 pt-9">
-    <h1>{{ $t("adminSendEmail") }}</h1>
+    <div class="w-90 border-bottom pb-4 border-dark">
+      <h1 class="font-24 mb-0">{{$t('notifyAllClients')}}</h1>
+    </div>
+
     <div
-      class="w-100 pt-5 d-flex flex-column align-items-center justify-content-center sms-cont"
+      class="w-100 pt-5 mt-5 d-flex flex-column align-items-center justify-content-center sms-cont"
     >
       <div
         class="w-90 d-flex justify-content-around flex-column flex-lg-row align-items-center"
@@ -26,8 +29,8 @@
 
           <input
             class="sms-search px-5 text-muted w-100 outline-none"
-            :placeholder="`${$t('adminAllClientsSelected')}`"
-            :disabled="selectedType === 'All clients selected'"
+            :placeholder="selectedType"
+            :disabled="selectedType === $t('notifyAllClientsSelected')"
           />
         </div>
         <div
@@ -37,33 +40,44 @@
             class="border outline-none px-2 font-weight-bolder select-arrow w-48 sms-select"
             @change="selectHandler"
           >
-            <option value="All clients selected">
-              {{ $t("adminAllClients") }}
-            </option>
-            <option value="Search and Exclude Clients">
-              {{ $t("adminAllButExcluded") }}
-            </option>
-            <option value="Search VIP Clients">
-              {{ $t("adminVipClients") }}
-            </option>
-            <option value="Search New Users">{{ $t("adminNoUsers") }}</option>
+            <option :value="`${$t('notifyAllClientsSelected')}`">{{$t('notifyNotifyAllClients')}}</option>
+            <option :value="`${$t('notifySelectedExcludedClient')}`">{{$t('notifyAllButExclude')}}</option>
+            <option :value="`${$t('notifySearchDepartments')}`">{{$t('notifyDepartment')}}</option>
+            <option :value="`${$t('notifySearchAndExcludeDepartments')}`">{{$t('notifyExcludeDepartment')}}</option>
           </select>
-          <button class="btn border sms-button text-white px-4">
-            {{ $t("adminSearch") }}
-          </button>
+          <button class="btn border sms-button text-white px-4">{{$t('adminSearch')}}</button>
         </div>
       </div>
       <div class="w-90 d-flex justify-content-center align-items-center my-3">
         <div class="w-90 d-flex">
           <div
-            v-if="selectedType !== 'All clients selected'"
+          v-if="selectedType == $t('notifySelectedExcludedClient')"
             class="btn excluded d-flex justify-content-center align-items-center"
           >
-            {{ $t("adminExclueName") }}
+            {{$t('notifyExcludedClientName')}}
 
-            <button
-              class="btn outline-none p-0 d-flex justify-content-center align-items-center mx-2"
-            >
+            <button class="btn outline-none p-0 d-flex justify-content-center align-items-center mx-2">
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.5962 1.59634L8.18198 0.182129L5 3.36411L1.81802 0.182129L0.403809 1.59634L3.58579 4.77832L0.403809 7.9603L1.81802 9.37452L5 6.19254L8.18198 9.37452L9.5962 7.9603L6.41422 4.77832L9.5962 1.59634Z"
+                  fill="black"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+          v-if="selectedType == $t('notifySearchAndExcludeDepartments')"
+            class="btn excluded d-flex justify-content-center align-items-center"
+          >
+                {{$t('notifySelectedExcludedDepartment')}}
+
+            <button class="btn outline-none p-0 mx-2 d-flex justify-content-center align-items-center ">
               <svg
                 width="10"
                 height="10"
@@ -81,65 +95,15 @@
         </div>
       </div>
       <div class="w-90 sms-message-cont mt-5">
-        <!-- <textarea
-          class="w-100 outline-none sms-text px-4"
-          :placeholder="`${$t('adminEnterYourSms')}`"
-        ></textarea> -->
-        <vue-editor
-          :placeholder="`${$t('adminEnterYourSms')}`"
-          class="w-100"
-          id="editor1"
-        ></vue-editor>
+          <input class="w-100 outline-none sms-input p-4" :placeholder="`${$t('notifySubject')}`">
+        <textarea
+          class="w-100 outline-none sms-text p-4"
+          :placeholder="`${$t('notifySendToAllClients')}`"
+
+        ></textarea>
       </div>
-      <div class="d-flex justify-content-between sms-footer w-90">
-        <div class="d-flex align-items-center">
-          <button class="outline-none mx-4">
-            <svg
-              width="52"
-              height="42"
-              viewBox="0 0 52 42"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M44.4489 2H7.30612C4.37563 2 2 3.89251 2 6.22704V35.8163C2 38.1508 4.37563 40.0433 7.30612 40.0433H44.4489C47.3794 40.0433 49.7551 38.1508 49.7551 35.8163V6.22704C49.7551 3.89251 47.3794 2 44.4489 2Z"
-                stroke="#4F5660"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M13.2978 16.7952C14.9993 16.7952 16.3787 15.3758 16.3787 13.6249C16.3787 11.874 14.9993 10.4546 13.2978 10.4546C11.5962 10.4546 10.2168 11.874 10.2168 13.6249C10.2168 15.3758 11.5962 16.7952 13.2978 16.7952Z"
-                stroke="#4F5660"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M49.7547 27.0738L36.2754 16.2661L6.62109 40.043"
-                stroke="#4F5660"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <button class="outline-none">
-            <svg
-              width="24"
-              height="26"
-              viewBox="0 0 24 26"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2.31674 23.6713C-0.81344 20.6097 -0.755101 15.6727 2.39099 12.6222L13.6281 1.72659C16.0022 -0.575427 19.8612 -0.57563 22.2355 1.72659C24.5867 4.00636 24.5896 7.68469 22.2355 9.96715L12.44 19.4557C10.8406 21.0064 8.22754 20.9848 6.65527 19.405C5.14054 17.8831 5.18913 15.4709 6.73306 13.9738L14.4336 6.51738C14.7648 6.19675 15.3074 6.19127 15.6457 6.50515L16.8704 7.64158C17.2087 7.95551 17.2144 8.46992 16.8833 8.79055L9.18357 16.2463C8.91936 16.5025 8.90307 16.9282 9.14886 17.1752C9.38307 17.4105 9.75127 17.4144 9.98929 17.1836L19.7848 7.69505C20.8355 6.67628 20.8355 5.01761 19.7842 3.99828C18.7562 3.0016 17.1079 3.00109 16.0795 3.99828L4.84231 14.8939C2.98001 16.6997 2.95129 19.6226 4.7785 21.4098C6.60047 23.1918 9.54556 23.1941 11.3709 21.4243L20.5884 12.4869C20.9193 12.166 21.462 12.1602 21.8005 12.4739L23.0261 13.6095C23.3646 13.9232 23.3707 14.4376 23.0398 14.7585L13.8223 23.6959C10.6307 26.7904 5.46818 26.7537 2.31674 23.6713Z"
-                fill="#4F5660"
-              />
-            </svg>
-          </button>
-        </div>
-        <button class="outline-none mx-2">
+      <div class="d-flex justify-content-end sms-footer w-90">
+        <div class="d-flex justify-content-end align-items-center">
           <svg
             width="47"
             height="46"
@@ -164,26 +128,22 @@
               fill="#4F5660"
             />
           </svg>
-        </button>
+        </div>
       </div>
       <div class="mt-5 d-flex justify-content-end align-items-center w-90">
         <div class="d-flex justify-content-center align-items-center">
-          <button class="btn sms-send text-white">{{ $t("adminSend") }}</button>
+          <button class="btn sms-send text-white">{{$t('adminSend')}}</button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import { VueEditor } from "vue2-editor";
 export default {
-  name: "AdminEmail",
-  components: {
-    VueEditor,
-  },
+  name: "NotifyClients",
   data() {
     return {
-      selectedType: "All clients selected",
+      selectedType: this.$t('notifyAllClientsSelected'),
     };
   },
   methods: {
@@ -193,16 +153,7 @@ export default {
   },
 };
 </script>
-<style >
-.ql-toolbar.ql-snow {
-  border: 0px !important;
-  border-bottom: 2px solid #878787 !important;
-}
-#editor1 {
-  min-height: 400px;
-  border: 0px !important;
-  padding-top: 14px;
-}
+<style scoped>
 .excluded {
   background: #ffffff;
   border: 2px solid #fdca65;
@@ -225,6 +176,16 @@ export default {
 }
 .sms-text {
   min-height: 400px;
+}
+.sms-input{
+      background: #ffffff;
+  border-bottom: 1px solid #878787;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .sms-message-cont {
   background: #ffffff;
