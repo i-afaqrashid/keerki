@@ -72,8 +72,10 @@
             type="password"
             required
           />
+
+
         </div>
-        <div class="w-300">
+        <div class="w-300 ml-22">
           <button
             class="btn w-100 login-input shadow-md btn-white btn-light mt-5"
             type="submit"
