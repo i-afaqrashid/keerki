@@ -1023,7 +1023,7 @@ export default {
       role: localStorage.getItem("role"),
       quickSearch: this.$t("adminDashBoardQuickSearch"),
       activeSideBar: [
-        { isActive: false },
+        { isActive: true },
         { isActive: false },
         { isActive: false },
         { isActive: false },
