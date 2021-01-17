@@ -28,38 +28,41 @@
           </b-navbar-nav>
 
           <b-navbar-nav
-            class="d-flex justify-content-lg-center align-items-lg-center text-light pt-3 w-100"
+            class="d-flex justify-content-lg-center text-light pt-3 w-100"
           >
             <p class="pl-lg-5">{{ $t("home") }}</p>
             <p class="pl-lg-5">{{ $t("product") }}</p>
             <p class="pl-lg-5">{{ $t("about") }}</p>
             <p class="pl-lg-5">{{ $t("contact") }}</p>
-            <p class="pl-lg-5 d-flex align-items-center">
-              <img
-                v-if="this.$i18n.locale == 'en'"
-                src="../assets/enFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-              <img
-                v-else-if="this.$i18n.locale == 'ar'"
-                src="../assets/arFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-              <img
-                v-else
-                if="this.$i18n.locale == 'ch'"
-                src="../assets/chFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-            </p>
-            <p>
-              <b-nav-item-dropdown :text="`${$t('setLanguage')}`">
+            <div class="d-flex align-items-start">
+              <p
+                class="pl-lg-5 pr-2 mb-0 d-flex "
+              >
+                <img
+                  v-if="this.$i18n.locale == 'en'"
+                  src="../assets/enFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+                <img
+                  v-else-if="this.$i18n.locale == 'ar'"
+                  src="../assets/arFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+                <img
+                  v-else
+                  if="this.$i18n.locale == 'ch'"
+                  src="../assets/chFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+              </p>
+
+              <b-nav-item-dropdown :text="`${$t('setLanguage')}`" toggle-class="p-0">
                 <b-dropdown-item @click="switchLocale('en')">
                   <img
                     src="../assets/enFlag.png"
@@ -67,8 +70,8 @@
                     height="24"
                     class="rounded-circle"
                   />
-                  ENGLISH
-                </b-dropdown-item>
+                  ENGLISH</b-dropdown-item
+                >
                 <b-dropdown-item @click="switchLocale('ar')">
                   <img
                     src="../assets/arFlag.png"
@@ -88,7 +91,7 @@
                   中文</b-dropdown-item
                 >
               </b-nav-item-dropdown>
-            </p>
+            </div>
           </b-navbar-nav>
         </div>
       </b-collapse>
