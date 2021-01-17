@@ -42,8 +42,8 @@
             height="80"
           />
           <div>
-            <h1 class="fs-30">{{ $t("signUpHeading") }}</h1>
-            <p class="font-weight-lighter fs-18">
+            <h1 class="fs-30 ml-23">{{ $t("signUpHeading") }}</h1>
+            <p class="font-weight-lighter fs-18 ml-23">
               {{ $t("signUpdummy") }}
             </p>
             <p class="horizontal-line"></p>

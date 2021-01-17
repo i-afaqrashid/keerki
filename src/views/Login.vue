@@ -47,7 +47,7 @@
             height="80"
           />
           <div class="w-84">
-            <div v-if="type <= 1 || type > 8 || isNaN(type)">
+            <div class="ml-23"  v-if="type <= 1 || type > 8 || isNaN(type)">
               <h1 class="fs-30">{{ $t("loginHeading") }}</h1>
               <p class="font-weight-lighter fs-18">
                 {{ $t("loginDescription") }}
