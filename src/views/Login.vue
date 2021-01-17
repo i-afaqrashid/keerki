@@ -91,7 +91,7 @@
                 </b-form-group>
                 <router-link to="/forgot">
                   <button
-                    class="mb-2 mr-sm-2 mb-sm-0 bg-white border-0 outline-none"
+                    class="mb-2 mr-sm-2 ml-23 mb-sm-0 bg-white border-0 outline-none"
                     type="button"
                   >
                     {{ $t("forgotPassword") }}
@@ -100,18 +100,18 @@
                 <b-button
                   size="lg"
                   type="submit"
-                  class="w-100 border-0 bg-info mt-11 text-white py-3 mb-5"
+                  class="w-100 border-0 ml-23 bg-info mt-11 text-white py-3 mb-5"
                   >{{ $t("login") }}</b-button
                 >
                 <div
-                  class="d-flex align-items-center text-center separator font-weight-lighter text-black"
+                  class="d-flex align-items-center ml-22 text-center separator font-weight-lighter text-black"
                 >
                   {{ $t("or") }}
                 </div>
                 <button
                   dir="auto"
                   type="button"
-                  class="btn w-100 btn-white d-flex align-items-center justify-content-between shadow-sm form-input mt-5"
+                  class="btn w-100 btn-white ml-23 d-flex align-items-center justify-content-between shadow-sm form-input mt-5"
                 >
                   <div dir="ltr">
                     <svg
@@ -180,7 +180,7 @@
                   <button
                     dir="auto"
                     type="button"
-                    class="btn w-100 btn-white text-center shadow-sm form-input mt-3 mb-5"
+                    class="btn w-100 ml-23 btn-white text-center shadow-sm form-input mt-3 mb-5"
                   >
                     {{ $t("noAccount") }}
                   </button>

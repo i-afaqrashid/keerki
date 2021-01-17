@@ -43,7 +43,7 @@
           height="80"
         />
         <div class="w-84">
-          <div>
+          <div class="ml-23">
             <h1 class="fs-30">{{ $t("forgotPasswordHeading") }}</h1>
             <p class="font-weight-lighter fs-18">
               {{ $t("forgotPasswordDescription") }}
@@ -70,7 +70,7 @@
                 v-b-modal.modal-center
                 size="lg"
                 type="submit"
-                class="w-100 bg-info border-0 text-white py-3 mb-5"
+                class="w-100 ml-23 bg-info border-0 text-white py-3 mb-5"
                 >{{ $t("requestNewPassword") }}</b-button
               >
             </b-form>

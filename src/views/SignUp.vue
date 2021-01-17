@@ -195,7 +195,7 @@
                     class="form-input outline-none border rounded-lg px-3"
                   />
                 </b-form-group>
-                <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0 outline-none" required >
+                <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0 ml-23 outline-none" required >
                   <button v-b-modal.terms-modal class="outline-none">
                     {{ $t("termsAndConditions") }}
                   </button>
@@ -212,12 +212,12 @@
           </b-modal>
                 <b-button
                   size="lg"
-                  class="w-100 border-0 bg-info mt-11 text-white py-3 mb-5"
+                  class="w-100 border-0 bg-info mt-11 text-white ml-23 py-3 mb-5"
                   type="submit"
                   >{{ $t("registerAccountBtn") }}</b-button
                 >
                 <div
-                  class="d-flex align-items-center text-center separator font-weight-lighter text-black"
+                  class="d-flex align-items-center text-center separator font-weight-lighter text-black ml-22"
                 >
                   {{ $t("or") }}
                 </div>
@@ -226,7 +226,7 @@
                   <button
                     dir="auto"
                     type="button"
-                    class="btn w-100 btn-white text-center shadow-sm form-input mt-5"
+                    class="btn w-100 ml-23 btn-white ml-23 text-center shadow-sm form-input mt-5"
                   >
                     {{ $t("signupLoginNow") }}
                   </button>
@@ -234,7 +234,7 @@
 
                 <button
                   type="button"
-                  class="btn w-100 btn-white d-flex align-items-center justify-content-between shadow-sm form-input mt-3"
+                  class="btn w-100 btn-white ml-23 d-flex align-items-center justify-content-between shadow-sm form-input mt-3"
                 >
                   <svg
                     width="34"
@@ -266,7 +266,7 @@
                 </button>
                 <button
                   type="button"
-                  class="btn w-100 btn-white d-flex align-items-center justify-content-between shadow-sm form-input mt-3 mb-5"
+                  class="btn w-100 btn-white d-flex ml-23 align-items-center justify-content-between shadow-sm form-input mt-3 mb-5"
                 >
                   <svg
                     width="30"
