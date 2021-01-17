@@ -1,7 +1,7 @@
 <template>
   <div class="w-90 pt-9">
     <div class="w-90 border-bottom pb-4 border-dark">
-      <h1 class="font-24 mb-0">{{$t('notifyAllClients')}}</h1>
+      <h1 class="font-24 mb-0">{{ $t("notifyAllClients") }}</h1>
     </div>
 
     <div
@@ -40,23 +40,35 @@
             class="border outline-none px-2 font-weight-bolder select-arrow w-48 sms-select"
             @change="selectHandler"
           >
-            <option :value="`${$t('notifyAllClientsSelected')}`">{{$t('notifyNotifyAllClients')}}</option>
-            <option :value="`${$t('notifySelectedExcludedClient')}`">{{$t('notifyAllButExclude')}}</option>
-            <option :value="`${$t('notifySearchDepartments')}`">{{$t('notifyDepartment')}}</option>
-            <option :value="`${$t('notifySearchAndExcludeDepartments')}`">{{$t('notifyExcludeDepartment')}}</option>
+            <option :value="`${$t('notifyAllClientsSelected')}`">
+              {{ $t("notifyNotifyAllClients") }}
+            </option>
+            <option :value="`${$t('notifySelectedExcludedClient')}`">
+              {{ $t("notifyAllButExclude") }}
+            </option>
+            <option :value="`${$t('notifySearchDepartments')}`">
+              {{ $t("notifyDepartment") }}
+            </option>
+            <option :value="`${$t('notifySearchAndExcludeDepartments')}`">
+              {{ $t("notifyExcludeDepartment") }}
+            </option>
           </select>
-          <button class="btn border sms-button text-white px-4">{{$t('adminSearch')}}</button>
+          <button class="btn border sms-button text-white px-4">
+            {{ $t("adminSearch") }}
+          </button>
         </div>
       </div>
       <div class="w-90 d-flex justify-content-center align-items-center my-3">
         <div class="w-90 d-flex">
           <div
-          v-if="selectedType == $t('notifySelectedExcludedClient')"
+            v-if="selectedType == $t('notifySelectedExcludedClient')"
             class="btn excluded d-flex justify-content-center align-items-center"
           >
-            {{$t('notifyExcludedClientName')}}
+            {{ $t("notifyExcludedClientName") }}
 
-            <button class="btn outline-none p-0 d-flex justify-content-center align-items-center mx-2">
+            <button
+              class="btn outline-none p-0 d-flex justify-content-center align-items-center mx-2"
+            >
               <svg
                 width="10"
                 height="10"
@@ -72,12 +84,14 @@
             </button>
           </div>
           <div
-          v-if="selectedType == $t('notifySearchAndExcludeDepartments')"
+            v-if="selectedType == $t('notifySearchAndExcludeDepartments')"
             class="btn excluded d-flex justify-content-center align-items-center"
           >
-                {{$t('notifySelectedExcludedDepartment')}}
+            {{ $t("notifySelectedExcludedDepartment") }}
 
-            <button class="btn outline-none p-0 mx-2 d-flex justify-content-center align-items-center ">
+            <button
+              class="btn outline-none p-0 mx-2 d-flex justify-content-center align-items-center"
+            >
               <svg
                 width="10"
                 height="10"
@@ -95,15 +109,17 @@
         </div>
       </div>
       <div class="w-90 sms-message-cont mt-5">
-          <input class="w-100 outline-none sms-input p-4" :placeholder="`${$t('notifySubject')}`">
+        <input
+          class="w-100 outline-none sms-input p-4"
+          :placeholder="`${$t('notifySubject')}`"
+        />
         <textarea
           class="w-100 outline-none sms-text p-4"
           :placeholder="`${$t('notifySendToAllClients')}`"
-
         ></textarea>
       </div>
-      <div class="d-flex justify-content-end sms-footer w-90">
-        <div class="d-flex justify-content-end align-items-center">
+      <div class="d-flex justify-content-center sms-footer w-90">
+        <div class="d-flex justify-content-end w-90 align-items-center">
           <svg
             width="47"
             height="46"
@@ -132,7 +148,7 @@
       </div>
       <div class="mt-5 d-flex justify-content-end align-items-center w-90">
         <div class="d-flex justify-content-center align-items-center">
-          <button class="btn sms-send text-white">{{$t('adminSend')}}</button>
+          <button class="btn sms-send text-white">{{ $t("adminSend") }}</button>
         </div>
       </div>
     </div>
@@ -143,7 +159,7 @@ export default {
   name: "NotifyClients",
   data() {
     return {
-      selectedType: this.$t('notifyAllClientsSelected'),
+      selectedType: this.$t("notifyAllClientsSelected"),
     };
   },
   methods: {
@@ -177,8 +193,8 @@ export default {
 .sms-text {
   min-height: 400px;
 }
-.sms-input{
-      background: #ffffff;
+.sms-input {
+  background: #ffffff;
   border-bottom: 1px solid #878787;
   -webkit-border-top-left-radius: 20px;
   -webkit-border-top-right-radius: 20px;

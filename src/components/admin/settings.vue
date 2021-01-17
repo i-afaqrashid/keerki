@@ -167,7 +167,6 @@
               centered
               hide-footer
               header-class="border-0"
-              hide-header
               no-stacking
               size="xl"
             >
@@ -447,7 +446,6 @@
               centered
               hide-footer
               header-class="border-0"
-              hide-header
               size="xl"
             >
               <div
@@ -473,7 +471,7 @@
                           class="d-flex w-100 justify-content-between align-items-center"
                         >
                           <input
-                            class="settings-input w-50 px-1 outline-none"
+                            class="first-name-input border-right-0 w-50 px-1 outline-none"
                             :placeholder="`${$t(
                               'adminSettingsEditEmployeeFirst'
                             )}`"
@@ -481,9 +479,9 @@
                             required
                           />
                           <input
-                            class="settings-input w-50 px-1 outline-none"
+                            class="last-name-input w-50 px-1 outline-none"
                             :placeholder="`${$t(
-                              'adminSettingsEditEmployeeFirst'
+                              'adminSettingsEditEmployeeLast'
                             )}`"
                             required
                           />
@@ -1655,6 +1653,18 @@ export default {
   border: 1px solid #dedede;
   border-radius: 4px;
   height: 36px;
+}
+.first-name-input{
+  height: 36px;
+    background: #ffffff;
+border: 1px solid rgba(0, 0, 0, 0.15);
+border-radius: 6px 0px 0px 6px;
+}
+.last-name-input{
+    height: 36px;
+    background: #ffffff;
+border: 1px solid rgba(0, 0, 0, 0.15);
+border-radius: 0px 6px 6px 0px;
 }
 .settings-btn {
   background: #245aab !important;

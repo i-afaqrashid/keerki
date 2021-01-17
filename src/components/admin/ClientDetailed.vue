@@ -9,7 +9,7 @@
         class="w-100 d-flex justify-content-center flex-column align-items-center"
         dir="auto"
       >
-        <table class="table table-borderless">
+        <table class="table table-borderless table-responsive-sm">
           <tbody>
             <tr class="border-bottom">
               <td class="border-right p-lg-4">
@@ -26,47 +26,75 @@
                 </div>
               </td>
               <td class="p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsAddress")
                   }}</span>
-                  Guangzhou, street no 15
-                </p>
+
+                  <input
+                    value="Guangzhou, street no 15"
+                    class="outline-none px-2 font-weight-bold"
+                    type="text"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
             </tr>
             <tr class="border-bottom">
               <td class="border-right p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsCompanyName")
                   }}</span>
-                  Shudi
-                </p>
+                  <input
+                    value="Shudi"
+                    class="outline-none px-2 font-weight-bold"
+                    type="text"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
               <td class="p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsEmail")
                   }}</span>
-                  david@email.com
-                </p>
+                  <input
+                    value="david@email.com"
+                    class="outline-none px-2 font-weight-bold"
+                    type="email"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
             </tr>
             <tr class="border-bottom">
               <td class="border-right p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="text-muted font-weight-light">{{
                     $t("clientDetailsPhone")
                   }}</span>
-                  187171717
-                </p>
+
+                  <input
+                    value="187171717"
+                    class="outline-none px-2 font-weight-bold"
+                    type="number"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
               <td class="p-lg-4">
                 <p class="font-weight-bold">
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsWhatsapp")
                   }}</span>
-                  1123232323
+
+                  <input
+                    value="1123232323"
+                    class="outline-none px-2 font-weight-bold"
+                    type="number"
+                    :disabled="isDisabled"
+                  />
                 </p>
               </td>
             </tr>
@@ -76,7 +104,13 @@
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsBalance")
                   }}</span>
-                  $1873
+
+                  <input
+                    value="$1873"
+                    class="outline-none px-2 font-weight-bold"
+                    type="text"
+                    :disabled="isDisabled"
+                  />
                 </p>
               </td>
               <td class="p-lg-4">
@@ -263,7 +297,7 @@
                             class="d-flex flex-column justify-content-end pb-2"
                           >
                             <input
-                              class="font-11 tag-btn outline-none text-dark px-2 border"
+                              class="font-11 tag-btn outline-none text-dark px-2 "
                               @keypress="
                                 (e) => {
                                   inputHandler(e, index);
@@ -357,9 +391,9 @@
       </div>
       <div class="w-90 d-flex my-4 align-items-center">
         <button
-        v-if="isDisabled"
+          v-if="isDisabled"
           class="btn p-0 mb-0 outline-none d-flex align-items-center justify-content-around"
-        @click="editHandler"
+          @click="editHandler"
         >
           <svg
             width="23"
@@ -385,34 +419,12 @@
           </svg>
           <p class="mb-0 w-100">{{ $t("clientDetailsEdit") }}</p>
         </button>
-       <button
-        v-else
-          class="btn p-0 mb-0 outline-none d-flex align-items-center justify-content-around"
-        @click="saveHandler"
+        <button
+          v-else
+          class="btn btn-primary mb-0 outline-none d-flex align-items-center justify-content-around"
+          @click="saveHandler"
         >
-          <svg
-            width="23"
-            height="23"
-            viewBox="0 0 23 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 4H3C2.46957 4 1.96086 4.21071 1.58579 4.58579C1.21071 4.96086 1 5.46957 1 6V20C1 20.5304 1.21071 21.0391 1.58579 21.4142C1.96086 21.7893 2.46957 22 3 22H17C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20V13"
-              stroke="#FFB800"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M17.5 2.49998C17.8978 2.10216 18.4374 1.87866 19 1.87866C19.5626 1.87866 20.1022 2.10216 20.5 2.49998C20.8978 2.89781 21.1213 3.43737 21.1213 3.99998C21.1213 4.56259 20.8978 5.10216 20.5 5.49998L11 15L7 16L8 12L17.5 2.49998Z"
-              stroke="#FFB800"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="mb-0 w-100">{{ $t("companySave") }}</p>
+          {{ $t("companySave") }}
         </button>
       </div>
     </div>
@@ -484,7 +496,7 @@ export default {
           id: 2,
         },
       ],
-      isDisabled:true
+      isDisabled: true,
     };
   },
   methods: {
@@ -493,14 +505,12 @@ export default {
       d.color = color;
       Vue.set(this.tags, index, d);
     },
-    editHandler(){
+    editHandler() {
       this.isDisabled = false;
-    }
-    ,
-    saveHandler(){
+    },
+    saveHandler() {
       this.isDisabled = true;
-    }
-    ,
+    },
     dropHandler(index) {
       let d = this.tags[index];
       d.dropDown = !d.dropDown;

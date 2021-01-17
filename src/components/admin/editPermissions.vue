@@ -8,13 +8,12 @@
     content-class="client-class"
     header-class="header-class2"
     body-class="body-class2"
-    hide-header
     size="xl"
   >
 
     <div class="w-100 d-flex flex-column flex-lg-row justify-content-center">
       <div
-        class="w-33-resp py-3 border-right d-flex flex-column align-items-center"
+        class="w-33-resp py-5 border-right d-flex flex-column align-items-center"
       >
         <div
           class="w-25-resp align-self-start d-flex align-items-center justify-content-around"
@@ -121,7 +120,7 @@
         </div>
       </div>
       <div
-        class="w-33-resp mt-3 mt-lg-0 vh-100 overflow-scroll py-3 border-right d-flex flex-column align-items-center"
+        class="w-33-resp mt-3 mt-lg-0 vh-100 overflow-scroll py-5 border-right d-flex flex-column align-items-center"
       >
         <div
           class="w-25-resp align-self-start d-flex align-items-center justify-content-around"
@@ -598,7 +597,7 @@
           </div>
         </div>
       </div>
-      <div class="w-33-resp py-3 d-flex flex-column align-items-center mt-3">
+      <div class="w-33-resp py-5 d-flex flex-column align-items-center mt-3 mt-lg-0">
         <div
           class="w-25-resp align-self-start d-flex align-items-center justify-content-around"
         >
@@ -796,7 +795,7 @@ export default {
 <style>
 .header-class2 {
   border: 0px !important;
-  padding: 0 10px !important;
+  padding: 20px 20px !important;
   position: absolute;
   right: 0;
   z-index: 2;

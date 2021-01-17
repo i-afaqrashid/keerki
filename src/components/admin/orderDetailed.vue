@@ -9,60 +9,90 @@
       <div
         class="w-100 d-flex justify-content-center flex-column align-items-center"
       >
-        <table class="table table-borderless">
+        <table class="table table-borderless table-responsive-sm">
           <tbody>
             <tr class="border-bottom">
               <td class="border-right p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="text-muted font-weight-light">{{
                     $t("clientDetailsName")
                   }}</span>
-                  David Smith Will
-                </p>
+                  <input
+                    value="David Smith Will"
+                    class="outline-none px-2 font-weight-bold"
+                    type="text"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
               <td class="p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsAddress")
                   }}</span>
-                  Guangzhou, street no 15
-                </p>
+                  <input
+                    value="Guangzhou, street no 15"
+                    class="outline-none px-2 font-weight-bold"
+                    type="text"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
             </tr>
             <tr class="border-bottom">
               <td class="border-right p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsCompanyName")
                   }}</span>
-                  Shudi
-                </p>
+                  <input
+                    value="Shudi"
+                    class="outline-none px-2 font-weight-bold"
+                    type="text"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
               <td class="p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsEmail")
                   }}</span>
-                  david@email.com
-                </p>
+                  <input
+                    value="david@email.com"
+                    class="outline-none px-2 font-weight-bold"
+                    type="email"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
             </tr>
             <tr class="border-bottom">
               <td class="border-right p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="text-muted font-weight-light">{{
                     $t("clientDetailsPhone")
                   }}</span>
-                  187171717
-                </p>
+                  <input
+                    value="187171717"
+                    class="outline-none px-2 font-weight-bold"
+                    type="number"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
               <td class="p-lg-4">
-                <p class="font-weight-bold">
+                <div class="font-weight-bold">
                   <span class="font-weight-light text-muted">{{
                     $t("clientDetailsWhatsapp")
                   }}</span>
-                  1123232323
-                </p>
+                  <input
+                    value="1123232323"
+                    class="outline-none px-2 font-weight-bold"
+                    type="number"
+                    :disabled="isDisabled"
+                  />
+                </div>
               </td>
             </tr>
           </tbody>
@@ -70,7 +100,9 @@
       </div>
       <div class="w-90 d-flex align-items-center my-4">
         <button
+          v-if="isDisabled"
           class="btn p-0 mb-0 outline-none d-flex align-items-center justify-content-around"
+          @click="editHandler"
         >
           <svg
             width="23"
@@ -95,6 +127,13 @@
             />
           </svg>
           <p class="mb-0 w-100">{{ $t("adminOrdersDetailsEdit") }}</p>
+        </button>
+        <button
+          v-else
+          class="btn btn-primary mb-0 outline-none d-flex align-items-center justify-content-around"
+          @click="saveHandler"
+        >
+          {{ $t("companySave") }}
         </button>
       </div>
     </div>
@@ -260,15 +299,16 @@
             <div
               class="bg-white px-4 w-100 rounded-lg border py-2 d-flex justify-content-between"
             >
-              <div v-if="tags.length>0" class="d-flex flex-wrap">
+              <div v-if="tags.length > 0" class="d-flex flex-wrap">
                 <button
-                  v-for="(item,index) in tags"
+                  v-for="(item, index) in tags"
                   :key="item.id"
                   class="tags-btn px-2 mx-1 outline-none mt-2"
                 >
                   {{ item.name }}
-                  <button class="px-1 text-muted opacity-50 outline-none"
-                  @click="deleteTag(index)"
+                  <button
+                    class="px-1 text-muted opacity-50 outline-none"
+                    @click="deleteTag(index)"
                   >
                     X
                   </button>
@@ -283,9 +323,7 @@
                 <p class="mb-0">Categories</p>
               </div>
 
-              <button class="outline-none"
-              @click="addData"
-              >
+              <button class="outline-none" @click="addData">
                 <svg
                   width="12"
                   height="8"
@@ -336,7 +374,6 @@
           id="transfer-modal"
           centered
           hide-footer
-          body-class="client-drop-modal"
           header-class="header-class2"
           no-stacking
           dir="auto"
@@ -349,7 +386,7 @@
                 height="15"
                 viewBox="0 0 14 15"
                 fill="none"
-                class="position-absolute mt-20 mx-15"
+                class="position-absolute mt-20"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -359,15 +396,13 @@
               </svg>
 
               <input
-                class="w-100 py-4 px-11 outline-none"
+                class="w-100 pt-4 pb-2 px-15 border-bottom outline-none"
                 :placeholder="`${$t('clientsSearchFor')}`"
               />
             </div>
-            <div
-              class="w-100 d-flex justify-content-center align-items-center flex-column overflow-scroll pt-5 h-300"
-            >
+            <div class="overflow-scroll h-300 mt-3">
               <div
-                class="d-flex justify-content-around w-100 align-items-center pt-9 mt-4"
+                class="d-flex justify-content-around w-75 align-items-center"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -388,7 +423,7 @@
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
+                class="d-flex justify-content-around w-75 align-items-center mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -409,7 +444,7 @@
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
+                class="d-flex justify-content-around w-75 align-items-center mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -430,7 +465,7 @@
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
+                class="d-flex justify-content-around w-75 align-items-center mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -451,7 +486,7 @@
                 </div>
               </div>
               <div
-                class="d-flex justify-content-around w-100 align-items-center mt-4"
+                class="d-flex justify-content-around w-75 align-items-center mt-4"
               >
                 <div class="p-1 rounded-circle border">
                   <img
@@ -682,6 +717,12 @@ export default {
     CustomAlert,
   },
   methods: {
+    editHandler() {
+      this.isDisabled = false;
+    },
+    saveHandler() {
+      this.isDisabled = true;
+    },
     tagsInputHandler(e) {
       this.id++;
       if (e.keyCode === 13) {
@@ -694,26 +735,25 @@ export default {
         this.tags = d;
       }
     },
-    addData(){
-      if(this.tags.length == 0)
-      {
-         let d = this.tags;
+    addData() {
+      if (this.tags.length == 0) {
+        let d = this.tags;
         d.push({
           name: "Chair",
           id: this.id,
         });
         this.tags = d;
       }
-      
     },
-    deleteTag(index){
+    deleteTag(index) {
       this.tags.splice(index, 1);
-    }
+    },
   },
   data() {
     return {
       ratingValue: 0,
-      id:3,
+      id: 3,
+      isDisabled: true,
       tags: [
         {
           name: "Electronics",

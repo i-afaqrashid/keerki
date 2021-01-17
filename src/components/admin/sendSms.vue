@@ -75,8 +75,8 @@
           :placeholder="`${$t('adminEnterYourSms')}`"
         ></textarea>
       </div>
-      <div class="d-flex justify-content-end sms-footer w-90">
-        <div class="d-flex justify-content-end align-items-center">
+      <div class="d-flex justify-content-center sms-footer w-90">
+        <div class="d-flex justify-content-end align-items-center w-90">
           <svg
             width="47"
             height="46"

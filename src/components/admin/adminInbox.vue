@@ -191,7 +191,6 @@
                 id="transfer-modal"
                 centered
                 hide-footer
-                body-class="client-drop-modal"
                 header-class="header-class2"
                 no-stacking
                 dir="auto"
@@ -204,7 +203,7 @@
                       height="15"
                       viewBox="0 0 14 15"
                       fill="none"
-                      class="position-absolute mt-20 mx-15"
+                      class="position-absolute mt-20"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
@@ -214,15 +213,13 @@
                     </svg>
 
                     <input
-                      class="w-100 py-4 px-11 outline-none"
+                      class="w-100 pt-4 pb-2 px-15 border-bottom outline-none"
                       :placeholder="`${$t('clientsSearchFor')}`"
                     />
                   </div>
-                  <div
-                    class="w-100 d-flex justify-content-center align-items-center flex-column overflow-scroll pt-5 h-300"
-                  >
+                  <div class="overflow-scroll h-300 mt-3">
                     <div
-                      class="d-flex justify-content-around w-50 align-items-center pt-9 mt-4"
+                      class="d-flex justify-content-around w-75 align-items-center"
                     >
                       <div class="p-1 rounded-circle border">
                         <img
@@ -243,7 +240,7 @@
                       </div>
                     </div>
                     <div
-                      class="d-flex justify-content-around w-50 align-items-center mt-4"
+                      class="d-flex justify-content-around w-75 align-items-center mt-4"
                     >
                       <div class="p-1 rounded-circle border">
                         <img
@@ -264,7 +261,7 @@
                       </div>
                     </div>
                     <div
-                      class="d-flex justify-content-around w-50 align-items-center mt-4"
+                      class="d-flex justify-content-around w-75 align-items-center mt-4"
                     >
                       <div class="p-1 rounded-circle border">
                         <img
@@ -285,7 +282,7 @@
                       </div>
                     </div>
                     <div
-                      class="d-flex justify-content-around w-50 align-items-center mt-4"
+                      class="d-flex justify-content-around w-75 align-items-center mt-4"
                     >
                       <div class="p-1 rounded-circle border">
                         <img
@@ -306,7 +303,7 @@
                       </div>
                     </div>
                     <div
-                      class="d-flex justify-content-around w-50 align-items-center mt-4"
+                      class="d-flex justify-content-around w-75 align-items-center mt-4"
                     >
                       <div class="p-1 rounded-circle border">
                         <img
@@ -338,24 +335,84 @@
                 size="lg"
               >
                 <div
-                  class="d-flex justify-content-around align-items-center pb-4"
+                  class="d-flex flex-column flex-sm-row justify-content-around align-items-center pb-4"
                 >
-                  <div>
+                  <div class="order-1 order-sm-0 mt-5 mt-sm-0">
                     <p class="text-center font-24 font-weight-bolder">
                       {{ $t("issueHasBeenResolved") }}
                     </p>
                     <div
                       class="d-flex w-100 justify-content-center flex-column align-items-center"
                     >
-                      <b-form-rating
-                        id="rating-lg-no-border"
-                        color="#FFC145"
-                        class="outline-none"
-                        v-model="value"
-                        no-border
-                        disabled
-                      ></b-form-rating>
-                      <button class="btn btn-outline-secondary mt-4">
+                      <div
+                        class="d-flex w-75 justify-content-between align-items-center"
+                      >
+                        <svg
+                          width="20"
+                          height="18"
+                          viewBox="0 0 20 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.9271 0.62615L6.48599 5.28026L1.02432 6.029C0.0448775 6.16257 -0.347645 7.29798 0.362634 7.94829L4.31403 11.5689L3.37945 16.6835C3.21123 17.608 4.24674 18.3005 5.11403 17.8682L10 15.4532L14.886 17.8682C15.7533 18.297 16.7888 17.608 16.6206 16.6835L15.686 11.5689L19.6374 7.94829C20.3476 7.29798 19.9551 6.16257 18.9757 6.029L13.514 5.28026L11.0729 0.62615C10.6355 -0.203435 9.36823 -0.213981 8.9271 0.62615Z"
+                            fill="#FFC145"
+                          />
+                        </svg>
+
+                        <svg
+                          width="20"
+                          height="18"
+                          viewBox="0 0 20 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.9271 0.62615L6.48599 5.28026L1.02432 6.029C0.0448775 6.16257 -0.347645 7.29798 0.362634 7.94829L4.31403 11.5689L3.37945 16.6835C3.21123 17.608 4.24674 18.3005 5.11403 17.8682L10 15.4532L14.886 17.8682C15.7533 18.297 16.7888 17.608 16.6206 16.6835L15.686 11.5689L19.6374 7.94829C20.3476 7.29798 19.9551 6.16257 18.9757 6.029L13.514 5.28026L11.0729 0.62615C10.6355 -0.203435 9.36823 -0.213981 8.9271 0.62615Z"
+                            fill="#FFC145"
+                          />
+                        </svg>
+
+                        <svg
+                          width="20"
+                          height="18"
+                          viewBox="0 0 20 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.9271 0.62615L6.48599 5.28026L1.02432 6.029C0.0448775 6.16257 -0.347645 7.29798 0.362634 7.94829L4.31403 11.5689L3.37945 16.6835C3.21123 17.608 4.24674 18.3005 5.11403 17.8682L10 15.4532L14.886 17.8682C15.7533 18.297 16.7888 17.608 16.6206 16.6835L15.686 11.5689L19.6374 7.94829C20.3476 7.29798 19.9551 6.16257 18.9757 6.029L13.514 5.28026L11.0729 0.62615C10.6355 -0.203435 9.36823 -0.213981 8.9271 0.62615Z"
+                            fill="#FFC145"
+                          />
+                        </svg>
+
+                        <svg
+                          width="20"
+                          height="18"
+                          viewBox="0 0 20 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.9271 0.62615L6.48599 5.28026L1.02432 6.029C0.0448775 6.16257 -0.347645 7.29798 0.362634 7.94829L4.31403 11.5689L3.37945 16.6835C3.21123 17.608 4.24674 18.3005 5.11403 17.8682L10 15.4532L14.886 17.8682C15.7533 18.297 16.7888 17.608 16.6206 16.6835L15.686 11.5689L19.6374 7.94829C20.3476 7.29798 19.9551 6.16257 18.9757 6.029L13.514 5.28026L11.0729 0.62615C10.6355 -0.203435 9.36823 -0.213981 8.9271 0.62615Z"
+                            fill="#FFC145"
+                          />
+                        </svg>
+
+                        <svg
+                          width="20"
+                          height="18"
+                          viewBox="0 0 20 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.9271 0.62615L6.48599 5.28026L1.02432 6.029C0.0448775 6.16257 -0.347645 7.29798 0.362634 7.94829L4.31403 11.5689L3.37945 16.6835C3.21123 17.608 4.24674 18.3005 5.11403 17.8682L10 15.4532L14.886 17.8682C15.7533 18.297 16.7888 17.608 16.6206 16.6835L15.686 11.5689L19.6374 7.94829C20.3476 7.29798 19.9551 6.16257 18.9757 6.029L13.514 5.28026L11.0729 0.62615C10.6355 -0.203435 9.36823 -0.213981 8.9271 0.62615Z"
+                            fill="#FFC145"
+                          />
+                        </svg>
+                      </div>
+                      <button class="d-flex justify-content-center align-items-center outline-none request-btn mt-5">
                         {{ $t("requestRatingFromClient") }}
                       </button>
                     </div>
@@ -1028,6 +1085,17 @@ export default {
 };
 </script>
 <style scoped>
+.request-btn{
+border: 3px solid #FFC145;
+border-radius: 8px;
+width: 224px;
+height: 41px;
+color:#ffc145
+}
+.request-btn:hover{
+  background: #FFC145;
+  color:#ffffff
+}
 .quick-resp-text {
   min-height: 221px;
   background: #f3f3f3;
