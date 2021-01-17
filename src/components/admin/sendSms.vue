@@ -27,7 +27,6 @@
           <input
             class="sms-search px-5 text-muted w-100 outline-none"
             :placeholder="`${$t('adminAllClientsSelected')}`"
-            :disabled="selectedType === 'All clients selected'"
           />
         </div>
         <div
