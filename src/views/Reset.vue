@@ -8,15 +8,15 @@
     size="lg"
   >
     <div class="d-flex justify-content-center flex-column px-5" dir="auto">
-      <h1 class="fs-28">{{ $t("changePassword") }}</h1>
-      <h3 class="fs-16 font-weight-thin mt-4">
+      <h1 class="fs-28 ml-23">{{ $t("changePassword") }}</h1>
+      <h3 class="fs-16 ml-23 font-weight-thin mt-4">
         {{ $t("changePasswordDescription") }}
       </h3>
-      <div class="d-flex mt-4 justify-content-between">
+      <div class="d-flex ml-23 mt-4 justify-content-between">
         <p class="font-weight-light w-50">{{ $t("lowercaseLetter") }}</p>
         <p class="font-weight-light w-50 ml-3 ml-sm-0">{{ $t("number") }}</p>
       </div>
-      <div class="d-flex justify-content-between text-left">
+      <div class="d-flex ml-23 justify-content-between text-left">
         <p class="font-weight-light w-50">{{ $t("uppercaseLetter") }}</p>
         <p class="font-weight-light w-50 ml-3 ml-sm-0">
           {{ $t("specialCharacter") }}
@@ -62,12 +62,15 @@
             type="password"
             required
             class="modal-input w-100 outline-none border rounded-lg px-3"
-          >
+          />
         </b-form-group>
         <router-link to="/login">
-          <b-button size="sm" class="w-100 bg-info mt-5 text-white py-3 mb-5">{{
-            $t("changePasswordBtn")
-          }}</b-button></router-link
+          <b-button
+            size="sm"
+            variant="primary"
+            class="w-100 ml-23 border-0 bg-info mt-5 text-white py-3 mb-5"
+            >{{ $t("changePasswordBtn") }}</b-button
+          ></router-link
         >
       </b-form>
     </div>

@@ -52,7 +52,14 @@
             {{ $t("help") }}
           </p>
 
-          <b-modal id="entry-modal" hide-footer centered size="lg">
+          <b-modal
+            id="entry-modal"
+            @hide="handleClose('headerClose')"
+            v-model="firstTime"
+            hide-footer
+            centered
+            size="lg"
+          >
             <div
               class="d-flex flex-column py-4 px-4 w-100 align-items-center justify-content-center"
             >
@@ -316,128 +323,128 @@
         </button>
       </div>
       <div
-          class=" d-flex ml-2 justify-content-center text-white align-items-center text-left outline-none ml-0 ml-lg-5"
-        >
-          <div class="bg-secondary rounded-circle">
-            <svg
-              width="47"
-              height="47"
-              viewBox="0 0 39 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+        class="d-flex ml-2 justify-content-center text-white align-items-center text-left outline-none ml-0 ml-lg-5"
+      >
+        <div class="bg-secondary rounded-circle">
+          <svg
+            width="47"
+            height="47"
+            viewBox="0 0 39 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <mask
+              id="mask0"
+              mask-type="alpha"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="39"
+              height="36"
             >
-              <mask
-                id="mask0"
-                mask-type="alpha"
-                maskUnits="userSpaceOnUse"
-                x="0"
-                y="0"
-                width="39"
-                height="36"
-              >
-                <ellipse
-                  cx="19.5711"
-                  cy="18.0019"
-                  rx="18.745"
-                  ry="17.5292"
-                  fill="#FFC145"
-                />
-              </mask>
-              <g mask="url(#mask0)">
-                <path
-                  d="M31.1551 37.6195V34.0386C31.1551 32.1392 30.5448 30.3176 29.4586 28.9746C28.3724 27.6315 26.8991 26.877 25.363 26.877H13.7789C12.2427 26.877 10.7695 27.6315 9.68327 28.9746C8.59705 30.3176 7.98682 32.1392 7.98682 34.0386V37.6195"
-                  fill="#197BBD"
-                />
-                <path
-                  d="M19.5694 21.4598C22.7683 21.4598 25.3615 19.0348 25.3615 16.0434C25.3615 13.052 22.7683 10.627 19.5694 10.627C16.3705 10.627 13.7773 13.052 13.7773 16.0434C13.7773 19.0348 16.3705 21.4598 19.5694 21.4598Z"
-                  fill="white"
-                />
-              </g>
-            </svg>
-          </div>
-          <div class="mx-2">
-            <p class="mb-0 text-dark fs-14">Hedi</p>
-            <p class="mb-0 fs-14 text-dark">
-              {{ $t("formHeaderAccountDetails") }}
-
-              <b-dropdown
-                variant="link"
-                size="sm"
-                dropleft
-                toggle-class="text-decoration-none p-0"
-                no-caret
-              >
-                <template #button-content>
-                  <svg
-                    width="12"
-                    height="7"
-                    viewBox="0 0 12 7"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M2.20711 0.792893C1.81658 0.402369 1.18342 0.402369 0.792893 0.792893C0.402369 1.18342 0.402369 1.81658 0.792893 2.20711L5.29289 6.70711C5.68342 7.09763 6.31658 7.09763 6.70711 6.70711L11.2071 2.20711C11.5976 1.81658 11.5976 1.18342 11.2071 0.792893C10.8166 0.402369 10.1834 0.402369 9.79289 0.792893L6 4.58579L2.20711 0.792893Z"
-                      fill="#000000"
-                    />
-                  </svg>
-                </template>
-                <b-dropdown-item @click="account">
-                  {{ $t("formHeaderAccountDetails") }}</b-dropdown-item
-                >
-                <b-dropdown-item @click="overview">{{
-                  $t("overview")
-                }}</b-dropdown-item>
-                <b-dropdown-item @click="orderHistory">{{
-                  $t("orderHistory")
-                }}</b-dropdown-item>
-                <b-dropdown-item @click="notifications">{{
-                  $t("notifications")
-                }}</b-dropdown-item>
-                <b-dropdown-item @click="messages">{{
-                  $t("messages")
-                }}</b-dropdown-item>
-
-                <b-modal
-                  id="log-out-modal"
-                  centered
-                  hide-footer
-                  header-class="header-class"
-                  hide-header
-                  hide-header-close
-                >
-                  <div
-                    class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
-                  >
-                    <div class="w-100">
-                      <h1 class="fs-16">{{ $t("automaticLogout") }}</h1>
-                      <h1 class="fs-18 text-primary">{{ $t("logoutTime") }}</h1>
-                    </div>
-                    <div class="d-flex justify-content-end w-100 mt-3">
-                      <button
-                        class="rounded-lg btn modal-logout bg-white color-c7 outline-none"
-                        @click="logout"
-                      >
-                        {{ $t("logout") }}
-                      </button>
-                      <button
-                        class="rounded-lg btn btn-primary outline-none ml-2"
-                        @click="$bvModal.hide('log-out-modal')"
-                      >
-                        {{ $t("continueSession") }}
-                      </button>
-                    </div>
-                  </div>
-                </b-modal>
-
-                <b-dropdown-item v-b-modal.log-out-modal>{{
-                  $t("logout")
-                }}</b-dropdown-item>
-              </b-dropdown>
-            </p>
-          </div>
+              <ellipse
+                cx="19.5711"
+                cy="18.0019"
+                rx="18.745"
+                ry="17.5292"
+                fill="#FFC145"
+              />
+            </mask>
+            <g mask="url(#mask0)">
+              <path
+                d="M31.1551 37.6195V34.0386C31.1551 32.1392 30.5448 30.3176 29.4586 28.9746C28.3724 27.6315 26.8991 26.877 25.363 26.877H13.7789C12.2427 26.877 10.7695 27.6315 9.68327 28.9746C8.59705 30.3176 7.98682 32.1392 7.98682 34.0386V37.6195"
+                fill="#197BBD"
+              />
+              <path
+                d="M19.5694 21.4598C22.7683 21.4598 25.3615 19.0348 25.3615 16.0434C25.3615 13.052 22.7683 10.627 19.5694 10.627C16.3705 10.627 13.7773 13.052 13.7773 16.0434C13.7773 19.0348 16.3705 21.4598 19.5694 21.4598Z"
+                fill="white"
+              />
+            </g>
+          </svg>
         </div>
+        <div class="mx-2">
+          <p class="mb-0 text-dark fs-14">Hedi</p>
+          <p class="mb-0 fs-14 text-dark">
+            {{ $t("formHeaderAccountDetails") }}
+
+            <b-dropdown
+              variant="link"
+              size="sm"
+              dropleft
+              toggle-class="text-decoration-none p-0"
+              no-caret
+            >
+              <template #button-content>
+                <svg
+                  width="12"
+                  height="7"
+                  viewBox="0 0 12 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.20711 0.792893C1.81658 0.402369 1.18342 0.402369 0.792893 0.792893C0.402369 1.18342 0.402369 1.81658 0.792893 2.20711L5.29289 6.70711C5.68342 7.09763 6.31658 7.09763 6.70711 6.70711L11.2071 2.20711C11.5976 1.81658 11.5976 1.18342 11.2071 0.792893C10.8166 0.402369 10.1834 0.402369 9.79289 0.792893L6 4.58579L2.20711 0.792893Z"
+                    fill="#000000"
+                  />
+                </svg>
+              </template>
+              <b-dropdown-item @click="account">
+                {{ $t("formHeaderAccountDetails") }}</b-dropdown-item
+              >
+              <b-dropdown-item @click="overview">{{
+                $t("overview")
+              }}</b-dropdown-item>
+              <b-dropdown-item @click="orderHistory">{{
+                $t("orderHistory")
+              }}</b-dropdown-item>
+              <b-dropdown-item @click="notifications">{{
+                $t("notifications")
+              }}</b-dropdown-item>
+              <b-dropdown-item @click="messages">{{
+                $t("messages")
+              }}</b-dropdown-item>
+
+              <b-modal
+                id="log-out-modal"
+                centered
+                hide-footer
+                header-class="header-class"
+                hide-header
+                hide-header-close
+              >
+                <div
+                  class="d-flex flex-column w-100 justify-content-center align-items-center p-3"
+                >
+                  <div class="w-100">
+                    <h1 class="fs-16">{{ $t("automaticLogout") }}</h1>
+                    <h1 class="fs-18 text-primary">{{ $t("logoutTime") }}</h1>
+                  </div>
+                  <div class="d-flex justify-content-end w-100 mt-3">
+                    <button
+                      class="rounded-lg btn modal-logout bg-white color-c7 outline-none"
+                      @click="logout"
+                    >
+                      {{ $t("logout") }}
+                    </button>
+                    <button
+                      class="rounded-lg btn btn-primary outline-none ml-2"
+                      @click="$bvModal.hide('log-out-modal')"
+                    >
+                      {{ $t("continueSession") }}
+                    </button>
+                  </div>
+                </div>
+              </b-modal>
+
+              <b-dropdown-item v-b-modal.log-out-modal>{{
+                $t("logout")
+              }}</b-dropdown-item>
+            </b-dropdown>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -446,7 +453,7 @@ export default {
   name: "DashboardTop",
   data() {
     return {
-      visible: localStorage.newUser == "true" ? true : false,
+      firstTime: localStorage.newUser == "true" ? true : false,
       index: 0,
       data: [
         {
@@ -478,6 +485,11 @@ export default {
     };
   },
   methods: {
+    handleClose() {
+      this.firstTime = false;
+      localStorage.newUser = false;
+      this.$bvModal.hide("entry-modal");
+    },
     done() {
       this.$bvModal.hide("entry-modal");
     },
@@ -509,7 +521,7 @@ export default {
       this.$router.push({ path: "/dashboard/account" }).catch(() => {});
     },
 
-logout() {
+    logout() {
       localStorage.clear();
       this.$router.push({ path: "/" });
     },
@@ -543,7 +555,7 @@ logout() {
     },
     checked: {
       type: Boolean,
-      default:false,
+      default: false,
     },
   },
 };
