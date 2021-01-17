@@ -49,12 +49,13 @@
                 </g>
               </svg>
             </div>
-            <div class="mx-lg-4 my-2 my-lg-0 text-white">
+            <div class="mx-lg-4 my-2 my-lg-0 text-white pl-24 pl-lg-0">
               <p class="mb-0 fs-16 font-weight-bolder">Hedi</p>
               <router-link to="/dashboard/account" class="text-white">
                 <p class="mb-0 fs-16">{{ $t("formHeaderAccountDetails") }}</p>
               </router-link>
             </div>
+            <div class="d-flex align-items-center pl-24 pl-lg-0">
             <svg
               width="26"
               height="24"
@@ -81,7 +82,7 @@
               height="24"
               viewBox="0 0 26 24"
               fill="none"
-              class="my-2 my-lg-0"
+              class="my-2 my-lg-0 mx-3"
               v-if="this.$route.fullPath == '/dashboard/inbox'"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -104,10 +105,11 @@
                 fill="#BB4430"
               />
             </svg>
+            </div>
           </b-navbar-nav>
 
           <b-navbar-nav
-            class="d-flex justify-content-around align-items-lg-center text-light pt-lg-3 w-100"
+            class="d-flex justify-content-around pl-24 pl-lg-0 align-items-lg-center text-light pt-lg-3 w-100"
           >
             <router-link to="/">
               <p class="pl-lg-5 text-white">{{ $t("home") }}</p></router-link
