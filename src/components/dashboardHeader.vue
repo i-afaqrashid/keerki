@@ -3,17 +3,16 @@
     <b-navbar toggleable="lg" type="dark" variant="primary" fixed="top">
       <div class="d-flex">
         <b-navbar-toggle target="nav-collapse" class="white"></b-navbar-toggle>
-        
       </div>
       <b-navbar-nav class="d-lg-none w-25">
         <img src="../assets/logo.png" width="100" />
       </b-navbar-nav>
       <b-collapse id="nav-collapse" is-nav class="w-100">
         <div
-          class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-around w-100"
+          class="d-flex flex-column flex-lg-row justify-content-lg-around w-100"
         >
           <b-navbar-nav
-            class="d-flex justify-content-lg-center align-items-lg-center text-light pt-lg-3 mt-3 mt-lg-0"
+            class="d-flex justify-content-lg-center text-light pt-lg-3 mt-3 mt-lg-0"
           >
             <router-link to="/">
               <p class="pl-lg-5 text-white">{{ $t("home") }}</p></router-link
@@ -21,32 +20,36 @@
             <p class="pl-lg-5">{{ $t("product") }}</p>
             <p class="pl-lg-5">{{ $t("about") }}</p>
             <p class="pl-lg-5">{{ $t("contact") }}</p>
-            <p class="pl-lg-5 d-flex align-items-center">
-              <img
-                v-if="this.$i18n.locale == 'en'"
-                src="../assets/enFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-              <img
-                v-else-if="this.$i18n.locale == 'ar'"
-                src="../assets/arFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-              <img
-                v-else
-                if="this.$i18n.locale == 'ch'"
-                src="../assets/chFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-            </p>
-            <p>
-              <b-nav-item-dropdown :text="`${$t('setLanguage')}`">
+
+            <div class="d-flex align-items-start">
+              <p
+                class="pl-lg-5 pr-2 mb-0 d-flex "
+              >
+                <img
+                  v-if="this.$i18n.locale == 'en'"
+                  src="../assets/enFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+                <img
+                  v-else-if="this.$i18n.locale == 'ar'"
+                  src="../assets/arFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+                <img
+                  v-else
+                  if="this.$i18n.locale == 'ch'"
+                  src="../assets/chFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+              </p>
+
+              <b-nav-item-dropdown :text="`${$t('setLanguage')}`" toggle-class="p-0">
                 <b-dropdown-item @click="switchLocale('en')">
                   <img
                     src="../assets/enFlag.png"
@@ -75,7 +78,7 @@
                   中文</b-dropdown-item
                 >
               </b-nav-item-dropdown>
-            </p>
+            </div>
           </b-navbar-nav>
         </div>
       </b-collapse>

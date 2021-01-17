@@ -930,8 +930,9 @@
               />
             </div>
           </b-dropdown>
-          <button class="outline-none">
-            <svg
+          <label class="file-select mb-0">
+            <div class="select-button d-flex flex-column">
+                  <svg
               width="29"
               height="29"
               viewBox="0 0 29 29"
@@ -943,8 +944,18 @@
                 fill="#4F5660"
               />
             </svg>
-          </button>
-          <button class="outline-none">
+            </div>
+            <input type="file" @change="handleFileChange" />
+          </label>
+          <button class="outline-none position-relative">
+
+          <emoji-picker @emoji="append" :search="search">
+            <div
+              class="emoji-invoker"
+              slot="emoji-invoker"
+              slot-scope="{ events: { click: clickEvent } }"
+              @click.stop="clickEvent"
+            >
             <svg
               width="26"
               height="26"
@@ -969,9 +980,36 @@
                 fill="#4F5660"
               />
             </svg>
+
+            </div>
+            <div slot="emoji-picker" slot-scope="{ emojis, insert}">
+
+              <div
+                class="emoji-picker"
+              >
+              
+                <div>
+                  <div v-for="(emojiGroup, category) in emojis" :key="category">
+                    <h5>{{ category }}</h5>
+                    <div class="emojis">
+                      <span
+                        v-for="(emoji, emojiName) in emojiGroup"
+                        :key="emojiName"
+                        @click="insert(emoji)"
+                        :title="emojiName"
+                        >{{ emoji }}</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </emoji-picker>
+
           </button>
-          <button class="outline-none">
-            <svg
+          <label class="file-select mb-0">
+            <div class="select-button d-flex flex-column">
+                         <svg
               width="24"
               height="26"
               viewBox="0 0 24 26"
@@ -983,11 +1021,14 @@
                 fill="#4F5660"
               />
             </svg>
-          </button>
+            </div>
+            <input type="file" @change="handleFileChange" />
+          </label>
         </div>
         <div>
-          <button class="outline-none">
-            <svg
+          <label class="file-select mb-0">
+            <div class="select-button d-flex flex-column">
+                           <svg
               width="25"
               height="25"
               viewBox="0 0 25 25"
@@ -999,7 +1040,9 @@
                 fill="#4F5660"
               />
             </svg>
-          </button>
+            </div>
+            <input type="file" @change="handleFileChange" />
+          </label>
         </div>
       </div>
       <div>
@@ -1007,11 +1050,16 @@
           v-if="this.$i18n.locale === 'ar'"
           class="w-100 text-right messagebox px-4 py-2 outline-none border-bottom"
           :placeholder="`${$t('adminMessagesPlaceholder')}`"
+                    v-model="input"
+
         ></textarea>
+
         <textarea
           v-else
           class="w-100 messagebox px-4 py-2 outline-none border-bottom"
           :placeholder="`${$t('adminMessagesPlaceholder')}`"
+                    v-model="input"
+
         ></textarea>
       </div>
       <div class="d-flex justify-content-end">
@@ -1070,16 +1118,35 @@
   </div>
 </template>
 <script>
+import EmojiPicker from "vue-emoji-picker";
 export default {
   name: "AdminInbox",
   data() {
     return {
       value: 3,
+      input: "",
+      search: "",
     };
+  },
+   components: {
+    EmojiPicker,
   },
   methods: {
     sidebarToggle() {
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
+    },
+     append(emoji) {
+      this.input += emoji;
+    },
+        handleFileChange(e) {
+      this.$emit("input", e.target.files[0]);
+    },
+  },
+  directives: {
+    focus: {
+      inserted(el) {
+        el.focus();
+      },
     },
   },
 };
@@ -1153,5 +1220,83 @@ color:#ffc145
 }
 .btn-color29 {
   background: #29cc97 !important;
+}
+.emoji-invoker {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.emoji-invoker:hover {
+  transform: scale(1.1);
+}
+
+.emoji-picker {
+  position: absolute;
+  z-index: 1;
+  font-family: Montserrat;
+  border: 1px solid #ccc;
+  width: 15rem;
+  height: 20rem;
+  overflow-y: scroll;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  background: #fff;
+  bottom:32px!important;
+  right:-110px!important;
+  box-shadow: 1px 1px 8px #c7dbe6;
+}
+.emoji-picker__search {
+  display: flex;
+}
+.emoji-picker__search > input {
+  flex: 1;
+  border-radius: 10rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+.emoji-picker h5 {
+  margin-bottom: 0;
+  color: #b1b1b1;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: default;
+}
+.emoji-picker .emojis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.emoji-picker .emojis:after {
+  content: "";
+  flex: auto;
+}
+.emoji-picker .emojis span {
+  padding: 0.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.emoji-picker .emojis span:hover {
+  background: #ececec;
+  cursor: pointer;
+}
+.file-select > .select-button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16.0564px;
+  line-height: 18px;
+
+  color: #aeaeae;
+
+  cursor: pointer;
+  border-radius: 0.3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Don't forget to hide the original file input! */
+.file-select > input[type="file"] {
+  display: none;
 }
 </style>

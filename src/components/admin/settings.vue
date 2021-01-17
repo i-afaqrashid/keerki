@@ -788,7 +788,6 @@
             centered
             hide-footer
             header-class="border-0"
-            hide-header
             no-stacking
             size="xl"
           >

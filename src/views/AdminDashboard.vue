@@ -586,36 +586,37 @@
               >
                 {{ $t("adminDashboardHeading") }}
               </div>
-              <p
-                class="d-flex align-items-center pt-15 pt-lg-3 justify-content-center mb-0"
-              >
-                <img
-                  v-if="this.$i18n.locale == 'en'"
-                  src="../assets/enFlag.png"
-                  width="24"
-                  height="24"
-                  class="rounded-circle"
-                />
-                <img
-                  v-else-if="this.$i18n.locale == 'ar'"
-                  src="../assets/arFlag.png"
-                  width="24"
-                  height="24"
-                  class="rounded-circle"
-                />
-                <img
-                  v-else
-                  if="this.$i18n.locale == 'ch'"
-                  src="../assets/chFlag.png"
-                  width="24"
-                  height="24"
-                  class="rounded-circle"
-                />
-              </p>
-              <div class="pt-3">
+
+              <div class="pt-3 d-flex align-items-start">
+                <p class="d-flex pr-2 justify-content-center mb-0">
+                  <img
+                    v-if="this.$i18n.locale == 'en'"
+                    src="../assets/enFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                  <img
+                    v-else-if="this.$i18n.locale == 'ar'"
+                    src="../assets/arFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                  <img
+                    v-else
+                    if="this.$i18n.locale == 'ch'"
+                    src="../assets/chFlag.png"
+                    width="24"
+                    height="24"
+                    class="rounded-circle"
+                  />
+                </p>
+
                 <b-dropdown
                   :text="`${$t('setLanguage')}`"
                   variant="transparent"
+                  toggle-class="p-0"
                 >
                   <b-dropdown-item @click="switchLocale('en')">
                     <img

@@ -109,7 +109,7 @@
           </b-navbar-nav>
 
           <b-navbar-nav
-            class="d-flex justify-content-around pl-24 pl-lg-0 align-items-lg-center text-light pt-lg-3 w-100"
+            class="d-flex justify-content-around pl-24 pl-lg-0 text-light pt-lg-3 w-100"
           >
             <router-link to="/">
               <p class="pl-lg-5 text-white">{{ $t("home") }}</p></router-link
@@ -117,55 +117,35 @@
             <p class="">{{ $t("product") }}</p>
             <p class="">{{ $t("about") }}</p>
             <p class="">{{ $t("contact") }}</p>
-            <p class="d-flex align-items-center d-lg-none">
-              <img
-                v-if="this.$i18n.locale == 'en'"
-                src="../assets/enFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-              <img
-                v-else-if="this.$i18n.locale == 'ar'"
-                src="../assets/arFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-              <img
-                v-else
-                if="this.$i18n.locale == 'ch'"
-                src="../assets/chFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle"
-              />
-            </p>
+            <div class="d-flex align-items-start">
+              <p
+                class=" pr-2 mb-0 d-flex "
+              >
+                <img
+                  v-if="this.$i18n.locale == 'en'"
+                  src="../assets/enFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+                <img
+                  v-else-if="this.$i18n.locale == 'ar'"
+                  src="../assets/arFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+                <img
+                  v-else
+                  if="this.$i18n.locale == 'ch'"
+                  src="../assets/chFlag.png"
+                  width="24"
+                  height="24"
+                  class="rounded-circle"
+                />
+              </p>
 
-            <p class="d-flex align-items-center">
-              <img
-                v-if="this.$i18n.locale == 'en'"
-                src="../assets/enFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle d-none d-lg-block"
-              />
-              <img
-                v-else-if="this.$i18n.locale == 'ar'"
-                src="../assets/arFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle d-none d-lg-block"
-              />
-              <img
-                v-else
-                if="this.$i18n.locale == 'ch'"
-                src="../assets/chFlag.png"
-                width="24"
-                height="24"
-                class="rounded-circle d-none d-lg-block"
-              />
-              <b-nav-item-dropdown :text="`${$t('setLanguage')}`">
+              <b-nav-item-dropdown :text="`${$t('setLanguage')}`" toggle-class="p-0">
                 <b-dropdown-item @click="switchLocale('en')">
                   <img
                     src="../assets/enFlag.png"
@@ -173,7 +153,6 @@
                     height="24"
                     class="rounded-circle"
                   />
-
                   ENGLISH</b-dropdown-item
                 >
                 <b-dropdown-item @click="switchLocale('ar')">
@@ -183,7 +162,6 @@
                     height="24"
                     class="rounded-circle"
                   />
-
                   عربى</b-dropdown-item
                 >
                 <b-dropdown-item @click="switchLocale('ch')">
@@ -193,11 +171,10 @@
                     height="24"
                     class="rounded-circle"
                   />
-
                   中文</b-dropdown-item
                 >
               </b-nav-item-dropdown>
-            </p>
+            </div>
           </b-navbar-nav>
         </div>
       </b-collapse>

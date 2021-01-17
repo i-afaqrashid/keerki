@@ -4,7 +4,7 @@
     dir="auto"
   >
     <div class="w-100 d-flex flex-column align-items-center">
-      <div class="resp-search">
+      <div class="resp-search" dir="ltr">
         <b-dropdown
           size="lg"
           variant="link"
@@ -436,7 +436,8 @@
         </b-modal>
         <button
           class="admin-card btn mt-5 mt-lg-0 btn-transparent d-flex flex-column justify-content-around align-items-center align-content-around"
-          v-b-modal.client-modal @click="clients"
+          v-b-modal.client-modal
+          @click="clients"
         >
           <svg
             width="53"
@@ -651,7 +652,7 @@ export default {
       this.$router.push({ path: "/admin/dashboard/orders" }).catch(() => {});
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },
-     clients() {
+    clients() {
       this.$router.push({ path: "/admin/dashboard/clients" }).catch(() => {});
       document.getElementsByClassName("admin-side")[0].classList.add("d-none");
     },

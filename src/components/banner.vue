@@ -35,6 +35,67 @@ export default {
 </script>
 
 <style>
+
+.overflow-scroll{
+  overflow-y: scroll!important;
+  overflow-x:hidden!important;
+}
+.rating-text-area {
+  height: 130px !important;
+  border: 1px solid #000000;
+  border-radius: 20px;
+
+  background: #eceaea !important;
+}
+.rating-header {
+  border: none !important;
+}
+.resp-w-75 {
+  width: 100%;
+}
+.btn-inbox {
+  height: 36px !important;
+  padding: 0 15px;
+}
+.quick-search {
+  height: 46px !important;
+  background: #e3e5e8;
+}
+.send {
+  background: #b3d7e7;
+  border-radius: 20px 20px 0px 20px;
+  min-height: 70px !important;
+}
+.receive {
+  background: #f9eac4;
+  border-radius: 20px 20px 20px 0px;
+  min-height: 70px !important;
+}
+.messagesend {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #060607;
+}
+.send-bar {
+  background: #f1f4f5;
+  height: 49px !important;
+}
+.messagebox {
+  height: 117px !important;
+}
+
+#editor1 {
+  min-height: 400px!important;
+  border: 0px !important;
+  padding-top: 14px;
+}
+.ql-toolbar.ql-snow {
+  border: 0px !important;
+  border-bottom: 2px solid #878787 !important;
+}
+
 .popover-header {
   border: 0 !important;
   background: #ffffff !important;
