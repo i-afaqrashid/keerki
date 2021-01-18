@@ -169,7 +169,7 @@
     </div>
 
     <table
-      class="table table-borderless table-responsive-md table-hover border-bottom clients-table mt-4"
+      class="table table-borderless table-responsive-lg table-hover border-bottom clients-table mt-4"
     >
       <thead class="pt-0 text-center">
         <tr class="border-bottom">

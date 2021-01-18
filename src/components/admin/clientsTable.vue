@@ -281,7 +281,7 @@
           </th>
           <td @click="rowClicked">
             <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
+              class="btn rounded-pill py-0 button-width d-flex justify-content-center align-items-center admin-btn-active text-white font-11"
             >
               {{ $t("clientBtnActive") }}
             </button>
@@ -440,7 +440,7 @@
           </th>
           <td @click="rowClicked">
             <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
+              class="btn rounded-pill py-0 button-width d-flex justify-content-center align-items-center admin-btn-active text-white font-11"
             >
               {{ $t("clientBtnActive") }}
             </button>
@@ -599,7 +599,7 @@
           </th>
           <td @click="rowClicked">
             <button
-              class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
+              class="btn rounded-pill py-0 d-flex justify-content-center align-items-center button-width admin-btn-inactive text-white font-11"
             >
               {{ $t("clientBtnInactive") }}
             </button>
@@ -758,7 +758,7 @@
           </th>
           <td @click="rowClicked">
             <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
+              class="btn rounded-pill py-0 button-width d-flex justify-content-center align-items-center admin-btn-active text-white font-11"
             >
               {{ $t("clientBtnActive") }}
             </button>
@@ -917,7 +917,7 @@
           </th>
           <td @click="rowClicked">
             <button
-              class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
+              class="btn rounded-pill py-0 button-width d-flex justify-content-center align-items-center admin-btn-inactive text-white font-11"
             >
               {{ $t("clientBtnInactive") }}
             </button>
@@ -1076,7 +1076,7 @@
           </th>
           <td @click="rowClicked">
             <button
-              class="btn rounded-pill py-0 px-3 admin-btn-inactive text-white font-11"
+              class="btn rounded-pill py-0 button-width d-flex justify-content-center align-items-center admin-btn-inactive text-white font-11"
             >
               {{ $t("clientBtnInactive") }}
             </button>
@@ -1235,7 +1235,7 @@
           </th>
           <td @click="rowClicked">
             <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
+              class="btn rounded-pill py-0 button-width d-flex justify-content-center align-items-center admin-btn-active text-white font-11"
             >
               {{ $t("clientBtnActive") }}
             </button>
@@ -1394,7 +1394,7 @@
           </th>
           <td @click="rowClicked">
             <button
-              class="btn rounded-pill py-0 px-4 admin-btn-active text-white font-11"
+              class="btn rounded-pill py-0 button-width d-flex justify-content-center align-items-center admin-btn-active text-white font-11"
             >
               {{ $t("clientBtnActive") }}
             </button>
@@ -1489,8 +1489,12 @@ export default {
     },
   },
 };
+
 </script>
 <style scoped>
+.button-width{
+  width:90px;
+}
 .clients-table tr {
   cursor: pointer !important;
 }

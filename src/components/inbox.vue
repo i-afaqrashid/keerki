@@ -181,7 +181,8 @@
             <div>
               <img
                 src="../assets/customerSupport.png"
-                class="w-100 rounded-circle"
+                class="rounded-circle"
+                width="35" height="35"
               />
             </div>
             <div class="d-flex">
@@ -243,7 +244,8 @@
             <div>
               <img
                 src="../assets/customerSupport.png"
-                class="w-100 rounded-circle"
+                class="rounded-circle"
+                width="35" height="35"
               />
             </div>
             <div class="d-flex">

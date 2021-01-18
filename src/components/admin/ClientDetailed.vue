@@ -291,13 +291,13 @@
                         class="border h-139 w-100 d-flex justify-content-center"
                       >
                         <div
-                          class="w-100 px-md-2 d-flex justify-content-between"
+                          class="w-100 px-md-2 px-1 d-flex justify-content-between"
                         >
                           <div
                             class="d-flex flex-column justify-content-end pb-2"
                           >
                             <input
-                              class="font-11 tag-btn outline-none text-dark px-2 "
+                              class="font-11 tag-btn outline-none width-110 text-dark px-2 "
                               @keypress="
                                 (e) => {
                                   inputHandler(e, index);
@@ -305,7 +305,7 @@
                               "
                             />
                             <button
-                              class="font-11 tag-btn outline-none text-dark px-2 mt-3 tagGreen"
+                              class="font-11 tag-btn outline-none text-dark width-110 px-2 mt-3 tagGreen"
                               @click="
                                 changeTag($t('intClient'), index, 'tagGreen')
                               "
@@ -313,7 +313,7 @@
                               {{ $t("intClient") }}
                             </button>
                             <button
-                              class="font-11 tag-btn outline-none text-dark px-2 tagYellow mt-2"
+                              class="font-11 tag-btn outline-none text-dark width-110 px-2 tagYellow mt-2"
                               @click="
                                 changeTag($t('localClient'), index, 'tagYellow')
                               "
@@ -548,6 +548,9 @@ export default {
 };
 </script>
 <style scoped>
+.width-110{
+  width:109px;
+}
 .tags-container {
   width: 50% !important;
 }
@@ -581,6 +584,7 @@ export default {
 .tagGreen {
   background: #87f5b3;
 }
+
 .tagBlue {
   background: #80bfff;
 }
@@ -614,6 +618,12 @@ export default {
 }
 .w-75-resp {
   width: 100%;
+}
+@media (max-width:576px){
+  .tags-container
+  {
+    width:63%!important;
+  }
 }
 @media only screen and (min-width: 576px) and (max-width: 768px) {
   .width-25-resp {

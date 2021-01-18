@@ -764,7 +764,7 @@ export default {
   transform: scale(1.1);
 }
 .resp-search {
-  width: 80% !important;
+  width: 90% !important;
 }
 .quick-search1 {
   height: 65px !important;
@@ -776,7 +776,7 @@ export default {
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .resp-search {
-    width: 50% !important;
+    width: 100% !important;
   }
   .admin-card {
     width: 30% !important;

@@ -469,9 +469,9 @@
         class="d-flex flex-column pt-lg-15 justify-content-center w-100 align-items-center"
       >
         <div
-          class="w-95 d-flex justify-content-around flex-column flex-lg-row align-items-center"
+          class="w-100 d-flex justify-content-around flex-column flex-lg-row align-items-center"
         >
-          <div class="w-95 d-flex order-1 order-lg-0">
+          <div class="w-100 d-flex justify-content-center align-items-center order-1 order-lg-0">
             <div
               class="w-95 d-flex justify-content-between flex-column flex-lg-row align-items-center"
             >
@@ -906,7 +906,7 @@
                       $t("adminDashboardMyaccount")
                     }}</template>
                     <button
-                      class="btn btn-transparent rounded-0 w-100 d-flex justify-content-around align-items-center"
+                      class="btn btn-transparent mb-2 rounded-0 w-100 d-flex justify-content-around align-items-center"
                       @click="account"
                     >
                       <svg
@@ -936,7 +936,7 @@
                       }}</span>
                     </button>
                     <button
-                      class="btn btn-transparent rounded-0 w-100 d-flex justify-content-center align-items-center"
+                      class="btn btn-transparent my-2 rounded-0 w-100 d-flex justify-content-center align-items-center"
                       @click="account"
                     >
                       <svg
@@ -967,7 +967,7 @@
                     </button>
                     <router-link to="/admin">
                       <button
-                        class="btn btn-transparent rounded-0 bg-f7 w-100 d-flex justify-content-center align-items-center"
+                        class="btn btn-transparent my-2 rounded-0 bg-f7 w-100 d-flex justify-content-center align-items-center"
                       >
                         <svg
                           width="17"
